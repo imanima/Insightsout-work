@@ -21,8 +21,9 @@ window.IO_CONFIG = {
   CONTACT_EMAIL: "imani.nima@gmail.com",
 
   // --- Luma ---
-  // Public Luma calendar page (used as the "see everything" fallback link).
-  LUMA_CALENDAR_URL: "https://lu.ma/user/nimaimani",
+  // The events pages use the official calendar embed (cal-cHPs3Da3iGJZspe)
+  // directly in the HTML. This URL is the non-embed fallback link.
+  LUMA_CALENDAR_URL: "https://luma.com/embed/calendar/cal-cHPs3Da3iGJZspe/events",
 
   // --- Newsletter ---
   // Paste a provider form action URL (Buttondown/ConvertKit/Mailchimp) when ready.

@@ -53,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var kind = mount.getAttribute("data-kind") || "coaching";
   var url = bookingUrl(kind);
   if (url) {
+    // Google appointment pages only allow framing with gv=true appended
+    if (url.indexOf("calendar.google.com/calendar/appointments") !== -1 && url.indexOf("gv=true") === -1) {
+      url += (url.indexOf("?") === -1 ? "?" : "&") + "gv=true";
+    }
     var iframe = document.createElement("iframe");
     iframe.src = url;
     iframe.title = "Book a call with Nima";
