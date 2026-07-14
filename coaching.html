@@ -3,241 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nima Imani — Executive Coaching for Founders &amp; Leaders</title>
-  <meta name="description" content="Executive coaching for founders and technical leaders navigating rapid change — and small-group coaching on emotional intelligence, overwhelm, and leading through uncertainty. Book a free discovery call.">
+  <title>Coaching — Nima Imani | InsightsOut</title>
+  <meta name="description" content="Executive coaching for founders and leaders — decisions under pressure, co-founder and team relationships, role change, overwhelm. Plus The Inner Board, a small-group program. Book a free discovery call.">
   <link rel="canonical" href="https://insightsout.work/coaching.html">
-  <meta property="og:title" content="Nima Imani — Executive Coaching">
-  <meta property="og:description" content="Executive coaching for founders navigating rapid change. ICF ACC · former engineer and tech leader.">
+  <meta property="og:title" content="Executive Coaching with Nima Imani">
+  <meta property="og:description" content="Coaching for founders and leaders: decisions, relationships, role change, overwhelm. Book a free discovery call.">
   <meta property="og:image" content="https://insightsout.work/assets/coach.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
-  <style>
-    /* Standalone page — deliberately single-theme: dark executive.
-       Palette shares DNA with insightsout.app (navy ground, pastel gems). */
-    :root {
-      --ground: #0E131A;
-      --surface: #151C25;
-      --raise: #1B2430;
-      --line: #26303D;
-      --ink: #EEF2F8;
-      --muted: #93A1B1;
-      --gold: #E3C36F;
-      --coral: #F2644B;
-      --coral-deep: #E5532F;
-      --display: "Avenir Next", Avenir, Inter, Seravek, system-ui, -apple-system, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      background: var(--ground); color: var(--ink);
-      font-family: var(--display); font-size: 17.5px; line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3 { font-weight: 600; line-height: 1.1; letter-spacing: -0.018em; margin: 0; text-wrap: balance; }
-    h1 { font-size: clamp(2.6rem, 5.2vw, 4rem); }
-    h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
-    h3 { font-size: 1.2rem; }
-    p { margin: 0; }
-    a { color: var(--gold); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
-    section { padding: 96px 0; }
-    .eyebrow {
-      font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 20px;
-    }
-    .lede { font-size: 19.5px; color: var(--muted); max-width: 60ch; }
-    .btn {
-      display: inline-block; font-size: 15.5px; font-weight: 600; text-align: center;
-      padding: 13px 26px; border-radius: 99px; cursor: pointer; border: 1.5px solid transparent;
-    }
-    .btn:hover { text-decoration: none; }
-    .btn-primary { background: var(--coral); color: #FFF6F0; border-color: var(--coral); }
-    .btn-primary:hover { background: var(--coral-deep); border-color: var(--coral-deep); }
-    .btn-ghost { background: transparent; color: var(--ink); border-color: #3A4756; }
-    .btn-ghost:hover { border-color: var(--ink); }
-    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-
-    /* header */
-    header.bar {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(14, 19, 26, 0.86); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-    .bar-inner {
-      max-width: 1040px; margin: 0 auto; padding: 15px 28px;
-      display: flex; align-items: center; gap: 20px;
-    }
-    .name { font-weight: 600; font-size: 18px; color: var(--ink); margin-right: auto; display: flex; align-items: center; gap: 10px; }
-    .name img { width: 22px; height: 22px; }
-    .name:hover { text-decoration: none; }
-
-    /* hero */
-    .hero { padding: 110px 0 96px; position: relative; overflow: hidden; }
-    .hero::before {
-      content: ""; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 60% 45% at 78% 18%, rgba(227, 195, 111, 0.07), transparent 65%);
-      pointer-events: none;
-    }
-    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center; position: relative; }
-    @media (max-width: 880px) { .hero-grid { grid-template-columns: 1fr; } }
-    .hero h1 { margin-bottom: 28px; max-width: 16ch; }
-    .hero .lede { margin-bottom: 22px; }
-    .cred { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; margin-bottom: 38px; }
-    .portrait { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
-
-    /* pull quote */
-    .pull {
-      border-left: 2px solid var(--gold); padding-left: 28px; max-width: 720px;
-    }
-    .pull p:first-child { font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.45; font-weight: 500; }
-    .pull .who { margin-top: 18px; font-size: 14.5px; color: var(--muted); }
-
-    /* lists */
-    .fit { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; max-width: 720px; }
-    .fit li {
-      padding: 20px 0 20px 34px; position: relative; font-size: 18.5px; font-weight: 500;
-      border-top: 1px solid var(--line);
-    }
-    .fit li:last-child { border-bottom: 1px solid var(--line); }
-    .fit li::before {
-      content: ""; position: absolute; left: 4px; top: 1.75em; width: 11px; height: 11px;
-      border-radius: 2px; transform: rotate(45deg); background: var(--gold);
-    }
-
-    .chips { display: flex; flex-wrap: wrap; gap: 12px; max-width: 780px; }
-    .chip {
-      border: 1px solid var(--line); border-radius: 99px; padding: 9px 18px;
-      font-size: 14.5px; color: var(--ink); background: var(--surface);
-    }
-
-    /* grids & cards */
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
-    @media (max-width: 800px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
-      padding: 30px 28px; display: flex; flex-direction: column; gap: 12px;
-    }
-    .card p { color: var(--muted); font-size: 15.5px; }
-    .card .go { margin-top: auto; font-weight: 600; font-size: 14.5px; }
-    .card.feature { border-color: rgba(227, 195, 111, 0.45); background: var(--raise); }
-    .tag {
-      display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--ground); background: var(--gold);
-      padding: 4px 12px; border-radius: 99px; margin-bottom: 6px; align-self: flex-start;
-    }
-
-    /* group panel */
-    .group-panel {
-      background: linear-gradient(140deg, var(--raise), var(--surface));
-      border: 1px solid rgba(227, 195, 111, 0.4); border-radius: 12px;
-      padding: 56px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 52px; align-items: center;
-    }
-    @media (max-width: 840px) { .group-panel { grid-template-columns: 1fr; padding: 36px 28px; } }
-    .group-panel h2 { margin-bottom: 20px; }
-    .group-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
-    .group-list li { padding-left: 28px; position: relative; font-size: 16.5px; }
-    .group-list li::before {
-      content: ""; position: absolute; left: 0; top: 0.5em; width: 11px; height: 11px;
-      border-radius: 50%; border: 2px solid var(--gold);
-    }
-
-    /* testimonials */
-    .t-card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 30px 28px; display: flex; flex-direction: column; gap: 18px; }
-    .t-card blockquote { margin: 0; font-size: 16px; line-height: 1.65; color: var(--ink); }
-    .t-card .who { font-size: 14px; font-weight: 600; margin-top: auto; }
-    .t-card .who span { display: block; font-weight: 400; color: var(--muted); }
-
-    /* faq */
-    .faq details { border-top: 1px solid var(--line); padding: 20px 0; }
-    .faq details:last-child { border-bottom: 1px solid var(--line); }
-    .faq summary {
-      cursor: pointer; font-weight: 600; font-size: 17px; list-style: none;
-      display: flex; justify-content: space-between; gap: 16px; align-items: baseline;
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; color: var(--gold); font-size: 21px; line-height: 1; flex-shrink: 0; }
-    .faq details[open] summary::after { content: "–"; }
-    .faq details p { margin-top: 12px; color: var(--muted); font-size: 15.5px; max-width: 65ch; }
-
-    /* final */
-    .final { text-align: left; border-top: 1px solid var(--line); }
-    footer.min {
-      border-top: 1px solid var(--line); padding: 36px 0 52px;
-      color: var(--muted); font-size: 14px;
-    }
-    footer.min .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-
-    img { max-width: 100%; display: block; }
-    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
-  </style>
 </head>
 <body>
 
-<header class="bar">
-  <div class="bar-inner">
-    <a class="name" href="#top">
+<nav class="site">
+  <div class="nav-inner">
+    <a class="wordmark" href="index.html">
       <img src="assets/logo.svg" alt="" aria-hidden="true">
-      Nima Imani
+      Insights<em>Out</em>
     </a>
-    <a class="btn btn-primary" style="font-size: 14px; padding: 9px 20px;" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book a Call</a>
-  </div>
-</header>
-
-<div class="hero" id="top">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Executive coaching · San Francisco &amp; Zoom</p>
-        <h1>Executive coaching for founders navigating rapid change.</h1>
-        <p class="lede">I help founders and technical leaders stay clear, steady, and decisive through fundraising pressure, team tension, high-stakes decisions, and the emotional weight of building. This is for the moments when the work is no longer only strategic — it is emotional, relational, and deeply personal.</p>
-        <p class="cred">Executive Coach · ICF ACC · Co-founder of InsightsOut · Former engineer, data scientist, and tech leader</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book a Free Discovery Call</a>
-          <a class="btn btn-ghost" href="#group">Group coaching ↓</a>
-        </div>
-      </div>
-      <img class="portrait" src="assets/coach.jpg" alt="Nima Imani outdoors, smiling, one hand resting on a tree">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="cohort.html">Cohort</a>
+      <a href="coaching.html" class="active">Coaching</a>
+      <a href="organizations.html">Organizations</a>
+      <a href="insights.html">Insights</a>
+      <a href="about.html">About</a>
     </div>
+    <a class="btn btn-primary btn-sm" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book a Call</a>
   </div>
-</div>
+</nav>
 
-<section style="padding-top: 40px;">
+<section style="padding-top: 100px;">
   <div class="wrap">
-    <div class="pull">
-      <p>“He asks insightful questions that lead me to uncover the answers I need. My business has tripled since we began working together — and the growth aligns with my values.”</p>
-      <p class="who">Kamran Rahman — Co-founder</p>
+    <p class="eyebrow">Executive coaching · San Francisco &amp; Zoom</p>
+    <h1 style="max-width: 18ch; margin-bottom: 26px;">Coaching for founders and leaders navigating rapid change.</h1>
+    <p class="lede">I help founders and leaders stay clear, steady, and decisive — through high-stakes decisions, co-founder and team tension, role change, and the emotional weight of leading. This is for the moments when the work is no longer only strategic: it is emotional, relational, and deeply personal.</p>
+    <p style="margin-top: 20px; font-size: 14.5px; color: var(--muted); letter-spacing: 0.03em;">Executive Coach · ICF ACC · Co-founder of InsightsOut · Former engineer, data scientist, and tech leader</p>
+    <div class="cta-row" style="margin-top: 36px;">
+      <a class="btn btn-primary" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book a Free Discovery Call</a>
+      <a class="btn btn-ghost" href="#inner-board">The Inner Board ↓</a>
     </div>
-  </div>
-</section>
-
-<section style="padding-top: 48px;">
-  <div class="wrap">
-    <p class="eyebrow">This is for you if you are…</p>
-    <ul class="fit">
-      <li>Carrying more than your team can see.</li>
-      <li>Making high-stakes decisions without enough support.</li>
-      <li>Feeling stuck between the company you're building and the leader you want to be.</li>
-      <li>Exhausted by the emotional weight of being the one people look to.</li>
-      <li>Ready to do the real work — not just the strategic work.</li>
-    </ul>
+    <figure class="shot" style="margin-top: 56px;">
+      <img src="assets/coach.jpg" alt="Nima Imani outdoors, smiling, one hand resting on a tree">
+    </figure>
   </div>
 </section>
 
 <section style="padding-top: 0;">
   <div class="wrap">
     <p class="eyebrow">What we work on</p>
-    <h2 style="margin-bottom: 32px; max-width: 22ch;">The work underneath the work.</h2>
+    <h2 style="margin-bottom: 30px; max-width: 24ch;">A thousand decisions. Relationships in every direction.</h2>
+    <p class="lede" style="margin-bottom: 34px;">Leading means deciding constantly — and holding relationships on every side: co-founder, team, customers, investors. We work on the capabilities underneath all of it.</p>
     <div class="chips">
-      <span class="chip">Clear decision-making under pressure</span>
-      <span class="chip">Co-founder &amp; team dynamics</span>
-      <span class="chip">Fundraising &amp; investor conversations</span>
-      <span class="chip">Emotional resilience &amp; steadiness</span>
-      <span class="chip">Hard conversations you've been avoiding</span>
-      <span class="chip">Leadership identity shifts</span>
+      <span class="chip">Decisions under pressure — more of them, faster, without burnout</span>
+      <span class="chip">Co-founder relationships &amp; conflict</span>
+      <span class="chip">Team leadership &amp; hard conversations</span>
+      <span class="chip">Investor &amp; board relationships</span>
+      <span class="chip">Sales &amp; customer relationships</span>
+      <span class="chip">Role change &amp; leadership identity</span>
+      <span class="chip">Overwhelm, focus &amp; energy</span>
     </div>
     <p class="lede" style="margin-top: 34px;">We work at the level of who you are being as a leader — the beliefs, emotional patterns, and ways of relating that shape your decisions — not just the tactics.</p>
   </div>
@@ -245,71 +71,84 @@
 
 <section style="padding-top: 0;">
   <div class="wrap">
+    <p class="eyebrow">This is for you if you are…</p>
+    <ul class="maybe" style="margin-top: 24px;">
+      <li>Carrying more than your team can see.</li>
+      <li>Making high-stakes decisions without enough support.</li>
+      <li>Navigating a role that is changing under you — founder to CEO, builder to leader.</li>
+      <li>Holding tension with a co-founder, your team, or your board that you keep postponing.</li>
+      <li>Exhausted by the emotional weight of being the one people look to.</li>
+      <li>Ready to do the real work — not just the strategic work.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
     <p class="eyebrow">How I work</p>
-    <h2 style="margin-bottom: 38px;">Small practice, focused work.</h2>
+    <h2 style="margin-bottom: 36px;">Small practice, focused work.</h2>
     <div class="grid-3">
-      <div class="card">
-        <h3>One-hour sessions</h3>
-        <p>Mostly on Zoom, sometimes in person in San Francisco. Spot coaching and support between sessions, depending on your package.</p>
+      <div>
+        <h3 style="margin-bottom: 8px;">One-hour sessions</h3>
+        <p class="b-muted">Mostly on Zoom, sometimes in person in San Francisco. Spot coaching and support between sessions, depending on your package.</p>
       </div>
-      <div class="card">
-        <h3>Five to eight clients</h3>
-        <p>I work with a small number of clients at a time — so the work stays focused and I stay present.</p>
+      <div>
+        <h3 style="margin-bottom: 8px;">Five to eight clients</h3>
+        <p class="b-muted">I work with a small number of clients at a time — so the work stays focused and I stay present.</p>
       </div>
-      <div class="card">
-        <h3>What changes</h3>
-        <p>Founders I work with get clearer faster, decide with less second-guessing, have harder conversations without the dread — and feel like themselves again.</p>
+      <div>
+        <h3 style="margin-bottom: 8px;">What changes</h3>
+        <p class="b-muted">Leaders I work with get clearer faster, decide with less second-guessing, have harder conversations without the dread — and feel like themselves again.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section style="padding-top: 0;">
+<section>
   <div class="wrap">
     <p class="eyebrow">One-on-one</p>
-    <h2 style="margin-bottom: 38px;">Start with a conversation.</h2>
+    <h2 style="margin-bottom: 40px;">Start with a conversation.</h2>
     <div class="grid-3">
-      <div class="card feature">
-        <span class="tag">Free</span>
-        <h3>Discovery Call</h3>
+      <div class="card" style="border-color: var(--gold);">
+        <h3>Discovery Call · Free</h3>
         <p>A free 30-minute conversation to explore what you're building, what you're carrying, and whether coaching together would be useful.</p>
-        <a class="go" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book free →</a>
+        <a class="card-cta" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book free →</a>
       </div>
       <div class="card">
         <h3>Executive Coaching · 2x/month</h3>
         <p>Two sessions each month, plus spot coaching and support in between — to help you lead with clarity and navigate challenges in real time.</p>
-        <a class="go" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">View on Paperbell →</a>
+        <a class="card-cta" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">View on Paperbell →</a>
       </div>
       <div class="card">
         <h3>Executive Coaching · 4x/month</h3>
-        <p>Ongoing private coaching for founders and technical leaders navigating high-stakes seasons — building, scaling, fundraising, team dynamics.</p>
-        <a class="go" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">View on Paperbell →</a>
+        <p>Ongoing private coaching for founders and leaders navigating high-stakes seasons — building, scaling, fundraising, team dynamics.</p>
+        <a class="card-cta" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">View on Paperbell →</a>
       </div>
     </div>
   </div>
 </section>
 
-<section style="padding-top: 0;" id="group">
+<section style="padding-top: 0;" id="inner-board">
   <div class="wrap">
-    <div class="group-panel">
+    <div class="panel" style="border-color: var(--gold); align-items: start;">
       <div>
         <p class="eyebrow" style="margin-bottom: 14px;">Small group · By application</p>
-        <h2>Emotional intelligence for leaders.</h2>
-        <p style="color: var(--muted); font-size: 17px; margin-bottom: 26px;">A small-group coaching experience for founders and leaders managing overwhelm and navigating constant change. The same depth as 1:1 work — with the added power of a trusted circle of peers who carry what you carry.</p>
-        <ul class="group-list">
-          <li>Emotional awareness as a leadership practice — reading yourself before you read the room</li>
-          <li>Managing overwhelm: attention, energy, and the weight you don't put down</li>
-          <li>Navigating change and uncertainty without losing your footing — or your people</li>
-          <li>A confidential peer circle, facilitated live — not a course, not a webinar</li>
+        <h2 style="margin-bottom: 8px;">The Inner Board.</h2>
+        <p style="font-size: 17px; font-weight: 600; margin-bottom: 18px;">A private board of peers for the inner game of leading.</p>
+        <p style="color: var(--muted); font-size: 16px; margin-bottom: 26px;">You have a board for the business. This is the board for everything else — a small, confidential group of founders and leaders working on what actually determines how you lead: overwhelm, decisions, and the relationships you lead through.</p>
+        <ul class="outcomes">
+          <li>Decide faster, with less second-guessing — under real pressure</li>
+          <li>Manage overwhelm: attention, energy, and the weight you don't put down</li>
+          <li>Work the whole relationship map — co-founder, team, customers, investors</li>
+          <li>Emotional intelligence as a leadership practice, not a soft skill</li>
+          <li>A confidential circle, facilitated live — not a course, not a webinar</li>
         </ul>
       </div>
-      <div>
-        <div class="card" style="background: var(--ground);">
-          <h3>Next group forming</h3>
-          <p>Small group, capped for depth and confidentiality. Live sessions with Nima. Dates, rhythm, and investment announced to the waitlist first.</p>
-          <a class="btn btn-primary" style="margin-top: 10px;" href="mailto:imani.nima@gmail.com?subject=Group%20coaching%20waitlist%20—%20Emotional%20Intelligence%20for%20Leaders&body=Hi%20Nima%2C%0A%0AI%27d%20like%20to%20join%20the%20waitlist%20for%20the%20group%20coaching%20on%20emotional%20intelligence%20for%20leaders.%0A%0AA%20bit%20about%20me%20and%20what%20I%27m%20carrying%20right%20now%3A%0A%0A" data-track="cta_join_cohort_click">Join the Waitlist</a>
-          <p style="font-size: 13.5px;">No commitment — you'll hear the details first and decide.</p>
-        </div>
+      <div class="card" style="border-color: var(--line);">
+        <h3>Next board forming</h3>
+        <p>Small group, capped for depth and confidentiality. Live sessions with Nima. Dates, rhythm, and investment announced to the waitlist first.</p>
+        <a class="btn btn-primary" style="margin-top: 10px;" href="mailto:imani.nima@gmail.com?subject=The%20Inner%20Board%20—%20waitlist&body=Hi%20Nima%2C%0A%0AI%27d%20like%20to%20join%20the%20waitlist%20for%20The%20Inner%20Board.%0A%0AA%20bit%20about%20me%20and%20what%20I%27m%20carrying%20right%20now%3A%0A%0A" data-track="cta_join_cohort_click">Join the Waitlist</a>
+        <p style="font-size: 13.5px;">No commitment — you'll hear the details first and decide.</p>
       </div>
     </div>
   </div>
@@ -318,33 +157,33 @@
 <section style="padding-top: 0;">
   <div class="wrap">
     <p class="eyebrow">What clients say</p>
-    <h2 style="margin-bottom: 38px;">In their words.</h2>
+    <h2 style="margin-bottom: 40px;">In their words.</h2>
     <div class="grid-2">
-      <div class="t-card">
-        <blockquote>“His coaching helped me tackle key challenges by breaking down complex decisions into simple, actionable steps. I became more confident as an entrepreneur, learning to handle setbacks and stay focused on growth.”</blockquote>
-        <p class="who">Soroosh Sohangir, Ph.D. <span>CEO at Regulate Care · ex-Amazon, ex-Snap</span></p>
+      <div class="card">
+        <p style="color: var(--ink); font-size: 15.5px;">“He doesn't offer traditional business consulting — he asks insightful questions that lead me to uncover the answers I need. My business has tripled since we began working together, and the growth aligns with my values.”</p>
+        <p style="margin-top: auto; font-weight: 600; font-size: 14px;">Kamran Rahman<br><span style="font-weight: 400; color: var(--muted);">Co-founder</span></p>
       </div>
-      <div class="t-card">
-        <blockquote>“He helped me align my technical vision with strategic business goals and trust my instincts more confidently. He was instrumental in enhancing my leadership skills and improving collaboration with my co-founder.”</blockquote>
-        <p class="who">Jacob Rafati <span>Co-Founder &amp; CTO at dble.io</span></p>
+      <div class="card">
+        <p style="color: var(--ink); font-size: 15.5px;">“His coaching helped me tackle key challenges by breaking down complex decisions into simple, actionable steps. I became more confident as an entrepreneur, learning to handle setbacks and stay focused on growth.”</p>
+        <p style="margin-top: auto; font-weight: 600; font-size: 14px;">Soroosh Sohangir, Ph.D.<br><span style="font-weight: 400; color: var(--muted);">CEO at Regulate Care · ex-Amazon, ex-Snap</span></p>
       </div>
-      <div class="t-card">
-        <blockquote>“His unique ability to help separate my emotional decision-making from strategic business planning was invaluable. What sets him apart is his genuine empathy and skill in asking the right questions that lead to powerful insights.”</blockquote>
-        <p class="who">Carmelo Santana <span>Technical Lead &amp; Creator of Coqui</span></p>
+      <div class="card">
+        <p style="color: var(--ink); font-size: 15.5px;">“He helped me align my technical vision with strategic business goals and trust my instincts more confidently. He was instrumental in enhancing my leadership skills and improving collaboration with my co-founder.”</p>
+        <p style="margin-top: auto; font-weight: 600; font-size: 14px;">Jacob Rafati<br><span style="font-weight: 400; color: var(--muted);">Co-Founder &amp; CTO at dble.io</span></p>
       </div>
-      <div class="t-card">
-        <blockquote>“Every conversation with Nima brought fresh insights or a new perspective. It's incredibly helpful to have someone who not only listens but also offers thoughtful advice — a trusted mentor for clarity and new viewpoints.”</blockquote>
-        <p class="who">Arif Khan <span>Founder of Zinzu · ex-Microsoft</span></p>
+      <div class="card">
+        <p style="color: var(--ink); font-size: 15.5px;">“Every conversation with Nima brought fresh insights or a new perspective. It's incredibly helpful to have someone who not only listens but also offers thoughtful advice — a trusted mentor for clarity and new viewpoints.”</p>
+        <p style="margin-top: auto; font-weight: 600; font-size: 14px;">Arif Khan<br><span style="font-weight: 400; color: var(--muted);">Founder of Zinzu · ex-Microsoft</span></p>
       </div>
     </div>
-    <p style="margin-top: 26px; font-size: 14.5px; color: var(--muted);">More testimonials on <a href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">the booking page</a>.</p>
+    <p style="margin-top: 24px; font-size: 14.5px; color: var(--muted);">More testimonials on <a href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">the booking page</a>.</p>
   </div>
 </section>
 
 <section style="padding-top: 0;">
   <div class="wrap">
     <p class="eyebrow">Questions</p>
-    <h2 style="margin-bottom: 32px;">Straight answers.</h2>
+    <h2 style="margin-bottom: 30px;">Straight answers.</h2>
     <div class="faq" style="max-width: 720px;">
       <details>
         <summary>Is this coaching or consulting?</summary>
@@ -355,12 +194,12 @@
         <p>No. Coaching is not therapy and does not diagnose or treat mental health conditions. We may work with emotions, stress, and overwhelm, but always in the context of leadership, building, and personal growth.</p>
       </details>
       <details>
-        <summary>Do I need to be post-revenue?</summary>
-        <p>No, but the work is most useful when you are carrying real stakes: a team, customers, investors, a serious venture, or a major transition.</p>
+        <summary>Is this only for founders?</summary>
+        <p>No. I work with founders, executives, managers, and leaders whose roles are changing — anyone carrying real stakes: a team, customers, investors, or a major transition.</p>
       </details>
       <details>
-        <summary>What's the difference between 1:1 and the group?</summary>
-        <p>1:1 is private, tailored, and moves at your pace. The group works on shared ground — emotional intelligence, overwhelm, navigating change — with the honesty and perspective of peers who carry similar weight. Many leaders do both.</p>
+        <summary>What's the difference between 1:1 and The Inner Board?</summary>
+        <p>1:1 is private, tailored, and moves at your pace. The Inner Board works on shared ground — decisions, overwhelm, relationships — with the honesty and perspective of peers who carry similar weight. Many leaders do both.</p>
       </details>
       <details>
         <summary>What happens on a discovery call?</summary>
@@ -370,27 +209,28 @@
   </div>
 </section>
 
-<section class="final">
+<section class="band">
   <div class="wrap">
-    <h2 style="margin-bottom: 16px; max-width: 22ch;">Start with a free discovery call.</h2>
-    <p class="lede" style="margin-bottom: 34px;">Thirty minutes. No pitch — a real conversation about what you're carrying and whether this work would help.</p>
+    <h2 style="margin-bottom: 16px; max-width: 24ch;">Start with a free discovery call.</h2>
+    <p class="lede" style="margin-bottom: 32px;">Thirty minutes. No pitch — a real conversation about what you're carrying and whether this work would help.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book on Paperbell</a>
-      <a class="btn btn-ghost" href="#group">Join the group waitlist</a>
+      <a class="btn btn-ghost" href="#inner-board">Join The Inner Board waitlist</a>
     </div>
   </div>
 </section>
 
-<footer class="min">
+<footer class="site">
   <div class="wrap">
-    <span>Nima Imani · Executive Coaching</span>
-    <span>
-      <a href="mailto:imani.nima@gmail.com">imani.nima@gmail.com</a> ·
-      <a href="https://www.linkedin.com/in/imaninima/" target="_blank" rel="noopener">LinkedIn</a> ·
-      <a href="index.html">Part of the InsightsOut community</a>
-    </span>
+    <span>InsightsOut · Human leadership for the age of AI</span>
+    <span>San Francisco · <a href="mailto:imani.nima@gmail.com">imani.nima@gmail.com</a> · <a href="https://www.linkedin.com/in/imaninima/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://luma.com/embed/calendar/cal-cHPs3Da3iGJZspe/events" target="_blank" rel="noopener">Luma</a></span>
   </div>
 </footer>
+
+<div class="msticky">
+  <a class="btn btn-primary btn-sm" href="https://paperbell.me/nimani" target="_blank" rel="noopener" data-track="book_coaching_click">Book a Call</a>
+  <a class="btn btn-ghost btn-sm" href="#inner-board">Inner Board</a>
+</div>
 
 </body>
 </html>
