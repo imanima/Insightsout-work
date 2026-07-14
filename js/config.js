@@ -3,12 +3,12 @@
 // This is the ONE file to edit when connecting real services.
 // ============================================================
 window.IO_CONFIG = {
-  // --- Booking (Google Calendar appointment schedules) ---
-  // In Google Calendar: Create > Appointment schedule > Share > copy the
-  // booking page link, then paste it here. Two schedules recommended:
-  // one for coaching discovery calls, one for organization calls.
-  // Example: "https://calendar.google.com/calendar/appointments/schedules/AcZs..."
-  BOOKING_URL_COACHING: "",
+  // --- Booking ---
+  // Coaching books through Paperbell (Nima's executive-coaching practice).
+  // Paperbell blocks iframe embedding, so buttons open it in a new tab.
+  BOOKING_URL_COACHING: "https://paperbell.me/nimani",
+  // Organization calls: paste a Google Calendar appointment-schedule link
+  // (Calendar > Create > Appointment schedule > Share) or another booking URL.
   BOOKING_URL_ORG: "",
 
   // --- Cohort form backend ---
