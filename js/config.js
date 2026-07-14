@@ -7,9 +7,8 @@ window.IO_CONFIG = {
   // Coaching books through Paperbell (Nima's executive-coaching practice).
   // Paperbell blocks iframe embedding, so buttons open it in a new tab.
   BOOKING_URL_COACHING: "https://paperbell.me/nimani",
-  // Organization calls: paste a Google Calendar appointment-schedule link
-  // (Calendar > Create > Appointment schedule > Share) or another booking URL.
-  BOOKING_URL_ORG: "",
+  // Discovery calls (organizations + general) book through Google Calendar.
+  BOOKING_URL_ORG: "https://calendar.app.google/8y9NgWzBLaiT414G6",
 
   // --- Cohort form backend ---
   // Leave empty to use the email fallback (opens a pre-filled email).
