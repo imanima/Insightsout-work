@@ -1,6 +1,6 @@
 # InsightsOut.work
 
-Static site for **InsightsOut — Human leadership for the age of AI**.
+Static site for **InsightsOut — helping people and teams find their way through rapid change**.
 No build step: plain HTML/CSS/JS, deployable as-is to Vercel, Netlify, or any static host.
 
 ## Run locally
@@ -28,8 +28,8 @@ so no lead is ever dropped.
 ## Events (Luma)
 
 Events display through the official Luma calendar embed
-(`https://luma.com/embed/calendar/cal-cHPs3Da3iGJZspe/events`) on the Home and
-Events pages — always current, zero maintenance.
+(`https://luma.com/embed/calendar/cal-cHPs3Da3iGJZspe/events`) on the Events
+page so registration stays current without duplicating event details.
 
 For custom-branded event cards later (blueprint Phase 2), the plumbing already
 exists: `scripts/fetch_luma_events.py` writes `data/events.json` from the Luma
@@ -48,11 +48,21 @@ python3 scripts/fetch_luma_events.py
 `window.dataLayer` now; adding a Plausible or PostHog snippet picks them up
 automatically.
 
+## Research and articles
+
+`insights.html` is the research hub. `js/research.js` calculates transparent
+event record statistics from `data/events.json`. The first field note lives at
+`articles/event-record-2026.html` and clearly separates calendar records from
+participant outcomes.
+
+Participant findings should only be added after optional anonymous responses
+have been collected in sufficient numbers. The current publishing threshold is
+10 responses.
+
 ## Content notes
 
-- Insights topic chips mirror the research-engine Topic taxonomy
-  (see `IMPLEMENTATION_PLAN.md` in the Luma data reader repo §3) so published
-  articles land in matching categories.
+- Research currently focuses on role change, overwhelm and agency, and
+  responsible AI adoption.
 - No fabricated testimonials — add a TestimonialCard section once real quotes exist.
 - Photos: confirm all event photos are approved for public use before deploying.
 

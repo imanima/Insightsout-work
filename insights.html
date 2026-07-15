@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-events-source="data/events.json">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Insights — InsightsOut</title>
-  <meta name="description" content="Field notes from the human side of AI change — essays, frameworks, and patterns from InsightsOut cohorts, workshops, and hundreds of conversations with founders and leaders.">
+  <title>Research and Articles | InsightsOut</title>
+  <meta name="description" content="Event based research and clear articles about role change, overwhelm, leadership, agency, and responsible AI adoption.">
   <link rel="canonical" href="https://insightsout.work/insights.html">
-  <meta property="og:title" content="InsightsOut — Field notes from the human side of AI change">
-  <meta property="og:description" content="Essays, frameworks, and patterns written from practice, not punditry.">
+  <meta property="og:title" content="InsightsOut Research and Articles">
+  <meta property="og:description" content="Learning from people inside rapid change, with clear methods and no invented findings.">
   <meta property="og:image" content="https://insightsout.work/assets/photo1.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/config.js?v=2" defer></script>
-  <script src="js/main.js?v=2" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <script src="js/config.js?v=4" defer></script>
+  <script src="js/main.js?v=4" defer></script>
+  <script src="js/research.js?v=1" defer></script>
 </head>
 <body>
 
@@ -23,101 +24,128 @@
       Insights<em>Out</em>
     </a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="events.html">Events</a>
       <a href="cohort.html">Cohort</a>
-      <a href="coaching.html">Coaching</a>
+      <a href="events.html">Events</a>
       <a href="organizations.html">Organizations</a>
-      <a href="insights.html" class="active">Insights</a>
+      <a href="insights.html" class="active">Research</a>
       <a href="about.html">About</a>
     </div>
-    <a class="btn btn-primary btn-sm" href="cohort.html#join" data-track="cta_join_cohort_click">Join Cohort</a>
+    <a class="btn btn-primary btn-sm" href="events.html">Join an Event</a>
   </div>
 </nav>
 
-<section style="padding-top: 100px;">
-  <div class="wrap">
-    <p class="eyebrow">Insights &amp; research</p>
-    <h1 style="max-width: 18ch; margin-bottom: 26px;">Field notes from the human side of AI change.</h1>
-    <p class="lede">Essays, frameworks, and patterns gathered from cohorts, workshops, and hundreds of conversations with founders and leaders navigating the shift. Written from practice, not punditry — and grounded in our own community research.</p>
-    <!-- Topic filters match the research-engine taxonomy (Topic nodes) so
-         published articles land in matching categories automatically. -->
-    <div class="chips" style="margin-top: 30px;">
-      <span class="chip">AI enablement</span>
-      <span class="chip">Future of work</span>
-      <span class="chip">AI ethics</span>
-      <span class="chip">Role change</span>
-      <span class="chip">The emotional side of change</span>
-      <span class="chip">Founder psychology</span>
-      <span class="chip">Human-AI collaboration</span>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top: 0;">
-  <div class="wrap">
-    <div class="grid-3">
-      <a class="card" href="#" aria-disabled="true">
-        <p class="eyebrow" style="margin-bottom: 4px;">Role change</p>
-        <h3>“What is my role becoming?” — notes from 40 conversations</h3>
-        <p>The question underneath almost every AI conversation we host, and what people discover when they finally say it out loud. <em>(Coming soon.)</em></p>
-        <span class="card-cta">Read →</span>
-      </a>
-      <a class="card" href="#" aria-disabled="true">
-        <p class="eyebrow" style="margin-bottom: 4px;">The emotional side of change</p>
-        <h3>Emotion as data: the skill AI can't automate</h3>
-        <p>Why emotional awareness is becoming a leadership capability, not a soft extra — and how to practice it. <em>(Coming soon.)</em></p>
-        <span class="card-cta">Read →</span>
-      </a>
-      <a class="card" href="#" aria-disabled="true">
-        <p class="eyebrow" style="margin-bottom: 4px;">AI enablement</p>
-        <h3>The adoption gap is human, not technical</h3>
-        <p>A framework from our organizational work: why rollouts stall after the pilot, and what actually moves them. <em>(Coming soon.)</em></p>
-        <span class="card-cta">Read →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top: 0;" id="newsletter">
-  <div class="wrap">
-    <div class="panel">
-      <div>
-        <p class="eyebrow">Newsletter</p>
-        <h2 style="margin-bottom: 14px;">One honest letter, monthly.</h2>
-        <p style="color: var(--muted);">What we're seeing in the community, one framework worth trying, and upcoming events. No hype, no flood.</p>
-      </div>
-      <div>
-        <form class="newsletter" id="newsletter-form">
-          <input type="email" placeholder="you@example.com" aria-label="Email address" required>
-          <button class="btn btn-primary" type="submit">Subscribe</button>
-        </form>
-        <p id="newsletter-status" class="form-status" role="status" aria-live="polite" style="margin-top: 10px;"></p>
+<main>
+  <section class="simple-hero research-hero">
+    <div class="wrap">
+      <p class="eyebrow">Research and articles</p>
+      <h1 style="max-width: 18ch; margin-bottom: 26px;">What people are experiencing inside rapid change.</h1>
+      <p class="lede">InsightsOut studies role change, overwhelm, leadership, agency, and responsible AI adoption through events, anonymous reflections, interviews, and practical labs.</p>
+      <div class="cta-row" style="margin-top: 34px;">
+        <a class="btn btn-primary" href="articles/event-record-2026.html">Read the First Field Note</a>
+        <a class="btn btn-ghost" href="#method">See How We Learn</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="band">
-  <div class="wrap">
-    <h2 style="margin-bottom: 26px; max-width: 26ch;">The research starts in the room.</h2>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="events.html">Attend an Event</a>
-      <a class="btn btn-ghost" href="cohort.html#join" data-track="cta_join_cohort_click">Join the Next Cohort</a>
+  <section class="section-tight">
+    <div class="wrap">
+      <p class="eyebrow">The event record</p>
+      <h2 style="max-width: 25ch; margin-bottom: 16px;">A transparent starting point.</h2>
+      <p class="lede" style="margin-bottom: 40px;">These numbers describe InsightsOut gatherings hosted or scheduled in 2026. They do not claim participant outcomes.</p>
+      <div class="research-stats">
+        <div class="research-stat"><strong data-event-stat="total">18</strong><span>events hosted or scheduled</span></div>
+        <div class="research-stat"><strong data-event-stat="in_person">12</strong><span>in person gatherings</span></div>
+        <div class="research-stat"><strong data-event-stat="online">6</strong><span>online gatherings</span></div>
+      </div>
+      <p class="method-note" data-event-data-status>Calculated from the public InsightsOut event record.</p>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">What we are studying</p>
+      <div class="research-questions">
+        <article>
+          <span>01</span>
+          <h2>Role change</h2>
+          <p>How do people understand their value when their work, responsibilities, or professional identity start changing?</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Overwhelm and agency</h2>
+          <p>What helps people move from fear and overload toward clearer choices and practical action?</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Responsible adoption</h2>
+          <p>How can teams use AI while protecting trust, human judgment, clear ownership, and honest communication?</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles">
+    <div class="wrap">
+      <p class="eyebrow">Articles and field notes</p>
+      <h2 style="margin-bottom: 18px;">Useful writing with the evidence clearly named.</h2>
+      <p class="lede" style="margin-bottom: 44px;">Every article will distinguish event records, participant data, facilitator observations, and outside research.</p>
+      <div class="article-list">
+        <a class="article-card article-live" href="articles/event-record-2026.html">
+          <div><span class="article-type">Field note · Event record</span><h3>What the InsightsOut Event Record Shows So Far</h3><p>A transparent look at 2026 programming across emotion, founder pressure, overwhelm, role change, and practical adoption.</p></div>
+          <span class="article-link">Read article</span>
+        </a>
+        <div class="article-card">
+          <div><span class="article-type">Participant study · In development</span><h3>When Your Role Starts Changing</h3><p>What people fear, what helps them recover agency, and what paths they begin testing.</p></div>
+          <span class="article-link">Collecting anonymous responses</span>
+        </div>
+        <div class="article-card">
+          <div><span class="article-type">Practice brief · In development</span><h3>What Should Stay Human?</h3><p>Patterns from teams deciding what to automate and where human judgment must remain.</p></div>
+          <span class="article-link">Research in progress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" id="method" style="padding-top: 0;">
+    <div class="wrap panel research-method">
+      <div>
+        <p class="eyebrow">How we learn</p>
+        <h2 style="margin-bottom: 16px;">Small, careful, and transparent.</h2>
+        <p style="color: var(--muted);">Events are not automatically research studies. Attendees choose whether to contribute anonymous reflections.</p>
+      </div>
+      <ul class="outcomes">
+        <li>Optional questions before and after selected events</li>
+        <li>No names in published event findings</li>
+        <li>Aggregate findings only when at least 10 people respond</li>
+        <li>Clear separation between data and facilitator interpretation</li>
+        <li>No claims that the available evidence cannot support</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">Research begins in the room</p>
+      <h2 style="max-width: 25ch; margin-bottom: 18px;">Join a practical event and help us understand change more honestly.</h2>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="events.html">See Upcoming Events</a>
+        <a class="btn btn-ghost" href="mailto:imani.nima@gmail.com?subject=InsightsOut%20research%20conversation">Share Your Experience</a>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <span>InsightsOut · Human leadership for a time of rapid change</span>
-    <span>San Francisco · <a href="mailto:imani.nima@gmail.com">imani.nima@gmail.com</a> · <a href="https://www.linkedin.com/in/imaninima/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://luma.com/embed/calendar/cal-cHPs3Da3iGJZspe/events" target="_blank" rel="noopener">Luma</a></span>
+    <span>InsightsOut · Find your way through rapid change</span>
+    <span><a href="cohort.html">Cohort</a> · <a href="events.html">Events</a> · <a href="organizations.html">Organizations</a> · <a href="insights.html">Research</a> · <a href="coaching.html">Private Coaching</a> · <a href="about.html">About</a></span>
+    <span>San Francisco · <a href="mailto:imani.nima@gmail.com">imani.nima@gmail.com</a> · <a href="https://www.linkedin.com/in/imaninima/" target="_blank" rel="noopener">LinkedIn</a></span>
   </div>
 </footer>
 
 <div class="msticky">
-  <a class="btn btn-primary btn-sm" href="cohort.html#join" data-track="cta_join_cohort_click">Join Cohort</a>
-  <a class="btn btn-ghost btn-sm" href="events.html">Events</a>
+  <a class="btn btn-primary btn-sm" href="events.html">Join an Event</a>
+  <a class="btn btn-ghost btn-sm" href="articles/event-record-2026.html">Read Field Note</a>
 </div>
 
 </body>

@@ -35,11 +35,11 @@ document.addEventListener("click", function (e) {
     window.open(url, "_blank", "noopener");
   } else {
     var subject = kind === "org"
-      ? "Organization discovery call — InsightsOut"
-      : "Coaching discovery call — InsightsOut";
-    var body = "Hi Nima,%0D%0A%0D%0AI'd like to book a " +
-      (kind === "org" ? "discovery call for my organization." : "coaching discovery call.") +
-      "%0D%0A%0D%0AA few times that work for me:%0D%0A- %0D%0A- %0D%0A%0D%0AThanks!";
+      ? "Organization conversation | InsightsOut"
+      : "Private coaching conversation | InsightsOut";
+    var body = "Hi Nima,%0D%0A%0D%0AI would like to book a " +
+      (kind === "org" ? "conversation for my organization." : "private coaching conversation.") +
+      "%0D%0A%0D%0ATime 1:%0D%0ATime 2:%0D%0A%0D%0AThank you.";
     window.location.href = "mailto:" + (window.IO_CONFIG.CONTACT_EMAIL || "") +
       "?subject=" + encodeURIComponent(subject) + "&body=" + body;
   }
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }).then(function (r) {
         if (!r.ok) throw new Error("HTTP " + r.status);
         form.reset();
-        status.textContent = "You're in. Check your email for next steps — we'll be in touch soon.";
+        status.textContent = "You are in. Check your email for next steps. We will be in touch soon.";
         status.className = "form-status ok";
       }).catch(function () {
         status.textContent = "That didn't go through. Please try again, or email " +
@@ -110,21 +110,16 @@ document.addEventListener("DOMContentLoaded", function () {
       // Email fallback: opens a pre-filled message so the lead reaches Nima
       // even before a form backend is configured.
       var lines = [
-        "Cohort interest — submitted from insightsout.work", "",
+        "Group coaching interest from insightsout.work", "",
         "Name: " + (data.name || ""),
         "Email: " + (data.email || ""),
-        "Role / work context: " + (data.role || ""),
-        "AI comfort level: " + (data.ai_comfort || ""),
-        "What brings you: " + (data.motivation || ""),
-        "Wants to build or lead: " + (data.build_goal || ""),
-        "Schedule preference: " + (data.schedule || ""),
-        "Interested in coaching too: " + (data.coaching_interest ? "yes" : "no"),
+        "What they are working through: " + (data.motivation || ""),
         "Consent to updates: " + (data.consent ? "yes" : "no")
       ];
       window.location.href = "mailto:" + window.IO_CONFIG.CONTACT_EMAIL +
-        "?subject=" + encodeURIComponent("Join the Next Cohort — " + data.name) +
+        "?subject=" + encodeURIComponent("Group coaching waitlist: " + data.name) +
         "&body=" + encodeURIComponent(lines.join("\n"));
-      status.textContent = "Opening your email app to send your details. (Connect a form backend in js/config.js to make this seamless.)";
+      status.textContent = "Your email app is opening with your details. Send the message to complete your application.";
       status.className = "form-status ok";
     }
   });
@@ -149,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }).then(function () {
         status.textContent = "Subscribed. Welcome.";
       }).catch(function () {
-        status.textContent = "Something went wrong — try again?";
+        status.textContent = "Something went wrong. Please try again.";
       });
     } else {
       window.location.href = "mailto:" + window.IO_CONFIG.CONTACT_EMAIL +
