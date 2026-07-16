@@ -16,7 +16,7 @@ window.IO_CONFIG = {
   FORM_ENDPOINT: "",
 
   // --- Contact ---
-  CONTACT_EMAIL: "imani.nima@gmail.com",
+  CONTACT_EMAIL: "nimani.coaching@gmail.com",
 
   // --- Luma ---
   // The events pages use the official calendar embed (cal-cHPs3Da3iGJZspe)

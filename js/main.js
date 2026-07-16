@@ -85,6 +85,11 @@ document.addEventListener("DOMContentLoaded", function () {
       status.className = "form-status err";
       return;
     }
+    if (!data.consent) {
+      status.textContent = "Please confirm that you want cohort and event updates.";
+      status.className = "form-status err";
+      return;
+    }
 
     window.ioTrack("cohort_form_submit", { role: data.role || null });
     var endpoint = (window.IO_CONFIG || {}).FORM_ENDPOINT;
@@ -99,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }).then(function (r) {
         if (!r.ok) throw new Error("HTTP " + r.status);
         form.reset();
-        status.textContent = "You are in. Check your email for next steps. We will be in touch soon.";
+        status.textContent = "You are on the interest list. We will email you when dates are ready.";
         status.className = "form-status ok";
       }).catch(function () {
         status.textContent = "That didn't go through. Please try again, or email " +
@@ -131,26 +136,50 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!nl) return;
   nl.addEventListener("submit", function (e) {
     e.preventDefault();
-    var email = nl.querySelector("input[type=email]").value;
-    if (!email) return;
-    window.ioTrack("newsletter_submit");
-    var endpoint = (window.IO_CONFIG || {}).NEWSLETTER_ENDPOINT;
+    var data = {};
+    new FormData(nl).forEach(function (v, k) { data[k] = v; });
     var status = document.getElementById("newsletter-status");
+    if (!data.email) {
+      status.textContent = "Please add your email.";
+      status.className = "form-status err";
+      return;
+    }
+    if (!data.consent) {
+      status.textContent = "Please confirm that you want to receive The Signal and updates.";
+      status.className = "form-status err";
+      return;
+    }
+    window.ioTrack("newsletter_submit", { interest: data.interest || null, source: data.source || null });
+    var endpoint = (window.IO_CONFIG || {}).NEWSLETTER_ENDPOINT;
     if (endpoint) {
+      status.textContent = "Subscribing…";
+      status.className = "form-status";
       fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email })
-      }).then(function () {
-        status.textContent = "Subscribed. Welcome.";
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data)
+      }).then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        nl.reset();
+        status.textContent = "Subscribed. We will send the report when it is ready.";
+        status.className = "form-status ok";
       }).catch(function () {
         status.textContent = "Something went wrong. Please try again.";
+        status.className = "form-status err";
       });
     } else {
       window.location.href = "mailto:" + window.IO_CONFIG.CONTACT_EMAIL +
-        "?subject=" + encodeURIComponent("Newsletter signup") +
-        "&body=" + encodeURIComponent("Please add me to the newsletter: " + email);
-      status.textContent = "Opening your email app to confirm.";
+        "?subject=" + encodeURIComponent("The Signal subscription") +
+        "&body=" + encodeURIComponent([
+        "Please add me to the first InsightsOut report and The Signal.", "",
+          "Name: " + (data.first_name || ""),
+          "Email: " + data.email,
+          "Interest: " + (data.interest || ""),
+          "Consent to The Signal, events, and InsightsOut updates: yes",
+          "Source: " + (data.source || "")
+        ].join("\n"));
+      status.textContent = "Your email app is opening. Send the message to confirm.";
+      status.className = "form-status ok";
     }
   });
 });

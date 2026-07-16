@@ -48,16 +48,17 @@ python3 scripts/fetch_luma_events.py
 `window.dataLayer` now; adding a Plausible or PostHog snippet picks them up
 automatically.
 
-## Research and articles
+## The Signal, articles, and field reports
 
-`insights.html` is the research hub. `js/research.js` calculates transparent
-event record statistics from `data/events.json`. The first field note lives at
-`articles/event-record-2026.html` and clearly separates calendar records from
-participant outcomes.
+`insights.html` is the writing and subscription hub. It separates InsightsOut
+perspective essays from evidence-based field notes. `js/research.js` calculates
+transparent event record statistics from `data/events.json`; the event-record
+article clearly separates calendar records from participant outcomes.
 
 Participant findings should only be added after optional anonymous responses
 have been collected in sufficient numbers. The current publishing threshold is
-10 responses.
+10 responses. Every report should name its source, method, sample size, and
+limits.
 
 ## Content notes
 
