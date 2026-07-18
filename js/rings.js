@@ -7,7 +7,7 @@
   var t = 0;
 
   function accentColor() {
-    return getComputedStyle(document.documentElement).getPropertyValue("--head").trim() || "#2E266D";
+    return getComputedStyle(document.documentElement).getPropertyValue("--hero-ring").trim() || "#45BCD4";
   }
   function hexToRgb(hex) {
     hex = hex.replace("#", "");
