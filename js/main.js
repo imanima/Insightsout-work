@@ -17,6 +17,49 @@ document.addEventListener("click", function (e) {
   if (el) window.ioTrack(el.getAttribute("data-track"), { href: el.href || null });
 });
 
+// ---------- Mobile navigation ----------
+document.addEventListener("DOMContentLoaded", function () {
+  var nav = document.querySelector("nav.site");
+  if (!nav) return;
+  var navInner = nav.querySelector(".nav-inner");
+  var links = nav.querySelector(".nav-links");
+  if (!navInner || !links) return;
+
+  links.id = links.id || "primary-nav-links";
+  var toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "btn btn-ghost btn-sm mobile-menu-toggle";
+  toggle.textContent = "Menu";
+  toggle.setAttribute("aria-controls", links.id);
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Open navigation menu");
+
+  var headerAction = navInner.querySelector(":scope > .btn");
+  navInner.insertBefore(toggle, headerAction || null);
+
+  function closeMenu() {
+    nav.classList.remove("mobile-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation menu");
+  }
+
+  toggle.addEventListener("click", function () {
+    var willOpen = !nav.classList.contains("mobile-open");
+    nav.classList.toggle("mobile-open", willOpen);
+    toggle.setAttribute("aria-expanded", String(willOpen));
+    toggle.setAttribute("aria-label", willOpen ? "Close navigation menu" : "Open navigation menu");
+  });
+  links.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
+  document.addEventListener("click", function (e) {
+    if (!nav.contains(e.target)) closeMenu();
+  });
+});
+
 // ---------- Booking ----------
 // Buttons carry data-book="coaching" | "org". If a booking URL is configured,
 // open it; otherwise fall back to a pre-filled email so no lead is ever lost.
@@ -125,6 +168,69 @@ document.addEventListener("DOMContentLoaded", function () {
         "?subject=" + encodeURIComponent("Group coaching waitlist: " + data.name) +
         "&body=" + encodeURIComponent(lines.join("\n"));
       status.textContent = "Your email app is opening with your details. Send the message to complete your application.";
+      status.className = "form-status ok";
+    }
+  });
+});
+
+// ---------- Workshop interest form ----------
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("workshop-form");
+  if (!form) return;
+  var status = document.getElementById("workshop-form-status");
+  var interest = document.getElementById("workshop-interest");
+
+  document.querySelectorAll("[data-workshop-interest]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (interest) interest.value = link.getAttribute("data-workshop-interest");
+    });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+    if (!data.name || !data.email) {
+      status.textContent = "Please add your name and email so we can reach you.";
+      status.className = "form-status err";
+      return;
+    }
+    if (!data.consent) {
+      status.textContent = "Please confirm that you want workshop updates.";
+      status.className = "form-status err";
+      return;
+    }
+
+    window.ioTrack("workshop_form_submit", { interest: data.interest || null });
+    var endpoint = (window.IO_CONFIG || {}).FORM_ENDPOINT;
+    if (endpoint) {
+      status.textContent = "Sending…";
+      status.className = "form-status";
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data)
+      }).then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        form.reset();
+        status.textContent = "You are on the list. We will email you when dates are ready.";
+        status.className = "form-status ok";
+      }).catch(function () {
+        status.textContent = "That did not go through. Please try again, or email " +
+          window.IO_CONFIG.CONTACT_EMAIL + " directly.";
+        status.className = "form-status err";
+      });
+    } else {
+      window.location.href = "mailto:" + window.IO_CONFIG.CONTACT_EMAIL +
+        "?subject=" + encodeURIComponent("Workshop interest: " + (data.interest || "InsightsOut")) +
+        "&body=" + encodeURIComponent([
+          "Workshop interest from insightsout.work", "",
+          "Name: " + data.name,
+          "Email: " + data.email,
+          "Most relevant: " + (data.interest || ""),
+          "Consent to workshop updates: yes"
+        ].join("\n"));
+      status.textContent = "Your email app is opening. Send the message to join the list.";
       status.className = "form-status ok";
     }
   });
