@@ -591,8 +591,29 @@ footer.personal-footer .footer-brand { font-family: var(--display); }
 .about-work-grid a:hover span { color: var(--coral-deep); }
 .about-work-grid p { color: var(--muted); font-size: 14.5px; }
 .about-origin-section { padding-top: 80px; }
-.about-origin { padding: 54px; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; }
-.about-origin .text-link { display: inline-block; margin-top: 26px; }
+.about-origin { padding: 54px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.about-founder-copy h2 { max-width: 21ch; margin-bottom: 24px; }
+.about-credibility {
+  display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 34px;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.about-credibility > div { padding: 20px 18px; border-right: 1px solid var(--line); }
+.about-credibility > div:first-child { padding-left: 0; }
+.about-credibility > div:last-child { padding-right: 0; border-right: 0; }
+.about-credibility strong { display: block; color: var(--head); font-size: 14px; line-height: 1.35; }
+.about-credibility span { display: block; color: var(--muted); font-size: 12.5px; line-height: 1.5; margin-top: 6px; }
+.about-founder-actions { margin-top: 26px; gap: 28px; }
+.about-work-intro { max-width: 720px; margin-bottom: 42px; }
+.about-work-grid-primary a small {
+  display: block; color: var(--coral-deep); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px;
+}
+.about-secondary-links {
+  display: flex; align-items: center; gap: 18px 28px; flex-wrap: wrap;
+  margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line);
+}
+.about-secondary-links p { color: var(--muted); font-size: 14px; }
+.about-secondary-links .text-link { font-size: 14px; }
 
 /* ---------- event research and articles ---------- */
 .research-hero { background: var(--surface); border-bottom: 1px solid var(--line); }
@@ -684,6 +705,11 @@ a.article-card:hover { text-decoration: none; }
   .about-work-grid a:nth-child(odd) { padding-left: 0; border-left: 0; }
   .signal-signup { gap: 44px; }
   .community-path-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-credibility { grid-template-columns: 1fr; }
+  .about-credibility > div,
+  .about-credibility > div:first-child,
+  .about-credibility > div:last-child { padding: 16px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .about-credibility > div:last-child { border-bottom: 0; }
 }
 @media (max-width: 640px) {
   .simple-hero { padding: 70px 0; }
