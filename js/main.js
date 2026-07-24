@@ -73,7 +73,7 @@ document.addEventListener("click", function (e) {
   e.preventDefault();
   var kind = el.getAttribute("data-book");
   window.ioTrack(kind === "org" ? "book_org_call_click" : "book_coaching_click");
-  var url = bookingUrl(kind);
+  var url = bookingUrl(kind) || el.href;
   if (url) {
     window.open(url, "_blank", "noopener");
   } else {
@@ -83,7 +83,8 @@ document.addEventListener("click", function (e) {
     var body = "Hi Nima,%0D%0A%0D%0AI would like to book a " +
       (kind === "org" ? "conversation for my organization." : "private coaching conversation.") +
       "%0D%0A%0D%0ATime 1:%0D%0ATime 2:%0D%0A%0D%0AThank you.";
-    window.location.href = "mailto:" + (window.IO_CONFIG.CONTACT_EMAIL || "") +
+    var contactEmail = (window.IO_CONFIG || {}).CONTACT_EMAIL || "nima@insightsout.work";
+    window.location.href = "mailto:" + contactEmail +
       "?subject=" + encodeURIComponent(subject) + "&body=" + body;
   }
 });

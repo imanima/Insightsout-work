@@ -5,7 +5,7 @@
 window.IO_CONFIG = {
   // --- Booking ---
   // Private coaching books through Nima's Paperbell discovery call.
-  BOOKING_URL_COACHING: "https://paperbell.me/nimani/checkout/packages/145702",
+  BOOKING_URL_COACHING: "https://app.paperbell.com/checkout/packages/145702",
   // Discovery calls (organizations + general) book through Google Calendar.
   BOOKING_URL_ORG: "https://calendar.app.google/8y9NgWzBLaiT414G6",
 
@@ -16,7 +16,7 @@ window.IO_CONFIG = {
   FORM_ENDPOINT: "",
 
   // --- Contact ---
-  CONTACT_EMAIL: "nimani.coaching@gmail.com",
+  CONTACT_EMAIL: "nima@insightsout.work",
 
   // --- Luma ---
   // The events pages use the official calendar embed (cal-cHPs3Da3iGJZspe)

@@ -1109,6 +1109,32 @@ footer.site a { color: #D6DEEA; }
   right: 2px;
   color: #538d92;
 }
+.coach-situation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.coach-situation-grid li {
+  min-height: 116px;
+  padding: 24px 26px 24px 0;
+}
+.coach-situation-grid li:nth-child(even) {
+  padding-left: 26px;
+  border-left: 1px solid var(--personal-line);
+}
+.coach-situation-grid li::after { content: none; }
+.coach-situation-grid span,
+.coach-situation-grid strong { display: block; }
+.coach-situation-grid span {
+  margin-bottom: 18px;
+  color: #6b8386;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.coach-situation-grid strong {
+  color: var(--personal-ink);
+  font-size: 17px;
+  font-weight: 650;
+}
 .coach-session-note {
   margin-top: 42px;
   padding: 26px 0 0 28px;
@@ -1131,6 +1157,13 @@ footer.site a { color: #D6DEEA; }
   font-size: 16px;
   line-height: 1.65;
 }
+.coach-session-note .coach-practice-note {
+  margin-top: 18px;
+  padding-top: 18px;
+  color: var(--personal-muted);
+  border-top: 1px solid var(--personal-line);
+  font-size: 14.5px;
+}
 .coach-session-note span {
   margin-top: 14px;
   color: var(--personal-muted);
@@ -1138,6 +1171,65 @@ footer.site a { color: #D6DEEA; }
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+.coach-engagement-section {
+  padding: 108px 0;
+  background: var(--personal-surface);
+  border-top: 1px solid var(--personal-line);
+  border-bottom: 1px solid var(--personal-line);
+}
+.coach-engagement-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  gap: 104px;
+  align-items: start;
+}
+.coach-engagement-grid h2 {
+  max-width: 13ch;
+  color: var(--personal-ink);
+  font-size: clamp(2.45rem, 4.5vw, 3.8rem);
+}
+.coach-engagement-intro {
+  max-width: 34ch;
+  margin-top: 24px;
+  color: var(--personal-muted);
+  font-size: 17px;
+}
+.coach-engagement-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--personal-line);
+}
+.coach-engagement-steps li {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 18px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--personal-line);
+}
+.coach-engagement-steps li > span {
+  color: #6b8386;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.coach-engagement-steps h3 {
+  margin-bottom: 7px;
+  font-size: 1.05rem;
+}
+.coach-engagement-steps p {
+  max-width: 58ch;
+  color: var(--personal-muted);
+  font-size: 15px;
+}
+.coach-confidentiality {
+  margin-top: 28px;
+  padding: 22px 24px;
+  color: var(--personal-muted);
+  border-left: 3px solid var(--personal-accent);
+  background: var(--personal-paper);
+  font-size: 14.5px;
+}
+.coach-confidentiality strong { color: var(--personal-ink); }
 .coach-testimonial-section {
   padding: 116px 0;
   background: #182427;
@@ -1145,34 +1237,33 @@ footer.site a { color: #D6DEEA; }
 .coach-testimonial-section .eyebrow { color: var(--personal-accent); }
 .coach-testimonial-grid {
   display: grid;
-  grid-template-columns: 1.16fr 0.84fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .coach-testimonial-grid figure {
   display: flex;
-  min-height: 370px;
+  min-height: 320px;
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
-  padding: 46px 52px 42px 0;
+  padding: 42px 46px 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-.coach-testimonial-grid figure + figure {
-  padding-left: 52px;
+.coach-testimonial-grid figure:nth-child(even) {
+  padding-left: 46px;
   padding-right: 0;
   border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
+.coach-testimonial-grid figure:nth-last-child(-n + 2) { border-bottom: 0; }
 .coach-testimonial-grid blockquote {
   margin: 0;
   color: #f2eee5;
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
   font-weight: 400;
   line-height: 1.4;
-}
-.coach-testimonial-grid figure + figure blockquote {
-  font-size: clamp(1.45rem, 2.5vw, 1.95rem);
 }
 .coach-testimonial-grid figcaption {
   margin-top: 40px;
@@ -1462,6 +1553,7 @@ footer.site a { color: #D6DEEA; }
   }
   .coach-editorial-grid,
   .founder-story-grid { gap: 54px; }
+  .coach-engagement-grid { gap: 54px; }
   .coach-about-lean { gap: 54px; }
 }
 
@@ -1471,6 +1563,7 @@ footer.site a { color: #D6DEEA; }
   .coach-premium-hero .coaching-hero-grid,
   .founder-hero-grid,
   .coach-editorial-grid,
+  .coach-engagement-grid,
   .coach-about-lean,
   .founder-story-grid,
   .founder-work-heading,
@@ -1501,6 +1594,7 @@ footer.site a { color: #D6DEEA; }
     border-right: 0;
   }
   .coach-editorial-intro,
+  .coach-engagement-section,
   .coach-testimonial-section,
   .coach-about-section,
   .coach-final,
@@ -1511,6 +1605,7 @@ footer.site a { color: #D6DEEA; }
   .coach-editorial-grid,
   .founder-story-grid { gap: 34px; }
   .coach-editorial-grid h2,
+  .coach-engagement-grid h2,
   .founder-story-grid h2,
   .coach-about-lean h2 { font-size: clamp(2.2rem, 11vw, 3.1rem); }
   .founder-work-heading {
@@ -1520,7 +1615,8 @@ footer.site a { color: #D6DEEA; }
   .founder-work-heading .eyebrow { grid-column: auto; }
   .coach-testimonial-grid { grid-template-columns: 1fr; }
   .coach-testimonial-grid figure,
-  .coach-testimonial-grid figure + figure {
+  .coach-testimonial-grid figure + figure,
+  .coach-testimonial-grid figure:nth-child(even) {
     min-height: 0;
     padding: 36px 0;
     border-left: 0;
@@ -1559,4 +1655,12 @@ footer.site a { color: #D6DEEA; }
     padding: 16px 0;
     border-right: 0;
   }
+  .coach-situation-grid { grid-template-columns: 1fr; }
+  .coach-situation-grid li,
+  .coach-situation-grid li:nth-child(even) {
+    min-height: 0;
+    padding: 20px 0;
+    border-left: 0;
+  }
+  .coach-situation-grid span { margin-bottom: 10px; }
 }
