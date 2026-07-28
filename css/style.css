@@ -486,6 +486,22 @@ figure.shot figcaption {
 .offer-split h2 { margin-bottom: 18px; }
 .offer-split .lede { margin-bottom: 26px; }
 .offer-split .outcomes { margin-bottom: 30px; }
+
+.home-hero .text-link {
+  color: #7cd8e6;
+}
+
+.home-hero .text-link:hover {
+  color: #a4e6ef;
+}
+
+.simple-offer-actions {
+  margin-top: 30px;
+}
+
+.simple-process {
+  background: var(--surface);
+}
 .offer-side { border-left: 1px solid color-mix(in srgb, var(--band-ink) 22%, transparent); padding-left: 72px; }
 .home-proof { display: grid; grid-template-columns: 1fr 220px; gap: 64px; align-items: center; }
 .home-proof h2 { max-width: 25ch; margin-bottom: 18px; }
@@ -1470,7 +1486,7 @@ footer.site a { color: #D6DEEA; }
 }
 .founder-work-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--personal-line);
   border-bottom: 1px solid var(--personal-line);
 }
@@ -1555,6 +1571,15 @@ footer.site a { color: #D6DEEA; }
   .founder-story-grid { gap: 54px; }
   .coach-engagement-grid { gap: 54px; }
   .coach-about-lean { gap: 54px; }
+  .founder-work-grid { grid-template-columns: 1fr; }
+  .founder-work-grid > a,
+  .founder-work-grid > a + a {
+    min-height: 0;
+    padding: 32px 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--personal-line);
+  }
+  .founder-work-grid > a:last-child { border-bottom: 0; }
 }
 
 @media (max-width: 700px) {
