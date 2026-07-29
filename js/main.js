@@ -83,7 +83,7 @@ document.addEventListener("click", function (e) {
     var body = "Hi Nima,%0D%0A%0D%0AI would like to book a " +
       (kind === "org" ? "conversation for my organization." : "private coaching conversation.") +
       "%0D%0A%0D%0ATime 1:%0D%0ATime 2:%0D%0A%0D%0AThank you.";
-    var contactEmail = (window.IO_CONFIG || {}).CONTACT_EMAIL || "nima@insightsout.work";
+    var contactEmail = (window.IO_CONFIG || {}).CONTACT_EMAIL || "nimani.coaching@gmail.com";
     window.location.href = "mailto:" + contactEmail +
       "?subject=" + encodeURIComponent(subject) + "&body=" + body;
   }
