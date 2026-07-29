@@ -10,7 +10,7 @@
   <meta property="og:description" content="Research grounded in what people are experiencing as AI changes roles, leadership, and work.">
   <meta property="og:image" content="https://insightsout.work/assets/photo4.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <link rel="stylesheet" href="css/style.css?v=21">
+  <link rel="stylesheet" href="css/style.css?v=23">
   <script src="js/config.js?v=6" defer></script>
   <script src="js/main.js?v=8" defer></script>
 </head>
@@ -37,37 +37,29 @@
     <div class="wrap narrow-copy">
       <p class="eyebrow">InsightsOut research</p>
       <h1>What is AI change doing to people and work?</h1>
-      <p class="lede">We study what people are experiencing as roles change, AI enters everyday work, and leaders help teams adapt. We look for patterns that can make the future of work more human, ethical, and grounded in real experience.</p>
+      <p class="lede">We study what people experience as roles change and AI enters everyday work — and use those patterns to make our workshops, coaching, and organizational work better.</p>
       <div class="cta-row" style="margin-top: 34px;">
-        <a class="btn btn-primary" href="#subscribe">Get InsightsOut Updates</a>
+        <a class="btn btn-primary" href="#articles">Read the Research</a>
       </div>
     </div>
   </section>
 
   <section class="section-tight">
-    <div class="wrap panel">
+    <div class="wrap research-method-grid">
       <div>
         <p class="eyebrow">How we learn</p>
-        <h2 style="margin-bottom: 18px;">Real people, real work, and change as it happens.</h2>
-        <p class="lede">Our learning comes from community events, workshops, organizational programs, and conversations with people living through the transition.</p>
+        <h2>Research grounded in real work.</h2>
       </div>
-      <div>
-        <p class="eyebrow">What we follow</p>
-        <ul class="outcomes">
-          <li>How AI is changing roles, identity, and working life</li>
-          <li>How people navigate ethics, judgment, and responsibility</li>
-          <li>How managers and teams lead through uncertainty</li>
-          <li>What helps AI learning become useful everyday practice</li>
-        </ul>
-        <p class="b-muted" style="margin-top: 22px;">We share only what the evidence supports and protect participant privacy.</p>
+      <div class="research-method-copy">
+        <p>We learn from community workshops, organizational programs, and conversations with people living through AI change.</p>
+        <p>We follow changing roles, leadership, ethics, judgment, and everyday practice. We share only what the evidence supports and protect participant privacy.</p>
       </div>
     </div>
   </section>
 
-  <section class="section-tight" style="padding-top: 0;">
+  <section id="articles" class="section-tight" style="padding-top: 0;">
     <div class="wrap">
-      <p class="eyebrow">Current research and thinking</p>
-      <h2 style="max-width: 24ch; margin-bottom: 42px;">Questions and patterns emerging from the work.</h2>
+      <h2 class="research-list-heading">Research and field notes.</h2>
       <div class="article-list">
         <a class="article-card article-live" href="articles/ai-change-is-human-change.html">
           <div>
@@ -97,25 +89,23 @@
     </div>
   </section>
 
-  <section class="band" id="subscribe">
-    <div class="wrap signal-signup">
+  <section class="band insights-signup-compact" id="subscribe">
+    <div class="wrap insights-signup-grid">
       <div>
         <p class="eyebrow">Stay connected</p>
-        <h2>Get InsightsOut updates.</h2>
-        <p class="lede">Receive new event dates, community invitations, research, and new programs. One email list, sent occasionally.</p>
+        <h2>Get new research.</h2>
+        <p class="b-muted">Occasional field notes, workshop dates, and new programs.</p>
       </div>
-      <form id="newsletter-form" class="form-grid signal-form" novalidate>
+      <form id="newsletter-form" class="insights-inline-form" novalidate>
         <input type="hidden" name="source" value="insightsout-updates">
         <input type="hidden" name="consent" value="yes">
-        <div class="field full">
+        <div class="field">
           <label for="signal-email">Email</label>
           <input id="signal-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
         </div>
-        <div class="field full">
-          <button class="btn btn-primary" type="submit">Subscribe</button>
-          <p class="form-note" style="margin-top: 10px;">By subscribing, you agree to receive InsightsOut event, research, community, and program updates. Unsubscribe anytime.</p>
-          <p id="newsletter-status" class="form-status" role="status" aria-live="polite" style="margin-top: 12px;"></p>
-        </div>
+        <button class="btn btn-primary" type="submit">Get Updates</button>
+        <p class="form-note insights-form-note">Unsubscribe anytime.</p>
+        <p id="newsletter-status" class="form-status insights-form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -123,12 +113,6 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="footer-contact">
-      <div><p class="eyebrow">Start a conversation</p><h2>Tell us what you are working through.</h2></div>
-      <div class="footer-actions">
-        <a class="btn btn-primary" href="https://calendar.app.google/8y9NgWzBLaiT414G6" target="_blank" rel="noopener" data-book="org">Book a Conversation</a>
-      </div>
-    </div>
     <div class="footer-bottom">
       <span class="footer-brand">InsightsOut · Human leadership for the age of AI</span>
       <span class="footer-links"><a href="events.html">Community</a> · <a href="organizations.html">Organizations</a> · <a href="insights.html">Research</a> · <a href="about.html">About</a></span>
@@ -139,7 +123,6 @@
 
 <div class="msticky">
   <a class="btn btn-primary btn-sm" href="#subscribe">Get Updates</a>
-  <a class="btn btn-ghost btn-sm" href="events.html">Workshops</a>
 </div>
 
 </body>

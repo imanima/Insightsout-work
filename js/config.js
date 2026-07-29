@@ -19,9 +19,10 @@ window.IO_CONFIG = {
   CONTACT_EMAIL: "nima@insightsout.work",
 
   // --- Luma ---
-  // The events pages use the official calendar embed (cal-cHPs3Da3iGJZspe)
-  // directly in the HTML. This URL is the non-embed fallback link.
-  LUMA_CALENDAR_URL: "https://luma.com/embed/calendar/cal-cHPs3Da3iGJZspe/events",
+  // The events page uses the official calendar embed (cal-cHPs3Da3iGJZspe)
+  // directly in the HTML, so newly published events appear automatically.
+  // This is the public non-embed fallback link.
+  LUMA_CALENDAR_URL: "https://lu.ma/user/nimaimani",
 
   // --- Newsletter ---
   // Paste a provider form action URL (Buttondown/ConvertKit/Mailchimp) when ready.
