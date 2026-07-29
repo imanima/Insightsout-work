@@ -2168,12 +2168,12 @@ footer.site a { color: #D6DEEA; }
 
 /* ---------- about: restrained editorial design ---------- */
 .about-clean {
-  --about-bg: #f5f7fb;
-  --about-tint: #ffffff;
-  --about-ink: #18202d;
-  --about-muted: #5f6979;
-  --about-line: #dde3ec;
-  --about-accent: #2c57c9;
+  --about-bg: var(--ground);
+  --about-tint: var(--surface);
+  --about-ink: var(--ink);
+  --about-muted: var(--muted);
+  --about-line: var(--line);
+  --about-accent: var(--teal);
   margin: 0;
   background: var(--about-bg);
   color: var(--about-ink);
@@ -2181,9 +2181,9 @@ footer.site a { color: #D6DEEA; }
 .about-clean h1,
 .about-clean h2 {
   color: var(--about-ink);
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-weight: 500;
-  letter-spacing: -0.045em;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
 }
 .about-clean h3 { color: var(--about-ink); }
 .about-shell {
@@ -2255,17 +2255,17 @@ footer.site a { color: #D6DEEA; }
 }
 .about-label {
   margin-bottom: 20px;
-  color: #747a76;
+  color: var(--about-accent);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 .about-hero-copy h1 {
-  max-width: 14ch;
+  max-width: 16ch;
   margin-bottom: 26px;
-  font-size: clamp(3.6rem, 6.2vw, 5.45rem);
-  line-height: 0.99;
+  font-size: clamp(3.2rem, 5vw, 4.5rem);
+  line-height: 1.03;
 }
 .about-hero-copy > p:not(.about-label) {
   max-width: 62ch;
@@ -2289,6 +2289,7 @@ footer.site a { color: #D6DEEA; }
   padding: 10px 10px 12px;
   background: #ffffff;
   border: 1px solid var(--about-line);
+  border-radius: 18px;
 }
 .about-workshop-photo img {
   display: block;
@@ -2296,6 +2297,7 @@ footer.site a { color: #D6DEEA; }
   aspect-ratio: 16 / 7.7;
   object-fit: cover;
   object-position: center 46%;
+  border-radius: 12px;
 }
 .about-workshop-photo figcaption {
   padding-top: 10px;
@@ -2303,7 +2305,7 @@ footer.site a { color: #D6DEEA; }
   font-size: 11px;
 }
 .about-clean-section {
-  padding: 108px 0;
+  padding: 96px 0;
   background: var(--about-bg);
   border-top: 1px solid var(--about-line);
 }
@@ -2318,8 +2320,8 @@ footer.site a { color: #D6DEEA; }
 .about-founder-clean h2,
 .about-paths-heading h2 {
   color: var(--about-ink);
-  font-size: clamp(2.55rem, 4.4vw, 3.7rem);
-  line-height: 1.06;
+  font-size: clamp(2.1rem, 3.7vw, 3rem);
+  line-height: 1.08;
 }
 .about-clean-split h2 { max-width: 11ch; }
 .about-clean-copy > p {
@@ -2355,9 +2357,9 @@ footer.site a { color: #D6DEEA; }
 .about-sequence strong {
   margin-bottom: 8px;
   color: var(--about-ink);
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 650;
 }
 .about-sequence p {
   color: var(--about-muted);
@@ -2376,6 +2378,7 @@ footer.site a { color: #D6DEEA; }
   padding: 10px;
   background: #ffffff;
   border: 1px solid var(--about-line);
+  border-radius: 18px;
 }
 .about-founder-clean figure img {
   display: block;
@@ -2383,6 +2386,7 @@ footer.site a { color: #D6DEEA; }
   aspect-ratio: 4 / 4.75;
   object-fit: cover;
   object-position: 50% 45%;
+  border-radius: 12px;
 }
 .about-founder-clean h2 {
   max-width: 12ch;
@@ -2432,9 +2436,9 @@ footer.site a { color: #D6DEEA; }
 .about-paths-grid h3 {
   max-width: 16ch;
   margin: 42px 0 14px;
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: 1.55rem;
-  font-weight: 500;
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 650;
 }
 .about-paths-grid p {
   max-width: 33ch;
@@ -2460,10 +2464,10 @@ footer.site a { color: #D6DEEA; }
 .about-final-clean h2 {
   margin-bottom: 9px;
   color: var(--about-ink);
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  font-weight: 500;
-  letter-spacing: -0.04em;
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.3vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
 }
 .about-final-clean p {
   color: var(--about-muted);
@@ -2485,9 +2489,6 @@ footer.site a { color: #D6DEEA; }
 
 @media (max-width: 760px) {
   .about-shell { width: min(100% - 40px, 1120px); }
-  .about-nav-inner { min-height: 64px; }
-  .about-nav-links > a:not(.about-nav-button) { display: none; }
-  .about-nav-button { padding: 9px 12px; font-size: 12px; }
   .about-clean-hero { padding-top: 60px; }
   .about-hero-copy { margin-bottom: 46px; }
   .about-hero-copy h1 {
