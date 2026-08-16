@@ -4,8 +4,8 @@
 // ============================================================
 window.IO_CONFIG = {
   // --- Booking ---
-  // Private coaching books through Nima's Paperbell discovery call.
-  BOOKING_URL_COACHING: "https://app.paperbell.com/checkout/packages/145702",
+  // Private coaching books through Nima's free 30-minute call schedule.
+  BOOKING_URL_COACHING: "https://calendar.app.google/wpqVkuaH1uwFRh6cA",
   // Discovery calls (organizations + general) book through Google Calendar.
   BOOKING_URL_ORG: "https://calendar.app.google/8y9NgWzBLaiT414G6",
 
