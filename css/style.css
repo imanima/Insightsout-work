@@ -2502,3 +2502,81 @@ footer.site a { color: #D6DEEA; }
     gap: 6px;
   }
 }
+
+
+/* ---------- coaching: two programs ---------- */
+.coach-hero-programs { margin-top: 18px; color: var(--coach-muted); font-size: 15px; }
+.coach-hero-programs a { color: var(--coach-text); font-weight: 600; border-bottom: 1px solid var(--coach-line); text-decoration: none; }
+.coach-offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; margin-top: 24px; }
+.coach-offer-card { display: flex; flex-direction: column; padding: 28px 0 32px; border-top: 1px solid var(--coach-line); }
+.coach-offer-kicker { margin: 0 0 10px; color: var(--coach-muted); font-size: 12px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
+.coach-offer-card h2 { margin-bottom: 10px; font-size: clamp(1.5rem, 2.2vw, 1.9rem); line-height: 1.2; }
+.coach-offer-for { margin: 0 0 12px; color: var(--coach-muted); font-size: 16px; line-height: 1.6; }
+.coach-offer-promise { margin: 0 0 18px; color: var(--coach-text); font-size: 16.5px; line-height: 1.6; }
+.coach-offer-facts { margin: 0 0 22px; padding: 0; list-style: none; }
+.coach-offer-facts li { padding: 10px 0; border-top: 1px solid var(--coach-line); color: var(--coach-text); font-size: 15px; line-height: 1.5; }
+.coach-offer-price { margin: auto 0 18px; color: var(--coach-text); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+.coach-offer-price span { display: block; margin-top: 2px; color: var(--coach-muted); font-size: 14px; font-weight: 500; letter-spacing: 0; }
+.coach-offer-card .coach-button { align-self: start; }
+.coach-offer-faq { margin-top: 36px; max-width: 64ch; }
+.coach-offer-faq details { padding: 14px 0; border-top: 1px solid var(--coach-line); }
+.coach-offer-faq details:last-of-type { border-bottom: 1px solid var(--coach-line); }
+.coach-offer-faq summary { cursor: pointer; list-style: none; color: var(--coach-text); font-weight: 650; font-size: 15.5px; }
+.coach-offer-faq summary::-webkit-details-marker { display: none; }
+.coach-offer-faq summary::after { content: "+"; float: right; color: var(--coach-muted); }
+.coach-offer-faq details[open] summary::after { content: "–"; }
+.coach-offer-faq details p { margin: 10px 0 0; color: var(--coach-muted); font-size: 15px; line-height: 1.6; }
+@media (max-width: 760px) {
+  .coach-offer-grid { grid-template-columns: 1fr; gap: 0; }
+  .coach-offer-card .coach-button { width: 100%; text-align: center; }
+}
+.about-paths-grid { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .about-paths-grid { grid-template-columns: repeat(2, 1fr); } .about-paths-grid > a + a { padding-left: 0; border-left: 0; } .about-paths-grid > a { border-top: 1px solid var(--about-line); } }
+.module-copy .module-note { margin-top: 8px; color: var(--muted); font-size: 14px; }
+.community-topic-actions { display: flex; gap: 28px; flex-wrap: wrap; }
+
+
+/* ---------- coaching page (site system, v38) ---------- */
+.coaching-hero .hero-note { color: var(--band-muted); }
+.coaching-hero .btn-ghost { color: var(--band-ink); border-color: rgba(255,255,255,0.35); }
+figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
+.coach-situations .card ul { margin: 6px 0 16px; padding: 0; list-style: none; }
+.coach-situations .card li { padding: 9px 0; border-top: 1px solid var(--line); color: var(--ink); font-size: 15.5px; }
+.coach-situations .card li:first-child { border-top: 0; }
+.offer-grid { align-items: stretch; }
+.offer-card { display: flex; flex-direction: column; }
+.offer-kicker { display: inline-block; margin-bottom: 10px; color: var(--teal); font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.offer-card h3 { font-size: 1.45rem; margin-bottom: 8px; }
+.offer-card .offer-for { color: var(--muted); font-size: 15px; margin-bottom: 8px; }
+.offer-card .offer-promise { color: var(--ink); font-size: 15.5px; margin-bottom: 14px; }
+.offer-facts { margin: 0 0 16px; padding: 0; list-style: none; }
+.offer-facts li { padding: 8px 0; border-top: 1px solid var(--line); color: var(--ink); font-size: 14.5px; }
+.offer-price { margin: auto 0 14px; color: var(--head); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; }
+.offer-price span { display: block; color: var(--muted); font-size: 13.5px; font-weight: 500; letter-spacing: 0; margin-top: 2px; }
+.offer-card .btn-primary { align-self: flex-start; }
+.band .offer-card h3, .band .offer-card .offer-promise, .band .offer-facts li, .band .offer-price { color: var(--head); }
+.coach-faq { margin-top: 36px; max-width: 66ch; }
+.coach-faq details { padding: 14px 0; border-top: 1px solid var(--line); }
+.coach-faq details:last-of-type { border-bottom: 1px solid var(--line); }
+.coach-faq summary { cursor: pointer; list-style: none; color: var(--head); font-weight: 650; font-size: 15.5px; }
+.coach-faq summary::-webkit-details-marker { display: none; }
+.coach-faq summary::after { content: "+"; float: right; color: var(--muted); }
+.coach-faq details[open] summary::after { content: "–"; }
+.coach-faq details p { margin: 10px 0 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.coach-about .grid-2 { align-items: start; gap: 48px; }
+.coach-quotes { display: grid; gap: 16px; }
+.coach-quotes blockquote { margin: 0; }
+.coach-quotes blockquote p { color: var(--ink); font-size: 15.5px; line-height: 1.6; margin: 0 0 12px; }
+.coach-quotes cite { font-style: normal; color: var(--muted); font-size: 13.5px; }
+.coach-quotes cite strong { color: var(--head); }
+@media (max-width: 760px) { .offer-card .btn-primary { align-self: stretch; text-align: center; } }
+/* about: dark hero override (v38) */
+.about-clean .about-hero { padding: 96px 0; border-bottom: 0; }
+.about-clean .about-hero h1 { color: #F3F6FB; max-width: 16ch; margin-bottom: 24px; }
+.about-clean .about-hero .lede { color: var(--band-muted); max-width: 52ch; }
+.about-clean .about-hero .text-link { color: var(--gold); }
+.coaching-hero h1 { max-width: 20ch; font-size: clamp(2.2rem, 4.6vw, 3.6rem); }
+.coaching-hero .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.offer-card .btn-primary { margin-top: auto; }
+.offer-facts { margin-bottom: 22px; }
+.coaching-hero .cta-row .btn { white-space: nowrap; }
