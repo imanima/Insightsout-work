@@ -1,0 +1,608 @@
+{
+  "_about": "InsightsOut findings ledger. Single source of truth for every published number. Papers and pages reference findings by id via data-finding attributes; never hard-code a stat in HTML. Numbers seeded 2026-08-18 from 'Workshop Themed Findings 2026-08' (9 waves, 444 registrations, 363 unique people, Mar-Jul 2026) and hypothesis-status. Re-verify against the master dataset before each edition.",
+  "dataset": {
+    "version": "2026-08-15",
+    "waves": 9,
+    "registrations": 444,
+    "unique_people": 363,
+    "date_range": "March – July 2026",
+    "wave_codes": [
+      "SOLAR",
+      "EMO-WORK",
+      "AI-TRANS",
+      "FIC-OPEN",
+      "FIC-AI",
+      "OTC",
+      "OTF",
+      "ROLE-V",
+      "ROLE-IP"
+    ],
+    "limits": "Registration-time answers (needs and intent, not outcomes); self-selected, San Francisco / startup-ecosystem heavy; questionnaire varied by event so cross-event counts use a conservative theme mapping; role not captured at OTF and FIC."
+  },
+  "findings": [
+    {
+      "id": "H1.decision_uncertainty",
+      "hypothesis": "H1",
+      "claim": "Roughly half of respondents describe their hardest problem as uncertainty or lack of clarity about what to decide next — across every event and every segment.",
+      "stat": {
+        "value": "49%",
+        "detail": "178 of 360",
+        "n": 360,
+        "waves": [
+          "all"
+        ]
+      },
+      "anchor": {
+        "source": "Microsoft, 2026 Work Trend Index",
+        "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+        "relationship": "confirms",
+        "note": "Organizational factors (culture, manager support, talent practices) drive about twice the AI-value impact of individual factors — the bottleneck is not individual knowledge."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-04",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H1.top_outcome",
+      "hypothesis": "H1",
+      "claim": "When asked what they want to walk out with, the top picks are a strategy to choose and a way to move fast without chaos — not tool training.",
+      "stat": {
+        "value": "31 of 73",
+        "detail": "'knowing what strategy to choose' 31/73; 'moving fast without chaos' 25/73",
+        "n": 73,
+        "waves": [
+          "OTF"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": ""
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H2.fragmentation",
+      "hypothesis": "H2",
+      "claim": "Time, focus, and prioritization is the #1 free-text challenge, but people describe fragmentation ('many hats, no filter') — not a shortage of hours.",
+      "stat": {
+        "value": "29 of 120",
+        "detail": "top free-text challenge, OTF",
+        "n": 120,
+        "waves": [
+          "OTF"
+        ]
+      },
+      "anchor": {
+        "source": "MIT Sloan Management Review, 'When Employees Are Drowning in Change'",
+        "url": "https://sloanreview.mit.edu/article/when-employees-are-drowning-in-change/",
+        "relationship": "confirms",
+        "note": "Change fatigue framed as an organizational-load problem, not individual resilience."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H5.trust_gap",
+      "hypothesis": "H5",
+      "claim": "On the same form, non-founders name lack of trust in leadership far more often than founders do.",
+      "stat": {
+        "value": "23% vs 5%",
+        "detail": "non-founders vs founders, ROLE form",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "SHRM, Navigating AI in the Workplace 2026",
+        "url": "https://www.shrm.org/topics-tools/research/navigating-ai-in-the-workplace/full-report",
+        "relationship": "confirms",
+        "note": "Only 47% of individual contributors trust leadership on AI vs 80% of directors."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H5.manager_relational",
+      "hypothesis": "H5",
+      "claim": "Managers are the only large segment where relational pain — trust, resistance, communication — is named by a majority.",
+      "stat": {
+        "value": "56%",
+        "detail": "managers vs under 50% for every other segment",
+        "n": 361,
+        "waves": [
+          "all"
+        ]
+      },
+      "anchor": {
+        "source": "Gallup, State of the Global Workplace 2026",
+        "url": "https://www.gallup.com/workplace/",
+        "relationship": "complicates",
+        "note": "Gallup reports manager engagement falling ~3x faster than employees'. In our rooms managers are not disengaged — they are overloaded and silent. Different diagnosis, different fix."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-04",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H6.ambivalence",
+      "hypothesis": "H6",
+      "claim": "Only about a third of emotion answers are exclusively heavy; the modal pattern pairs excited/curious with overwhelmed/uncertain.",
+      "stat": {
+        "value": "31%",
+        "detail": "38 of 121 exclusively heavy",
+        "n": 121,
+        "waves": [
+          "EMO-WORK",
+          "AI-TRANS",
+          "OTC"
+        ]
+      },
+      "anchor": {
+        "source": "Gallup, State of the Global Workplace 2026 ('the human side of the AI revolution')",
+        "url": "https://www.gallup.com/workplace/",
+        "relationship": "contradicts",
+        "note": "Contradicts the standard 'overcoming resistance' change-management frame."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H7.peer_processing",
+      "hypothesis": "H7",
+      "claim": "Peer conversation is the most-requested form of support, ahead of content or tools.",
+      "stat": {
+        "value": "52 of 163",
+        "detail": "top non-Other support pick, ROLE form",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": "External literature is thin here — a differentiated finding."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H9.translation_gap",
+      "hypothesis": "H9",
+      "claim": "Founders and executives ask for strategy; ICs, managers, and people in transition ask for clearer communication and leadership alignment — the same gap, seen from opposite sides.",
+      "stat": {
+        "value": "50 of 163",
+        "detail": "'clearer communication' 50/163, 'better leadership alignment' 35/163 among non-founders",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": "Candidate finding — one form so far. Needs a second wave before it carries a headline."
+      },
+      "status": "candidate",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H3.identity_where_felt",
+      "hypothesis": "H3",
+      "claim": "Asked where the change is felt most, more than one in five people navigating role change point to their identity or sense of value — not their workload.",
+      "stat": {
+        "value": "36 of 163",
+        "detail": "'my identity or sense of value', ROLE form",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "SHRM, Navigating AI in the Workplace 2026",
+        "url": "https://www.shrm.org/topics-tools/research/navigating-ai-in-the-workplace/full-report",
+        "relationship": "confirms",
+        "note": "27% of early-career workers fear AI will devalue their field; 45% of workers overall expect to reskill."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H3.ai_top_change",
+      "hypothesis": "H3",
+      "claim": "AI adoption is the single most-named kind of change people are navigating.",
+      "stat": {
+        "value": "76 of 163",
+        "detail": "top 'kind of change', ROLE form",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": ""
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H3.transition_uncertainty",
+      "hypothesis": "H3",
+      "claim": "Among people who describe themselves as in career or role transition, uncertainty about direction is close to universal.",
+      "stat": {
+        "value": "83%",
+        "detail": "of 23 self-described in-transition respondents; managers 62%, startup operators 63%, founders 45%",
+        "n": 23,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "Anthropic, What 81,000 people told us about the economics of AI (Apr 2026)",
+        "url": "https://www.anthropic.com/research/81k-economics",
+        "relationship": "confirms",
+        "note": "Early-career workers report substantially higher displacement concern than senior professionals."
+      },
+      "status": "published",
+      "threshold": "segment",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H3.fear_gap",
+      "hypothesis": "H3",
+      "claim": "Fear or anxiety about the change is named roughly three times as often by individual contributors and people in transition as by founders.",
+      "stat": {
+        "value": "33–39% vs 11%",
+        "detail": "product/eng ICs 33% (n=21), in transition 39% (n=23), founders 11% (n=141); on the identical ROLE form: 32% non-founders vs 27% founders",
+        "n": 185,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP",
+          "OTC",
+          "EMO-WORK",
+          "AI-TRANS"
+        ]
+      },
+      "anchor": {
+        "source": "Anthropic, What 81,000 people told us about the economics of AI (Apr 2026)",
+        "url": "https://www.anthropic.com/research/81k-economics",
+        "relationship": "confirms",
+        "note": "Displacement concern is highest where role security is lowest."
+      },
+      "status": "published",
+      "threshold": "segment",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H3.skills_map",
+      "hypothesis": "H3",
+      "claim": "A map of what skills or capacities to build next is the #1 thing people navigating role change want to leave with — even though almost nobody names a skill gap as their biggest pain.",
+      "stat": {
+        "value": "62 of 163",
+        "detail": "#1 desired outcome, ROLE form; skill gap named as a pain by only 9% across the dataset",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "SHRM, Navigating AI in the Workplace 2026",
+        "url": "https://www.shrm.org/topics-tools/research/navigating-ai-in-the-workplace/full-report",
+        "relationship": "complicates",
+        "note": "The field talks about reskilling as courses; people ask for a map, not a curriculum."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H7.practical_and_peer",
+      "hypothesis": "H7",
+      "claim": "People want a practical next step and peer conversation in almost equal measure — and say the peer part must not feel like networking.",
+      "stat": {
+        "value": "53 and 52 of 163",
+        "detail": "'a practical next step' 53, 'peer conversations with others navigating change' 52, 'practical decision-making tools' 37",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": ""
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H6.emotion_pairs",
+      "hypothesis": "H6",
+      "claim": "Asked to pick two emotions, founders paired an activating one with a heavy one: curious and uncertain, energized and anxious.",
+      "stat": {
+        "value": "Curious 15 · Uncertain 14 · Energized 13 · Anxious 13",
+        "detail": "OTC founders, pick 2 of 10; Overwhelmed 11, Hopeful 11, Lonely 7, Stuck 7",
+        "n": 46,
+        "waves": [
+          "OTC"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": ""
+      },
+      "status": "published",
+      "threshold": "segment",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "H5.leader_team_role_form",
+      "hypothesis": "H5",
+      "claim": "On the identical form, non-founders name communication breakdown and leader–team misalignment two to four times as often as founders.",
+      "stat": {
+        "value": "19% vs 7% · 17% vs 5%",
+        "detail": "communication breakdown; misalignment between leaders and teams — non-founders (n=108) vs founders (n=55)",
+        "n": 163,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP"
+        ]
+      },
+      "anchor": {
+        "source": "Gallup, State of the Global Workplace 2026",
+        "url": "https://www.gallup.com/workplace/",
+        "relationship": "confirms",
+        "note": "Employees whose managers champion AI are 8.7x more likely to report AI transforming their work — the manager is the transmission line."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.pre_revenue",
+      "hypothesis": "H2",
+      "claim": "Three quarters of the founders in our rooms are pre-revenue: building an MVP, exploring an idea, or launched without revenue.",
+      "stat": {
+        "value": "~75%",
+        "detail": "Building MVP 53 · Idea/exploring 38 · Launched pre-revenue 37 · Early revenue 23 · Post-revenue 14 · Fundraising 9 · Funded/scaling 7 (of 170 who gave a stage)",
+        "n": 170,
+        "waves": [
+          "FIC-AI",
+          "FIC-OPEN",
+          "OTC",
+          "OTF"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": "This is an early-stage room. Almost nobody is scaling a team."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.money_first",
+      "hypothesis": "H2",
+      "claim": "When founders write their main challenge in their own words, money and customers come first — often before any human theme.",
+      "stat": {
+        "value": "15 and 16 of 120",
+        "detail": "funding/capital 15, customers/GTM/traction 16, co-founder/hiring/team 12 of 120 free-text answers",
+        "n": 120,
+        "waves": [
+          "FIC-AI",
+          "FIC-OPEN",
+          "OTF"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": ""
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.pace_not_fatigue",
+      "hypothesis": "H2",
+      "claim": "Founders almost never call it 'decision fatigue' — but a third pick 'moving fast without creating chaos'. Same load, different word.",
+      "stat": {
+        "value": "5% vs 25 of 73",
+        "detail": "'decision fatigue' named by 5% of founders (n=141); 'moving fast without creating chaos' picked by 25 of 73 and 'knowing what strategy to choose' by 31 of 73 (OTF)",
+        "n": 141,
+        "waves": [
+          "OTF",
+          "ROLE-V",
+          "ROLE-IP",
+          "OTC"
+        ]
+      },
+      "anchor": {
+        "source": "Bloomberg, 'AI Anxiety Is Fueling Burnout Across Silicon Valley's Tech Workers' (June 2026)",
+        "url": "https://www.bloomberg.com/news/articles/2026-06-26/ai-anxiety-is-fueling-burnout-across-silicon-valley-s-tech-workers",
+        "relationship": "complicates",
+        "note": "Bloomberg documents founders working longer, not less, as AI raises the bar. Our founders describe the same pressure as pace and strategy, not exhaustion."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.founder_uncertainty",
+      "hypothesis": "H1",
+      "claim": "Nearly half of founders name uncertainty or lack of clarity about direction as their hardest thing — the one theme they share with everyone else in the room.",
+      "stat": {
+        "value": "45%",
+        "detail": "of 141 founders who answered a pain question; on the identical ROLE form founders name raw uncertainty more than non-founders (55% vs 48%)",
+        "n": 141,
+        "waves": [
+          "all"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": ""
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.solo_vs_co",
+      "hypothesis": "H7",
+      "claim": "Solo founders and co-founders are both in the room; the solo ones describe being the single point of failure on everything.",
+      "stat": {
+        "value": "16 solo · 21 co-founder",
+        "detail": "of 49 who answered (OTC); free text repeats 'solo founder with no team', 'single point of failure on fundraising, product, and recruiting'",
+        "n": 49,
+        "waves": [
+          "OTC"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": ""
+      },
+      "status": "published",
+      "threshold": "segment",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.loneliness",
+      "hypothesis": "H7",
+      "claim": "Loneliness is quiet in the structured answers and loud in what draws founders to the smaller circles: safe space and non-performative peer community.",
+      "stat": {
+        "value": "11 of 19",
+        "detail": "FIC 'what drew you' answers about community / safe space; 'lonely' picked 7 times as an emotion (OTC); 'loneliness at the top' 4",
+        "n": 19,
+        "waves": [
+          "FIC-OPEN",
+          "FIC-AI",
+          "OTC"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": "Directional. Consistent, small, and only asked directly once."
+      },
+      "status": "published",
+      "threshold": "directional",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.fear_unnamed",
+      "hypothesis": "H6",
+      "claim": "Founders name fear about one time in nine — roughly a third the rate of the people who work for them.",
+      "stat": {
+        "value": "11%",
+        "detail": "founders (n=141) vs product/eng ICs 33%, in transition 39%; on the identical ROLE form 27% vs 32%",
+        "n": 141,
+        "waves": [
+          "ROLE-V",
+          "ROLE-IP",
+          "OTC",
+          "EMO-WORK",
+          "AI-TRANS"
+        ]
+      },
+      "anchor": {
+        "source": "",
+        "url": "",
+        "relationship": "",
+        "note": "Whether founders feel it less or report it less is not knowable from this data."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "FND.support_intent",
+      "hypothesis": "H7",
+      "claim": "Coaching interest is real but lukewarm; when founders say yes, they want a group or circle at least as much as one-to-one — and almost nobody asks for a workshop for their team.",
+      "stat": {
+        "value": "41% yes · 36% maybe",
+        "detail": "Yes 97, Maybe 84, Not right now 55 of 236; among Yes: group/circle ≈ 1:1 > team workshop (20 across all events)",
+        "n": 236,
+        "waves": [
+          "OTF",
+          "ROLE-V",
+          "ROLE-IP",
+          "FIC-AI"
+        ]
+      },
+      "anchor": {
+        "source": "ManpowerGroup / Everest Group, The New Talent Equation (July 2026)",
+        "url": "https://www.prnewswire.com/news-releases/ai-adoption-is-outpacing-leadership-readiness-as-new-research-finds-only-3-of-organizations-say-their-leaders-are-fully-prepared-to-lead-ai-enabled-teams-302831661.html",
+        "relationship": "complicates",
+        "note": "Only 3% of organizations say their leaders are ready to lead AI-enabled teams — yet the demand for team-level help does not come from the people in our rooms. It has to be brought to leaders, not pulled by them."
+      },
+      "status": "published",
+      "threshold": "headline",
+      "first_seen": "2026-08-15",
+      "last_verified": "2026-08-15"
+    }
+  ]
+}
