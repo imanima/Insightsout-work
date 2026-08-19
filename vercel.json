@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { "source": "/coaching", "destination": "/coaching.html", "permanent": true },
+    { "source": "/subscribe", "destination": "/index.html#subscribe", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
+  ]
+}

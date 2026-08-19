@@ -24,7 +24,13 @@ window.IO_CONFIG = {
   // This is the public non-embed fallback link.
   LUMA_CALENDAR_URL: "https://lu.ma/user/nimaimani",
 
-  // --- Newsletter ---
-  // Paste a provider form action URL (Buttondown/ConvertKit/Mailchimp) when ready.
-  NEWSLETTER_ENDPOINT: ""
+  // --- Newsletter / subscribers ---
+  // Subscribers live in the Luma calendar (People list). The site form POSTs
+  // JSON to /api/subscribe (Vercel function, api/subscribe.js), which calls the
+  // Luma API with the LUMA_API_KEY environment variable set in Vercel.
+  // To move to an email provider later (Kit/MailerLite), point this at their
+  // form endpoint — the form already sends { email, source }.
+  NEWSLETTER_ENDPOINT: "/api/subscribe",
+  // Public subscribe page on Luma (fallback link shown if the API call fails).
+  LUMA_SUBSCRIBE_URL: "https://luma.com/NimaImani"
 };

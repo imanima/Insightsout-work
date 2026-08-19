@@ -11,8 +11,55 @@
   <meta property="og:image" content="https://insightsout.work/assets/photo2.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="stylesheet" href="css/style.css?v=39">
-  <script src="js/config.js?v=6" defer></script>
-  <script src="js/main.js?v=8" defer></script>
+  <script src="js/config.js?v=7" defer></script>
+  <script src="js/main.js?v=9" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://insightsout.work/events.html",
+      "url": "https://insightsout.work/events.html",
+      "name": "Community Workshops for the Human Side of AI Change",
+      "description": "Small, facilitated InsightsOut workshops in San Francisco and online: From AI Overwhelm to Focus; My Role Is Changing — What Is My Next Move?; What Should Stay Human?; and the free weekly Founder Coaching group at Frontier Tower. Dates on Luma.",
+      "isPartOf": {
+        "@id": "https://insightsout.work/#website"
+      },
+      "about": {
+        "@id": "https://insightsout.work/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "EventSeries",
+      "name": "InsightsOut community workshops",
+      "organizer": {
+        "@id": "https://insightsout.work/#organization"
+      },
+      "url": "https://luma.com/NimaImani",
+      "location": [
+        {
+          "@type": "Place",
+          "name": "Frontier Tower",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "995 Market Street",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "VirtualLocation",
+          "url": "https://luma.com/NimaImani"
+        }
+      ],
+      "description": "Recurring 90-minute facilitated workshops on AI overwhelm, role change, what should stay human, and a free weekly founder coaching group. Registration and dates on Luma."
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -108,16 +155,17 @@
       <div>
         <p class="eyebrow">Stay connected</p>
         <h2>Get the next workshop date.</h2>
-        <p class="b-muted">Occasional updates on workshops, cohorts, and <a href="coaching.html">coaching</a>. Unsubscribe anytime.</p>
+        <p class="b-muted">Event invites, occasional field notes, and news on cohorts and <a href="coaching.html">coaching</a>. Unsubscribe anytime.</p>
       </div>
-      <form id="newsletter-form" class="community-inline-form" novalidate>
-        <input type="hidden" name="source" value="community-workshops">
+      <form id="newsletter-form" class="community-inline-form js-subscribe" novalidate>
+        <input type="hidden" name="source" value="community">
         <input type="hidden" name="consent" value="yes">
+        <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
         <div class="field">
           <label for="community-email">Email</label>
           <input id="community-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
         </div>
-        <button class="btn btn-primary" type="submit">Get Updates</button>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
         <p id="newsletter-status" class="form-status community-form-status" role="status" aria-live="polite"></p>
       </form>
     </div>

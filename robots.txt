@@ -1,4 +1,46 @@
+# insightsout.work — crawl policy
+# We want to be found and cited by search engines AND by AI assistants
+# (ChatGPT, Claude, Perplexity, Gemini, Copilot). Everything public is allowed.
+# Machine-readable summary for LLMs: https://insightsout.work/llms.txt
+
 User-agent: *
+Allow: /
+Disallow: /api/
+
+# AI search & answer engines (explicit allow, in case a host default blocks them)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://insightsout.work/sitemap.xml

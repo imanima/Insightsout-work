@@ -174,55 +174,52 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ---------- Newsletter ----------
+// ---------- Newsletter / subscribe ----------
+// Every <form class="js-subscribe"> (and the legacy #newsletter-form) POSTs
+// { email, source, consent } as JSON to IO_CONFIG.NEWSLETTER_ENDPOINT
+// (/api/subscribe → Luma People list). Falls back to the Luma subscribe page.
 document.addEventListener("DOMContentLoaded", function () {
-  var nl = document.getElementById("newsletter-form");
-  if (!nl) return;
-  nl.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var data = {};
-    new FormData(nl).forEach(function (v, k) { data[k] = v; });
-    var status = document.getElementById("newsletter-status");
-    if (!data.email) {
-      status.textContent = "Please add your email.";
-      status.className = "form-status err";
-      return;
+  var forms = Array.prototype.slice.call(document.querySelectorAll("form.js-subscribe, form#newsletter-form"));
+  if (!forms.length) return;
+  var cfg = window.IO_CONFIG || {};
+  var lumaUrl = cfg.LUMA_SUBSCRIBE_URL || cfg.LUMA_CALENDAR_URL || "https://luma.com/NimaImani";
+
+  forms.forEach(function (nl) {
+    var status = nl.querySelector(".form-status") || document.getElementById("newsletter-status");
+    var button = nl.querySelector('button[type="submit"]');
+    function say(msg, cls) {
+      if (!status) return;
+      status.innerHTML = msg;
+      status.className = status.className.replace(/\b(ok|err)\b/g, "").trim() + (cls ? " " + cls : "");
     }
-    if (!data.consent) {
-      status.textContent = "Please confirm that you want to receive InsightsOut updates.";
-      status.className = "form-status err";
-      return;
-    }
-    window.ioTrack("newsletter_submit", { interest: data.interest || null, source: data.source || null });
-    var endpoint = (window.IO_CONFIG || {}).NEWSLETTER_ENDPOINT;
-    if (endpoint) {
-      status.textContent = "Subscribing…";
-      status.className = "form-status";
-      fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(data)
-      }).then(function (r) {
-        if (!r.ok) throw new Error("HTTP " + r.status);
-        nl.reset();
-        status.textContent = "You are on the list. We will share new events, research, and programs as they develop.";
-        status.className = "form-status ok";
-      }).catch(function () {
-        status.textContent = "Something went wrong. Please try again.";
-        status.className = "form-status err";
-      });
-    } else {
-      window.location.href = "mailto:" + window.IO_CONFIG.CONTACT_EMAIL +
-        "?subject=" + encodeURIComponent("InsightsOut updates") +
-        "&body=" + encodeURIComponent([
-        "Please add me to InsightsOut updates.", "",
-          "Email: " + data.email,
-          "Consent to InsightsOut event, research, community, and program updates: yes",
-          "Source: " + (data.source || "")
-        ].join("\n"));
-      status.textContent = "Your email app is opening. Send the message to join the list.";
-      status.className = "form-status ok";
-    }
+    nl.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = {};
+      new FormData(nl).forEach(function (v, k) { data[k] = v; });
+      if (!data.email) { say("Please add your email.", "err"); return; }
+      if (!data.consent) { say("Please confirm that you want to receive InsightsOut updates.", "err"); return; }
+      window.ioTrack("newsletter_submit", { interest: data.interest || null, source: data.source || null });
+      var endpoint = cfg.NEWSLETTER_ENDPOINT;
+      if (endpoint) {
+        say("Subscribing\u2026", "");
+        if (button) button.disabled = true;
+        fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data)
+        }).then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          nl.reset();
+          window.ioTrack("newsletter_subscribed", { source: data.source || null });
+          say("You're on the list. You'll get event invites, field notes, and new programs \u2014 unsubscribe anytime.", "ok");
+        }).catch(function () {
+          say('Something went wrong. <a href="' + lumaUrl + '" target="_blank" rel="noopener">Subscribe on Luma instead \u2192</a>', "err");
+        }).finally(function () { if (button) button.disabled = false; });
+      } else {
+        window.open(lumaUrl, "_blank", "noopener");
+        say("Finish subscribing on Luma \u2014 it opened in a new tab.", "ok");
+      }
+    });
   });
 });
 

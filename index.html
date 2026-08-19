@@ -11,8 +11,133 @@
   <meta property="og:image" content="https://insightsout.work/assets/photo2.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="stylesheet" href="css/style.css?v=39">
-  <script src="js/config.js?v=6" defer></script>
-  <script src="js/main.js?v=8" defer></script>
+  <script src="js/config.js?v=7" defer></script>
+  <script src="js/main.js?v=9" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://insightsout.work/#organization",
+      "name": "InsightsOut",
+      "alternateName": "Insights Out",
+      "url": "https://insightsout.work/",
+      "logo": "https://insightsout.work/assets/logo.svg",
+      "image": "https://insightsout.work/assets/photo2.jpg",
+      "description": "InsightsOut helps organizations, founders, and people navigate the human side of AI change: leadership alignment, manager and role-change workshops, founder coaching, community workshops, responsible AI enablement, and research built from workshop registrations.",
+      "slogan": "The human side of AI change",
+      "founder": {
+        "@id": "https://insightsout.work/about.html#nima"
+      },
+      "email": "nimani.coaching@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "San Francisco Bay Area",
+        "United States",
+        "Online"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/imaninima/",
+        "https://luma.com/NimaImani",
+        "https://github.com/imanima/Insightsout-work"
+      ],
+      "knowsAbout": [
+        "AI change management",
+        "human side of AI adoption",
+        "leadership alignment on AI",
+        "manager role change",
+        "founder coaching",
+        "co-founder alignment",
+        "decision overwhelm",
+        "responsible AI enablement",
+        "what should stay human"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://insightsout.work/about.html#nima",
+      "name": "Nima Imani",
+      "givenName": "Nima",
+      "familyName": "Imani",
+      "jobTitle": "Founder of InsightsOut; ICF-certified, ontologically trained coach",
+      "description": "Nima Imani is the founder of InsightsOut and an ICF-certified, ontologically trained coach with more than a decade in software, data, AI, solution architecture, and organizational transformation, including work at EY and Neo4j. He coaches founders 1:1 (decision overwhelm) and in founding pairs (co-founder and team alignment), runs a weekly founder coaching group at Frontier Tower in San Francisco, and leads InsightsOut's leadership work and research on the human side of AI change.",
+      "url": "https://insightsout.work/about.html",
+      "image": "https://insightsout.work/assets/nima-imani-coaching.jpg",
+      "email": "nimani.coaching@gmail.com",
+      "worksFor": {
+        "@id": "https://insightsout.work/#organization"
+      },
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "EY"
+        },
+        {
+          "@type": "Organization",
+          "name": "Neo4j"
+        }
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "ICF-certified coach",
+        "credentialCategory": "certification"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/imaninima/",
+        "https://luma.com/NimaImani",
+        "https://insightsout.work/coaching.html"
+      ],
+      "knowsAbout": [
+        "founder coaching",
+        "co-founder conflict and alignment",
+        "decision making under uncertainty",
+        "leadership through AI change",
+        "role change",
+        "AI enablement for teams"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://insightsout.work/#website",
+      "url": "https://insightsout.work/",
+      "name": "InsightsOut",
+      "publisher": {
+        "@id": "https://insightsout.work/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://insightsout.work/",
+      "url": "https://insightsout.work/",
+      "name": "InsightsOut | The human side of AI change",
+      "description": "InsightsOut helps organizations, founders, and people navigate the human and ethical side of AI change through leadership work, founder coaching, community workshops, responsible AI enablement, and research.",
+      "isPartOf": {
+        "@id": "https://insightsout.work/#website"
+      },
+      "about": {
+        "@id": "https://insightsout.work/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -107,6 +232,28 @@
           <p>Put the choices into practice through workshops and real-work AI labs.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="band community-signup-compact" id="subscribe">
+    <div class="wrap community-signup-grid">
+      <div>
+        <p class="eyebrow">Stay connected</p>
+        <h2>Get InsightsOut updates.</h2>
+        <p class="b-muted">Workshop dates, research on the human side of AI change, and new programs for founders and organizations.</p>
+      </div>
+      <form class="community-inline-form js-subscribe" novalidate>
+        <input type="hidden" name="source" value="home">
+        <input type="hidden" name="consent" value="yes">
+        <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+        <div class="field">
+          <label for="subscribe-email">Email</label>
+          <input id="subscribe-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+        <p class="form-note community-form-note">Event invites, field notes, new programs. Unsubscribe anytime.</p>
+        <p class="form-status community-form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 </main>

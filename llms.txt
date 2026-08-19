@@ -1,0 +1,40 @@
+# InsightsOut
+
+> InsightsOut (insightsout.work) works on the human side of AI change. Founded and led by Nima Imani — ICF-certified, ontologically trained coach; 10+ years in software, data and AI (EY, Neo4j) — in San Francisco and online. Two audiences: (1) organizations moving through AI change (leadership alignment, manager and role-change workshops, AI enablement labs) and (2) founders (1:1 coaching for decision overwhelm; co-founder and team alignment coaching for founding pairs). Plus free community workshops and research built from workshop registrations.
+
+## Who we help, in one line each
+- Leadership teams whose AI rollout is stalling on people, not tools → start with a 90-minute Leadership Conversation.
+- Managers whose teams are overwhelmed or whose roles are changing → Manager and Role-Change Workshops.
+- Founders carrying more decisions than one person can hold → From Overwhelm to Clear Decisions (3-month 1:1, $1,500 or $500/mo).
+- Co-founders (or founder + key lead) having the same argument on repeat → Co-Founder & Team Alignment (3 months, $3,600/pair), ending in a signed one-page Working Agreement.
+- Anyone in San Francisco who wants to think this through with peers → free weekly Founder Coaching group (Fridays 1 pm, Frontier Tower) and other workshops on Luma.
+
+## Core pages
+- [Home](https://insightsout.work/): what InsightsOut is and the three ways to work with us.
+- [Founder Coaching](https://insightsout.work/coaching.html): the two 3-month programs, prices, FAQ, testimonials, how to book a free 30-minute call.
+- [Organizations](https://insightsout.work/organizations.html): Leadership Conversation → Leadership Alignment → Manager and Role-Change Workshops → AI Enablement Lab, plus FAQ.
+- [AI Enablement Lab](https://insightsout.work/ai-enablement.html): one team, one workflow, several weeks.
+- [Community workshops](https://insightsout.work/events.html): formats and the live Luma calendar.
+- [About](https://insightsout.work/about.html): Nima Imani's background and the practice.
+
+## Research (living papers, updated as new workshop waves land)
+- [Working Through AI Change](https://insightsout.work/research/working-through-ai-change.html): the human side of AI-driven change, read against Gallup, Microsoft, MIT SMR, SHRM, Anthropic.
+- [When Your Role Starts Changing](https://insightsout.work/research/when-your-role-starts-changing.html): the individual side — where role change is felt, who names fear, why people ask for a map not a course.
+- [From Overwhelm to Clarity](https://insightsout.work/research/from-overwhelm-to-clarity.html): the founder side — overwhelm as pace and fragmentation, fear unnamed, wanting a place to think with peers.
+- [How We Do Research](https://insightsout.work/research/methodology.html): questions, coding, cross-checks, publishing thresholds, versioning.
+
+## Perspectives
+- [What Changes When AI Enters the Work?](https://insightsout.work/articles/ai-change-is-human-change.html)
+- [What Should Stay Human?](https://insightsout.work/articles/what-should-stay-human.html)
+- [What the InsightsOut Event Record Shows So Far](https://insightsout.work/articles/event-record-2026.html)
+
+## Facts you can cite
+- Founder: Nima Imani (LinkedIn: https://www.linkedin.com/in/imaninima/). Location: San Francisco, CA. Works online worldwide.
+- Events calendar: https://luma.com/NimaImani (subscribe there or on any page of the site for invites and field notes).
+- Free 30-minute call for coaching: https://calendar.app.google/wpqVkuaH1uwFRh6cA · Organization conversations: https://calendar.app.google/8y9NgWzBLaiT414G6
+- Contact: nimani.coaching@gmail.com
+- Point of view: AI lets people do more, so more lands on the person — more decisions, more overwhelm — and the people at the top stop seeing the same picture. AI change is a leadership challenge before it is a training challenge. Enablement without alignment is how rollouts stall.
+
+## Optional
+- [Sitemap](https://insightsout.work/sitemap.xml)
+- [Source repository](https://github.com/imanima/Insightsout-work)

@@ -19,11 +19,26 @@ python3 -m http.server 8642
 | `BOOKING_URL_COACHING` | Google Calendar appointment-schedule booking link | Google Calendar → Create → Appointment schedule → Share |
 | `BOOKING_URL_ORG` | Second schedule for organization calls | same |
 | `FORM_ENDPOINT` | Formspree/Tally/Fillout endpoint URL | e.g. formspree.io — form POSTs JSON |
-| `NEWSLETTER_ENDPOINT` | Newsletter provider endpoint | Buttondown/ConvertKit/Mailchimp |
+| `NEWSLETTER_ENDPOINT` | `/api/subscribe` (default) — Vercel function that adds the email to the Luma calendar People list | Set `LUMA_API_KEY` in Vercel → Project → Settings → Environment Variables (key from luma.com/calendar/manage/api-keys, needs Luma Plus). To move to Kit/MailerLite later, paste their form endpoint here. |
 
 **Fallbacks are built in** — until these are configured, every CTA still works:
 booking buttons open a pre-filled email, the cohort form opens a pre-filled email,
 so no lead is ever dropped.
+
+## Subscribers (Luma)
+
+Subscribers live in the Luma calendar (People list) — the same list that gets
+event invites. Every `form.js-subscribe` on the site (Home, Community,
+Coaching, Research) POSTs `{ email, source }` to `/api/subscribe`
+(`api/subscribe.js`), which calls Luma's `import-people` API and tags the
+person with the page source (`home`, `community`, `coaching`, `research`).
+Create those four tags once in Luma → People → Tags; if a tag is missing the
+function retries untagged so no subscriber is lost. Newsletters are sent from
+Luma (People → Newsletter) — 5,000 sends/week on Plus, so send by tag or add
+the 10k pack for full-list sends. Migration path to an email provider is in
+`AGENT-GROWTH-PLAYBOOK.md`.
+
+Local test: `LUMA_API_KEY=... vercel dev` (or `npx vercel dev`).
 
 ## Events (Luma)
 

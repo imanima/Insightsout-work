@@ -11,9 +11,30 @@
   <meta property="og:image" content="https://insightsout.work/assets/photo4.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="stylesheet" href="css/style.css?v=39">
-  <script src="js/config.js?v=6" defer></script>
-  <script src="js/main.js?v=8" defer></script>
+  <script src="js/config.js?v=7" defer></script>
+  <script src="js/main.js?v=9" defer></script>
   <script src="js/findings.js?v=1" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://insightsout.work/insights.html",
+      "url": "https://insightsout.work/insights.html",
+      "name": "Research on the Human Side of AI Change",
+      "description": "InsightsOut research and field notes: living research papers built from workshop registrations and read against published studies, plus perspective essays.",
+      "isPartOf": {
+        "@id": "https://insightsout.work/#website"
+      },
+      "about": {
+        "@id": "https://insightsout.work/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -129,14 +150,15 @@
         <h2>Get new research.</h2>
         <p class="b-muted">Occasional field notes, workshop dates, and new programs.</p>
       </div>
-      <form id="newsletter-form" class="insights-inline-form" novalidate>
-        <input type="hidden" name="source" value="insightsout-updates">
+      <form id="newsletter-form" class="insights-inline-form js-subscribe" novalidate>
+        <input type="hidden" name="source" value="research">
         <input type="hidden" name="consent" value="yes">
+        <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
         <div class="field">
           <label for="signal-email">Email</label>
           <input id="signal-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
         </div>
-        <button class="btn btn-primary" type="submit">Get Updates</button>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
         <p class="form-note insights-form-note">Unsubscribe anytime.</p>
         <p id="newsletter-status" class="form-status insights-form-status" role="status" aria-live="polite"></p>
       </form>

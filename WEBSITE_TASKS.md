@@ -2,7 +2,8 @@
 
 ## Needs an account or content decision
 
-- Connect `NEWSLETTER_ENDPOINT` in `js/config.js` to Buttondown, Kit, Mailchimp, or another email provider. This is the highest-priority growth task.
+- **Subscribe is wired to Luma (2026-08-18).** To activate: add `LUMA_API_KEY` in Vercel env vars (Production + Preview) and redeploy; create tags `home`, `community`, `coaching`, `research` in Luma → People. Test on each page. Later: swap `NEWSLETTER_ENDPOINT` to Kit/MailerLite when a welcome sequence is wanted.
+- **LLM/AI-search visibility (2026-08-18):** `llms.txt`, AI-crawler allows in `robots.txt`, JSON-LD on all indexed pages, FAQ on Organizations. Ongoing program is in `AGENT-GROWTH-PLAYBOOK.md` — run its monthly visibility test.
 - Connect `FORM_ENDPOINT` if the cohort interest form will be used again. Until then it opens a pre-filled email.
 - Choose an analytics provider (Plausible or PostHog), add its site key, and verify the events already emitted by `js/main.js`.
 - Refresh `data/events.json` after new Luma events when the research record or event statistics need updating. The Community page itself uses the live Luma embed and updates automatically.
