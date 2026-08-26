@@ -2580,3 +2580,62 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
 .offer-card .btn-primary { margin-top: auto; }
 .offer-facts { margin-bottom: 22px; }
 .coaching-hero .cta-row .btn { white-space: nowrap; }
+
+/* ---------- Research hub v2 (2026-08-18) ---------- */
+.research-hero-v2 .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.8fr); gap: 64px; }
+.research-hero-v2 h1 { max-width: 16ch; }
+.dataset-card { gap: 14px; padding: 30px 30px 28px; }
+.dataset-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.dataset-stats div { border-top: 2px solid var(--teal); padding-top: 12px; }
+.dataset-stats strong { display: block; color: var(--head); font-family: var(--display); font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1; letter-spacing: -0.02em; }
+.dataset-stats span { display: block; margin-top: 6px; color: var(--muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+.dataset-range { color: var(--ink); font-size: 14.5px; margin: 0; }
+.dataset-card .offer-facts { margin: 0; }
+.dataset-card .offer-facts li { font-size: 14px; color: var(--muted); }
+.dataset-card .card-cta { margin-top: 4px; }
+
+.finding-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.band .finding { padding: 26px 24px 24px; border-radius: 16px; background: rgba(255, 255, 255, 0.055); border: 1px solid rgba(255, 255, 255, 0.10); min-height: 200px; }
+.band .finding .research-stat { padding: 0; border: 0; }
+.band .finding .research-stat strong { color: var(--band-ink); font-size: clamp(1.7rem, 2.6vw, 2.3rem); letter-spacing: -0.02em; overflow-wrap: anywhere; }
+.band .finding .research-stat span { color: var(--gold); font-size: 12.5px; margin-top: 8px; }
+.band .finding > p { margin-top: 14px; color: var(--band-ink); font-size: 15px; line-height: 1.55; }
+.band .finding .method-note { color: var(--band-muted); font-size: 12.5px; margin-top: 12px; }
+.band .finding .method-note a { color: var(--gold); }
+.band .finding.finding-missing { display: none; }
+
+.paper-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.paper-card { gap: 10px; }
+.paper-card h3 { font-size: 1.32rem; line-height: 1.25; }
+.paper-card h3 a { color: var(--head); }
+.paper-card h3 a:hover { color: var(--teal); text-decoration: none; }
+.paper-card .paper-sub { color: var(--ink); font-size: 14.5px; font-weight: 600; }
+.paper-actions { margin-top: auto; padding-top: 10px; display: flex; align-items: center; gap: 18px; }
+.paper-actions .card-cta { margin-top: 0; }
+
+.perspectives { padding-top: 0; }
+.note-card { gap: 10px; }
+.note-card h3 { font-size: 1.15rem; line-height: 1.3; }
+
+.method-band { background: var(--surface); border-top: 1px solid var(--line); }
+.method-steps { margin: 0; padding: 0; list-style: none; counter-reset: step; max-width: 680px; }
+.method-steps li { position: relative; padding: 16px 0 16px 52px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15.5px; line-height: 1.6; counter-increment: step; }
+.method-steps li:last-child { border-bottom: 1px solid var(--line); }
+.method-steps li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 18px; color: var(--teal); font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; }
+.method-steps li strong { color: var(--head); }
+.cite-line { margin-top: 34px; padding: 16px 20px; border-left: 3px solid var(--gold); background: color-mix(in srgb, var(--line) 35%, transparent); color: var(--muted); font-size: 13.5px; word-break: break-word; }
+.cite-line strong { color: var(--head); }
+
+.subscribe-alt { margin-top: 18px; color: var(--band-muted); font-size: 14px; }
+.subscribe-alt a { color: var(--gold); font-weight: 600; }
+
+@media (max-width: 980px) {
+  .research-hero-v2 .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .finding-grid { grid-template-columns: repeat(2, 1fr); }
+  .paper-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .finding-grid { grid-template-columns: 1fr; }
+  .dataset-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .paper-actions { flex-wrap: wrap; }
+}

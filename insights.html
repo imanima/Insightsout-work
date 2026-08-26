@@ -10,10 +10,10 @@
   <meta property="og:description" content="Research grounded in what people are experiencing as AI changes roles, leadership, and work.">
   <meta property="og:image" content="https://insightsout.work/assets/photo4.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <link rel="stylesheet" href="css/style.css?v=39">
+  <link rel="stylesheet" href="css/style.css?v=40">
   <script src="js/config.js?v=7" defer></script>
   <script src="js/main.js?v=9" defer></script>
-  <script src="js/findings.js?v=1" defer></script>
+  <script src="js/findings.js?v=2" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,117 +51,156 @@
       <a href="insights.html" class="active">Research</a>
       <a href="about.html">About</a>
     </div>
-    <a class="btn btn-primary btn-sm" href="#subscribe">Get Updates</a>
+    <a class="btn btn-primary btn-sm" href="#subscribe">Subscribe</a>
   </div>
 </nav>
 
 <main>
-  <section class="simple-hero research-hero">
-    <div class="wrap narrow-copy">
-      <p class="eyebrow">InsightsOut research</p>
-      <h1>What is AI change doing to people and work?</h1>
-      <p class="lede">We study what people experience as roles change and AI enters everyday work — and use those patterns to make our workshops, coaching, and organizational work better.</p>
-      <div class="cta-row" style="margin-top: 34px;">
-        <a class="btn btn-primary" href="#articles">Read the Research</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="wrap research-method-grid">
+  <section class="hero coaching-hero research-hero-v2">
+    <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">How we learn</p>
-        <h2>Research grounded in real work.</h2>
+        <p class="eyebrow">InsightsOut research</p>
+        <h1>What is AI change doing to people and work?</h1>
+        <p class="lede">We ask everyone who registers for an InsightsOut workshop three short questions. Then we read the answers against published research and publish what holds up — with the sample, the version, and what changed.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#papers">Read the papers</a>
+          <a class="btn btn-ghost" href="#subscribe">Get new research by email</a>
+        </div>
+        <p class="hero-note">Living papers. Updated as each wave of events lands.</p>
       </div>
-      <div class="research-method-copy">
-        <p>We learn from community workshops, organizational programs, and conversations with people living through AI change.</p>
-        <p>We follow changing roles, leadership, ethics, judgment, and everyday practice. We share only what the evidence supports and protect participant privacy.</p>
+      <aside class="card dataset-card" aria-label="The dataset behind the research">
+        <span class="offer-kicker">The dataset</span>
+        <div class="dataset-stats">
+          <div><strong data-dataset="unique_people">363</strong><span>people</span></div>
+          <div><strong data-dataset="waves">9</strong><span>event waves</span></div>
+          <div><strong data-dataset="registrations">444</strong><span>registrations</span></div>
+        </div>
+        <p class="dataset-range"><span data-dataset="date_range">March – July 2026</span> · founders, managers, and professionals · San Francisco and online</p>
+        <ul class="offer-facts">
+          <li>Registration-time answers: needs and intent, in people's own words</li>
+          <li>Coded into themes, cross-checked against Gallup, Microsoft, MIT SMR, SHRM, Anthropic</li>
+          <li>Every number lives in one findings ledger; papers cite it by id</li>
+        </ul>
+        <a class="card-cta" href="research/methodology.html">How we do research →</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="band" id="findings">
+    <div class="wrap">
+      <p class="eyebrow">What we're finding</p>
+      <h2 class="section-heading">Four things that keep showing up.</h2>
+      <p class="lede section-lede">Numbers come straight from the findings ledger and update with each edition.</p>
+      <div class="finding-grid">
+        <article class="finding" data-finding-card="H1.decision_uncertainty"></article>
+        <article class="finding" data-finding-card="H7.peer_processing"></article>
+        <article class="finding" data-finding-card="H3.fear_gap"></article>
+        <article class="finding" data-finding-card="H5.manager_relational"></article>
       </div>
     </div>
   </section>
 
-  <section id="articles" class="section-tight" style="padding-top: 0;">
+  <section class="section-tight" id="papers">
     <div class="wrap">
-      <h2 class="research-list-heading">Research papers.</h2>
-      <p class="method-note">Living papers built from our workshop data and read against published research. Each shows its version, sample, and what changed. <a href="research/methodology.html">How we do research →</a></p>
-      <div class="article-list" data-research-list data-types="white-paper,brief">
+      <p class="eyebrow">Research papers</p>
+      <h2 class="section-heading">Three living papers. One dataset.</h2>
+      <p class="lede section-lede">Each paper shows its version, sample, and changelog, and links the numbers back to the ledger. PDFs are versioned for citation.</p>
+      <div class="paper-grid" data-research-list data-types="white-paper,brief">
         <!-- research-list:start (generated by scripts/build_research.py) -->
-        <a class="article-card article-live" href="research/working-through-ai-change.html">
-          <div>
-            <span class="article-type">White paper · v1.0 · August 18, 2026 · n=363</span>
-            <h3>Working Through AI Change</h3>
-            <p>A living research paper on the human side of AI-driven change, built from InsightsOut workshop registrations and read against Gallup, Microsoft, MIT SMR, SHRM, and Anthropic. Updated as each new wave of events lands.</p>
-          </div>
-          <span class="article-link">Read →</span>
-        </a>
-        <a class="article-card article-live" href="research/from-overwhelm-to-clarity.html">
-          <div>
-            <span class="article-type">White paper · v1.0 · August 18, 2026 · n=363</span>
-            <h3>From Overwhelm to Clarity</h3>
-            <p>A living research paper on the founder side of AI-driven change: an early-stage room where money and customers come first, overwhelm is pace and fragmentation rather than hours, fear goes mostly unnamed, and what people quietly want is a place to think with peers. Built from InsightsOut founder workshop registrations and updated as new waves land.</p>
-          </div>
-          <span class="article-link">Read →</span>
-        </a>
-        <a class="article-card article-live" href="research/when-your-role-starts-changing.html">
-          <div>
-            <span class="article-type">White paper · v1.0 · August 18, 2026 · n=363</span>
-            <h3>When Your Role Starts Changing</h3>
-            <p>A living research paper on the individual side of AI-driven change: where role change is felt, who names fear and who doesn&#x27;t, why people ask for a map rather than a course, and what kind of support they actually want. Built from InsightsOut workshop registrations and updated as new waves land.</p>
-          </div>
-          <span class="article-link">Read →</span>
-        </a>
+        <article class="card paper-card">
+          <span class="offer-kicker">White paper · v1.0 · August 18, 2026 · n=363</span>
+          <h3><a href="research/working-through-ai-change.html">Working Through AI Change</a></h3>
+          <p class="paper-sub">What 363 founders, managers, and professionals tell us before anyone surveys them</p>
+          <p>A living research paper on the human side of AI-driven change, built from InsightsOut workshop registrations and read against Gallup, Microsoft, MIT SMR, SHRM, and Anthropic.</p>
+          <div class="paper-actions"><a class="btn btn-primary btn-sm" href="research/working-through-ai-change.html">Read the paper</a><a class="card-cta" href="research/pdf/working-through-ai-change-v1.0.pdf">PDF ↓</a></div>
+        </article>
+        <article class="card paper-card">
+          <span class="offer-kicker">White paper · v1.0 · August 18, 2026 · n=363</span>
+          <h3><a href="research/from-overwhelm-to-clarity.html">From Overwhelm to Clarity</a></h3>
+          <p class="paper-sub">The founder side of AI-driven change</p>
+          <p>An early-stage room where money and customers come first, overwhelm is pace and fragmentation rather than hours, fear goes mostly unnamed, and what people quietly want is a place to think with peers.</p>
+          <div class="paper-actions"><a class="btn btn-primary btn-sm" href="research/from-overwhelm-to-clarity.html">Read the paper</a><a class="card-cta" href="research/pdf/from-overwhelm-to-clarity-v1.0.pdf">PDF ↓</a></div>
+        </article>
+        <article class="card paper-card">
+          <span class="offer-kicker">White paper · v1.0 · August 18, 2026 · n=363</span>
+          <h3><a href="research/when-your-role-starts-changing.html">When Your Role Starts Changing</a></h3>
+          <p class="paper-sub">What people navigating AI-driven role change say about identity, fear, and what they want next</p>
+          <p>Where role change is felt, who names fear and who doesn't, why people ask for a map rather than a course, and what kind of support they actually want.</p>
+          <div class="paper-actions"><a class="btn btn-primary btn-sm" href="research/when-your-role-starts-changing.html">Read the paper</a><a class="card-cta" href="research/pdf/when-your-role-starts-changing-v1.0.pdf">PDF ↓</a></div>
+        </article>
         <!-- research-list:end -->
       </div>
+    </div>
+  </section>
 
-      <h2 class="research-list-heading" style="margin-top: 48px;">Perspectives and field notes.</h2>
-      <div class="article-list">
-        <a class="article-card article-live" href="articles/ai-change-is-human-change.html">
-          <div>
-            <span class="article-type">Perspective</span>
-            <h3>What Changes When AI Enters the Work?</h3>
-            <p>Why AI adoption must include roles, emotions, agency, leadership, and practical human responsibility.</p>
-          </div>
-          <span class="article-link">Read →</span>
+  <section class="section-tight perspectives" id="perspectives">
+    <div class="wrap">
+      <p class="eyebrow">Perspectives and field notes</p>
+      <h2 class="section-heading">Shorter reads. Same point of view.</h2>
+      <div class="grid-3 note-grid">
+        <a class="card note-card" href="articles/ai-change-is-human-change.html">
+          <span class="offer-kicker">Perspective</span>
+          <h3>What Changes When AI Enters the Work?</h3>
+          <p>Why AI adoption must include roles, emotions, agency, leadership, and practical human responsibility.</p>
+          <span class="card-cta">Read →</span>
         </a>
-        <a class="article-card article-live" href="articles/what-should-stay-human.html">
-          <div>
-            <span class="article-type">Ethics and judgment</span>
-            <h3>What Should Stay Human?</h3>
-            <p>A way to think about what AI can support and where judgment, responsibility, trust, and care should remain human.</p>
-          </div>
-          <span class="article-link">Read →</span>
+        <a class="card note-card" href="articles/what-should-stay-human.html">
+          <span class="offer-kicker">Ethics and judgment</span>
+          <h3>What Should Stay Human?</h3>
+          <p>A way to think about what AI can support and where judgment, responsibility, trust, and care should remain human.</p>
+          <span class="card-cta">Read →</span>
         </a>
-        <a class="article-card article-live" href="articles/event-record-2026.html">
-          <div>
-            <span class="article-type">Field note</span>
-            <h3>What the InsightsOut Event Record Shows So Far</h3>
-            <p>An early view of the questions people are bringing to public conversations about AI, work, and change.</p>
-          </div>
-          <span class="article-link">Read →</span>
+        <a class="card note-card" href="articles/event-record-2026.html">
+          <span class="offer-kicker">Field note</span>
+          <h3>What the InsightsOut Event Record Shows So Far</h3>
+          <p>An early view of the questions people are bringing to public conversations about AI, work, and change.</p>
+          <span class="card-cta">Read →</span>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="band insights-signup-compact" id="subscribe">
-    <div class="wrap insights-signup-grid">
+  <section class="section-tight method-band" id="method">
+    <div class="wrap">
+      <div class="research-method-grid">
+        <div>
+          <p class="eyebrow">How we do research</p>
+          <h2>Small questions. Careful claims.</h2>
+          <p class="method-note" style="margin-top:14px;">Full method, limits, and what we won't publish: <a href="research/methodology.html">methodology →</a></p>
+        </div>
+        <ol class="method-steps">
+          <li><strong>Ask at registration.</strong> Three short questions when someone signs up for a workshop: the challenge, how AI is changing their work, what they want to leave with.</li>
+          <li><strong>Code the answers.</strong> Free text is themed by hand with a conservative mapping across events; role and segment are kept where captured.</li>
+          <li><strong>Cross-check.</strong> Every claim is read against published research and marked as consistent, extending, or in tension.</li>
+          <li><strong>Publish with a version.</strong> n, waves, date range, changelog, and a versioned PDF — updated as new waves land. Individual answers are never published.</li>
+        </ol>
+      </div>
+      <p class="cite-line"><strong>How to cite:</strong> Imani, N. (2026). <em>Working Through AI Change</em> (v1.0). InsightsOut. https://insightsout.work/research/working-through-ai-change.html</p>
+    </div>
+  </section>
+
+  <section class="band community-signup-compact" id="subscribe">
+    <div class="wrap community-signup-grid">
       <div>
         <p class="eyebrow">Stay connected</p>
-        <h2>Get new research.</h2>
-        <p class="b-muted">Occasional field notes, workshop dates, and new programs.</p>
+        <h2>Get new research first.</h2>
+        <p class="b-muted">New editions, key findings, and workshop dates. One note every couple of weeks, no more.</p>
       </div>
-      <form id="newsletter-form" class="insights-inline-form js-subscribe" novalidate>
-        <input type="hidden" name="source" value="research">
-        <input type="hidden" name="consent" value="yes">
-        <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
-        <div class="field">
-          <label for="signal-email">Email</label>
-          <input id="signal-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-        </div>
-        <button class="btn btn-primary" type="submit">Subscribe</button>
-        <p class="form-note insights-form-note">Unsubscribe anytime.</p>
-        <p id="newsletter-status" class="form-status insights-form-status" role="status" aria-live="polite"></p>
-      </form>
+      <div>
+        <form id="newsletter-form" class="community-inline-form js-subscribe" novalidate>
+          <input type="hidden" name="source" value="research">
+          <input type="hidden" name="consent" value="yes">
+          <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+          <div class="field">
+            <label for="signal-email">Email</label>
+            <input id="signal-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+          <p class="form-note community-form-note">Unsubscribe anytime.</p>
+          <p class="form-status community-form-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="subscribe-alt">Prefer Luma? <a href="https://luma.com/NimaImani" target="_blank" rel="noopener" data-track="luma_subscribe_click">Subscribe on Luma →</a> — same list, and you'll see every upcoming event there.</p>
+      </div>
     </div>
   </section>
 </main>
@@ -177,7 +216,7 @@
 </footer>
 
 <div class="msticky">
-  <a class="btn btn-primary btn-sm" href="#subscribe">Get Updates</a>
+  <a class="btn btn-primary btn-sm" href="#subscribe">Subscribe</a>
 </div>
 
 </body>

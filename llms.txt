@@ -7,7 +7,7 @@
 - Managers whose teams are overwhelmed or whose roles are changing → Manager and Role-Change Workshops.
 - Founders carrying more decisions than one person can hold → From Overwhelm to Clear Decisions (3-month 1:1, $1,500 or $500/mo).
 - Co-founders (or founder + key lead) having the same argument on repeat → Co-Founder & Team Alignment (3 months, $3,600/pair), ending in a signed one-page Working Agreement.
-- Anyone in San Francisco who wants to think this through with peers → free weekly Founder Coaching group (Fridays 1 pm, Frontier Tower) and other workshops on Luma.
+- Anyone in San Francisco who wants to think this through with peers → free weekly Founder Coaching group (Fridays 2 pm, Frontier Tower) and other workshops on Luma.
 
 ## Core pages
 - [Home](https://insightsout.work/): what InsightsOut is and the three ways to work with us.
@@ -16,6 +16,13 @@
 - [AI Enablement Lab](https://insightsout.work/ai-enablement.html): one team, one workflow, several weeks.
 - [Community workshops](https://insightsout.work/events.html): formats and the live Luma calendar.
 - [About](https://insightsout.work/about.html): Nima Imani's background and the practice.
+
+## Workshops (each documented in full on the site; register on Luma)
+- [My Team Is Overwhelmed. How Do I Lead Through Uncertainty?](https://insightsout.work/workshops/my-team-is-overwhelmed.html): 90-minute sensemaking session for middle managers and team leads leading teams through AI change. Free.
+- [AI Is Changing Everything. What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human.html): 3-hour working session to find your own line, what to hand over and what should stay human. Free.
+- [AI for the Rest of Us](https://insightsout.work/workshops/ai-for-the-rest-of-us.html): no-jargon facilitated conversation for people who feel left behind by AI. Free.
+- [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching.html): free weekly small-group coaching for founders, Fridays 2 pm, Frontier Tower Back Salon.
+- [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having.html): 2-hour working session for founding pairs ending in a first draft working agreement. $90 per person, $180 per pair.
 
 ## Research (living papers, updated as new workshop waves land)
 - [Working Through AI Change](https://insightsout.work/research/working-through-ai-change.html): the human side of AI-driven change, read against Gallup, Microsoft, MIT SMR, SHRM, Anthropic.

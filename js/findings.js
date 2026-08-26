@@ -64,8 +64,19 @@
         var types = (mount.getAttribute("data-types") || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
         var list = types.length ? pubs.filter(function (p) { return types.indexOf(p.type) !== -1; }) : pubs;
         list.sort(function (a, b) { return ((b.weight || 0) - (a.weight || 0)) || (b.date || "").localeCompare(a.date || ""); });
+        var isGrid = mount.classList.contains("paper-grid");
         mount.innerHTML = list.map(function (p) {
-          var meta = [p.version ? "v" + p.version : "", p.date || "", p.n ? "n=" + p.n : ""].filter(Boolean).join(" · ");
+          var meta = [p.version ? "v" + p.version : "", p.date_human || p.date || "", p.n ? "n=" + p.n : ""].filter(Boolean).join(" · ");
+          if (isGrid) {
+            return '<article class="card paper-card">' +
+              '<span class="offer-kicker">' + (p.type_label || p.type) + (meta ? " · " + meta : "") + "</span>" +
+              '<h3><a href="' + root + p.url + '">' + p.title + "</a></h3>" +
+              (p.subtitle ? '<p class="paper-sub">' + p.subtitle + "</p>" : "") +
+              "<p>" + (p.summary || "") + "</p>" +
+              '<div class="paper-actions"><a class="btn btn-primary btn-sm" href="' + root + p.url + '">Read the paper</a>' +
+              (p.pdf ? '<a class="card-cta" href="' + root + p.pdf + '">PDF ↓</a>' : "") + "</div>" +
+            "</article>";
+          }
           return '<a class="article-card article-live" href="' + root + p.url + '">' +
             "<div>" +
               '<span class="article-type">' + (p.type_label || p.type) + (meta ? " · " + meta : "") + "</span>" +

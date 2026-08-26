@@ -22,7 +22,7 @@ window.IO_CONFIG = {
   // The events page uses the official calendar embed (cal-cHPs3Da3iGJZspe)
   // directly in the HTML, so newly published events appear automatically.
   // This is the public non-embed fallback link.
-  LUMA_CALENDAR_URL: "https://lu.ma/user/nimaimani",
+  LUMA_CALENDAR_URL: "https://luma.com/NimaImani",
 
   // --- Newsletter / subscribers ---
   // Subscribers live in the Luma calendar (People list). The site form POSTs
