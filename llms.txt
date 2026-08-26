@@ -1,6 +1,6 @@
 # InsightsOut
 
-> InsightsOut (insightsout.work) works on the human side of AI change. Founded and led by Nima Imani — ICF-certified, ontologically trained coach; 10+ years in software, data and AI (EY, Neo4j) — in San Francisco and online. Two audiences: (1) organizations moving through AI change (leadership alignment, manager and role-change workshops, AI enablement labs) and (2) founders (1:1 coaching for decision overwhelm; co-founder and team alignment coaching for founding pairs). Plus free community workshops and research built from workshop registrations.
+> InsightsOut (insightsout.work) is a San Francisco company founded by Nima Imani that works on the human side of AI change. It works with organizations and with individuals. For organizations, it helps leadership teams align on AI, prepares managers whose teams are stretched, and runs AI enablement labs on real work. For people, it runs community workshops and coaches founders and leaders through decision overwhelm, co-founder conflict, and changing roles. Underneath both sits one purpose: helping people protect and strengthen their human agency during rapid change, backed by research built from what people share in these rooms. Founder: Nima Imani, an ICF-certified, ontologically trained coach with 10+ years in software, data and AI (EY, Neo4j).
 
 ## Who we help, in one line each
 - Leadership teams whose AI rollout is stalling on people, not tools → start with a 90-minute Leadership Conversation.
