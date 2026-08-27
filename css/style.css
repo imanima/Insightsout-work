@@ -2630,3 +2630,11 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
   .dataset-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .paper-actions { flex-wrap: wrap; }
 }
+
+/* ---------- homepage upcoming strip ---------- */
+#upcoming-strip { padding: 44px 0 36px; border-bottom: 1px solid var(--line); }
+#upcoming-strip .eyebrow { margin-bottom: 14px; }
+.upcoming-list p { padding: 7px 0; border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); font-size: 16.5px; }
+.upcoming-list p:last-child { border-bottom: 0; }
+.upcoming-list strong { font-variant-numeric: tabular-nums; color: var(--head); margin-right: 4px; }
+.upcoming-more { margin-top: 14px; font-size: 15px; }
