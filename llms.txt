@@ -15,7 +15,7 @@
 - [Founder Coaching](https://insightsout.work/coaching.html): the two 3-month programs, prices, FAQ, testimonials, how to book a free 30-minute call.
 - [Organizations](https://insightsout.work/organizations.html): Leadership Conversation → Leadership Alignment → Manager and Role-Change Workshops → Enablement (the people side), plus FAQ.
 - [Hands-On AI Enablement](https://insightsout.work/ai-enablement.html): for individuals, coaches, consultants, and small business owners — put AI to work on one real workflow of your own.
-- [Community workshops](https://insightsout.work/events.html): formats and the live Luma calendar.
+- [Events](https://insightsout.work/events.html): all upcoming workshops and the live Luma calendar.
 - [About](https://insightsout.work/about.html): Nima Imani's background and the practice.
 
 ## Workshops (each documented in full on the site; register on Luma)
