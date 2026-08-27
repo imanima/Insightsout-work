@@ -1,2 +1,9 @@
 .DS_Store
 node_modules/
+*.docx
+*.pages
+InsightsOut_*
+AGENT-GROWTH-PLAYBOOK.md
+WEBSITE_TASKS.md
+_to_delete/
+__pycache__/

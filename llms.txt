@@ -7,13 +7,14 @@
 - Managers whose teams are overwhelmed or whose roles are changing → Manager and Role-Change Workshops.
 - Founders carrying more decisions than one person can hold → From Uncertainty to Clear Decisions (3-month 1:1, $1,500 or $500/mo).
 - Co-founders (or founder + key lead) having the same argument on repeat → Co-Founder & Team Alignment (3 months, $3,600/pair), ending in a signed one-page Working Agreement.
+- Individuals, coaches, consultants, and small business owners who want to put AI to work → hands-on AI enablement and the AI for the Rest of Us workshop.
 - Anyone in San Francisco who wants to think this through with peers → free weekly Founder Coaching group (Fridays 2 pm, Frontier Tower) and other workshops on Luma.
 
 ## Core pages
 - [Home](https://insightsout.work/): what InsightsOut is and the three ways to work with us.
 - [Founder Coaching](https://insightsout.work/coaching.html): the two 3-month programs, prices, FAQ, testimonials, how to book a free 30-minute call.
-- [Organizations](https://insightsout.work/organizations.html): Leadership Conversation → Leadership Alignment → Manager and Role-Change Workshops → AI Enablement Lab, plus FAQ.
-- [AI Enablement Lab](https://insightsout.work/ai-enablement.html): one team, one workflow, several weeks.
+- [Organizations](https://insightsout.work/organizations.html): Leadership Conversation → Leadership Alignment → Manager and Role-Change Workshops → Enablement (the people side), plus FAQ.
+- [Hands-On AI Enablement](https://insightsout.work/ai-enablement.html): for individuals, coaches, consultants, and small business owners — put AI to work on one real workflow of your own.
 - [Community workshops](https://insightsout.work/events.html): formats and the live Luma calendar.
 - [About](https://insightsout.work/about.html): Nima Imani's background and the practice.
 
