@@ -466,7 +466,8 @@ figure.shot figcaption {
 .simple-hero h1 { max-width: 16ch; margin-bottom: 26px; }
 .section-tight { padding-top: 88px; padding-bottom: 88px; }
 .home-hero { padding-top: 96px; padding-bottom: 96px; }
-.home-hero h1 { max-width: 18ch; }
+.home-hero h1 { max-width: 22ch; }
+.page-home .home-hero::after { display: none; }
 .text-link { font-size: 15px; font-weight: 600; }
 .section-heading { max-width: 24ch; margin-bottom: 16px; }
 .section-lede { margin-bottom: 42px; }
@@ -503,7 +504,24 @@ figure.shot figcaption {
 .simple-process {
   background: var(--surface);
 }
-.primary-paths .card { min-height: 240px; }
+.primary-paths .card { min-height: 0; }
+.home-paths {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  padding: 88px 0;
+}
+.home-paths .card {
+  box-shadow: none;
+  border-radius: 10px;
+}
+.research-bridge-quiet {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 62ch;
+}
 .research-bridge {
   display: grid; grid-template-columns: 0.65fr 1.35fr auto; gap: 30px;
   align-items: center; margin-top: 22px; padding: 26px 28px;
@@ -2632,9 +2650,62 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
 }
 
 /* ---------- homepage upcoming strip ---------- */
-#upcoming-strip { padding: 44px 0 36px; border-bottom: 1px solid var(--line); }
-#upcoming-strip .eyebrow { margin-bottom: 14px; }
-.upcoming-list p { padding: 7px 0; border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); font-size: 16.5px; }
-.upcoming-list p:last-child { border-bottom: 0; }
-.upcoming-list strong { font-variant-numeric: tabular-nums; color: var(--head); margin-right: 4px; }
-.upcoming-more { margin-top: 14px; font-size: 15px; }
+#upcoming-strip { padding: 44px 0 40px; border-bottom: 1px solid var(--line); }
+#upcoming-strip .eyebrow { margin-bottom: 8px; }
+.upcoming-list { border-top: 1px solid var(--line); }
+.upcoming-row {
+  display: grid;
+  grid-template-columns: 8.6rem minmax(0, 1fr) auto;
+  gap: 18px 28px;
+  align-items: baseline;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+}
+.upcoming-row:hover { text-decoration: none; }
+.upcoming-row:hover .upcoming-title { color: var(--head); }
+.upcoming-row:hover .upcoming-go { text-decoration: underline; }
+.upcoming-row time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  font-size: 14.5px;
+  color: var(--head);
+}
+.upcoming-title { color: var(--ink); font-size: 16.5px; }
+.upcoming-go { font-size: 14px; font-weight: 600; color: var(--teal); white-space: nowrap; }
+.upcoming-more { margin-top: 16px; font-size: 15px; }
+@media (max-width: 700px) {
+  .upcoming-row { grid-template-columns: 1fr auto; gap: 4px 16px; }
+  .upcoming-row time { grid-column: 1 / -1; font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+}
+
+/* Coaching page: cream paper, personal night hero — not the InsightsOut teal brochure */
+.coaching-page .coaching-hero {
+  background: var(--personal-night);
+}
+.coaching-page .coaching-hero::after { display: none; }
+.coaching-page .coaching-hero .text-link { color: var(--personal-accent); }
+.coaching-page .coaching-hero .btn-primary,
+.coaching-page .offer-card .btn-primary,
+.coaching-page .footer-actions .btn-primary {
+  background: var(--personal-gold);
+  border-color: var(--personal-gold);
+  color: #152124;
+  box-shadow: none;
+}
+.coaching-page .coaching-hero .btn-primary:hover,
+.coaching-page .offer-card .btn-primary:hover,
+.coaching-page .footer-actions .btn-primary:hover {
+  background: #dfc58f;
+  border-color: #dfc58f;
+}
+.coaching-page .card {
+  background: var(--personal-surface);
+  border-color: var(--personal-line);
+  box-shadow: none;
+}
+.coaching-page .band { background: var(--personal-night); }
+.coaching-page figure.shot img {
+  border-radius: 2px;
+  filter: saturate(0.86) contrast(1.03);
+}

@@ -1,14 +1,50 @@
 {
+  "cleanUrls": true,
   "redirects": [
     {
-      "source": "/coaching",
-      "destination": "/coaching.html",
+      "source": "/subscribe",
+      "destination": "/#subscribe",
+      "permanent": false
+    },
+    {
+      "source": "/cohort",
+      "destination": "/events",
       "permanent": true
     },
     {
-      "source": "/subscribe",
-      "destination": "/index.html#subscribe",
-      "permanent": false
+      "source": "/cohort.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/leadership-circle",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/leadership-circle.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/partnerships",
+      "destination": "/organizations",
+      "permanent": true
+    },
+    {
+      "source": "/partnerships.html",
+      "destination": "/organizations",
+      "permanent": true
+    },
+    {
+      "source": "/ai-enablement",
+      "destination": "/ai-transformation",
+      "permanent": true
+    },
+    {
+      "source": "/ai-enablement.html",
+      "destination": "/ai-transformation",
+      "permanent": true
     }
   ],
   "headers": [
@@ -21,6 +57,5 @@
         }
       ]
     }
-  ],
-  "cleanUrls": true
+  ]
 }

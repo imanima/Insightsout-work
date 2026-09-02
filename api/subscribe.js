@@ -17,7 +17,7 @@ const ALLOWED_ORIGINS = [
   "https://www.insightsout.work",
   "http://localhost:8642"
 ];
-const ALLOWED_TAGS = ["website", "coaching", "research", "community", "organizations", "home"];
+const ALLOWED_TAGS = ["website", "coaching", "research", "events", "community", "organizations", "home"];
 
 function cors(req, res) {
   const origin = req.headers.origin || "";
