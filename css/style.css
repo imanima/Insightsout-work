@@ -2667,6 +2667,17 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
 .path-card .path-first-step { margin-top: auto; padding-top: 6px; font-weight: 600; font-size: 14.5px; color: var(--teal); }
 .path-card:hover .path-first-step { text-decoration: underline; }
 
+/* ---------- organizations: plain rows ---------- */
+.org-situations { background: var(--surface); border-top: 1px solid var(--line); }
+.plain-rows { border-top: 1px solid var(--line); margin-top: 28px; }
+.plain-row {
+  display: grid; grid-template-columns: minmax(200px, 0.7fr) minmax(0, 1.3fr);
+  gap: 20px 40px; padding: 26px 0; border-bottom: 1px solid var(--line); align-items: start;
+}
+.plain-row h3 { font-size: 1.12rem; margin: 0; color: var(--head); }
+.plain-row p { color: var(--muted); font-size: 15.5px; max-width: 62ch; margin: 0; }
+@media (max-width: 700px) { .plain-row { grid-template-columns: 1fr; gap: 8px; } }
+
 /* ---------- homepage upcoming strip ---------- */
 #upcoming-strip { padding: 44px 0 40px; border-bottom: 1px solid var(--line); }
 #upcoming-strip .eyebrow { margin-bottom: 8px; }
