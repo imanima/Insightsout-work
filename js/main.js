@@ -61,10 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ---------- Booking ----------
-// Buttons carry data-book="coaching" | "org". If a booking URL is configured,
+// Buttons carry data-book="coaching" | "org" | "smb". If a booking URL is configured,
 // open it; otherwise fall back to a pre-filled email so no lead is ever lost.
 function bookingUrl(kind) {
   var c = window.IO_CONFIG || {};
+  if (kind === "smb") return c.BOOKING_URL_SMB || c.BOOKING_URL_ORG;
   return kind === "org" ? c.BOOKING_URL_ORG : c.BOOKING_URL_COACHING;
 }
 document.addEventListener("click", function (e) {
@@ -72,13 +73,14 @@ document.addEventListener("click", function (e) {
   if (!el) return;
   e.preventDefault();
   var kind = el.getAttribute("data-book");
-  window.ioTrack(kind === "org" ? "book_org_call_click" : "book_coaching_click");
+  window.ioTrack(kind === "org" ? "book_org_call_click" : kind === "smb" ? "book_smb_evaluation_click" : "book_coaching_click");
   var url = bookingUrl(kind) || el.href;
   if (url) {
     window.open(url, "_blank", "noopener");
   } else {
     var subject = kind === "org"
       ? "Organization conversation | InsightsOut"
+      : kind === "smb" ? "Free AI evaluation | InsightsOut"
       : "Private coaching conversation | InsightsOut";
     var body = "Hi Nima,%0D%0A%0D%0AI would like to book a " +
       (kind === "org" ? "conversation for my organization." : "private coaching conversation.") +

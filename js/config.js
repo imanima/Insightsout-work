@@ -8,6 +8,8 @@ window.IO_CONFIG = {
   BOOKING_URL_COACHING: "https://calendar.app.google/wpqVkuaH1uwFRh6cA",
   // Discovery calls (organizations + general) book through Google Calendar.
   BOOKING_URL_ORG: "https://calendar.app.google/8y9NgWzBLaiT414G6",
+  // Small-business free evaluation (same calendar as org for now)
+  BOOKING_URL_SMB: "https://calendar.app.google/8y9NgWzBLaiT414G6",
 
   // --- Cohort form backend ---
   // Leave empty to use the email fallback (opens a pre-filled email).
