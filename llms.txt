@@ -19,11 +19,11 @@
 - [About](https://insightsout.work/about): what InsightsOut is, Nima Imani's background, FAQ.
 
 ## Workshops (each documented in full on the site; register on Luma)
-- [My Team Is Overwhelmed. How Do I Lead Through Uncertainty?](https://insightsout.work/workshops/my-team-is-overwhelmed): 90-minute sensemaking session for middle managers and team leads leading teams through AI change. Free.
-- [AI Is Changing Everything. What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): 3-hour working session to find your own line, what to hand over and what should stay human. Free.
+- [How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed](https://insightsout.work/workshops/my-team-is-overwhelmed): 90-minute sensemaking session for managers leading teams through AI change. In person at SF Commons (free for members, $10 suggested) and online on Zoom (free).
+- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): working session to find your own line, what to hand over and what should stay human. SF Commons; free for members, $10 suggested.
 - [AI for the Rest of Us](https://insightsout.work/workshops/ai-for-the-rest-of-us): no-jargon facilitated conversation for people who feel left behind by AI. Free.
 - [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly small-group coaching for founders, Fridays 2 pm, SF Commons (550 Laguna St, North Studio), $10, free for SF Commons members.
-- [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having): 2-hour working session for founding pairs ending in a first draft working agreement. $90 per person, $180 per pair.
+- [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having): 2-hour working session for founding pairs ending in a first draft working agreement. $90 per person; next date not yet scheduled.
 
 ## Research (living papers, updated as new workshop waves land)
 - [Working Through AI Change](https://insightsout.work/research/working-through-ai-change): the human side of AI-driven change, read against Gallup, Microsoft, MIT SMR, SHRM, Anthropic.
