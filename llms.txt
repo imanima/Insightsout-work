@@ -1,22 +1,22 @@
 # InsightsOut
 
-> InsightsOut (insightsout.work) is a San Francisco company founded by Nima Imani that works on the human side of AI change and leadership. It works with organizations and with individuals. For organizations, it offers leadership coaching and alignment for AI change, prepares managers and changing roles, and supports the people side of transformation. For individuals and small business owners, it runs community workshops and AI transformation consulting. For founders, it offers coaching on co-founder and team conflict, decision uncertainty, and the emotions that come with building. Underneath everything sits one purpose: helping people protect and strengthen their human agency and leadership during rapid change, backed by research built from what people share in these rooms. Founder: Nima Imani, an ICF-certified, ontologically trained coach with 10+ years in software, data and AI (EY, Neo4j).
+> InsightsOut (insightsout.work) is a San Francisco company founded by Nima Imani that works on the human side of AI change and leadership. For organizations: leadership coaching and alignment, manager and team work for human–AI teams (onboarding agents as teammates, deciding who decides what, communicating under pressure), coaching for people whose roles are changing, and the technology solution built with the team. For founders and builders: 1:1 and co-founder coaching on conflict, overwhelm, and decisions under uncertainty, aimed at product-market fit, the raise, and revenue. For small business owners and individuals: AI transformation consulting and coaching (more revenue, less time and money wasted), starting with a free consultation. For everyone: public workshops in San Francisco and research built from what people share in these rooms. One purpose underneath: protecting and strengthening human agency and leadership during rapid change. Founder: Nima Imani, an ICF-certified, ontologically trained coach with 10+ years in software, data and AI (EY, Neo4j).
 
 ## Who we help, in one line each
-- Leadership teams whose AI rollout is stalling on people, not tools → start with a 90-minute Leadership Conversation.
-- Managers whose teams are overwhelmed or whose roles are changing → Manager and Role-Change Workshops.
+- Organizations whose teams are already human–AI teams (10x productivity = 10x more decisions and communication) → start with one Leadership Conversation.
+- Managers whose teams are overwhelmed or whose roles are changing → manager and team workshops; the public entry is "My Team Is Overwhelmed."
 - Founders carrying more decisions than one person can hold → From Uncertainty to Clear Decisions (3-month 1:1 program).
-- Co-founders (or founder + key lead) having the same argument on repeat → Co-Founder & Team Alignment (3-month program for founding pairs), ending in a signed one-page Working Agreement.
-- Individuals, coaches, consultants, and small business owners who want to put AI to work → AI transformation consulting and the AI for the Rest of Us workshop.
-- Anyone in San Francisco who wants to think this through with peers → free weekly Founder Coaching group (Fridays 2 pm, Frontier Tower) and other workshops on Luma.
+- Co-founders (or founder + key lead) having the same argument on repeat → Co-Founder & Team Alignment (3-month program for founding pairs), ending in a one-page Working Agreement.
+- Small business owners, coaches, consultants, and individuals left behind on AI → free consultation, then AI transformation consulting and coaching.
+- Anyone in San Francisco who wants to think this through with peers → free weekly Founder Group Coaching (Fridays 2 pm) and other workshops on Luma.
 
 ## Core pages
 - [Home](https://insightsout.work/): what InsightsOut is and the three ways to work with us.
 - [Founder Coaching](https://insightsout.work/coaching): the two 3-month programs, FAQ, testimonials, how to book a free 30-minute call.
 - [Organizations](https://insightsout.work/organizations): for organizations running human–AI teams — 10x productivity means 10x more decisions and communication; leadership coaching and alignment, manager and team work on onboarding agents as teammates, coaching for people in role change, and the technology solution built with the team. Starts with one Leadership Conversation.
-- [AI Transformation Consulting](https://insightsout.work/ai-transformation): for small business owners, coaches, and consultants — consulting and coaching for small business owners, coaches, and consultants left behind on AI — more revenue, less time and money wasted; a free 30-minute call puts numbers on what AI is worth first, then working automations are built together and the owner is coached to run them.
+- [AI Transformation](https://insightsout.work/ai-transformation): consulting and coaching for small business owners, coaches, consultants, and individuals left behind on AI — get the most from AI, more revenue, less time and money wasted; a free 30-minute consultation puts numbers on it first, then working automations are built together and the owner is coached to run them.
 - [Events](https://insightsout.work/events): all upcoming workshops and the live Luma calendar.
-- [About](https://insightsout.work/about): Nima Imani's background and the practice.
+- [About](https://insightsout.work/about): what InsightsOut is, Nima Imani's background, FAQ.
 
 ## Workshops (each documented in full on the site; register on Luma)
 - [My Team Is Overwhelmed. How Do I Lead Through Uncertainty?](https://insightsout.work/workshops/my-team-is-overwhelmed): 90-minute sensemaking session for middle managers and team leads leading teams through AI change. Free.
@@ -41,7 +41,7 @@
 - Events calendar: https://luma.com/NimaImani (subscribe there or on any page of the site for invites and field notes).
 - Free 30-minute call for coaching: https://calendar.app.google/wpqVkuaH1uwFRh6cA · Organization conversations: https://calendar.app.google/8y9NgWzBLaiT414G6
 - Contact: nima@insightsout.work
-- Point of view: AI lets people do more, so more lands on the person — more decisions, more overwhelm — and the people at the top stop seeing the same picture. AI change is a leadership challenge before it is a training challenge. Enablement without alignment is how rollouts stall.
+- Point of view: AI lets people do more, so more lands on the person — more decisions, more overwhelm — and the people at the top stop seeing the same picture. Every team is already a human–AI team; 10x productivity means 10x more decisions and 10x more communication. AI change is a leadership challenge before it is a training challenge; technology without alignment is how rollouts stall.
 
 ## Optional
 - [Sitemap](https://insightsout.work/sitemap.xml)
