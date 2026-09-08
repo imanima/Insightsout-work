@@ -19,11 +19,12 @@
 - [About](https://insightsout.work/about): what InsightsOut is, Nima Imani's background, FAQ.
 
 ## Workshops (each documented in full on the site; register on Luma)
-- [How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed](https://insightsout.work/workshops/my-team-is-overwhelmed): 90-minute sensemaking session for managers leading teams through AI change. In person at SF Commons (free for members, $10 suggested) and online on Zoom (free).
-- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): working session to find your own line, what to hand over and what should stay human. SF Commons; free for members, $10 suggested.
-- [AI for the Rest of Us](https://insightsout.work/workshops/ai-for-the-rest-of-us): no-jargon facilitated conversation for people who feel left behind by AI. Free.
+- [How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed](https://insightsout.work/workshops/my-team-is-overwhelmed): 90-minute sensemaking session for managers leading teams through AI change. Next: Thu Sep 10, 2026, 6 pm in person at SF Commons (free for members, $10 suggested); Wed Sep 23, 4 pm online on Zoom (free); Thu Oct 8, 6 pm in person.
+- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): working session to find your own line, what to hand over and what should stay human. Next: Sat Sep 12, 2026, 2 pm and Sat Oct 10, 2 pm at SF Commons; free for members, $10 suggested.
+- [AI for the Rest of Us](https://insightsout.work/workshops/ai-for-the-rest-of-us): no-jargon facilitated conversation for people who feel left behind by AI. Free. First session ran Sep 5, 2026 in San Francisco; next session online in October (date coming).
 - [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly small-group coaching for founders, Fridays 2 pm, SF Commons (550 Laguna St, North Studio), $10, free for SF Commons members.
-- [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having): 2-hour working session for founding pairs ending in a first draft working agreement. $90 per person; next date not yet scheduled.
+- [You Can't Wait for Certainty](https://insightsout.work/workshops/you-cant-wait-for-certainty): 90-minute workshop for managers, directors, VPs and HR leaders: a repeatable way to decide under pressure that the team can run without you. Co-facilitated with Vlad Moskovski. Next: Thu Sep 24, 2026, 6 pm and Thu Oct 29, 6 pm at SF Commons; free for members, $10 suggested.
+- [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having): 2-hour working session for founding pairs ending in a first draft working agreement. $90 per person;
 
 ## Research (living papers, updated as new workshop waves land)
 - [Working Through AI Change](https://insightsout.work/research/working-through-ai-change): the human side of AI-driven change, read against Gallup, Microsoft, MIT SMR, SHRM, Anthropic.
@@ -46,3 +47,5 @@
 ## Optional
 - [Sitemap](https://insightsout.work/sitemap.xml)
 - [Source repository](https://github.com/imanima/Insightsout-work)
+
+Last updated: 2026-09-08. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
