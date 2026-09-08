@@ -9,3 +9,6 @@ _to_delete/
 __pycache__/
 
 Claude outputs/
+
+# local-only GitHub push token used by the weekly sync agent (never commit)
+.git-push-token
