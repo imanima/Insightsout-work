@@ -2656,7 +2656,7 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
 }
 
 /* ---------- homepage path cards ---------- */
-.path-card { gap: 10px; }
+.path-card { gap: 10px; min-height: 196px; }
 .path-card .path-audience {
   font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted);
