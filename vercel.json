@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/subscribe",
-      "destination": "/#subscribe",
+      "destination": "/events",
       "permanent": false
     },
     {

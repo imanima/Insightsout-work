@@ -195,7 +195,7 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="../insights.html" class="active">Research</a>
       <a href="../about.html">About</a>
     </div>
-    <a class="btn btn-primary btn-sm" href="../insights.html#subscribe">Get Updates</a>
+    <a class="btn btn-primary btn-sm" href="../insights.html">Research</a>
   </div>
 </nav>
 
@@ -260,7 +260,7 @@ TEMPLATE = """<!DOCTYPE html>
 </footer>
 
 <div class="msticky">
-  <a class="btn btn-primary btn-sm" href="../insights.html#subscribe">Get Updates</a>
+  <a class="btn btn-primary btn-sm" href="../insights.html">Research</a>
 </div>
 
 </body>
