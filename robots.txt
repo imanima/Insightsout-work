@@ -2,6 +2,8 @@
 # We want to be found and cited by search engines AND by AI assistants
 # (ChatGPT, Claude, Perplexity, Gemini, Copilot). Everything public is allowed.
 # Machine-readable summary for LLMs: https://insightsout.work/llms.txt
+# Longer source: https://insightsout.work/llms-full.txt
+# Direct Q&A: https://insightsout.work/answers
 
 User-agent: *
 Allow: /

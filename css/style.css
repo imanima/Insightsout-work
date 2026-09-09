@@ -407,6 +407,12 @@ a.card:hover { text-decoration: none; border-color: var(--coral); }
 .faq details[open] summary::after { content: "×"; }
 .faq details p { margin-top: 10px; color: var(--muted); font-size: 15.5px; max-width: 65ch; }
 
+.answers-list { max-width: 720px; }
+.answer-block { padding: 32px 0; border-top: 1px solid var(--line); }
+.answer-block h2 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); margin-bottom: 12px; }
+.answer-block p { color: var(--muted); max-width: 62ch; }
+.answer-block p + p { margin-top: 14px; }
+
 /* ---------- forms ---------- */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 760px; }
 @media (max-width: 700px) { .form-grid { grid-template-columns: 1fr; } }

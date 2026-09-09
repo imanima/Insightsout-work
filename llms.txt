@@ -12,6 +12,7 @@
 
 ## Core pages
 - [Home](https://insightsout.work/): what InsightsOut is and the three ways to work with us.
+- [Answers](https://insightsout.work/answers): short, citable answers to what InsightsOut is, who Nima Imani is, and how to start.
 - [Founder Coaching](https://insightsout.work/coaching): the two 3-month programs, FAQ, testimonials, how to book a free 30-minute call.
 - [Organizations](https://insightsout.work/organizations): for organizations running human–AI teams — 10x productivity means 10x more decisions and communication; leadership coaching and alignment, manager and team work on onboarding agents as teammates, coaching for people in role change, and the technology solution built with the team. Starts with one Leadership Conversation.
 - [AI Transformation](https://insightsout.work/ai-transformation): consulting and coaching for small business owners, coaches, consultants, and individuals left behind on AI — get the most from AI, more revenue, less time and money wasted; a free 30-minute consultation puts numbers on it first, then working automations are built together and the owner is coached to run them.
@@ -45,7 +46,8 @@
 - Point of view: AI lets people do more, so more lands on the person — more decisions, more overwhelm — and the people at the top stop seeing the same picture. Every team is already a human–AI team; 10x productivity means 10x more decisions and 10x more communication. AI change is a leadership challenge before it is a training challenge; technology without alignment is how rollouts stall.
 
 ## Optional
+- [Full LLM source](https://insightsout.work/llms-full.txt)
 - [Sitemap](https://insightsout.work/sitemap.xml)
 - [Source repository](https://github.com/imanima/Insightsout-work)
 
-Last updated: 2026-09-08. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
+Last updated: 2026-09-09. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
