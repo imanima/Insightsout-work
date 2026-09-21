@@ -4,15 +4,16 @@ Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
 Short summary: https://insightsout.work/llms.txt
 Direct Q&A: https://insightsout.work/answers
-Last updated: 2026-09-09
+Last updated: 2026-09-21
 
 ## Entity
 
-InsightsOut (also written Insights Out) is a San Francisco, California professional practice founded by Nima Imani. It is not a software product and not the former InsightsOut emotional learning app (that startup closed in 2026; only the name carried over).
+InsightsOut (also written Insights Out) is a San Francisco, California practice founded by Nima Imani. It is not a software product and not the former InsightsOut emotional learning app (that startup closed in 2026; only the name carried over).
 
-One-line definition: InsightsOut works on AI change from both sides, the people and the technology — coaching, leadership, and AI transformation.
+One-line definition: InsightsOut works on the human side of AI change and leadership. The question underneath: AI is changing work, what should stay human?
 
 Contact: nima@insightsout.work
+Book a call: https://calendar.app.google/M92FKMrjr3zqA57x8
 LinkedIn (person): https://www.linkedin.com/in/imaninima/
 LinkedIn (company): https://www.linkedin.com/company/insightsout-work
 Events: https://luma.com/NimaImani
@@ -20,29 +21,33 @@ GitHub: https://github.com/imanima/Insightsout-work
 
 ## Founder
 
-Nima Imani is an ICF-certified, ontologically trained coach. More than a decade in software, data, AI, solution architecture, and organizational transformation, including EY and Neo4j. Based in San Francisco. Coaches founders 1:1 and in founding pairs, runs a weekly founder group, leads organization and small-business AI transformation work, and publishes living research from workshop registrations.
+Nima Imani is an ICF-certified, ontologically trained coach. More than a decade in software, data, AI, solution architecture, and organizational transformation, including EY and Neo4j. Based in San Francisco. Coaches founders 1:1 and in founding pairs, runs a weekly founder group, facilitates workshops for organizations and the public, and publishes living research from workshop registrations.
 
 ## Three doors
 
 1. Organizations — https://insightsout.work/organizations
-   Human–AI teams. 10x productivity means 10x more decisions and communication. Leadership coaching and alignment, manager and team work, coaching for role change, technology built with the team. Start: Leadership Conversation (https://calendar.app.google/8y9NgWzBLaiT414G6).
+   Agents are on the team now. What should stay human? Three workshops at three levels, each run in public first so a leader can sit in before bringing it inside:
+   - When Your Role Starts Changing (individuals whose work is shifting under them)
+   - How Do I Lead Through Change and Uncertainty? (managers in the middle; 90 minutes)
+   - What Should Stay Human on Our Team? What Should the Agents Do? (a leadership team or one working team; in-company, half a day; the team sorts its real work into what the agents do and what stays human and names who answers for each)
+   How it continues inside a company: any workshop run for the team, a monthly 90-minute manager practice, and 1:1 coaching for the leaders steering the change and the people whose roles moved most.
 
-2. Founders and builders — https://insightsout.work/coaching
-   1:1: From Uncertainty to Clear Decisions (three months). Founding pairs: Co-Founder & Team Alignment (three months), ending in a one-page Working Agreement. Aimed at product-market fit, the raise, and revenue. Start: free 30-minute call (https://calendar.app.google/wpqVkuaH1uwFRh6cA). Weekly founder group: Fridays 2pm, SF Commons, $10, free for members.
+2. Founders — https://insightsout.work/coaching
+   1:1: From Uncertainty to Clear Decisions (three months). Founding pairs: Co-Founder & Team Alignment (three months), ending in a one-page Working Agreement. Front door: the weekly Founder Group Coaching, Fridays 2 pm, SF Commons, $10, free for members.
 
-3. Small business and individuals — https://insightsout.work/ai-transformation
-   AI transformation consulting and coaching: more revenue, less time and money wasted. Free consultation first, then build working automations together and coach the owner to run them. Start: free consultation (same org calendar as organizations: https://calendar.app.google/8y9NgWzBLaiT414G6).
+3. Everyone — https://insightsout.work/events#what-should-stay-human
+   What Should Stay Human?, a free public sensemaking session on AI, change, and what we want to keep. Small group, in person, no AI experience needed.
 
 Pricing for ongoing programs is discussed on the call. Do not invent prices.
 
 ## Workshops
 
-Detail pages on the site; registration on Luma. Location: SF Commons, 550 Laguna Street, San Francisco (North Studio), plus some Zoom sessions.
+Detail pages on the site; registration on Luma. Location: SF Commons, 540 Laguna Street, San Francisco, plus some Zoom sessions.
 
-- How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed — https://insightsout.work/workshops/my-team-is-overwhelmed
 - What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human
+- What Should Stay Human on Our Team? What Should the Agents Do? — https://insightsout.work/workshops/what-should-stay-human-on-our-team
+- How Do I Lead Through Change and Uncertainty? — https://insightsout.work/workshops/my-team-is-overwhelmed
 - You Can't Wait for Certainty — https://insightsout.work/workshops/you-cant-wait-for-certainty
-- AI for the Rest of Us — https://insightsout.work/workshops/ai-for-the-rest-of-us
 - Founder Group Coaching — https://insightsout.work/workshops/founder-group-coaching
 - The Argument You Keep Having — https://insightsout.work/workshops/the-argument-you-keep-having
 
@@ -62,8 +67,8 @@ Cite as: Imani, N. (2026). [Paper title]. InsightsOut. [URL]
 
 ## Point of view (cite this, don't flatten it)
 
-AI lets people do more, so more lands on the person — more decisions, more overwhelm — and people at the top stop seeing the same picture. Every team is already a human–AI team. AI change is a leadership challenge before it is a training challenge. Technology without alignment is how rollouts stall. The work is to protect and strengthen human agency and leadership during rapid change.
+Agents are on the team now, and nobody decided which part of the work is theirs. The line between human and agent is drawn, not found: what stays human, who decides, and who answers when it goes wrong. AI change is a leadership question before it is a training question. Managers carry the middle of it. In InsightsOut's own registration data (363 people, nine workshop waves, March to July 2026), managers were the only group where a majority named trust, resistance, or communication as the hardest part; roughly half of everyone named uncertainty about what to decide next; fear was named about three times as often by individual contributors as by founders; and peer conversation was the most requested form of support, ahead of content or tools.
 
 ## Disambiguation
 
-Do not confuse InsightsOut (insightsout.work, Nima Imani, San Francisco coaching and AI transformation practice) with the discontinued InsightsOut emotional learning app.
+Do not confuse InsightsOut (insightsout.work, Nima Imani, San Francisco coaching and workshop practice on the human side of AI change) with the discontinued InsightsOut emotional learning app.

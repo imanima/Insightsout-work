@@ -1,6 +1,6 @@
-// InsightsOut.work — shared behavior: analytics, booking, forms, video.
+// InsightsOut.work — shared behavior: analytics, mobile nav, event dates, subscribe, video.
 
-// ---------- Analytics (blueprint §13 event names) ----------
+// ---------- Analytics ----------
 // Works standalone now (console + dataLayer); when Plausible/PostHog is
 // added, their snippet picks these up via window.ioTrack.
 window.dataLayer = window.dataLayer || [];
@@ -60,134 +60,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ---------- Booking ----------
-// Buttons carry data-book="coaching" | "org" | "smb". If a booking URL is configured,
-// open it; otherwise fall back to a pre-filled email so no lead is ever lost.
-function bookingUrl(kind) {
-  var c = window.IO_CONFIG || {};
-  if (kind === "smb") return c.BOOKING_URL_SMB || c.BOOKING_URL_ORG;
-  return kind === "org" ? c.BOOKING_URL_ORG : c.BOOKING_URL_COACHING;
-}
-document.addEventListener("click", function (e) {
-  var el = e.target.closest("[data-book]");
-  if (!el) return;
-  e.preventDefault();
-  var kind = el.getAttribute("data-book");
-  window.ioTrack(kind === "org" ? "book_org_call_click" : kind === "smb" ? "book_smb_evaluation_click" : "book_coaching_click");
-  var url = bookingUrl(kind) || el.href;
-  if (url) {
-    window.open(url, "_blank", "noopener");
-  } else {
-    var subject = kind === "org"
-      ? "Organization conversation | InsightsOut"
-      : kind === "smb" ? "Free AI evaluation | InsightsOut"
-      : "Private coaching conversation | InsightsOut";
-    var body = "Hi Nima,%0D%0A%0D%0AI would like to book a " +
-      (kind === "org" ? "conversation for my organization." : "private coaching conversation.") +
-      "%0D%0A%0D%0ATime 1:%0D%0ATime 2:%0D%0A%0D%0AThank you.";
-    var contactEmail = (window.IO_CONFIG || {}).CONTACT_EMAIL || "nima@insightsout.work";
-    window.location.href = "mailto:" + contactEmail +
-      "?subject=" + encodeURIComponent(subject) + "&body=" + body;
-  }
-});
-
-// Inline booking embed (coaching page): if a URL is configured, show the
-// Google Calendar appointment page in an iframe; otherwise show fallback text.
+// ---------- Event dates ----------
+// Any element with data-event-date="YYYY-MM-DD" is hidden once that day has
+// passed (Pacific time), so a listing can't advertise a past date. A container
+// with data-event-list shows its [data-event-empty] child when nothing is left.
 document.addEventListener("DOMContentLoaded", function () {
-  var mount = document.getElementById("booking-embed");
-  if (!mount) return;
-  var kind = mount.getAttribute("data-kind") || "coaching";
-  var url = bookingUrl(kind);
-  if (url) {
-    // Google appointment pages only allow framing with gv=true appended
-    if (url.indexOf("calendar.google.com/calendar/appointments") !== -1 && url.indexOf("gv=true") === -1) {
-      url += (url.indexOf("?") === -1 ? "?" : "&") + "gv=true";
-    }
-    var iframe = document.createElement("iframe");
-    iframe.src = url;
-    iframe.title = "Book a call with Nima";
-    iframe.loading = "lazy";
-    mount.appendChild(iframe);
-  } else {
-    mount.style.display = "none";
-    var fb = document.getElementById("booking-fallback");
-    if (fb) fb.style.display = "block";
-  }
-});
-
-// ---------- Cohort form ----------
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("cohort-form");
-  if (!form) return;
-  var status = document.getElementById("cohort-form-status");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var data = {};
-    new FormData(form).forEach(function (v, k) { data[k] = v; });
-
-    if (!data.name || !data.email) {
-      status.textContent = "Please add your name and email so we can reach you.";
-      status.className = "form-status err";
-      return;
-    }
-    if (!data.consent) {
-      status.textContent = "Please confirm that you want cohort and event updates.";
-      status.className = "form-status err";
-      return;
-    }
-
-    window.ioTrack("cohort_form_submit", { role: data.role || null });
-    var endpoint = (window.IO_CONFIG || {}).FORM_ENDPOINT;
-
-    if (endpoint) {
-      status.textContent = "Sending…";
-      status.className = "form-status";
-      fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(data)
-      }).then(function (r) {
-        if (!r.ok) throw new Error("HTTP " + r.status);
-        form.reset();
-        status.textContent = "You are on the interest list. We will email you when dates are ready.";
-        status.className = "form-status ok";
-      }).catch(function () {
-        status.textContent = "That didn't go through. Please try again, or email " +
-          window.IO_CONFIG.CONTACT_EMAIL + " directly.";
-        status.className = "form-status err";
-      });
-    } else {
-      // Email fallback: opens a pre-filled message so the lead reaches Nima
-      // even before a form backend is configured.
-      var lines = [
-        "Group coaching interest from insightsout.work", "",
-        "Name: " + (data.name || ""),
-        "Email: " + (data.email || ""),
-        "What they are working through: " + (data.motivation || ""),
-        "Consent to updates: " + (data.consent ? "yes" : "no")
-      ];
-      window.location.href = "mailto:" + window.IO_CONFIG.CONTACT_EMAIL +
-        "?subject=" + encodeURIComponent("Group coaching waitlist: " + data.name) +
-        "&body=" + encodeURIComponent(lines.join("\n"));
-      status.textContent = "Your email app is opening with your details. Send the message to complete your application.";
-      status.className = "form-status ok";
-    }
+  var today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Los_Angeles" }); // YYYY-MM-DD
+  document.querySelectorAll("[data-event-date]").forEach(function (el) {
+    if (el.getAttribute("data-event-date") < today) el.hidden = true;
+  });
+  document.querySelectorAll("[data-event-list]").forEach(function (list) {
+    var live = list.querySelectorAll("[data-event-date]:not([hidden])").length;
+    var empty = list.querySelector("[data-event-empty]");
+    if (empty) empty.hidden = live > 0;
   });
 });
 
 // ---------- Newsletter / subscribe ----------
-// Every <form class="js-subscribe"> (and the legacy #newsletter-form) POSTs
-// { email, source, consent } as JSON to IO_CONFIG.NEWSLETTER_ENDPOINT
-// (/api/subscribe → Luma People list). Falls back to the Luma subscribe page.
+// Every <form class="js-subscribe"> POSTs { email, source, consent } as JSON to
+// IO_CONFIG.NEWSLETTER_ENDPOINT (/api/subscribe → Luma People list). Falls back
+// to the Luma subscribe page. No form is on the site right now; kept for when one returns.
 document.addEventListener("DOMContentLoaded", function () {
-  var forms = Array.prototype.slice.call(document.querySelectorAll("form.js-subscribe, form#newsletter-form"));
+  var forms = Array.prototype.slice.call(document.querySelectorAll("form.js-subscribe"));
   if (!forms.length) return;
   var cfg = window.IO_CONFIG || {};
   var lumaUrl = cfg.LUMA_SUBSCRIBE_URL || cfg.LUMA_CALENDAR_URL || "https://luma.com/NimaImani";
 
   forms.forEach(function (nl) {
-    var status = nl.querySelector(".form-status") || document.getElementById("newsletter-status");
+    var status = nl.querySelector(".form-status");
     var button = nl.querySelector('button[type="submit"]');
     function say(msg, cls) {
       if (!status) return;
@@ -200,10 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
       new FormData(nl).forEach(function (v, k) { data[k] = v; });
       if (!data.email) { say("Please add your email.", "err"); return; }
       if (!data.consent) { say("Please confirm that you want to receive InsightsOut updates.", "err"); return; }
-      window.ioTrack("newsletter_submit", { interest: data.interest || null, source: data.source || null });
+      window.ioTrack("newsletter_submit", { source: data.source || null });
       var endpoint = cfg.NEWSLETTER_ENDPOINT;
       if (endpoint) {
-        say("Subscribing\u2026", "");
+        say("Subscribing…", "");
         if (button) button.disabled = true;
         fetch(endpoint, {
           method: "POST",
@@ -213,13 +113,13 @@ document.addEventListener("DOMContentLoaded", function () {
           if (!r.ok) throw new Error("HTTP " + r.status);
           nl.reset();
           window.ioTrack("newsletter_subscribed", { source: data.source || null });
-          say("You're on the list. You'll get event invites, field notes, and new programs \u2014 unsubscribe anytime.", "ok");
+          say("You're on the list. Unsubscribe anytime.", "ok");
         }).catch(function () {
-          say('Something went wrong. <a href="' + lumaUrl + '" target="_blank" rel="noopener">Subscribe on Luma instead \u2192</a>', "err");
+          say('Something went wrong. <a href="' + lumaUrl + '" target="_blank" rel="noopener">Subscribe on Luma instead →</a>', "err");
         }).finally(function () { if (button) button.disabled = false; });
       } else {
         window.open(lumaUrl, "_blank", "noopener");
-        say("Finish subscribing on Luma \u2014 it opened in a new tab.", "ok");
+        say("Finish subscribing on Luma — it opened in a new tab.", "ok");
       }
     });
   });

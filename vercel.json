@@ -1,70 +1,22 @@
 {
   "cleanUrls": true,
   "redirects": [
-    {
-      "source": "/subscribe",
-      "destination": "/events",
-      "permanent": false
-    },
-    {
-      "source": "/cohort",
-      "destination": "/events",
-      "permanent": true
-    },
-    {
-      "source": "/cohort.html",
-      "destination": "/events",
-      "permanent": true
-    },
-    {
-      "source": "/leadership-circle",
-      "destination": "/events",
-      "permanent": true
-    },
-    {
-      "source": "/leadership-circle.html",
-      "destination": "/events",
-      "permanent": true
-    },
-    {
-      "source": "/partnerships",
-      "destination": "/organizations",
-      "permanent": true
-    },
-    {
-      "source": "/partnerships.html",
-      "destination": "/organizations",
-      "permanent": true
-    },
-    {
-      "source": "/ai-enablement",
-      "destination": "/ai-transformation",
-      "permanent": true
-    },
-    {
-      "source": "/ai-enablement.html",
-      "destination": "/ai-transformation",
-      "permanent": true
-    }
+    { "source": "/subscribe", "destination": "/events", "permanent": false },
+    { "source": "/cohort", "destination": "/events", "permanent": true },
+    { "source": "/cohort.html", "destination": "/events", "permanent": true },
+    { "source": "/leadership-circle", "destination": "/events", "permanent": true },
+    { "source": "/leadership-circle.html", "destination": "/events", "permanent": true },
+    { "source": "/partnerships", "destination": "/organizations", "permanent": true },
+    { "source": "/partnerships.html", "destination": "/organizations", "permanent": true },
+    { "source": "/ai-enablement", "destination": "/events", "permanent": true },
+    { "source": "/ai-enablement.html", "destination": "/events", "permanent": true },
+    { "source": "/ai-transformation", "destination": "/events", "permanent": true },
+    { "source": "/ai-transformation.html", "destination": "/events", "permanent": true },
+    { "source": "/workshops/ai-for-the-rest-of-us", "destination": "/workshops/what-should-stay-human", "permanent": true },
+    { "source": "/workshops/ai-for-the-rest-of-us.html", "destination": "/workshops/what-should-stay-human", "permanent": true }
   ],
   "headers": [
-    {
-      "source": "/llms.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain; charset=utf-8"
-        }
-      ]
-    },
-    {
-      "source": "/llms-full.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain; charset=utf-8"
-        }
-      ]
-    }
+    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] },
+    { "source": "/llms-full.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
   ]
 }

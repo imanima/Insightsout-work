@@ -1,53 +1,51 @@
 # InsightsOut
 
-> InsightsOut (insightsout.work) is a San Francisco company founded by Nima Imani. It works on AI change from both sides, the people and the technology: coaching, leadership, and AI transformation. For organizations: leadership coaching and alignment, manager and team work for human–AI teams (onboarding agents as teammates, deciding who decides what, communicating under pressure), coaching for people whose roles are changing, and the technology solution built with the team. For founders and builders: 1:1 and co-founder coaching on conflict, overwhelm, and decisions under uncertainty, aimed at product-market fit, the raise, and revenue. For small business owners and individuals: AI transformation consulting and coaching (more revenue, less time and money wasted), starting with a free consultation. For everyone: public workshops in San Francisco and research built from what people share in these rooms. One purpose underneath: protecting and strengthening human agency and leadership during rapid change. Founder: Nima Imani, an ICF-certified, ontologically trained coach with 10+ years in software, data and AI (EY, Neo4j).
+> InsightsOut (insightsout.work) is a San Francisco practice founded by Nima Imani, working on the human side of AI change and leadership. The question underneath all of it: AI is changing work, what should stay human? For organizations: workshops and coaching for leaders, managers, and teams on decisions, trust, and changing roles, and on what should stay human when agents join the team. For founders: coaching on conflict, overwhelm, and decisions, one to one and for founding pairs. For everyone: public workshops in San Francisco and research built from what people share in those rooms. Founder: Nima Imani, an ICF-certified, ontologically trained coach with 10+ years in software, data and AI (EY, Neo4j).
 
-## Who we help, in one line each
-- Organizations whose teams are already human–AI teams (10x productivity = 10x more decisions and communication) → start with one Leadership Conversation.
-- Managers whose teams are overwhelmed or whose roles are changing → manager and team workshops; the public entry is "My Team Is Overwhelmed."
-- Founders carrying more decisions than one person can hold → From Uncertainty to Clear Decisions (3-month 1:1 program).
-- Co-founders (or founder + key lead) having the same argument on repeat → Co-Founder & Team Alignment (3-month program for founding pairs), ending in a one-page Working Agreement.
-- Small business owners, coaches, consultants, and individuals left behind on AI → free consultation, then AI transformation consulting and coaching.
-- Anyone in San Francisco who wants to think this through with peers → weekly Founder Group Coaching (Fridays 2 pm at SF Commons, $10) and other workshops on Luma.
+## Three doors
+- Organizations → https://insightsout.work/organizations. Three workshops at three levels: When Your Role Starts Changing (individuals), How Do I Lead Through Change and Uncertainty? (managers), and What Should Stay Human on Our Team? What Should the Agents Do? (leadership teams, in-company, half a day). Then in-company sessions, a monthly manager practice, and 1:1 leadership coaching.
+- Founders → https://insightsout.work/coaching. 1:1: From Uncertainty to Clear Decisions (three months). Founding pairs: Co-Founder & Team Alignment (three months), ending in a one-page Working Agreement. Front door: the weekly Founder Group Coaching, Fridays 2 pm at SF Commons, $10, free for members.
+- Everyone → https://insightsout.work/events#what-should-stay-human. What Should Stay Human?, a free public sensemaking session on AI, change, and what we want to keep.
 
 ## Core pages
-- [Home](https://insightsout.work/): what InsightsOut is and the three ways to work with us.
-- [Answers](https://insightsout.work/answers): short, citable answers to what InsightsOut is, who Nima Imani is, and how to start.
-- [Founder Coaching](https://insightsout.work/coaching): the two 3-month programs, FAQ, testimonials, how to book a free 30-minute call.
-- [Organizations](https://insightsout.work/organizations): for organizations running human–AI teams — 10x productivity means 10x more decisions and communication; leadership coaching and alignment, manager and team work on onboarding agents as teammates, coaching for people in role change, and the technology solution built with the team. Starts with one Leadership Conversation.
-- [AI Transformation](https://insightsout.work/ai-transformation): consulting and coaching for small business owners, coaches, consultants, and individuals left behind on AI — get the most from AI, more revenue, less time and money wasted; a free 30-minute consultation puts numbers on it first, then working automations are built together and the owner is coached to run them.
-- [Events](https://insightsout.work/events): all upcoming workshops and the live Luma calendar.
-- [About](https://insightsout.work/about): what InsightsOut is, Nima Imani's background, FAQ.
+- [Home](https://insightsout.work/)
+- [Organizations](https://insightsout.work/organizations)
+- [Founder coaching](https://insightsout.work/coaching)
+- [Events](https://insightsout.work/events): all workshops and the live Luma calendar.
+- [Research](https://insightsout.work/insights): living papers built from workshop registrations.
+- [About](https://insightsout.work/about)
+- [Answers](https://insightsout.work/answers): short, citable answers.
 
-## Workshops (each documented in full on the site; register on Luma)
-- [How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed](https://insightsout.work/workshops/my-team-is-overwhelmed): 90-minute sensemaking session for managers leading teams through AI change. Next: Thu Sep 10, 2026, 6 pm in person at SF Commons (free for members, $10 suggested); Wed Sep 23, 4 pm online on Zoom (free); Thu Oct 8, 6 pm in person.
-- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): working session to find your own line, what to hand over and what should stay human. Next: Sat Sep 12, 2026, 2 pm and Sat Oct 10, 2 pm at SF Commons; free for members, $10 suggested.
-- [AI for the Rest of Us](https://insightsout.work/workshops/ai-for-the-rest-of-us): no-jargon facilitated conversation for people who feel left behind by AI. Free. First session ran Sep 5, 2026 in San Francisco; next session online in October (date coming).
-- [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly small-group coaching for founders, Fridays 2 pm, SF Commons (550 Laguna St, North Studio), $10, free for SF Commons members.
-- [You Can't Wait for Certainty](https://insightsout.work/workshops/you-cant-wait-for-certainty): 90-minute workshop for managers, directors, VPs and HR leaders: a repeatable way to decide under pressure that the team can run without you. Co-facilitated with Vlad Moskovski. Next: Thu Sep 24, 2026, 6 pm and Thu Oct 29, 6 pm at SF Commons; free for members, $10 suggested.
-- [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having): 2-hour working session for founding pairs ending in a first draft working agreement. $90 per person;
+## Workshops (detail pages on the site; register on Luma)
+- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): public sensemaking session, SF Commons. Next: Sat Oct 10, 2026, 2 pm. Free for members, $10 suggested.
+- [What Should Stay Human on Our Team? What Should the Agents Do?](https://insightsout.work/workshops/what-should-stay-human-on-our-team): in-company, half a day, for a leadership team or one working team.
+- [How Do I Lead Through Change and Uncertainty?](https://insightsout.work/workshops/my-team-is-overwhelmed): 90 minutes for managers in the middle. Next: Wed Sep 23, 2026, 4 pm online (free); Thu Oct 8, 6 pm at SF Commons.
+- [You Can't Wait for Certainty](https://insightsout.work/workshops/you-cant-wait-for-certainty): a repeatable way to decide under pressure, for managers and people leaders. With Vlad Moskovski. Next: Thu Sep 24, 2026, 6 pm; Thu Oct 29, 6 pm at SF Commons.
+- When Your Role Starts Changing: for anyone whose work is shifting under them. Next public date on Luma. Research from it: https://insightsout.work/research/when-your-role-starts-changing
+- [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly, Fridays 2 pm, SF Commons (540 Laguna St), $10, free for members.
+- [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having): 2 hours for founding pairs, $90 per person. Not currently scheduled.
 
 ## Research (living papers, updated as new workshop waves land)
-- [Working Through AI Change](https://insightsout.work/research/working-through-ai-change): the human side of AI-driven change, read against Gallup, Microsoft, MIT SMR, SHRM, Anthropic.
-- [When Your Role Starts Changing](https://insightsout.work/research/when-your-role-starts-changing): the individual side — where role change is felt, who names fear, why people ask for a map not a course.
-- [From Overwhelm to Clarity](https://insightsout.work/research/from-overwhelm-to-clarity): the founder side — overwhelm as pace and fragmentation, fear unnamed, wanting a place to think with peers.
-- [How We Do Research](https://insightsout.work/research/methodology): questions, coding, cross-checks, publishing thresholds, versioning.
+- [Working Through AI Change](https://insightsout.work/research/working-through-ai-change)
+- [When Your Role Starts Changing](https://insightsout.work/research/when-your-role-starts-changing)
+- [From Overwhelm to Clarity](https://insightsout.work/research/from-overwhelm-to-clarity)
+- [How We Do Research](https://insightsout.work/research/methodology)
 
 ## Perspectives
-- [What Changes When AI Enters the Work?](https://insightsout.work/articles/ai-change-is-human-change)
 - [What Should Stay Human?](https://insightsout.work/articles/what-should-stay-human)
+- [What Changes When AI Enters the Work?](https://insightsout.work/articles/ai-change-is-human-change)
 - [What the InsightsOut Event Record Shows So Far](https://insightsout.work/articles/event-record-2026)
 
 ## Facts you can cite
 - Founder: Nima Imani (LinkedIn: https://www.linkedin.com/in/imaninima/). Location: San Francisco, CA. Works online worldwide.
-- Events calendar: https://luma.com/NimaImani (subscribe there or on any page of the site for invites and field notes).
-- Free 30-minute call for coaching: https://calendar.app.google/wpqVkuaH1uwFRh6cA · Organization conversations: https://calendar.app.google/8y9NgWzBLaiT414G6
+- Workshops: SF Commons, 540 Laguna St, San Francisco, and some Zoom sessions. Calendar: https://luma.com/NimaImani
+- Book a call: https://calendar.app.google/M92FKMrjr3zqA57x8
 - Contact: nima@insightsout.work
-- Point of view: AI lets people do more, so more lands on the person — more decisions, more overwhelm — and the people at the top stop seeing the same picture. Every team is already a human–AI team; 10x productivity means 10x more decisions and 10x more communication. AI change is a leadership challenge before it is a training challenge; technology without alignment is how rollouts stall.
+- Point of view: agents are on the team now, and nobody decided which part of the work is theirs. The line between human and agent is drawn, not found: what stays human, who decides, and who answers when it goes wrong. Managers carry the middle of that change. In InsightsOut's own registration data, managers were the only group where a majority named trust, resistance, or communication as the hardest part; roughly half of everyone named uncertainty about what to decide next.
 
 ## Optional
 - [Full LLM source](https://insightsout.work/llms-full.txt)
 - [Sitemap](https://insightsout.work/sitemap.xml)
 - [Source repository](https://github.com/imanima/Insightsout-work)
 
-Last updated: 2026-09-09. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
+Last updated: 2026-09-21. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.

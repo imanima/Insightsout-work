@@ -1,7 +1,6 @@
 # InsightsOut.work
 
-Static site for **InsightsOut — helping people and teams find their way through rapid change**.
-No build step: plain HTML/CSS/JS, deployable as-is to Vercel, Netlify, or any static host.
+Static site for **InsightsOut — the human side of AI change**. Plain HTML/CSS/JS, no build step, deployed as-is on Vercel from `main`.
 
 ## Run locally
 
@@ -10,80 +9,43 @@ python3 -m http.server 8642
 # open http://localhost:8642
 ```
 
-(Serving over HTTP matters — the Luma iframe and `fetch()` calls don't run from `file://`.)
+Serve over HTTP: the Luma iframe and the `fetch()` calls don't run from `file://`.
 
-## Connect real services — edit `js/config.js`
+## Site map
 
-| Setting | What to paste | Where to get it |
-|---|---|---|
-| `BOOKING_URL_COACHING` | Google Calendar appointment-schedule booking link | Google Calendar → Create → Appointment schedule → Share |
-| `BOOKING_URL_ORG` | Second schedule for organization calls | same |
-| `FORM_ENDPOINT` | Formspree/Tally/Fillout endpoint URL | e.g. formspree.io — form POSTs JSON |
-| `NEWSLETTER_ENDPOINT` | `/api/subscribe` (default) — Vercel function that adds the email to the Luma calendar People list | Set `LUMA_API_KEY` in Vercel → Project → Settings → Environment Variables (key from luma.com/calendar/manage/api-keys, needs Luma Plus). To move to Kit/MailerLite later, paste their form endpoint here. |
+Five top pages: Home · Organizations · Founders (`coaching.html`) · Events · About.
+One level down: `workshops/`, `research/`, `articles/`, and `insights.html` (the research hub, linked from the footer).
+`answers.html` stays live for search engines and AI assistants but is not linked from the nav.
 
-**Fallbacks are built in** — until these are configured, every CTA still works:
-booking buttons open a pre-filled email, the cohort form opens a pre-filled email,
-so no lead is ever dropped.
+One button on the whole site: **Book a call**, one link, set in `js/config.js` (`BOOKING_URL`) and hard-coded in each page's header.
 
-## Subscribers (Luma)
+## Events and dates
 
-Subscribers live in the Luma calendar (People list) — the same list that gets
-event invites. Every `form.js-subscribe` on the site (Home, Community,
-Coaching, Research) POSTs `{ email, source }` to `/api/subscribe`
-(`api/subscribe.js`), which calls Luma's `import-people` API and tags the
-person with the page source (`home`, `community`, `coaching`, `research`).
-Create those four tags once in Luma → People → Tags; if a tag is missing the
-function retries untagged so no subscriber is lost. Newsletters are sent from
-Luma (People → Newsletter) — 5,000 sends/week on Plus, so send by tag or add
-the 10k pack for full-list sends. Migration path to an email provider is in
-`AGENT-GROWTH-PLAYBOOK.md`.
+Dates are written into the HTML (Home strip, Events page, each workshop page). Two rules keep them honest:
 
-Local test: `LUMA_API_KEY=... vercel dev` (or `npx vercel dev`).
+- Every dated row carries `data-event-date="YYYY-MM-DD"`. `js/main.js` hides it once the day has passed (Pacific time), and a container with `data-event-list` shows its `[data-event-empty]` child when nothing is left. A page can go stale in text, but never advertises a past date.
+- The Luma calendar embed on the Events page is the live source; new events appear there without a deploy.
 
-## Events (Luma)
+The weekly sync agent (runs on Nima's machine, token in `.git-push-token`, gitignored) updates dates in the HTML and, optionally, `data/events.json` via `scripts/fetch_luma_events.py`. Add the `data-event-date` attribute to any new dated row it writes.
 
-Events display through the official Luma calendar embed
-(`https://luma.com/embed/calendar/cal-cHPs3Da3iGJZspe/events`) on the Events
-page so registration stays current without duplicating event details.
+## Redirects
 
-For custom-branded event cards later (blueprint Phase 2), the plumbing already
-exists: `scripts/fetch_luma_events.py` writes `data/events.json` from the Luma
-API, and `js/events.js` renders it into any `<div data-events="N">` mount.
+`vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/ai-transformation` and `/ai-enablement` → `/events`, `/workshops/ai-for-the-rest-of-us` → `/workshops/what-should-stay-human`, older `/cohort`, `/leadership-circle`, `/partnerships` → the matching door.
 
-```bash
-set -a; source "../Luma data reader/.env"; set +a
-python3 scripts/fetch_luma_events.py
-```
+## Subscribers
+
+There is no signup form on the site right now. `api/subscribe.js` (Vercel function adding an email to the Luma People list via `LUMA_API_KEY`) and the `form.js-subscribe` handler in `js/main.js` are kept so a form can return without new plumbing.
+
+## Research
+
+`insights.html` is the hub. `research-src/` holds the paper sources and the operator guide (`research-src/README.md`); `scripts/build_research.py` renders `research/*.html`. Numbers live in `data/findings.json` and are filled in by `js/findings.js`. The event-record article reads `data/events.json` via `js/research.js`.
 
 ## Analytics
 
-`js/main.js` defines `window.ioTrack()` and fires the blueprint §13 event names
-(`cta_join_cohort_click`, `luma_rsvp_click`, `cohort_form_submit`,
-`book_coaching_click`, `book_org_call_click`, `newsletter_submit`). Events go to
-`window.dataLayer` now; adding a Plausible or PostHog snippet picks them up
-automatically.
-
-## The Signal, articles, and field reports
-
-`insights.html` is the writing and subscription hub. It separates InsightsOut
-perspective essays from evidence-based field notes. `js/research.js` calculates
-transparent event record statistics from `data/events.json`; the event-record
-article clearly separates calendar records from participant outcomes.
-
-Participant findings should only be added after optional anonymous responses
-have been collected in sufficient numbers. The current publishing threshold is
-10 responses. Every report should name its source, method, sample size, and
-limits.
+`js/main.js` defines `window.ioTrack()` and fires `book_call_click`, `luma_rsvp_click`, and `newsletter_submit` into `window.dataLayer`; a Plausible or PostHog snippet picks them up automatically.
 
 ## Content notes
 
-- Research currently focuses on role change, overwhelm and agency, and
-  responsible AI adoption.
-- No fabricated testimonials — add a TestimonialCard section once real quotes exist.
-- Photos: confirm all event photos are approved for public use before deploying.
-
-## Deploy
-
-Point Vercel/Netlify at this repo (branch `site-mvp`), no build command, output
-directory `/`. Then set the domain to `insightsout.work` and update the
-`canonical`/`og:` URLs if the domain differs.
+- Workshops are at SF Commons, 540 Laguna St, San Francisco (the 540 Cafe), or on Zoom.
+- Testimonials on the Founders page are real quotes; add more only with permission.
+- Confirm event photos are approved for public use before adding them.
