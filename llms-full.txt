@@ -4,7 +4,7 @@ Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
 Short summary: https://insightsout.work/llms.txt
 Direct Q&A: https://insightsout.work/answers
-Last updated: 2026-09-21
+Last updated: 2026-09-22
 
 ## Entity
 
@@ -42,7 +42,7 @@ Pricing for ongoing programs is discussed on the call. Do not invent prices.
 
 ## Workshops
 
-Detail pages on the site; registration on Luma. Location: SF Commons, 540 Laguna Street, San Francisco, plus some Zoom sessions.
+Detail pages on the site; registration on Luma. Location: SF Commons, San Francisco: 540 Laguna Street (540 Cafe) for most workshops; 550 Laguna Street (North Studio / Full Studio) for the Friday founder group and When Your Role Starts Changing. Some Zoom sessions.
 
 - What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human
 - What Should Stay Human on Our Team? What Should the Agents Do? — https://insightsout.work/workshops/what-should-stay-human-on-our-team

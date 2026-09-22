@@ -19,10 +19,11 @@
 ## Workshops (detail pages on the site; register on Luma)
 - [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): public sensemaking session, SF Commons. Next: Sat Oct 10, 2026, 2 pm. Free for members, $10 suggested.
 - [What Should Stay Human on Our Team? What Should the Agents Do?](https://insightsout.work/workshops/what-should-stay-human-on-our-team): in-company, half a day, for a leadership team or one working team.
-- [How Do I Lead Through Change and Uncertainty?](https://insightsout.work/workshops/my-team-is-overwhelmed): 90 minutes for managers in the middle. Next: Wed Sep 23, 2026, 4 pm online (free); Thu Oct 8, 6 pm at SF Commons.
+- [How Do I Lead Through Change and Uncertainty?](https://insightsout.work/workshops/my-team-is-overwhelmed): 90 minutes for managers in the middle. Next: Thu Oct 8, 2026, 6 pm at SF Commons, 540 Laguna St.
 - [You Can't Wait for Certainty](https://insightsout.work/workshops/you-cant-wait-for-certainty): a repeatable way to decide under pressure, for managers and people leaders. With Vlad Moskovski. Next: Thu Sep 24, 2026, 6 pm; Thu Oct 29, 6 pm at SF Commons.
-- When Your Role Starts Changing: for anyone whose work is shifting under them. Next public date on Luma. Research from it: https://insightsout.work/research/when-your-role-starts-changing
-- [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly, Fridays 2 pm, SF Commons (540 Laguna St), $10, free for members.
+- When Your Role Starts Changing: for anyone whose work is shifting under them. Next: Tue Oct 13, 2026, 6 pm at SF Commons, 550 Laguna St (Full Studio). Research from it: https://insightsout.work/research/when-your-role-starts-changing
+- [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly, Fridays 2 pm, SF Commons, North Studio (550 Laguna St), $10, free for members.
+- Co-hosted, September 2026: Agora Series: Wisdom in the Age of AI (Sun Sep 27, 2 pm, The Fold, with Apollo Commons and The Fold SF) and Navigating Uncertainty at Work in Times of Rapid Change (Wed Sep 30, 5 pm, The Yard Coffee, with Diane Friedlaender). Both on the Luma calendar.
 - [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having): 2 hours for founding pairs, $90 per person. Not currently scheduled.
 
 ## Research (living papers, updated as new workshop waves land)
@@ -38,7 +39,7 @@
 
 ## Facts you can cite
 - Founder: Nima Imani (LinkedIn: https://www.linkedin.com/in/imaninima/). Location: San Francisco, CA. Works online worldwide.
-- Workshops: SF Commons, 540 Laguna St, San Francisco, and some Zoom sessions. Calendar: https://luma.com/NimaImani
+- Workshops: SF Commons, San Francisco (540 Laguna St, 540 Cafe; the Friday founder group and When Your Role Starts Changing are at 550 Laguna St), and some Zoom sessions. Calendar: https://luma.com/NimaImani
 - Book a call: https://calendar.app.google/M92FKMrjr3zqA57x8
 - Contact: nima@insightsout.work
 - Point of view: agents are on the team now, and nobody decided which part of the work is theirs. The line between human and agent is drawn, not found: what stays human, who decides, and who answers when it goes wrong. Managers carry the middle of that change. In InsightsOut's own registration data, managers were the only group where a majority named trust, resistance, or communication as the hardest part; roughly half of everyone named uncertainty about what to decide next.
@@ -48,4 +49,4 @@
 - [Sitemap](https://insightsout.work/sitemap.xml)
 - [Source repository](https://github.com/imanima/Insightsout-work)
 
-Last updated: 2026-09-21. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
+Last updated: 2026-09-22. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.

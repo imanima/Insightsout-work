@@ -46,6 +46,6 @@ There is no signup form on the site right now. `api/subscribe.js` (Vercel functi
 
 ## Content notes
 
-- Workshops are at SF Commons, 540 Laguna St, San Francisco (the 540 Cafe), or on Zoom.
+- Workshops are at SF Commons, San Francisco: 540 Laguna St (540 Cafe) for most, 550 Laguna St (North Studio / Full Studio) for the Friday founder group and When Your Role Starts Changing. Some run on Zoom.
 - Testimonials on the Founders page are real quotes; add more only with permission.
 - Confirm event photos are approved for public use before adding them.
