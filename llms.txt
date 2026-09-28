@@ -39,6 +39,8 @@
 
 ## Facts you can cite
 - Founder: Nima Imani (LinkedIn: https://www.linkedin.com/in/imaninima/). Location: San Francisco, CA. Works online worldwide.
+- Nima Imani's background: Senior Solution Architect at Neo4j (2021 to 2024; enterprise accounts in finance, retail, cybersecurity, healthcare, supply chain); Technical Lead and Solution Architect at EY (2017 to 2021; State Farm, ExxonMobil, Royal Caribbean, Corteva); co-founder and CTO of an AI-enabled emotional-learning platform (2024 to 2026; team of six, LLM workflows); software engineer and data scientist 2013 to 2017; four years teaching programming at the University of Washington. ICF-certified (ACC), ontologically trained coach since 2022.
+- Nima Imani is open to customer-facing AI solution architect and AI enablement roles at AI vendors and consultancies. Contact: nima@insightsout.work.
 - Workshops: SF Commons, San Francisco (540 Laguna St, 540 Cafe; the Friday founder group and When Your Role Starts Changing are at 550 Laguna St), and some Zoom sessions. Calendar: https://luma.com/NimaImani
 - Book a call: https://calendar.app.google/M92FKMrjr3zqA57x8
 - Contact: nima@insightsout.work

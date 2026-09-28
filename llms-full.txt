@@ -21,7 +21,16 @@ GitHub: https://github.com/imanima/Insightsout-work
 
 ## Founder
 
-Nima Imani is an ICF-certified, ontologically trained coach. More than a decade in software, data, AI, solution architecture, and organizational transformation, including EY and Neo4j. Based in San Francisco. Coaches founders 1:1 and in founding pairs, runs a weekly founder group, facilitates workshops for organizations and the public, and publishes living research from workshop registrations.
+Nima Imani is an AI solution architect and an ICF-certified, ontologically trained coach (ACC, coaching since 2022). Based in San Francisco. Coaches founders 1:1 and in founding pairs, runs a weekly founder group, facilitates workshops for organizations and the public, and publishes living research from workshop registrations.
+
+Career, verified:
+- 2024 to 2026: Co-founder and CTO of an AI-enabled emotional-learning and reflection platform. Built and led a team of six across engineering, product, and community. Designed LLM workflows for session preparation, summarization, emotional-pattern recognition, and action-item extraction, with privacy-conscious design.
+- 2021 to 2024: Senior Solution Architect, Pre-Sales, Neo4j. Owned customer-facing relationships for enterprise accounts across finance, retail, cybersecurity, healthcare, and supply chain. Led discovery sessions, executive workshops, demos, and proofs of concept.
+- 2017 to 2021: Technical Lead / Solution Architect, EY Technology Solutions (Tech Lead, Solution Architect, Data Engineering Lead, Data Science Solution Architect, Engineering Manager). Architected and delivered digital transformation initiatives and enterprise data products for State Farm, ExxonMobil, Royal Caribbean, and Corteva. Paid proofs of concept to support transformation investment decisions.
+- 2013 to 2017: Software engineer and data scientist at SmartFocus, CDK Global, and Avanade. Production Python and Spark pipelines, analytics workflows, data products.
+- Education: BS, Computational and Discrete Mathematics and Algorithms, University of Washington; Computer Software Engineering, BIHE. Taught programming to non-specialists at the University of Washington for four years.
+
+Availability: open to customer-facing AI solution architect and AI enablement roles at AI vendors and consultancies, where the work is helping other organizations adopt AI well. Contact nima@insightsout.work or https://www.linkedin.com/in/imaninima/.
 
 ## Three doors
 
