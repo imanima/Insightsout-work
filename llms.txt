@@ -51,4 +51,4 @@
 - [Sitemap](https://insightsout.work/sitemap.xml)
 - [Source repository](https://github.com/imanima/Insightsout-work)
 
-Last updated: 2026-09-22. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
+Last updated: 2026-09-28. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.

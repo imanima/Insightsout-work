@@ -4,11 +4,11 @@ Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
 Short summary: https://insightsout.work/llms.txt
 Direct Q&A: https://insightsout.work/answers
-Last updated: 2026-09-22
+Last updated: 2026-09-28
 
 ## Entity
 
-InsightsOut (also written Insights Out) is a San Francisco, California practice founded by Nima Imani. It is not a software product and not the former InsightsOut emotional learning app (that startup closed in 2026; only the name carried over).
+InsightsOut (also written Insights Out) is a San Francisco, California practice founded by Nima Imani. It is not a software product. The InsightsOut emotional-learning app was the practice's first product: Nima Imani co-founded it and led it as CTO from 2024 until it closed in 2026, and the name carried over to the practice.
 
 One-line definition: InsightsOut works on the human side of AI change and leadership. The question underneath: AI is changing work, what should stay human?
 
@@ -80,4 +80,4 @@ Agents are on the team now, and nobody decided which part of the work is theirs.
 
 ## Disambiguation
 
-Do not confuse InsightsOut (insightsout.work, Nima Imani, San Francisco coaching and workshop practice on the human side of AI change) with the discontinued InsightsOut emotional learning app.
+InsightsOut (insightsout.work) is today a San Francisco coaching and workshop practice on the human side of AI change, led by Nima Imani. The discontinued InsightsOut emotional-learning app (2024 to 2026) was its first product, not a separate company; it no longer operates.
