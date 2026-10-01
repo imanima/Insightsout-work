@@ -125,6 +125,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// ---------- Newsletter blocks ----------
+// Every <div data-newsletter> becomes a subscribe form when IO_CONFIG.NEWSLETTER_URL
+// (the Substack publication) is set. Until then it shows a link to the Luma
+// calendar, so the site never shows a form that cannot deliver.
+document.addEventListener("DOMContentLoaded", function () {
+  var blocks = Array.prototype.slice.call(document.querySelectorAll("[data-newsletter]"));
+  if (!blocks.length) return;
+  var cfg = window.IO_CONFIG || {};
+  var sub = (cfg.NEWSLETTER_URL || "").replace(/\/+$/, "");
+  var lumaUrl = cfg.LUMA_SUBSCRIBE_URL || cfg.LUMA_CALENDAR_URL || "https://luma.com/NimaImani";
+  blocks.forEach(function (box) {
+    var source = box.getAttribute("data-source") || "site";
+    if (!sub) {
+      box.innerHTML = '<p class="form-note">The newsletter is almost ready. Until it opens, new dates and notes go out through the ' +
+        '<a href="' + lumaUrl + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">Luma calendar</a>.</p>';
+      return;
+    }
+    box.innerHTML = '<form class="subscribe-form" novalidate>' +
+      '<label class="sr-only" for="nl-' + source + '">Email</label>' +
+      '<input id="nl-' + source + '" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>' +
+      '<button class="btn btn-primary" type="submit">Subscribe</button>' +
+      '<p class="form-note form-status">Opens on Substack. No spam, unsubscribe anytime.</p></form>';
+    var form = box.querySelector("form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = (form.email.value || "").trim();
+      var status = form.querySelector(".form-status");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { status.textContent = "Please add a valid email."; return; }
+      window.ioTrack("newsletter_submit", { source: source });
+      window.open(sub + "/subscribe?email=" + encodeURIComponent(email), "_blank", "noopener");
+      status.textContent = "Finish subscribing on Substack. It opened in a new tab.";
+    });
+  });
+});
+
 // ---------- Reduced-motion video handling ----------
 document.addEventListener("DOMContentLoaded", function () {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

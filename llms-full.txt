@@ -4,13 +4,13 @@ Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
 Short summary: https://insightsout.work/llms.txt
 Direct Q&A: https://insightsout.work/answers
-Last updated: 2026-09-28
+Last updated: 2026-10-01
 
 ## Entity
 
 InsightsOut (also written Insights Out) is a San Francisco, California practice founded by Nima Imani. It is not a software product. The InsightsOut emotional-learning app was the practice's first product: Nima Imani co-founded it and led it as CTO from 2024 until it closed in 2026, and the name carried over to the practice.
 
-One-line definition: InsightsOut works on the human side of AI change and leadership. The question underneath: AI is changing work, what should stay human?
+One-line definition: InsightsOut is a founder-led leadership, coaching, and applied research practice focused on the human side of AI change. The question underneath: AI is changing work, what should stay human? Public line: AI is changing the work. We help people lead through it. Mission: help people and organizations preserve agency, judgment, trust, and dignity as AI changes work.
 
 Contact: nima@insightsout.work
 Book a call: https://calendar.app.google/M92FKMrjr3zqA57x8
@@ -35,36 +35,39 @@ Availability: open to customer-facing AI solution architect and AI enablement ro
 ## Three doors
 
 1. Organizations — https://insightsout.work/organizations
-   Agents are on the team now. What should stay human? Three workshops at three levels, each run in public first so a leader can sit in before bringing it inside:
-   - When Your Role Starts Changing (individuals whose work is shifting under them)
-   - How Do I Lead Through Change and Uncertainty? (managers in the middle; 90 minutes)
-   - What Should Stay Human on Our Team? What Should the Agents Do? (a leadership team or one working team; in-company, half a day; the team sorts its real work into what the agents do and what stays human and names who answers for each)
-   How it continues inside a company: any workshop run for the team, a monthly 90-minute manager practice, and 1:1 coaching for the leaders steering the change and the people whose roles moved most.
+   Agents are on the team now. What should stay human? Three problems: human-agent teams (who decides, who reviews, who is accountable), role change (what people still own and what to build next), and leadership under uncertainty (clarity and trust without pretending). One method: Understand, Align, Lead, Enable. Two workshops, each run in public first so a leader can sit in before bringing it inside:
+   - When Agents Join the Team: a working session on trust, accountability, and decision-making in human-agent teams. Output: a one-page Human-Agent Team Agreement. Public: 2 hours. Private: half a day for a leadership team or one working team.
+   - When the Work Changes: for people whose roles are changing and managers leading others through the same uncertainty. Two working paths (role and identity; management and team leadership). Output: a change map, one conversation or decision, one experiment.
+   What continues inside a company: leadership coaching, a monthly 90-minute manager practice, a learning report with aggregated themes, and, last, a bounded AI Enablement Lab that tests one workflow with explicit human review, measures, escalation, and a decision to scale, revise, pause, or stop. Smallest useful step first, usually one workshop with one team. Pricing scoped on a call.
+   Boundaries: does not replace technical AI strategy, security, legal, compliance, governance, or implementation specialists; the work must produce decisions, agreements, experiments, or changed practice.
 
 2. Founders — https://insightsout.work/coaching
    1:1: From Uncertainty to Clear Decisions (three months). Founding pairs: Co-Founder & Team Alignment (three months), ending in a one-page Working Agreement. Front door: the weekly Founder Group Coaching, Fridays 2 pm, SF Commons, $10, free for members.
 
 3. Everyone — https://insightsout.work/events#what-should-stay-human
-   What Should Stay Human?, a free public sensemaking session on AI, change, and what we want to keep. Small group, in person, no AI experience needed.
+   What Should Stay Human?, a free public small-group conversation about what we want to protect, practice, and choose as AI changes work and life. Not a debate about whether AI is good or bad, not a technology class, not a disguised sales event. Also the name of the InsightsOut newsletter.
 
 Pricing for ongoing programs is discussed on the call. Do not invent prices.
 
-## Workshops
+## The four events
 
-Detail pages on the site; registration on Luma. Location: SF Commons, San Francisco: 540 Laguna Street (540 Cafe) for most workshops; 550 Laguna Street (North Studio / Full Studio) for the Friday founder group and When Your Role Starts Changing. Some Zoom sessions.
+Four recurring series. Each has one audience, one problem, one concrete outcome, and one next step. Dates are instances of a series, not new products. Same title and promise on the site, Luma, email, and LinkedIn. Registration on Luma. Location: SF Commons, San Francisco: 540 Laguna Street (540 Cafe) for most sessions; 550 Laguna Street (North Studio / Full Studio) for the Friday founder group and the Oct 13 session. Some Zoom sessions.
 
-- What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human
-- What Should Stay Human on Our Team? What Should the Agents Do? — https://insightsout.work/workshops/what-should-stay-human-on-our-team
-- How Do I Lead Through Change and Uncertainty? — https://insightsout.work/workshops/my-team-is-overwhelmed
-- You Can't Wait for Certainty — https://insightsout.work/workshops/you-cant-wait-for-certainty
-- Founder Group Coaching — https://insightsout.work/workshops/founder-group-coaching
-- The Argument You Keep Having — https://insightsout.work/workshops/the-argument-you-keep-having
+- Founder Group Coaching & Peer Support — https://insightsout.work/workshops/founder-group-coaching — weekly, Fridays 2 pm. Founders, builders, creators, and business owners. Difficult decisions, relationship strain, carrying the work alone. Outcome: clarity on one real situation and a supported next move. Next step: group or 1:1 founder coaching.
+- What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human — monthly or quarterly. General public. AI change is moving faster than shared meaning. Outcome: a personal principle, one deliberate choice, a sense of connection. Next: Sat Oct 10, 2026, 2 pm.
+- When Agents Join the Team — https://insightsout.work/workshops/when-agents-join-the-team — managers, team leads, founders, People and transformation leaders. Teams use agents without shared rules for trust, review, or accountability. Outcome: a one-page Human-Agent Team Agreement. Next public date on Luma; private sessions now.
+- When the Work Changes — https://insightsout.work/workshops/when-the-work-changes — people whose roles are changing and managers leading others through it. Work moves before roles, identity, communication, and leadership catch up. Outcome: a change map, one conversation or decision, one experiment. Next: Thu Oct 8, 2026, 6 pm (the manager session; listed on Luma as How Do I Lead Through Change and Uncertainty?) and Tue Oct 13, 2026, 6 pm (the changing-roles session; listed on Luma as When Your Role Starts Changing).
+- Also on the calendar: You Can't Wait for Certainty — https://insightsout.work/workshops/you-cant-wait-for-certainty — with Vlad Moskovski, Thu Oct 29, 2026, 6 pm. The Argument You Keep Having — https://insightsout.work/workshops/the-argument-you-keep-having — for founding pairs, not currently scheduled.
 
 Live dates: https://luma.com/NimaImani (authoritative). Events page: https://insightsout.work/events
 
+## Newsletter
+
+What Should Stay Human. Field notes, research, and upcoming conversations about AI, work, leadership, and human agency, a few times a month. Explicit opt-in only; registering for a Luma event never adds anyone to the list.
+
 ## Research
 
-Living papers from workshop registration answers, read against published studies. Individual answers are never published.
+Living papers from workshop registration answers, read against published studies. Research question: how do people maintain agency, judgment, trust, and dignity as AI changes roles, teams, decisions, and the organization of work? Four streams: role change, managers under uncertainty, human-agent teams, what should stay human. Event attendance and research participation are separate; minimum data; aggregated themes by default; quotes and cases only with explicit permission; employers never receive identifiable emotional, performance, or coaching data. The data is registration data from a self-selected audience: it describes needs and intentions, not program outcomes. Individual answers are never published.
 
 - Working Through AI Change — https://insightsout.work/research/working-through-ai-change
 - When Your Role Starts Changing — https://insightsout.work/research/when-your-role-starts-changing

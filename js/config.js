@@ -21,6 +21,9 @@ window.IO_CONFIG = {
   // <form class="js-subscribe"> POSTs JSON to this endpoint (api/subscribe.js,
   // which adds the person to the Luma People list using LUMA_API_KEY in Vercel).
   NEWSLETTER_ENDPOINT: "/api/subscribe",
+  // Substack publication URL, e.g. "https://whatshouldstayhuman.substack.com".
+  // Empty until the publication exists: the newsletter blocks then point to Luma.
+  NEWSLETTER_URL: "",
   // Public subscribe page on Luma (fallback link shown if the API call fails).
   LUMA_SUBSCRIBE_URL: "https://luma.com/NimaImani"
 };

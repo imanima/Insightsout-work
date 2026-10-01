@@ -13,8 +13,10 @@ Serve over HTTP: the Luma iframe and the `fetch()` calls don't run from `file://
 
 ## Site map
 
-Five top pages: Home · Organizations · Founders (`coaching.html`) · Events · About.
-One level down: `workshops/`, `research/`, `articles/`, and `insights.html` (the research hub, linked from the footer).
+Six top pages: Home · Organizations · Founders (`coaching.html`) · Events · Research (`insights.html`) · About.
+One level down: `workshops/`, `research/`, `articles/`.
+
+Four recurring event series, same title everywhere (site, Luma, email, LinkedIn): Founder Group Coaching & Peer Support, What Should Stay Human?, When Agents Join the Team (`workshops/when-agents-join-the-team.html`), When the Work Changes (`workshops/when-the-work-changes.html`). Dates are instances of a series: add a dated row, never a new card.
 `answers.html` stays live for search engines and AI assistants but is not linked from the nav.
 
 One button on the whole site: **Book a call**, one link, set in `js/config.js` (`BOOKING_URL`) and hard-coded in each page's header.
@@ -30,11 +32,11 @@ The weekly sync agent (runs on Nima's machine, token in `.git-push-token`, gitig
 
 ## Redirects
 
-`vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/ai-transformation` and `/ai-enablement` → `/events`, `/workshops/ai-for-the-rest-of-us` → `/workshops/what-should-stay-human`, older `/cohort`, `/leadership-circle`, `/partnerships` → the matching door.
+`vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/ai-transformation` and `/ai-enablement` → `/events`, `/workshops/ai-for-the-rest-of-us` → `/workshops/what-should-stay-human`, `/workshops/my-team-is-overwhelmed` → `/workshops/when-the-work-changes`, `/workshops/what-should-stay-human-on-our-team` → `/workshops/when-agents-join-the-team`, older `/cohort`, `/leadership-circle`, `/partnerships` → the matching door.
 
 ## Subscribers
 
-There is no signup form on the site right now. `api/subscribe.js` (Vercel function adding an email to the Luma People list via `LUMA_API_KEY`) and the `form.js-subscribe` handler in `js/main.js` are kept so a form can return without new plumbing.
+The newsletter is **What Should Stay Human** on Substack. Every `<div data-newsletter>` (Home, Events) renders a subscribe form once `NEWSLETTER_URL` in `js/config.js` holds the publication URL; the form opens Substack's own subscribe page with the email prefilled. While the value is empty the block shows a link to the Luma calendar instead, so the site never shows a form that cannot deliver. `api/subscribe.js` (Luma People list via `LUMA_API_KEY`) and the `form.js-subscribe` handler are kept as a fallback path.
 
 ## Research
 
@@ -46,6 +48,6 @@ There is no signup form on the site right now. `api/subscribe.js` (Vercel functi
 
 ## Content notes
 
-- Workshops are at SF Commons, San Francisco: 540 Laguna St (540 Cafe) for most, 550 Laguna St (North Studio / Full Studio) for the Friday founder group and When Your Role Starts Changing. Some run on Zoom.
+- Workshops are at SF Commons, San Francisco: 540 Laguna St (540 Cafe) for most, 550 Laguna St (North Studio / Full Studio) for the Friday founder group and the Oct 13 session of When the Work Changes. Some run on Zoom.
 - Testimonials on the Founders page are real quotes; add more only with permission.
 - Confirm event photos are approved for public use before adding them.

@@ -12,6 +12,10 @@
     { "source": "/ai-enablement.html", "destination": "/events", "permanent": true },
     { "source": "/ai-transformation", "destination": "/events", "permanent": true },
     { "source": "/ai-transformation.html", "destination": "/events", "permanent": true },
+    { "source": "/workshops/my-team-is-overwhelmed", "destination": "/workshops/when-the-work-changes", "permanent": true },
+    { "source": "/workshops/my-team-is-overwhelmed.html", "destination": "/workshops/when-the-work-changes", "permanent": true },
+    { "source": "/workshops/what-should-stay-human-on-our-team", "destination": "/workshops/when-agents-join-the-team", "permanent": true },
+    { "source": "/workshops/what-should-stay-human-on-our-team.html", "destination": "/workshops/when-agents-join-the-team", "permanent": true },
     { "source": "/workshops/ai-for-the-rest-of-us", "destination": "/workshops/what-should-stay-human", "permanent": true },
     { "source": "/workshops/ai-for-the-rest-of-us.html", "destination": "/workshops/what-should-stay-human", "permanent": true }
   ],
