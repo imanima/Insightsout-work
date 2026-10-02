@@ -13,7 +13,7 @@ Serve over HTTP: the Luma iframe and the `fetch()` calls don't run from `file://
 
 ## Site map
 
-Six top pages: Home · Organizations · Founders (`coaching.html`) · Events · Research (`insights.html`) · About.
+Six top pages: Home · Organizations · Founders (`coaching.html`) · Events · Research (`insights.html`) · About. Plus `what-should-stay-human.html`, the hub for the question itself (linked from the Home door and the footer, not the nav).
 One level down: `workshops/`, `research/`, `articles/`.
 
 Four recurring event series, same title everywhere (site, Luma, email, LinkedIn): Founder Group Coaching & Peer Support, What Should Stay Human?, When Agents Join the Team (`workshops/when-agents-join-the-team.html`), When the Work Changes (`workshops/when-the-work-changes.html`). Dates are instances of a series: add a dated row, never a new card.

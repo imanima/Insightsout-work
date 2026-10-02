@@ -4,7 +4,7 @@ Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
 Short summary: https://insightsout.work/llms.txt
 Direct Q&A: https://insightsout.work/answers
-Last updated: 2026-10-01
+Last updated: 2026-10-02
 
 ## Entity
 
@@ -30,8 +30,6 @@ Career, verified:
 - 2013 to 2017: Software engineer and data scientist at SmartFocus, CDK Global, and Avanade. Production Python and Spark pipelines, analytics workflows, data products.
 - Education: BS, Computational and Discrete Mathematics and Algorithms, University of Washington; Computer Software Engineering, BIHE. Taught programming to non-specialists at the University of Washington for four years.
 
-Availability: open to customer-facing AI solution architect and AI enablement roles at AI vendors and consultancies, where the work is helping other organizations adopt AI well. Contact nima@insightsout.work or https://www.linkedin.com/in/imaninima/.
-
 ## Three doors
 
 1. Organizations — https://insightsout.work/organizations
@@ -44,7 +42,7 @@ Availability: open to customer-facing AI solution architect and AI enablement ro
 2. Founders — https://insightsout.work/coaching
    1:1: From Uncertainty to Clear Decisions (three months). Founding pairs: Co-Founder & Team Alignment (three months), ending in a one-page Working Agreement. Front door: the weekly Founder Group Coaching, Fridays 2 pm, SF Commons, $10, free for members.
 
-3. Everyone — https://insightsout.work/events#what-should-stay-human
+3. Everyone — https://insightsout.work/what-should-stay-human (the hub: essay, session, team version, research, newsletter)
    What Should Stay Human?, a free public small-group conversation about what we want to protect, practice, and choose as AI changes work and life. Not a debate about whether AI is good or bad, not a technology class, not a disguised sales event. Also the name of the InsightsOut newsletter.
 
 Pricing for ongoing programs is discussed on the call. Do not invent prices.

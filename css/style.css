@@ -517,87 +517,9 @@ footer.site a { color: #D6DEEA; }
 }
 
 /* ---------- premium coaching and founder pages ---------- */
-.coaching-page {
-  --personal-night: #10191c;
-  --personal-ink: #172326;
-  --personal-muted: #647074;
-  --personal-paper: #f4f1ea;
-  --personal-surface: #fffdf8;
-  --personal-line: #d9d7cf;
-  --personal-accent: #77c5cb;
-  --personal-gold: #d2b375;
-  background: var(--personal-paper);
-  color: var(--personal-ink);
-}
-.coaching-page h1, .coaching-page h2 {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-weight: 500;
-  letter-spacing: -0.045em;
-}
-.coaching-page h3 {
-  color: var(--personal-ink);
-}
-.coaching-page .eyebrow {
-  color: #397f87;
-  letter-spacing: 0.17em;
-}
-.coaching-page nav.site {
-  background: var(--personal-night);
-}
-.coaching-page nav .btn-primary, .coaching-page .msticky .btn-primary {
-  background: var(--personal-accent);
-  border-color: var(--personal-accent);
-  color: #0d2023;
-  box-shadow: none;
-}
-.coaching-page nav .btn-primary:hover, .coaching-page .msticky .btn-primary:hover {
-  background: #92d3d7;
-  border-color: #92d3d7;
-  box-shadow: none;
-}
 
-.coaching-page .text-link { color: #336f75; }
 
-@media (max-width: 700px) {
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .coaching-page .msticky { background: rgba(16, 25, 28, 0.96); }
-}
+
 
 /* ---------- coaching: quiet private-practice design ---------- */
 
@@ -868,31 +790,6 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
   .upcoming-row time { grid-column: 1 / -1; font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
 }
 
-.coaching-page .coaching-hero {
-  background: var(--personal-night);
-}
-.coaching-page .coaching-hero::after { display: none; }
-.coaching-page .coaching-hero .text-link { color: var(--personal-accent); }
-.coaching-page .coaching-hero .btn-primary, .coaching-page .offer-card .btn-primary, .coaching-page .footer-actions .btn-primary {
-  background: var(--personal-gold);
-  border-color: var(--personal-gold);
-  color: #152124;
-  box-shadow: none;
-}
-.coaching-page .coaching-hero .btn-primary:hover, .coaching-page .offer-card .btn-primary:hover, .coaching-page .footer-actions .btn-primary:hover {
-  background: #dfc58f;
-  border-color: #dfc58f;
-}
-.coaching-page .card {
-  background: var(--personal-surface);
-  border-color: var(--personal-line);
-  box-shadow: none;
-}
-.coaching-page .band { background: var(--personal-night); }
-.coaching-page figure.shot img {
-  border-radius: 2px;
-  filter: saturate(0.86) contrast(1.03);
-}
 
 /* ---------- newsletter (2026-10-01) ---------- */
 .subscribe { margin-top: 18px; }

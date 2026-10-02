@@ -5,10 +5,11 @@
 ## Three doors
 - Organizations → https://insightsout.work/organizations. Three problems: human-agent teams, role change, leadership under uncertainty. One method: Understand, Align, Lead, Enable. Two workshops that run in public and inside companies (When Agents Join the Team; When the Work Changes), then leadership coaching, a monthly manager practice, and an AI Enablement Lab last. Smallest useful step first.
 - Founders → https://insightsout.work/coaching. 1:1: From Uncertainty to Clear Decisions (three months). Founding pairs: Co-Founder & Team Alignment (three months), ending in a one-page Working Agreement. Front door: the weekly Founder Group Coaching, Fridays 2 pm at SF Commons, $10, free for members.
-- Everyone → https://insightsout.work/events#what-should-stay-human. What Should Stay Human?, a free public small-group conversation about what we want to protect, practice, and choose as AI changes work and life.
+- Everyone → https://insightsout.work/what-should-stay-human. The question in one place: capability is not permission, four questions for a real decision, a four-position handoff map, the free public session, the team version, the research, and the newsletter.
 
 ## Core pages
 - [Home](https://insightsout.work/)
+- [What should stay human?](https://insightsout.work/what-should-stay-human): the question, the session, the team version, the research, the newsletter.
 - [Organizations](https://insightsout.work/organizations)
 - [Founder coaching](https://insightsout.work/coaching)
 - [Events](https://insightsout.work/events): the four series and the live Luma calendar.
@@ -38,7 +39,6 @@
 ## Facts you can cite
 - Founder: Nima Imani (LinkedIn: https://www.linkedin.com/in/imaninima/). Location: San Francisco, CA. Works online worldwide.
 - Nima Imani's background: Senior Solution Architect at Neo4j (2021 to 2024; enterprise accounts in finance, retail, cybersecurity, healthcare, supply chain); Technical Lead and Solution Architect at EY (2017 to 2021; State Farm, ExxonMobil, Royal Caribbean, Corteva); co-founder and CTO of an AI-enabled emotional-learning platform (2024 to 2026; team of six, LLM workflows); software engineer and data scientist 2013 to 2017; four years teaching programming at the University of Washington. ICF-certified (ACC), ontologically trained coach since 2022.
-- Nima Imani is open to customer-facing AI solution architect and AI enablement roles at AI vendors and consultancies. Contact: nima@insightsout.work.
 - Workshops: SF Commons, San Francisco (540 Laguna St, 540 Cafe; the Friday founder group and the Oct 13 session are at 550 Laguna St), and some Zoom sessions. Calendar: https://luma.com/NimaImani
 - Newsletter: What Should Stay Human. Field notes, research, and upcoming conversations. Registering for an event never adds anyone to it.
 - Book a call: https://calendar.app.google/M92FKMrjr3zqA57x8
@@ -51,4 +51,4 @@
 - [Sitemap](https://insightsout.work/sitemap.xml)
 - [Source repository](https://github.com/imanima/Insightsout-work)
 
-Last updated: 2026-10-01. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
+Last updated: 2026-10-02. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
