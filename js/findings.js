@@ -28,8 +28,11 @@
         if (f.status === "candidate") el.classList.add("finding-candidate");
       });
 
+      var skipCounts = { waves: 1, registrations: 1, unique_people: 1 };
       document.querySelectorAll("[data-dataset]").forEach(function (el) {
-        text(el, get(ledger.dataset || {}, el.getAttribute("data-dataset")));
+        var key = el.getAttribute("data-dataset");
+        if (skipCounts[key]) return;
+        text(el, get(ledger.dataset || {}, key));
       });
 
       // Optional: full finding cards <div data-finding-card="H5.trust_gap"></div>
@@ -42,7 +45,7 @@
             (f.anchor.note ? " — " + f.anchor.note : "") + "</p>"
           : "";
         el.innerHTML =
-          '<div class="research-stat"><strong>' + f.stat.value + "</strong><span>" + (f.stat.detail || "") + " · n=" + f.stat.n + "</span></div>" +
+          '<div class="research-stat"><strong>' + f.stat.value + "</strong></div>" +
           "<p>" + f.claim + "</p>" + anchor;
       });
     })
@@ -66,7 +69,7 @@
         list.sort(function (a, b) { return ((b.weight || 0) - (a.weight || 0)) || (b.date || "").localeCompare(a.date || ""); });
         var isGrid = mount.classList.contains("paper-grid");
         mount.innerHTML = list.map(function (p) {
-          var meta = [p.version ? "v" + p.version : "", p.date_human || p.date || "", p.n ? "n=" + p.n : ""].filter(Boolean).join(" · ");
+          var meta = [p.version ? "v" + p.version : "", p.date_human || p.date || ""].filter(Boolean).join(" · ");
           if (isGrid) {
             return '<article class="card paper-card">' +
               '<span class="offer-kicker">' + (p.type_label || p.type) + (meta ? " · " + meta : "") + "</span>" +
