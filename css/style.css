@@ -268,11 +268,13 @@ figure.shot figcaption {
 .community-topics-heading { margin-bottom: 36px; }
 .community-topics { border-top: 1px solid var(--line); }
 .community-topics article {
-  display: grid; grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
-  gap: 44px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line);
+  display: grid; grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
+  gap: 36px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid var(--line);
 }
-.community-topics h3 { font-size: clamp(1.25rem, 2.4vw, 1.7rem); }
+.community-topics h3 { font-size: clamp(1.2rem, 2.2vw, 1.55rem); }
 .community-topics p { color: var(--muted); font-size: 15.5px; }
+.community-topics article > div > p + p { margin-top: 10px; }
+.community-topics .form-note [data-event-date] { display: block; }
 
 .luma-embed-community iframe { height: 320px; }
 .workshop-calendar { border-top: 1px solid var(--line); }
