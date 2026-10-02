@@ -28,6 +28,8 @@ Dates are written into the HTML (Home strip, Events page, each workshop page). T
 - Every dated row carries `data-event-date="YYYY-MM-DD"`. `js/main.js` hides it once the day has passed (Pacific time), and a container with `data-event-list` shows its `[data-event-empty]` child when nothing is left. A page can go stale in text, but never advertises a past date.
 - The Luma calendar embed on the Events page is the live source; new events appear there without a deploy.
 
+`scripts/luma_update_events.py` (dry run by default, `--apply` to write) renames and re-describes the Luma events to match the four series; it needs `LUMA_API_KEY` and network access to public-api.luma.com, which this cloud session does not have.
+
 The weekly sync agent (runs on Nima's machine, token in `.git-push-token`, gitignored) updates dates in the HTML and, optionally, `data/events.json` via `scripts/fetch_luma_events.py`. Add the `data-event-date` attribute to any new dated row it writes.
 
 ## Redirects
