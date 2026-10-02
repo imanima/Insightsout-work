@@ -20,7 +20,13 @@
     { "source": "/workshops/ai-for-the-rest-of-us.html", "destination": "/workshops/what-should-stay-human", "permanent": true }
   ],
   "headers": [
-    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] },
-    { "source": "/llms-full.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
+    { "source": "/llms.txt", "headers": [
+      { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+      { "key": "Cache-Control", "value": "public, max-age=3600" }
+    ] },
+    { "source": "/llms-full.txt", "headers": [
+      { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+      { "key": "Cache-Control", "value": "public, max-age=3600" }
+    ] }
   ]
 }

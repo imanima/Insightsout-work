@@ -44,5 +44,15 @@ User-agent: meta-externalagent
 Allow: /
 User-agent: CCBot
 Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: MistralAI-User
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: xAI-Grok
+Allow: /
 
 Sitemap: https://insightsout.work/sitemap.xml
