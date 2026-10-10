@@ -1142,6 +1142,9 @@ footer.site a { color: #D6DEEA; }
   color: #bbc4c5;
   font-size: 19px;
 }
+.coach-premium-hero .lede + .lede {
+  margin-top: 16px;
+}
 .coach-hero-actions { margin-top: 34px; }
 .coach-premium-hero .btn-primary,
 .coach-final .btn-primary,
