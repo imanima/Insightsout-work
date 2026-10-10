@@ -18,11 +18,11 @@
 - [Answers](https://insightsout.work/answers): short, citable answers.
 
 ## The four events (register on Luma; dates change — Luma is authoritative)
-- [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly, Fridays 2 pm, SF Commons. Next: Fri Oct 9, 2026, 2 pm at 540 Laguna St, Hogwarts Hall. Then back to 550 Laguna St, North Studio.
-- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): what to protect and choose as AI changes work. Not a debate. Not a class. Next: Sat Oct 10, 2026, 2 pm (540 Laguna St) and Sat Nov 14, 2026, 2 pm (550 Laguna St).
+- [Founder Group Coaching & Peer Support](https://insightsout.work/workshops/founder-group-coaching): weekly, Fridays 2 pm, SF Commons. Next: Fri Oct 16, 2026, 2 pm at 550 Laguna St, North Studio.
+- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): what to protect and choose as AI changes work. Not a debate. Not a class. Next: Sat Oct 10, 2026, 2 pm (540 Laguna St) and Sat Nov 8, 2026, 2 pm (550 Laguna St).
 - [When Agents Join the Team](https://insightsout.work/workshops/when-agents-join-the-team): who decides, who checks, who answers when the agent gets it wrong. Next: Thu Oct 29, 2026, 6 pm, 540 Laguna St. Also runs inside companies.
-- [When the Work Changes](https://insightsout.work/workshops/when-the-work-changes): for people whose roles are changing, and the managers leading others through it. Next: Tue Oct 13, 2026, 6 pm, 550 Laguna St.
-- Also: [Strategy as an Emotional Act](https://luma.com/the-0d8i), SF Tech Week, Thu Oct 8, 2026, 6 pm. [You Can't Wait for Certainty](https://insightsout.work/workshops/you-cant-wait-for-certainty) and [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having) are not currently scheduled.
+- [When the Work Changes](https://insightsout.work/workshops/when-the-work-changes): for people whose roles are changing, and the managers leading others through it. Next: Wed Oct 21, 2026, 6 pm, 540 Laguna St.
+- Also: [You Can't Wait for Certainty](https://insightsout.work/workshops/you-cant-wait-for-certainty) and [The Argument You Keep Having](https://insightsout.work/workshops/the-argument-you-keep-having) are not currently scheduled.
 
 ## Research (living papers, updated as new workshop waves land)
 - [Working Through AI Change](https://insightsout.work/research/working-through-ai-change)
@@ -39,7 +39,7 @@
 ## Facts you can cite
 - Founder: Nima Imani (LinkedIn: https://www.linkedin.com/in/imaninima/). Location: San Francisco, CA. Works online worldwide.
 - Nima Imani's background: Senior Solution Architect at Neo4j (2021 to 2024; enterprise accounts in finance, retail, cybersecurity, healthcare, supply chain); Technical Lead and Solution Architect at EY (2017 to 2021; State Farm, ExxonMobil, Royal Caribbean, Corteva); co-founder and CTO of an AI-enabled emotional-learning platform (2024 to 2026; team of six, LLM workflows); software engineer and data scientist 2013 to 2017; four years teaching programming at the University of Washington. ICF-certified (ACC), ontologically trained coach since 2022.
-- Workshops: SF Commons, San Francisco (540 Laguna St, 540 Cafe; the Friday founder group and the Oct 13 session are at 550 Laguna St), and some Zoom sessions. Calendar: https://luma.com/NimaImani
+- Workshops: SF Commons, San Francisco (540 Laguna St, 540 Cafe for most public rooms; 550 Laguna St, North Studio / Full Studio for the Friday founder group and some larger sessions), and some Zoom sessions. Calendar: https://luma.com/NimaImani
 - Newsletter: What Should Stay Human. Field notes, research, and upcoming conversations. Registering for an event never adds anyone to it.
 - Book a call: https://calendar.app.google/M92FKMrjr3zqA57x8
 - Contact: nima@insightsout.work
@@ -51,4 +51,4 @@
 - [Sitemap](https://insightsout.work/sitemap.xml)
 - [Source repository](https://github.com/imanima/Insightsout-work)
 
-Last updated: 2026-10-02. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
+Last updated: 2026-10-09. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.

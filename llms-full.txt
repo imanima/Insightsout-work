@@ -4,7 +4,7 @@ Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
 Short summary: https://insightsout.work/llms.txt
 Direct Q&A: https://insightsout.work/answers
-Last updated: 2026-10-02
+Last updated: 2026-10-09
 
 ## Entity
 
@@ -49,13 +49,13 @@ Pricing for ongoing programs is discussed on the call. Do not invent prices.
 
 ## The four events
 
-Four recurring series. Each has one audience, one problem, one concrete outcome, and one next step. Dates are instances of a series, not new products. Same title and promise on the site, Luma, email, and LinkedIn. Registration on Luma. Location: SF Commons, San Francisco: 540 Laguna Street (540 Cafe) for most sessions; 550 Laguna Street (North Studio / Full Studio) for the Friday founder group and the Oct 13 session. Some Zoom sessions.
+Four recurring series. Each has one audience, one problem, one concrete outcome, and one next step. Dates are instances of a series, not new products. Same title and promise on the site, Luma, email, and LinkedIn. Registration on Luma. Location: SF Commons, San Francisco: 540 Laguna Street (540 Cafe) for most public rooms; 550 Laguna Street (North Studio / Full Studio) for the Friday founder group and some larger sessions. Some Zoom sessions.
 
-- Founder Group Coaching & Peer Support — https://insightsout.work/workshops/founder-group-coaching — weekly, Fridays 2 pm. Founders, builders, creators, and business owners. Difficult decisions, relationship strain, carrying the work alone. Outcome: clarity on one real situation and a supported next move. Next: Fri Oct 9, 2026, 2 pm, 540 Laguna St, Hogwarts Hall. Then weekly at 550 Laguna St, North Studio.
-- What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human — monthly or quarterly. General public. AI change is moving faster than shared meaning. Outcome: a personal principle, one deliberate choice, a sense of connection. Next: Sat Oct 10, 2026, 2 pm (540 Laguna) and Sat Nov 14, 2026, 2 pm (550 Laguna, Full Studio).
+- Founder Group Coaching & Peer Support — https://insightsout.work/workshops/founder-group-coaching — weekly, Fridays 2 pm. Founders, builders, creators, and business owners. Difficult decisions, relationship strain, carrying the work alone. Outcome: clarity on one real situation and a supported next move. Next: Fri Oct 16, 2026, 2 pm, 550 Laguna St, North Studio.
+- What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human — monthly or quarterly. General public. AI change is moving faster than shared meaning. Outcome: a personal principle, one deliberate choice, a sense of connection. Next: Sat Oct 10, 2026, 2 pm (540 Laguna) and Sat Nov 8, 2026, 2 pm (550 Laguna, Full Studio).
 - When Agents Join the Team — https://insightsout.work/workshops/when-agents-join-the-team — managers, team leads, founders, People and transformation leaders. Teams use agents without shared rules for trust, review, or accountability. Outcome: a one-page Human-Agent Team Agreement. Next: Thu Oct 29, 2026, 6 pm, 540 Laguna. Private sessions now.
-- When the Work Changes — https://insightsout.work/workshops/when-the-work-changes — people whose roles are changing and managers leading others through it. Work moves before roles, identity, communication, and leadership catch up. Outcome: a change map, one conversation or decision, one experiment. Next: Tue Oct 13, 2026, 6 pm, 550 Laguna, Full Studio.
-- Also on the calendar: Strategy as an Emotional Act — https://luma.com/the-0d8i — SF Tech Week, Thu Oct 8, 2026, 6 pm. You Can't Wait for Certainty — https://insightsout.work/workshops/you-cant-wait-for-certainty — with Vlad Moskovski, not currently scheduled. The Argument You Keep Having — https://insightsout.work/workshops/the-argument-you-keep-having — for founding pairs, not currently scheduled.
+- When the Work Changes — https://insightsout.work/workshops/when-the-work-changes — people whose roles are changing and managers leading others through it. Work moves before roles, identity, communication, and leadership catch up. Outcome: a change map, one conversation or decision, one experiment. Next: Wed Oct 21, 2026, 6 pm, 540 Laguna.
+- Also: You Can't Wait for Certainty — https://insightsout.work/workshops/you-cant-wait-for-certainty — with Vlad Moskovski, not currently scheduled. The Argument You Keep Having — https://insightsout.work/workshops/the-argument-you-keep-having — for founding pairs, not currently scheduled.
 
 Live dates: https://luma.com/NimaImani (authoritative). Events page: https://insightsout.work/events
 
