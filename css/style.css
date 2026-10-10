@@ -1385,6 +1385,7 @@ footer.site a { color: #D6DEEA; }
   font-size: 16px;
   line-height: 1.7;
 }
+.coach-support-intro > p:not(.eyebrow) + p:not(.eyebrow) { margin-top: 14px; }
 .coach-support-intro .btn-primary {
   margin-top: 28px;
   background: var(--personal-night);
@@ -1437,6 +1438,26 @@ footer.site a { color: #D6DEEA; }
   line-height: 1.65;
 }
 .coach-program-summary > p + p { margin-top: 12px; }
+.coach-program-summary > p.coach-offer-price {
+  margin-top: 20px;
+  color: var(--personal-ink);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.coach-program-summary > p.coach-offer-price span {
+  display: block;
+  margin-top: 4px;
+  color: var(--personal-muted);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.coach-program-summary > p.coach-rate-note {
+  margin-top: 12px;
+  font-size: 13.5px;
+}
 .coach-engagement-card {
   padding: 30px 0; border-top: 1px solid var(--personal-line);
   border-bottom: 1px solid var(--personal-line);
@@ -1537,6 +1558,25 @@ footer.site a { color: #D6DEEA; }
 .coach-testimonial-grid figcaption strong {
   color: #e7e3da;
   font-weight: 600;
+}
+.coach-testimonial-grid figcaption a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+.coach-testimonial-grid figcaption a:hover { border-bottom-color: rgba(255, 255, 255, 0.6); }
+.coach-testimonial-grid.is-dense figure { min-height: 0; padding-top: 34px; padding-bottom: 34px; }
+.coach-testimonial-grid.is-dense figure:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, 0.15); }
+.coach-testimonial-grid.is-dense blockquote {
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+  line-height: 1.55;
+}
+.coach-testimonial-grid.is-dense figcaption { margin-top: 24px; }
+.coach-testimonial-more { margin-top: 26px; font-size: 14px; }
+.coach-testimonial-more a {
+  color: var(--personal-accent, #7fd4c1);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 .coach-testimonial-grid figcaption span { margin-top: 4px; }
 .coach-about-section {
