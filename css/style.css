@@ -1131,10 +1131,10 @@ footer.site a { color: #D6DEEA; }
   align-items: center;
 }
 .coach-premium-hero h1 {
-  max-width: 15ch;
+  max-width: 18ch;
   margin-bottom: 28px;
   color: #f6f2e9;
-  font-size: clamp(3.25rem, 5.7vw, 4.95rem);
+  font-size: clamp(3.05rem, 5.4vw, 4.55rem);
   line-height: 1;
 }
 .coach-premium-hero .lede {
@@ -1175,7 +1175,7 @@ footer.site a { color: #D6DEEA; }
 }
 .coach-proofline {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 56px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
@@ -1293,6 +1293,9 @@ footer.site a { color: #D6DEEA; }
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--personal-line);
   border-bottom: 1px solid var(--personal-line);
+}
+.coach-method-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 .coach-method-grid article {
   min-height: 250px;
@@ -1845,6 +1848,20 @@ footer.site a { color: #D6DEEA; }
     border-bottom: 1px solid var(--personal-line);
   }
   .founder-work-grid > a:last-child { border-bottom: 0; }
+  .coach-method-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .coach-method-grid-4 article,
+  .coach-method-grid-4 article + article {
+    min-height: 0;
+    padding: 28px 24px 28px 0;
+    border-left: 0;
+  }
+  .coach-method-grid-4 article:nth-child(even) {
+    padding-left: 24px;
+    border-left: 1px solid var(--personal-line);
+  }
+  .coach-method-grid-4 article:nth-child(-n+2) {
+    border-bottom: 1px solid var(--personal-line);
+  }
 }
 
 @media (max-width: 700px) {
