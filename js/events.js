@@ -1,57 +1,215 @@
-// Renders upcoming events from data/events.json (generated from the Luma API
-// by scripts/fetch_luma_events.py). Falls back to the public Luma calendar
-// link if the file is missing or empty — embeds are never the only route.
+// Fills event dates and Register links from /api/events (live Luma).
+// If the request fails, the dates already in the HTML stay put.
+// Guest/partner events (Agora, Redwood City, etc.) are skipped here;
+// they still show in the Luma embed on the Events page.
 
 (function () {
-  function fmtDate(iso, tz) {
-    var d = new Date(iso);
-    var opts = { month: "short", day: "numeric", timeZone: tz || "America/Los_Angeles" };
-    var wk = { weekday: "long", timeZone: tz || "America/Los_Angeles" };
-    return {
-      date: d.toLocaleDateString("en-US", opts),
-      weekday: d.toLocaleDateString("en-US", wk),
-      time: d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: tz || "America/Los_Angeles" })
-    };
+  "use strict";
+
+  var TITLES = {
+    "org-agents": "When Agents Join the Team",
+    "org-lead": "How Do I Lead Through Change and Uncertainty?",
+    "org-role": "When Your Role Starts Changing",
+    everyone: "What Should Stay Human?"
+  };
+
+  function classify(name) {
+    var n = String(name || "").trim();
+    if (/group coaching/i.test(n) || /peer support for founders/i.test(n)) return "guest";
+    if (/agents join the team/i.test(n)) return "org-agents";
+    if (/how do i lead/i.test(n) || /team is overwhelmed/i.test(n)) return "org-lead";
+    if (/role starts changing/i.test(n) || /the work changes/i.test(n)) return "org-role";
+    if (/^what should stay human\??$/i.test(n)) return "everyone";
+    return "guest";
   }
 
-  function render(mount, events, limit) {
-    var upcoming = events.filter(function (e) {
-      return new Date(e.start_at) > new Date();
-    }).slice(0, limit || 10);
+  function tzOf(e) {
+    return e.timezone || "America/Los_Angeles";
+  }
 
-    if (!upcoming.length) {
-      mount.innerHTML = '<p class="events-empty">No upcoming events posted right now — new gatherings land every month. ' +
-        '<a href="' + window.IO_CONFIG.LUMA_CALENDAR_URL + '" data-track="luma_rsvp_click">Follow the Luma calendar</a> to hear first.</p>';
-      return;
-    }
+  function place(e) {
+    var type = String(e.location_type || "");
+    if (type === "online" || type === "virtual") return "Online";
+    var addr = String(e.address || "");
+    if (/zoom/i.test(addr)) return "Online";
+    if (/laguna|commons/i.test(addr)) return "SF Commons";
+    return addr.split(",")[0].trim() || "San Francisco";
+  }
 
-    mount.innerHTML = upcoming.map(function (e) {
-      var f = fmtDate(e.start_at, e.timezone);
-      var loc = e.location_type === "online" ? "Online" : "In person · San Francisco";
-      return '<div class="event-card">' +
-        '<div class="event-date">' + f.date + '<span>' + f.weekday + " · " + f.time + '</span></div>' +
-        '<div><h3>' + e.name + '</h3>' +
-        '<p>' + loc + (e.description ? " — " + e.description + "…" : "") + '</p></div>' +
-        '<a class="btn btn-ghost btn-sm" target="_blank" rel="noopener" data-track="luma_rsvp_click" href="' + e.url + '">RSVP on Luma</a>' +
-        '</div>';
+  function stripYear(s) {
+    return String(s).replace(/,\s*\d{4}$/, "");
+  }
+
+  function shortDate(e) {
+    return stripYear(new Date(e.start_at).toLocaleDateString("en-US", {
+      weekday: "short", month: "short", day: "numeric", timeZone: tzOf(e)
+    }));
+  }
+
+  function longDate(e) {
+    return stripYear(new Date(e.start_at).toLocaleDateString("en-US", {
+      weekday: "long", month: "long", day: "numeric", timeZone: tzOf(e)
+    }));
+  }
+
+  function timeOf(e) {
+    return new Date(e.start_at).toLocaleTimeString("en-US", {
+      hour: "numeric", minute: "2-digit", timeZone: tzOf(e)
+    });
+  }
+
+  function dateAttr(e) {
+    return new Intl.DateTimeFormat("en-CA", {
+      timeZone: tzOf(e), year: "numeric", month: "2-digit", day: "2-digit"
+    }).format(new Date(e.start_at));
+  }
+
+  function monthDay(e) {
+    return new Date(e.start_at).toLocaleDateString("en-US", {
+      month: "short", day: "numeric", timeZone: tzOf(e)
+    });
+  }
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function calendarUrl() {
+    return (window.IO_CONFIG && window.IO_CONFIG.LUMA_CALENDAR_URL) || "https://luma.com/NimaImani";
+  }
+
+  function lumaUrl(slug) {
+    if (!slug) return calendarUrl();
+    if (/^https?:/i.test(slug)) return slug;
+    return "https://luma.com/" + String(slug).replace(/^\//, "");
+  }
+
+  function prepare(raw) {
+    var now = Date.now();
+    return (raw || []).map(function (e) {
+      var kind = classify(e.name);
+      return {
+        kind: kind,
+        title: TITLES[kind] || e.name,
+        start_at: e.start_at,
+        timezone: tzOf(e),
+        url: lumaUrl(e.url),
+        place: place(e),
+        location_type: e.location_type
+      };
+    }).filter(function (e) {
+      return e.start_at && new Date(e.start_at).getTime() > now;
+    }).sort(function (a, b) {
+      return new Date(a.start_at) - new Date(b.start_at);
+    });
+  }
+
+  function byKind(events, kind) {
+    return events.filter(function (e) { return e.kind === kind; });
+  }
+
+  function uniqueKinds(events) {
+    var seen = {};
+    var out = [];
+    events.forEach(function (e) {
+      if (e.kind === "guest" || seen[e.kind]) return;
+      seen[e.kind] = true;
+      out.push(e);
+    });
+    return out;
+  }
+
+  function renderUpcoming(mount, events) {
+    var list = uniqueKinds(events).slice(0, 5);
+    if (!list.length) return;
+    mount.innerHTML = list.map(function (e) {
+      return '<a class="upcoming-row" href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">' +
+        '<time datetime="' + esc(dateAttr(e)) + '">' + esc(shortDate(e)) + '</time>' +
+        '<span class="upcoming-title">' + esc(e.title) + '</span>' +
+        '<span class="upcoming-go">Register</span>' +
+        '</a>';
     }).join("");
   }
 
+  function whenLine(events, kind) {
+    if (!events.length) return "Next date on Luma";
+    var first = events[0];
+    var line = longDate(first) + " · " + timeOf(first) + " · " + first.place;
+    events.slice(1, 3).forEach(function (e) {
+      line += " · Also " + longDate(e) + " · " + timeOf(e);
+    });
+    return line;
+  }
+
+  function linksHtml(events, leadingDot) {
+    var html;
+    if (!events.length) {
+      html = '<a class="text-link" href="' + esc(calendarUrl()) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">See calendar &rarr;</a>';
+    } else {
+      html = events.slice(0, 3).map(function (e) {
+        return '<a class="text-link" href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">Register ' + esc(monthDay(e)) + ' &rarr;</a>';
+      }).join(" &nbsp;·&nbsp; ");
+    }
+    return leadingDot ? " &nbsp;·&nbsp; " + html : html;
+  }
+
+  function fillSeries(events) {
+    document.querySelectorAll("[data-luma-kind]").forEach(function (article) {
+      var kind = article.getAttribute("data-luma-kind");
+      var series = byKind(events, kind);
+      var when = article.querySelector("[data-luma-when]");
+      var links = article.querySelector("[data-luma-links]");
+      if (when) when.textContent = whenLine(series, kind);
+      if (links) links.innerHTML = linksHtml(series, links.tagName !== "P");
+    });
+  }
+
+  function fillRegisters(events) {
+    document.querySelectorAll("[data-luma-register]").forEach(function (a) {
+      var series = byKind(events, a.getAttribute("data-luma-register"));
+      a.href = series.length ? series[0].url : calendarUrl();
+    });
+  }
+
+  function fillNext(events) {
+    document.querySelectorAll("[data-luma-next]").forEach(function (el) {
+      var series = byKind(events, el.getAttribute("data-luma-next"));
+      if (!series.length) {
+        el.innerHTML = 'Not on the calendar yet. Watch <a href="' + esc(calendarUrl()) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">Luma</a>.';
+        return;
+      }
+      var e = series[0];
+      el.innerHTML = esc(longDate(e)) + ", " + esc(timeOf(e)) +
+        ' (<a href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">register</a>)';
+    });
+  }
+
+  function needed() {
+    return document.querySelector("[data-upcoming], [data-luma-kind], [data-luma-register], [data-luma-next]");
+  }
+
+  function apply(events) {
+    var upcoming = document.querySelector("[data-upcoming]");
+    if (upcoming) renderUpcoming(upcoming, events);
+    fillSeries(events);
+    fillRegisters(events);
+    fillNext(events);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    var mounts = document.querySelectorAll("[data-events]");
-    if (!mounts.length) return;
-    fetch("data/events.json")
-      .then(function (r) { if (!r.ok) throw new Error("no events.json"); return r.json(); })
-      .then(function (events) {
-        mounts.forEach(function (m) {
-          render(m, events, parseInt(m.getAttribute("data-events"), 10) || 10);
-        });
+    if (!needed()) return;
+    var api = (window.IO_CONFIG && window.IO_CONFIG.EVENTS_API) || "/api/events";
+    fetch(api)
+      .then(function (r) { if (!r.ok) throw new Error("no events api"); return r.json(); })
+      .then(function (data) {
+        var list = prepare(data.events || []);
+        if (!list.length) return;
+        apply(list);
       })
-      .catch(function () {
-        mounts.forEach(function (m) {
-          m.innerHTML = '<p class="events-empty">See all upcoming gatherings on our ' +
-            '<a href="' + window.IO_CONFIG.LUMA_CALENDAR_URL + '" data-track="luma_rsvp_click">Luma calendar</a>.</p>';
-        });
-      });
+      .catch(function () { /* keep the dates already in the HTML */ });
   });
 })();
