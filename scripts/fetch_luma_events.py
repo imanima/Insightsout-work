@@ -8,8 +8,11 @@ or, to reuse the key from the Luma data reader project:
     python3 scripts/fetch_luma_events.py
 
 Run this whenever events change (or wire it into a cron / build step).
-The site reads data/events.json at page load; if the file is stale or
-missing, pages fall back to the public Luma calendar link.
+
+This writes the historical event record, not the live calendar. Live dates
+on the site come from /api/events (see api/events.js). data/events.json is
+read by js/research.js and articles/event-record-2026.html; if the file is
+stale or missing, those pages fall back to the public Luma calendar link.
 """
 import json
 import os
