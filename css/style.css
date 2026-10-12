@@ -894,7 +894,7 @@ a.article-card:hover { text-decoration: none; }
   .msticky .btn { flex: 1; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 980px) {
   .nav-inner { position: relative; }
   .btn.mobile-menu-toggle {
     display: inline-flex; align-items: center; color: #F1EFE9;
@@ -1178,7 +1178,7 @@ footer.site a { color: #D6DEEA; }
 }
 .coach-proofline {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 56px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
@@ -1419,6 +1419,11 @@ footer.site a { color: #D6DEEA; }
   font-size: 15px;
   line-height: 1.65;
 }
+.coach-band-paper { background: var(--personal-paper); }
+.coach-band-paper .coach-program-summary {
+  background: var(--personal-surface);
+  border-left-color: var(--personal-accent);
+}
 .coach-program-summary {
   margin-top: 38px;
   padding: 30px 32px;
@@ -1516,7 +1521,7 @@ footer.site a { color: #D6DEEA; }
 .coaching-page #faq .coach-faq details p { color: var(--personal-muted); }
 .coach-testimonial-section {
   padding: 96px 0;
-  background: #182427;
+  background: var(--personal-night);
 }
 .coach-testimonial-section .eyebrow { color: var(--personal-accent); }
 .coach-testimonial-grid {
@@ -1577,6 +1582,32 @@ footer.site a { color: #D6DEEA; }
   color: var(--personal-accent, #7fd4c1);
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.coach-testimonial-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 48px;
+  align-items: end;
+  margin-top: 58px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.coach-testimonial-cta h2 {
+  max-width: 16ch;
+  color: #f2eee5;
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+}
+.coach-testimonial-cta p {
+  max-width: 55ch;
+  margin-top: 16px;
+  color: #9ba7a9;
+  font-size: 16px;
+}
+.coach-testimonial-cta .btn-primary {
+  background: var(--personal-gold);
+  border-color: var(--personal-gold);
+  color: #152124;
+  white-space: nowrap;
 }
 .coach-testimonial-grid figcaption span { margin-top: 4px; }
 .coach-about-section {
@@ -1948,6 +1979,11 @@ footer.site a { color: #D6DEEA; }
     padding-left: 16px;
     border-right: 0;
   }
+  .coach-proofline span:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    padding-left: 0;
+    border-right: 0;
+  }
   .coach-editorial-intro,
   .coach-method-section,
   .coach-engagement-section,
@@ -2000,6 +2036,15 @@ footer.site a { color: #D6DEEA; }
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   .coach-testimonial-grid figure:last-child { border-bottom: 0; }
+  .coach-testimonial-cta {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .coach-testimonial-cta .btn-primary {
+    justify-self: start;
+    white-space: normal;
+  }
   .coach-about-lean { gap: 32px; }
   .coach-support-types article { grid-template-columns: 1fr; gap: 8px; }
   .coach-program-summary { padding: 26px 24px; }
