@@ -2976,3 +2976,5 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
   border-radius: 2px;
   filter: saturate(0.86) contrast(1.03);
 }
+
+.coach-method-grid .card-cta { display: inline-block; margin-top: 12px; }
