@@ -593,6 +593,24 @@ figure.shot figcaption {
   align-items: flex-start;
   gap: 18px;
 }
+/* Home: route cards hold their own links, lanes list, and the cohort cards reused from /cohorts */
+.home-route-card .home-route-event { margin-top: 14px; font-size: 15px; color: var(--muted); }
+.home-route-card .home-route-event a { color: var(--teal); font-weight: 600; }
+.home-lanes { margin: 16px 0 0; padding: 0; list-style: none; font-size: 15px; line-height: 1.55; }
+.home-lanes li + li { margin-top: 8px; }
+.home-lanes strong { color: var(--head); }
+.home-route-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: auto; padding-top: 30px; }
+.cohort-card { display: flex; flex-direction: column; gap: 10px; }
+.cohort-card h3 { margin: 0; }
+.cohort-for { font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--teal); }
+.cohort-promise { font-weight: 600; color: var(--ink); margin: 0; }
+.cohort-detail { color: var(--muted); font-size: 15px; margin: 0; }
+.cohort-card .form-note { margin: 0; }
+.cohort-card .text-link { margin-top: auto; padding-top: 6px; }
+.home-final-grid .cta-row { margin-top: 22px; }
+@media (max-width: 700px) {
+  .home-route-actions { flex-direction: column; align-items: flex-start; }
+}
 .home-final-conversation {
   background: var(--surface);
   border-top: 1px solid var(--line);
