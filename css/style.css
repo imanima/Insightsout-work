@@ -685,6 +685,28 @@ figure.shot figcaption {
   .org-band-grid, .about-band-grid { grid-template-columns: 1fr; gap: 20px; }
   .about-photo { max-width: 220px; }
 }
+/* Home sizing: one scale, less air */
+.home-hero-short { padding-top: 64px; padding-bottom: 56px; }
+.home-hero-short h1 { font-size: clamp(2.1rem, 4.2vw, 3.1rem); max-width: 20ch; }
+.home-hero-short .lede { font-size: 17px; max-width: 58ch; margin-top: 14px; }
+.home-hero-short .hero-note { margin-top: 22px; font-size: 12.5px; }
+.lane { padding: 44px 0; }
+.lane-head { margin-bottom: 22px; }
+.lane-head h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); max-width: 30ch; margin-bottom: 8px; }
+.lane-head p:not(.eyebrow) { font-size: 15.5px; max-width: 66ch; }
+.lane-step { padding-top: 20px; padding-bottom: 20px; }
+.lane-step h3 { font-size: 1.08rem; }
+.lane-step p { font-size: 14px; }
+.org-band-grid h2, .about-band-grid h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); }
+.org-band-grid p, .about-band-grid p { font-size: 15.5px; }
+.section-tight.org-band, .section-tight.about-band { padding-top: 48px; padding-bottom: 48px; }
+.about-band-grid { grid-template-columns: 200px minmax(0, 1fr); }
+@media (max-width: 860px) {
+  .home-hero-short { padding-top: 48px; padding-bottom: 40px; }
+  .lane { padding: 32px 0; }
+  .about-band-grid { grid-template-columns: 1fr; }
+  .about-photo { max-width: 180px; }
+}
 .home-final-conversation {
   background: var(--surface);
   border-top: 1px solid var(--line);
