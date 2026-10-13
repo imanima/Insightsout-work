@@ -8,10 +8,15 @@ or send as they are:
   out/followup-<event>-<date>.txt        plain text, for Gmail or anywhere
   out/followup-<event>-<date>.html       rich HTML, for a Gmail draft
 
+The Luma blast is short on purpose (people just saw you; they need the next
+date and one link). The Gmail versions carry the full list.
+
 Usage:
   python3 scripts/followup_email.py --event "When Your Role Starts Changing" --date 2026-10-21
   python3 scripts/followup_email.py --event "..." --date ... --note "One sentence about what the room worked on."
   python3 scripts/followup_email.py --event "..." --date ... --events-json events.json   # saved /api/events output
+  python3 scripts/followup_email.py --weekly                 # the weekly "This week" letter (out/weekly-<date>.*)
+  python3 scripts/followup_email.py --weekly --note "..."    # with your one paragraph at the top
 
 Dates come from the live site (https://insightsout.work/api/events) when the
 network allows, otherwise from the static rows in start.html, which the site
@@ -135,7 +140,16 @@ def build(args, events):
               "starting in January, and a simple way to book time with me.")
     subject = "Thanks for joining %s" % args.event
 
-    # ---------- plain text and Luma blast ----------
+    # ---------- Luma blast: short ----------
+    l = ["Hi,", "", opening, "", "If you want to keep going:", ""]
+    for e in workshops[:3]:
+        l += ["%s, %s: %s" % (when(e), short_time(e["time"]), e["title"]), e["url"], ""]
+    if fridays:
+        l += ["Fridays at 2 PM, SF Commons: group coaching and peer support", fridays[0]["url"], ""]
+    l += ["Free 30 minute call: " + BOOK_ME, "Cohorts, organizations, everything else: " + START_PAGE, "", "Nima"]
+    luma = "\n".join(l)
+
+    # ---------- plain text (Gmail) ----------
     t = []
     t += ["Hi,", "", opening, "", bridge, "", ""]
     t += ["UPCOMING", ""]
@@ -230,13 +244,70 @@ def build(args, events):
         "rule": RULE, "start": a(START_PAGE, "insightsout.work/start"),
         "muted": MUTED, "site": SITE,
     }
+    return subject, luma, text, page
+
+
+def build_weekly(args, events):
+    """The weekly letter: this week's dates, what is coming, one link."""
+    today = dt.date.today()
+    week_end = today + dt.timedelta(days=7)
+    upcoming = sorted((e for e in events if e["date"] >= today), key=lambda e: e["date"])
+    this_week = [e for e in upcoming if e["date"] < week_end]
+    later = [e for e in upcoming if e["date"] >= week_end and not FRIDAY.search(e["title"])][:4]
+    first = next((e for e in this_week if not FRIDAY.search(e["title"])), this_week[0] if this_week else None)
+    subject = "This week: %s" % first["title"] if first else "This week at InsightsOut"
+    note = args.note.strip() if args.note else "[ONE SHORT PARAGRAPH: something you noticed this week, in a room or in your own work. Three to five sentences. No lesson required.]"
+
+    t = ["Hi,", "", note, "", "THIS WEEK", ""]
+    for e in this_week:
+        t += ["%s, %s, %s" % (when(e), short_time(e["time"]), e["place"]), e["title"], e["url"], ""]
+    if later:
+        t += ["COMING UP", ""]
+        for e in later:
+            t += ["%s: %s" % (when(e), e["title"]), e["url"], ""]
+    t += ["Fridays at 2 PM, SF Commons: group coaching and peer support, every week. " + CALENDAR, "",
+          "Ways to work with me, one page: " + START_PAGE, "",
+          "Reply to this email if something here landed. I read every reply.", "", "Nima"]
+    text = "\n".join(t)
+
+    def a(href, label):
+        return '<a href="%s" style="color:%s;font-weight:700;text-decoration:none;">%s</a>' % (href, TEAL, html.escape(label))
+    cell = "padding:10px 12px 10px 0;border-bottom:1px solid #eef1f0;"
+    rows = "".join(
+        '<tr><td width="128" valign="top" style="%sfont-weight:700;white-space:nowrap;">%s</td>'
+        '<td valign="top" style="%s">%s<br><span style="color:%s;font-size:13.5px;">%s &middot; %s</span></td>'
+        '<td width="70" valign="top" align="right" style="padding:10px 0;border-bottom:1px solid #eef1f0;">%s</td></tr>'
+        % (cell, when(e), cell, html.escape(e["title"]), MUTED, short_time(e["time"]), html.escape(e["place"]), a(e["url"], "Register"))
+        for e in this_week)
+    later_html = "<br>".join("%s: %s" % (when(e), a(e["url"], e["title"])) for e in later)
+    heading = ('<tr><td style="padding:22px 0 12px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;'
+               'color:%s;font-weight:700;border-top:1px solid %s;">%%s</td></tr>' % (MUTED, RULE))
+    page = """<!DOCTYPE html>
+<html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background:#ffffff;">
+<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="padding:24px 16px;">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1f2a2a;font-size:16px;line-height:1.5;">
+<tr><td style="padding:0 0 8px;">Hi,</td></tr>
+<tr><td style="padding:0 0 28px;">%(note)s</td></tr>
+%(h1)s
+<tr><td><table role="presentation" width="100%%" cellpadding="0" cellspacing="0" border="0" style="font-size:15px;">%(rows)s</table></td></tr>
+%(h2)s
+<tr><td style="padding:0 0 10px;font-size:15px;line-height:1.8;">%(later)s</td></tr>
+<tr><td style="padding:10px 0 30px;font-size:15px;">Fridays at 2 PM, SF Commons: group coaching and peer support, every week. %(cal)s</td></tr>
+<tr><td style="padding:22px 0 0;border-top:1px solid %(rule)s;font-size:15px;">Ways to work with me, one page: %(start)s</td></tr>
+<tr><td style="padding:18px 0 0;font-size:15px;">Reply to this email if something here landed. I read every reply.</td></tr>
+<tr><td style="padding:28px 0 0;">Nima</td></tr>
+</table></td></tr></table></body></html>
+""" % {"note": html.escape(note), "h1": heading % "This week", "rows": rows,
+       "h2": heading % "Coming up", "later": later_html,
+       "cal": a(CALENDAR, "Full calendar \u2192"), "rule": RULE, "start": a(START_PAGE, "insightsout.work/start")}
     return subject, text, page
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--event", required=True, help="name of the event you just ran")
-    ap.add_argument("--date", required=True, help="date you ran it, YYYY-MM-DD")
+    ap.add_argument("--event", help="name of the event you just ran")
+    ap.add_argument("--date", help="date you ran it, YYYY-MM-DD")
+    ap.add_argument("--weekly", action="store_true", help="build the weekly letter instead of a follow-up")
     ap.add_argument("--note", default="", help="optional sentence about what the room worked on")
     ap.add_argument("--events-json", help="saved output of /api/events instead of fetching")
     ap.add_argument("--limit", type=int, default=4, help="how many dated workshops to list (default 4)")
@@ -244,13 +315,26 @@ def main():
     args = ap.parse_args()
 
     events = load_events(args.events_json)
-    subject, text, page = build(args, events)
-
     os.makedirs(args.out, exist_ok=True)
+
+    if args.weekly:
+        subject, text, page = build_weekly(args, events)
+        base = os.path.join(args.out, "weekly-%s" % dt.date.today().isoformat())
+        with open(base + ".txt", "w") as f:
+            f.write("Subject: %s\n\n%s\n" % (subject, text))
+        with open(base + ".html", "w") as f:
+            f.write(page)
+        print("Subject: " + subject + "\n\n" + text)
+        print("\nwrote %s.txt, .html" % base, file=sys.stderr)
+        return
+
+    if not (args.event and args.date):
+        ap.error("--event and --date are required unless --weekly")
+    subject, luma, text, page = build(args, events)
     slug = re.sub(r"[^a-z0-9]+", "-", args.event.lower()).strip("-")
     base = os.path.join(args.out, "followup-%s-%s" % (slug, args.date))
     with open(base + ".luma.txt", "w") as f:
-        f.write(text + "\n")
+        f.write(luma + "\n")
     with open(base + ".txt", "w") as f:
         f.write("Subject: %s\n\n%s\n" % (subject, text))
     with open(base + ".html", "w") as f:
@@ -258,8 +342,10 @@ def main():
 
     print("Subject: " + subject)
     print()
-    print(text)
+    print("=== Luma blast (short) ===")
+    print(luma)
     print()
+    print("=== Gmail version is in %s.txt and .html ===" % base)
     print("wrote %s.luma.txt, .txt, .html" % base, file=sys.stderr)
 
 
