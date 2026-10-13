@@ -672,7 +672,7 @@ figure.shot figcaption {
 .org-band-grid .cta-row { margin-top: 20px; }
 .about-band-grid { grid-template-columns: 260px minmax(0, 1fr); align-items: center; }
 .about-photo { margin: 0; }
-.about-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; display: block; }
+.about-photo img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; display: block; }
 .about-band-grid h2 { margin: 0 0 14px; font-size: clamp(1.9rem, 3vw, 2.5rem); }
 .about-band-grid p { max-width: 62ch; }
 .about-band-grid p + p { margin-top: 12px; }
