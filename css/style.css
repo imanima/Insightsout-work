@@ -3106,9 +3106,13 @@ figure.shot.coach-portrait img { max-height: 460px; object-fit: cover; }
 .upcoming-title { color: var(--ink); font-size: 16.5px; }
 .upcoming-go { font-size: 14px; font-weight: 600; color: var(--teal); white-space: nowrap; }
 .upcoming-more { margin-top: 16px; font-size: 15px; }
+.upcoming-row-full { grid-template-columns: 8.6rem minmax(0, 1fr) auto auto; }
+.upcoming-meta { font-size: 14px; color: var(--muted); white-space: nowrap; }
 @media (max-width: 700px) {
   .upcoming-row { grid-template-columns: 1fr auto; gap: 4px 16px; }
   .upcoming-row time { grid-column: 1 / -1; font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  .upcoming-row-full { grid-template-columns: minmax(0, 1fr) auto; }
+  .upcoming-meta { grid-column: 1 / -1; order: 1; white-space: normal; font-size: 13.5px; }
 }
 
 /* Coaching page: cream paper, personal night hero — not the InsightsOut teal brochure */

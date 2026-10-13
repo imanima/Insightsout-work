@@ -10,12 +10,18 @@
     "org-agents": "When Agents Join the Team",
     "org-lead": "How Do I Lead Through Change and Uncertainty?",
     "org-role": "When Your Role Starts Changing",
-    everyone: "What Should Stay Human?"
+    everyone: "What Should Stay Human?",
+    side: "Building on the Side",
+    founders: "Friday Group Coaching and Peer Support"
   };
+
+  // Weekly groups are listed only where [data-upcoming="all"] asks for every date.
+  var WEEKLY = { side: true, founders: true };
 
   function classify(name) {
     var n = String(name || "").trim();
-    if (/group coaching/i.test(n) || /peer support for founders/i.test(n)) return "guest";
+    if (/building on the side/i.test(n)) return "side";
+    if (/group coaching/i.test(n) || /peer support/i.test(n)) return "founders";
     if (/agents join the team/i.test(n)) return "org-agents";
     if (/how do i lead/i.test(n) || /team is overwhelmed/i.test(n)) return "org-lead";
     if (/role starts changing/i.test(n) || /the work changes/i.test(n)) return "org-role";
@@ -125,7 +131,7 @@
     var seen = {};
     var out = [];
     events.forEach(function (e) {
-      if (e.kind === "guest" || seen[e.kind]) return;
+      if (e.kind === "guest" || WEEKLY[e.kind] || seen[e.kind]) return;
       seen[e.kind] = true;
       out.push(e);
     });
@@ -134,12 +140,15 @@
 
   function renderUpcoming(mount, events) {
     var showAll = mount.getAttribute("data-upcoming") === "all";
-    var list = (showAll ? events : uniqueKinds(events)).slice(0, 5);
+    var list = showAll
+      ? events.filter(function (e) { return e.kind !== "guest"; }).slice(0, 12)
+      : uniqueKinds(events).slice(0, 5);
     if (!list.length) return;
     mount.innerHTML = list.map(function (e) {
-      return '<a class="upcoming-row" href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">' +
+      return '<a class="upcoming-row' + (showAll ? ' upcoming-row-full' : '') + '" href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">' +
         '<time datetime="' + esc(dateAttr(e)) + '">' + esc(shortDate(e)) + '</time>' +
         '<span class="upcoming-title">' + esc(e.title) + '</span>' +
+        (showAll ? '<span class="upcoming-meta">' + esc(timeOf(e)) + ' &middot; ' + esc(place(e)) + '</span>' : '') +
         '<span class="upcoming-go">Register</span>' +
         '</a>';
     }).join("");
