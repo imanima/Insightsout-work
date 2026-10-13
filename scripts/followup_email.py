@@ -44,8 +44,8 @@ MUTED = "#6b7a78"
 RULE = "#e3e8e7"
 
 COHORT_LINES = [
-    ("Leading Through Uncertainty and Pressure", "for managers and team leads"),
-    ("When Your Role Starts Changing", "for anyone whose role is changing"),
+    ("Lead With Confidence", "for managers and team leads who want to lead well"),
+    ("Your Next Chapter", "for professionals who feel stuck or want the next level"),
     ("Startup on the Side", "for professionals building alongside a job"),
 ]
 
