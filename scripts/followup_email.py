@@ -193,7 +193,7 @@ def build(args, events):
         for n, who in COHORT_LINES)
 
     page = """<!DOCTYPE html>
-<html><body style="margin:0;padding:0;background:#ffffff;">
+<html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background:#ffffff;">
 <table role="presentation" width="100%%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
 <tr><td align="center" style="padding:24px 16px;">
 <table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1f2a2a;font-size:16px;line-height:1.5;">
