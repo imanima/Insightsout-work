@@ -13,13 +13,14 @@ Serve over HTTP: the Luma iframe and the `fetch()` calls don't run from `file://
 
 ## Site map
 
-Six top pages: Home · Organizations · Founders (`coaching.html`) · Events · Research (`insights.html`) · About. Plus `what-should-stay-human.html`, the hub for the question itself (linked from the Home door and the footer, not the nav).
-One level down: `workshops/`, `research/`, `articles/`.
+The home page is the one page: work for organizations, private 1:1 coaching (three ways in), the three cohorts starting January 2027 with the public room that feeds each, upcoming dates, and the free 30 minute call. Everything else is detail behind it.
 
-Four recurring event series, same title everywhere (site, Luma, email, LinkedIn): Founder Group Coaching & Peer Support, What Should Stay Human?, When Agents Join the Team (`workshops/when-agents-join-the-team.html`), When the Work Changes (`workshops/when-the-work-changes.html`). Dates are instances of a series: add a dated row, never a new card.
-`answers.html` stays live for search engines and AI assistants but is not linked from the nav.
+Nav: Organizations · 1:1 Coaching · Cohorts · Workshops (`events.html`) · About. Also live but not in the nav: `insights.html` (Research), `answers.html` (for search engines and AI assistants), `company-pay.html`.
+One level down: `workshops/` (one page per series), `research/` (living papers), `articles/`.
 
-One button on the whole site: **Book a call**, one link, set in `js/config.js` (`BOOKING_URL`) and hard-coded in each page's header.
+Recurring series, same title everywhere (site, Luma, email, LinkedIn): Founder Group Coaching & Peer Support (every Friday), Building on the Side (Fridays, for working professionals), When Your Role Starts Changing, When Agents Join the Team, What Should Stay Human?, How Do I Lead Through Change and Uncertainty? (`my-team-is-overwhelmed.html`). Dates are instances of a series: they fill live from Luma through `/api/events`; the HTML carries a static fallback.
+
+Two booking links, by audience: the free 30 minute coaching call (`data-book="coaching"`) on Home, Coaching, Cohorts, Company-pay; the leadership conversation (`data-book="org"`) on Organizations, Research, and the Agents workshop. No other calendar link exists on the site.
 
 ## Events and dates
 
@@ -34,7 +35,7 @@ The weekly sync agent (runs on Nima's machine, token in `.git-push-token`, gitig
 
 ## Redirects
 
-`vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/ai-transformation` and `/ai-enablement` → `/events`, `/workshops/ai-for-the-rest-of-us` → `/workshops/what-should-stay-human`, `/workshops/my-team-is-overwhelmed` → `/workshops/when-the-work-changes`, `/workshops/what-should-stay-human-on-our-team` → `/workshops/when-agents-join-the-team`, older `/cohort`, `/leadership-circle`, `/partnerships` → the matching door.
+`vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/start` and `/ai-transformation` → `/` or `/organizations`, `/what-should-stay-human` → `/workshops/what-should-stay-human`, `/workshops/when-the-work-changes` → `/workshops/when-your-role-starts-changing`, the retired workshops (`ai-for-the-rest-of-us`, `navigating-uncertainty-at-work`, `the-argument-you-keep-having`, `you-cant-wait-for-certainty`) → `/events`, older `/cohort`, `/leadership-circle`, `/partnerships`, `/ai-enablement` → the matching door.
 
 ## Subscribers
 

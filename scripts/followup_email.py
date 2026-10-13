@@ -19,8 +19,8 @@ Usage:
   python3 scripts/followup_email.py --weekly --note "..."    # with your one paragraph at the top
 
 Dates come from the live site (https://insightsout.work/api/events) when the
-network allows, otherwise from the static rows in start.html, which the site
-keeps current. The event you just ran is left out of the list.
+network allows, otherwise from the static rows on the home page (index.html), which the
+site keeps current. The event you just ran is left out of the list.
 """
 import argparse
 import datetime as dt
@@ -34,7 +34,7 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://insightsout.work"
 API = SITE + "/api/events"
-START_PAGE = SITE + "/start"
+START_PAGE = SITE + "/"
 CALENDAR = "https://luma.com/NimaImani"
 BOOK_ME = "https://calendar.app.google/wpqVkuaH1uwFRh6cA"
 BOOK_ORG = "https://calendar.app.google/8y9NgWzBLaiT414G6"
@@ -66,8 +66,8 @@ def load_events(events_json):
         if evs:
             return evs
     except Exception as err:  # network is blocked in some environments
-        print("live calendar not reachable (%s); using start.html" % err, file=sys.stderr)
-    return parse_start_page()
+        print("live calendar not reachable (%s); using index.html" % err, file=sys.stderr)
+    return parse_home_page()
 
 
 def norm_api(e):
@@ -93,8 +93,8 @@ def norm_api(e):
     }
 
 
-def parse_start_page():
-    with open(os.path.join(ROOT, "start.html")) as f:
+def parse_home_page():
+    with open(os.path.join(ROOT, "index.html")) as f:
         src = f.read()
     rows = re.findall(
         r'<a class="upcoming-row[^"]*" href="([^"]+)"[^>]*>\s*<time datetime="([^"]+)">[^<]*</time>\s*'
@@ -241,7 +241,7 @@ def build(args, events):
         "book_org": a(BOOK_ORG, "book a conversation →"),
         "h_cohorts": heading("Cohorts, starting January"), "cohorts": cohort_html,
         "cohorts_link": a(COHORTS, "See the cohorts and apply →"),
-        "rule": RULE, "start": a(START_PAGE, "insightsout.work/start"),
+        "rule": RULE, "start": a(START_PAGE, "insightsout.work"),
         "muted": MUTED, "site": SITE,
     }
     return subject, luma, text, page
@@ -299,7 +299,7 @@ def build_weekly(args, events):
 </table></td></tr></table></body></html>
 """ % {"note": html.escape(note), "h1": heading % "This week", "rows": rows,
        "h2": heading % "Coming up", "later": later_html,
-       "cal": a(CALENDAR, "Full calendar \u2192"), "rule": RULE, "start": a(START_PAGE, "insightsout.work/start")}
+       "cal": a(CALENDAR, "Full calendar \u2192"), "rule": RULE, "start": a(START_PAGE, "insightsout.work")}
     return subject, text, page
 
 

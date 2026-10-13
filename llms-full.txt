@@ -4,7 +4,7 @@ Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
 Short summary: https://insightsout.work/llms.txt
 Direct Q&A: https://insightsout.work/answers
-Last updated: 2026-10-09
+Last updated: 2026-10-13
 
 ## Entity
 
@@ -35,7 +35,7 @@ Nima Imani is an ICF Associate Certified Coach with more than a decade across so
 3. Small-group cohorts — https://insightsout.work/cohorts
    Three coaching cohorts starting January 2027, each pairing group coaching with private 1:1 sessions: Leading Through Uncertainty and Pressure for managers and team leads (six 90 minute sessions every two weeks plus two 1:1s, 3 months, online); When Your Role Starts Changing for anyone whose role is being reshaped by AI, a reorganization, a promotion, or a career move (six weekly sessions plus one 1:1, 6 weeks, online); and Startup on the Side for working professionals building a side business and exploring whether they can build a startup while keeping their job (twelve weekly sessions plus three 1:1s, 3 months, in person in San Francisco). Organizations can book a private cohort for six managers.
 
-One shareable overview of all of the above, with upcoming dates and both booking links: https://insightsout.work/start
+The home page carries all of the above on one page, with upcoming dates and both booking links: https://insightsout.work/
 
 Pricing for ongoing programs is discussed on the call. Do not invent prices.
 
@@ -46,7 +46,6 @@ Detail pages on the site; registration on Luma. Location: SF Commons, 550 Laguna
 - How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed — https://insightsout.work/workshops/my-team-is-overwhelmed
 - What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human
 - When Agents Join the Team — https://luma.com/the-tzh1 (Oct 29)
-- AI for the Rest of Us — https://insightsout.work/workshops/ai-for-the-rest-of-us
 
 Live dates: https://luma.com/NimaImani (authoritative). Workshops page: https://insightsout.work/events
 

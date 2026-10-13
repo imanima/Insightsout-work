@@ -55,6 +55,76 @@
       "source": "/ai-transformation.html",
       "destination": "/organizations",
       "permanent": true
+    },
+    {
+      "source": "/start",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/start.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/what-should-stay-human",
+      "destination": "/workshops/what-should-stay-human",
+      "permanent": true
+    },
+    {
+      "source": "/what-should-stay-human.html",
+      "destination": "/workshops/what-should-stay-human",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/ai-for-the-rest-of-us",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/ai-for-the-rest-of-us.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/navigating-uncertainty-at-work",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/navigating-uncertainty-at-work.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/the-argument-you-keep-having",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/the-argument-you-keep-having.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/you-cant-wait-for-certainty",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/you-cant-wait-for-certainty.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/when-the-work-changes",
+      "destination": "/workshops/when-your-role-starts-changing",
+      "permanent": true
+    },
+    {
+      "source": "/workshops/when-the-work-changes.html",
+      "destination": "/workshops/when-your-role-starts-changing",
+      "permanent": true
     }
   ],
   "headers": [
