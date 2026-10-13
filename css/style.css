@@ -707,6 +707,7 @@ figure.shot figcaption {
   .about-band-grid { grid-template-columns: 1fr; }
   .about-photo { max-width: 180px; }
 }
+.article-body, .article-body p, .article-body td { overflow-wrap: anywhere; }
 .home-final-conversation {
   background: var(--surface);
   border-top: 1px solid var(--line);
