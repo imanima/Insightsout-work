@@ -611,6 +611,41 @@ figure.shot figcaption {
 @media (max-width: 700px) {
   .home-route-actions { flex-direction: column; align-items: flex-start; }
 }
+/* Home: four rows, each said once */
+.home-hero-short { padding-top: 84px; padding-bottom: 72px; }
+.home-hero-short .lede { max-width: 56ch; }
+.home-menu { padding: 16px 0 72px; }
+.home-menu-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px 64px;
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+.home-menu-row:last-child { border-bottom: 0; }
+.home-menu-head .eyebrow { margin-bottom: 12px; }
+.home-menu-head h2 { max-width: 16ch; margin: 0 0 12px; font-size: clamp(1.9rem, 3vw, 2.5rem); }
+.home-menu-head p:not(.eyebrow) { max-width: 46ch; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.home-menu-body { align-self: center; }
+.home-menu-body .upcoming-more { margin-top: 12px; }
+.home-menu-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.home-menu-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.home-menu-list strong { color: var(--head); font-size: 16.5px; }
+.home-menu-list span { color: var(--muted); font-size: 14.5px; }
+.home-menu-action { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.home-proof-bottom { border-top: 1px solid var(--line); border-bottom: 0; }
+.home-proof-grid small a { color: var(--teal); font-weight: 600; }
+@media (max-width: 860px) {
+  .home-menu-row { grid-template-columns: 1fr; gap: 20px; padding: 40px 0; }
+  .home-menu-action { flex-direction: column; align-items: flex-start; }
+}
 .home-final-conversation {
   background: var(--surface);
   border-top: 1px solid var(--line);
