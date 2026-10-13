@@ -23,13 +23,22 @@
     return "guest";
   }
 
+  function displayTitle(name, kind) {
+    if (kind !== "guest") return TITLES[kind] || name;
+    if (/building on the side/i.test(name)) return "Building on the Side";
+    if (/group coaching/i.test(name) || /peer support for founders/i.test(name)) {
+      return "Friday Group Coaching and Peer Support";
+    }
+    return name;
+  }
+
   function tzOf(e) {
     return e.timezone || "America/Los_Angeles";
   }
 
   function place(e) {
     var type = String(e.location_type || "");
-    if (type === "online" || type === "virtual") return "Online";
+    if (type === "online" || type === "virtual" || type === "zoom") return "Online";
     var addr = String(e.address || "");
     if (/zoom/i.test(addr)) return "Online";
     if (/laguna|commons/i.test(addr)) return "SF Commons";
@@ -94,7 +103,7 @@
       var kind = classify(e.name);
       return {
         kind: kind,
-        title: TITLES[kind] || e.name,
+        title: displayTitle(e.name, kind),
         start_at: e.start_at,
         timezone: tzOf(e),
         url: lumaUrl(e.url),
@@ -124,7 +133,8 @@
   }
 
   function renderUpcoming(mount, events) {
-    var list = uniqueKinds(events).slice(0, 5);
+    var showAll = mount.getAttribute("data-upcoming") === "all";
+    var list = (showAll ? events : uniqueKinds(events)).slice(0, 5);
     if (!list.length) return;
     mount.innerHTML = list.map(function (e) {
       return '<a class="upcoming-row" href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">' +
