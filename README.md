@@ -37,6 +37,14 @@ The weekly sync agent (runs on Nima's machine, token in `.git-push-token`, gitig
 
 `vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/start` and `/ai-transformation` → `/` or `/organizations`, `/what-should-stay-human` → `/workshops/what-should-stay-human`, `/workshops/when-the-work-changes` → `/workshops/when-your-role-starts-changing`, the retired workshops (`ai-for-the-rest-of-us`, `navigating-uncertainty-at-work`, `the-argument-you-keep-having`, `you-cant-wait-for-certainty`) → `/events`, older `/cohort`, `/leadership-circle`, `/partnerships`, `/ai-enablement` → the matching door.
 
+## Hosting and hygiene
+
+- `vercel.json` sets security headers on every route (nosniff, referrer policy, frame options, permissions policy), a one-year immutable cache on `/assets/*` (assets are versioned by filename or `?v=`), and no trailing slashes. `404.html` is the branded not-found page.
+- Every page has a skip link to `#main`, an SVG favicon plus PNG fallbacks and an Apple touch icon under `/assets/`, and a `theme-color`.
+- The home page's social preview is `assets/og-home.png` (1200x630). Regenerate it from the slide styles if the headline changes.
+- `css/style.css` is purged of unused rules; when you add a class in HTML or JS, add its CSS too. A layout regression check (page heights and element boxes on desktop and mobile) lives in the session scratch scripts, not in the repo.
+- `slides/keep-going.html` is the end-of-workshop slide with QR codes (next room, cohorts, free call); `keep-going.png` and `.pdf` are the exports for decks.
+
 ## Subscribers
 
 The newsletter is **What Should Stay Human** on Substack. Every `<div data-newsletter>` (Home, Events) renders a subscribe form once `NEWSLETTER_URL` in `js/config.js` holds the publication URL; the form opens Substack's own subscribe page with the email prefilled. While the value is empty the block shows a link to the Luma calendar instead, so the site never shows a form that cannot deliver. `api/subscribe.js` (Luma People list via `LUMA_API_KEY`) and the `form.js-subscribe` handler are kept as a fallback path.
