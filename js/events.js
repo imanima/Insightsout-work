@@ -7,20 +7,19 @@
   "use strict";
 
   var TITLES = {
-    "org-agents": "When Agents Join the Team",
-    "org-lead": "How Do I Lead Through Change and Uncertainty?",
+    "org-agents": "Leading Change Without Losing Trust",
+    "org-lead": "My Team Is Overwhelmed. How Do I Lead?",
     "org-role": "When Your Role Starts Changing",
     everyone: "What Should Stay Human?",
-    side: "Building on the Side",
-    founders: "Friday Group Coaching and Peer Support"
+    founders: "Building on the Side"
   };
 
   // Weekly groups are listed only where [data-upcoming="all"] asks for every date.
-  var WEEKLY = { side: true, founders: true };
+  var WEEKLY = { founders: true };
 
   function classify(name) {
     var n = String(name || "").trim();
-    if (/building on the side/i.test(n)) return "side";
+    if (/building on the side/i.test(n)) return "founders";
     if (/group coaching/i.test(n) || /peer support/i.test(n)) return "founders";
     if (/agents join the team/i.test(n)) return "org-agents";
     if (/how do i lead/i.test(n) || /team is overwhelmed/i.test(n)) return "org-lead";
@@ -33,7 +32,7 @@
     if (kind !== "guest") return TITLES[kind] || name;
     if (/building on the side/i.test(name)) return "Building on the Side";
     if (/group coaching/i.test(name) || /peer support for founders/i.test(name)) {
-      return "Friday Group Coaching and Peer Support";
+      return "Building on the Side";
     }
     return name;
   }
