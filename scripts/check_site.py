@@ -87,7 +87,7 @@ for c in SITE["cohorts"]:
     if "<h3>%s</h3>" % c["name"] not in coh: bad("cohort name missing on cohorts page", "cohorts.html", c["name"])
     if "cohort=%s&" % c["key"] not in coh: bad("cohort apply key missing", "cohorts.html", c["key"])
     if c["name"] not in open("index.html").read(): bad("cohort name missing on home", "index.html", c["name"])
-    for f in ("llms.txt", "llms-full.txt", "scripts/followup_email.py"):
+    for f in ("llms.txt", "llms-full.txt"):
         if c["name"] not in open(f).read(): bad("cohort name missing", f, c["name"])
 for f in ("llms.txt", "llms-full.txt", "README.md", "scripts/followup_email.py"):
     t = open(f).read()

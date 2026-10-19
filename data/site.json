@@ -12,29 +12,91 @@
   "luma_calendar": "https://luma.com/NimaImani",
   "tally_form": "https://tally.so/r/WOGzMe",
   "lanes": [
-    {"key": "founders", "label": "Building on the side", "one_on_one": "Build something of your own"},
-    {"key": "role-change", "label": "Your career", "one_on_one": "Navigate your next chapter"},
-    {"key": "managers", "label": "Leading a team", "one_on_one": "Grow as a leader"}
+    {
+      "key": "founders",
+      "label": "Building on the side",
+      "one_on_one": "Build something of your own"
+    },
+    {
+      "key": "role-change",
+      "label": "Your career",
+      "one_on_one": "Navigate your next chapter"
+    },
+    {
+      "key": "managers",
+      "label": "Leading a team",
+      "one_on_one": "Grow as a leader"
+    }
   ],
   "cohorts": [
-    {"key": "managers", "name": "Steady Leadership Under Pressure", "for": "for managers and team leads", "format": "6 group sessions over 3 months, 2 private 1:1s, online, 6 to 8 people", "try_first": "workshops/my-team-is-overwhelmed.html"},
-    {"key": "role-change", "name": "Career Clarity Through Change", "for": "for professionals unsure of their next move", "format": "6 weekly sessions, 1 private 1:1, online, 8 to 10 people", "try_first": "workshops/when-your-role-starts-changing.html"},
-    {"key": "founders", "name": "Startup on the Side", "for": "for professionals building something alongside a job", "format": "12 weekly sessions over 3 months, 3 private 1:1s, in person in San Francisco, up to 8 people", "try_first": "workshops/founder-group-coaching.html"}
+    {
+      "key": "managers",
+      "name": "Steady Leadership Under Pressure",
+      "for": "for managers and team leads",
+      "format": "6 group sessions over 3 months, 2 private 1:1s, online, 6 to 8 people",
+      "try_first": "workshops/my-team-is-overwhelmed.html"
+    },
+    {
+      "key": "role-change",
+      "name": "Career Clarity Through Change",
+      "for": "for professionals unsure of their next move",
+      "format": "6 weekly sessions, 1 private 1:1, online, 8 to 10 people",
+      "try_first": "workshops/when-your-role-starts-changing.html"
+    },
+    {
+      "key": "founders",
+      "name": "Startup on the Side",
+      "for": "for professionals building something alongside a job",
+      "format": "12 weekly sessions over 3 months, 3 private 1:1s, in person in San Francisco, up to 8 people",
+      "try_first": "workshops/founder-group-coaching.html"
+    }
   ],
   "cohorts_start": "January 2027",
   "series": [
-    {"kind": "org-role", "name": "When Your Role Starts Changing", "page": "workshops/when-your-role-starts-changing.html"},
-    {"kind": "org-agents", "name": "When Agents Join the Team", "page": "workshops/when-agents-join-the-team.html"},
-    {"kind": "everyone", "name": "What Should Stay Human?", "page": "workshops/what-should-stay-human.html"},
-    {"kind": "org-lead", "name": "How Do I Lead Through Change and Uncertainty?", "page": "workshops/my-team-is-overwhelmed.html"},
-    {"kind": "founders", "name": "Friday Group Coaching and Peer Support", "page": "workshops/founder-group-coaching.html", "weekly": "Every Friday, 2:00 PM, SF Commons"}
+    {
+      "kind": "org-role",
+      "name": "When Your Role Starts Changing",
+      "page": "workshops/when-your-role-starts-changing.html"
+    },
+    {
+      "kind": "org-agents",
+      "name": "When Agents Join the Team",
+      "page": "workshops/when-agents-join-the-team.html"
+    },
+    {
+      "kind": "everyone",
+      "name": "What Should Stay Human?",
+      "page": "workshops/what-should-stay-human.html"
+    },
+    {
+      "kind": "org-lead",
+      "name": "How Do I Lead Through Change and Uncertainty?",
+      "page": "workshops/my-team-is-overwhelmed.html"
+    },
+    {
+      "kind": "founders",
+      "name": "Friday Group Coaching and Peer Support",
+      "page": "workshops/founder-group-coaching.html",
+      "weekly": "Every Friday, 2:00 PM, SF Commons"
+    }
   ],
   "retired_names": [
-    "Leading Through Change", "Leading Through Uncertainty and Pressure", "Lead With Confidence",
-    "When Your Role Starts Changing cohort", "Your Next Chapter cohort", "Founders' Inner Circle", "Founders Inner Circle",
-    "Small Business", "calendar.app.google/M92FKMrjr3zqA57x8", "start.html", "/start\""
+    "Leading Through Change",
+    "Leading Through Uncertainty and Pressure",
+    "Lead With Confidence",
+    "When Your Role Starts Changing cohort",
+    "Your Next Chapter cohort",
+    "Founders' Inner Circle",
+    "Founders Inner Circle",
+    "Small Business",
+    "calendar.app.google/M92FKMrjr3zqA57x8",
+    "start.html",
+    "/start\""
   ],
-  "retired_names_exempt_files": ["data/events.json", "research-src/"],
+  "retired_names_exempt_files": [
+    "data/events.json",
+    "research-src/"
+  ],
   "external": {
     "tally_form_id": "WOGzMe",
     "gmail_followup_draft": "r595996861093608350",
@@ -44,6 +106,7 @@
     "drive_newsletter_system": "1FFFPlL6sZkAQzTtH5-U8uA0BH5OA_DLKZ6lJKqrvXpI",
     "drive_substack_seed_posts": "18RoWMnJ6UQaWiqgBwspBWIC2ormXzOr0WxiAt9eO5wA",
     "drive_substack_starter_kit": "1OkbGjX2mdLObyfQ5DSr4L1NaiK16mM4uHUmUs51MDzY",
-    "drive_index": "1veygifeguNvd3KZdTlmnRpg4rFGrM3sntayGoZOfQng"
+    "drive_index": "1veygifeguNvd3KZdTlmnRpg4rFGrM3sntayGoZOfQng",
+    "drive_operations_map": "1MoJJLGGDR03Z_iGWgRj2iaWWIaJvK20DsM4Ic3leTfc"
   }
 }
