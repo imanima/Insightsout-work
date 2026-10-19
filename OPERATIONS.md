@@ -18,7 +18,7 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 | Claude business plan doc | Strategy, numbers, 90-day plan. | Claude via docs tools. | By hand after a rename. |
 | Drive: LinkedIn company page doc, Contacts playbook, Newsletter System, Substack seed posts, Substack starter kit | Paste-ready copy and playbooks. | Claude creates new versions (the connector cannot edit in place); Nima trashes old ones. | IDs in `data/site.json`; the current version carries "(current)" in its title. |
 | Drive index `00 Drive Index` | Where everything in Drive lives. | Nima's browser session only. | Rows owed are listed below. |
-| LinkedIn company page | Tagline, About, events, posts. | Nima pastes from the current Drive doc. | None automatic. |
+| LinkedIn company page | Logo, cover, tagline, About, fields, events, posts. | Nima pastes from the current Drive doc (v5). Images live in `assets/linkedin/`. | None automatic. |
 | Substack | Not created yet. When it exists, set `NEWSLETTER_URL` in `js/config.js`. | Nima. | |
 | `slides/keep-going.*` | End-of-workshop slide with QR codes (Luma calendar, cohorts page, free call). | Regenerate if a link changes. | |
 
@@ -30,7 +30,7 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 - **When a name changes:** follow the rename steps in `CLAUDE.md`.
 
 ## Open items that need Nima's browser
-- Drive index rows for: LinkedIn company page v4, Contacts playbook v3, Newsletter System, Substack seed posts, Post-event follow-up template, InsightsOut operations map.
-- Trash the superseded docs: LinkedIn company page v2 and v3, Contacts playbook v1 and v2, the Oct 13 follow-up template doc.
+- Drive index rows for: LinkedIn company page v5, Contacts playbook v3, Newsletter System, Substack seed posts, Post-event follow-up template, InsightsOut operations map.
+- Trash the superseded docs: LinkedIn company page v2, v3 and v4, Contacts playbook v1 and v2, the Oct 13 follow-up template doc.
 - Scan the three QR codes on `slides/keep-going.png` once with a phone.
 - Create the Substack and send the URL back so the site's subscribe forms go live.
