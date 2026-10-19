@@ -37,6 +37,10 @@ The weekly sync agent (runs on Nima's machine, token in `.git-push-token`, gitig
 
 `vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/start` and `/ai-transformation` → `/` or `/organizations`, `/what-should-stay-human` → `/workshops/what-should-stay-human`, `/workshops/when-the-work-changes` → `/workshops/when-your-role-starts-changing`, the retired workshops (`ai-for-the-rest-of-us`, `navigating-uncertainty-at-work`, `the-argument-you-keep-having`, `you-cant-wait-for-certainty`) → `/events`, older `/cohort`, `/leadership-circle`, `/partnerships`, `/ai-enablement` → the matching door.
 
+## Keeping it in sync
+
+Start with `CLAUDE.md` (rules for any agent session) and `OPERATIONS.md` (what lives where). `data/site.json` is the one source of truth for names and links; `scripts/check_site.py` must pass before every push and runs in CI every Monday.
+
 ## Hosting and hygiene
 
 - `vercel.json` sets security headers on every route (nosniff, referrer policy, frame options, permissions policy), a one-year immutable cache on `/assets/*` (assets are versioned by filename or `?v=`), and no trailing slashes. `404.html` is the branded not-found page.

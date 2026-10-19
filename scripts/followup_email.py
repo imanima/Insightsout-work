@@ -35,19 +35,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://insightsout.work"
 API = SITE + "/api/events"
 START_PAGE = SITE + "/"
-CALENDAR = "https://luma.com/NimaImani"
-BOOK_ME = "https://calendar.app.google/wpqVkuaH1uwFRh6cA"
-BOOK_ORG = "https://calendar.app.google/8y9NgWzBLaiT414G6"
 COHORTS = SITE + "/cohorts"
 TEAL = "#1d6f6a"
 MUTED = "#6b7a78"
 RULE = "#e3e8e7"
 
-COHORT_LINES = [
-    ("Steady Leadership Under Pressure", "for managers and team leads carrying too much"),
-    ("Career Clarity Through Change", "for professionals unsure of their next move"),
-    ("Startup on the Side", "for professionals building alongside a job"),
-]
+_SITE = json.load(open(os.path.join(ROOT, "data", "site.json")))
+COHORT_LINES = [(c["name"], c["for"]) for c in _SITE["cohorts"]]
+BOOK_ME = _SITE["booking"]["coaching"]
+BOOK_ORG = _SITE["booking"]["org"]
+CALENDAR = _SITE["luma_calendar"]
 
 FRIDAY = re.compile(r"friday group|building on the side|group coaching|peer support", re.I)
 

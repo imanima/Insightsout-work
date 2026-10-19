@@ -1,0 +1,49 @@
+{
+  "_comment": "Canonical facts for insightsout.work. Change a name or link HERE first, then run scripts/check_site.py; it lists every file that still carries the old value. The checker also fails on retired names and on static dates that have passed.",
+  "updated": "2026-10-19",
+  "site": "https://insightsout.work",
+  "home_headline": "Move through change with clarity.",
+  "coaching_headline": "Find your direction. Lead with confidence. Move forward.",
+  "contact_email": "nima@insightsout.work",
+  "booking": {
+    "coaching": "https://calendar.app.google/wpqVkuaH1uwFRh6cA",
+    "org": "https://calendar.app.google/8y9NgWzBLaiT414G6"
+  },
+  "luma_calendar": "https://luma.com/NimaImani",
+  "tally_form": "https://tally.so/r/WOGzMe",
+  "lanes": [
+    {"key": "founders", "label": "Building on the side", "one_on_one": "Build something of your own"},
+    {"key": "role-change", "label": "Your career", "one_on_one": "Navigate your next chapter"},
+    {"key": "managers", "label": "Leading a team", "one_on_one": "Grow as a leader"}
+  ],
+  "cohorts": [
+    {"key": "managers", "name": "Steady Leadership Under Pressure", "for": "for managers and team leads", "format": "6 group sessions over 3 months, 2 private 1:1s, online, 6 to 8 people", "try_first": "workshops/my-team-is-overwhelmed.html"},
+    {"key": "role-change", "name": "Career Clarity Through Change", "for": "for professionals unsure of their next move", "format": "6 weekly sessions, 1 private 1:1, online, 8 to 10 people", "try_first": "workshops/when-your-role-starts-changing.html"},
+    {"key": "founders", "name": "Startup on the Side", "for": "for professionals building something alongside a job", "format": "12 weekly sessions over 3 months, 3 private 1:1s, in person in San Francisco, up to 8 people", "try_first": "workshops/founder-group-coaching.html"}
+  ],
+  "cohorts_start": "January 2027",
+  "series": [
+    {"kind": "org-role", "name": "When Your Role Starts Changing", "page": "workshops/when-your-role-starts-changing.html"},
+    {"kind": "org-agents", "name": "When Agents Join the Team", "page": "workshops/when-agents-join-the-team.html"},
+    {"kind": "everyone", "name": "What Should Stay Human?", "page": "workshops/what-should-stay-human.html"},
+    {"kind": "org-lead", "name": "How Do I Lead Through Change and Uncertainty?", "page": "workshops/my-team-is-overwhelmed.html"},
+    {"kind": "founders", "name": "Friday Group Coaching and Peer Support", "page": "workshops/founder-group-coaching.html", "weekly": "Every Friday, 2:00 PM, SF Commons"}
+  ],
+  "retired_names": [
+    "Leading Through Change", "Leading Through Uncertainty and Pressure", "Lead With Confidence",
+    "When Your Role Starts Changing cohort", "Your Next Chapter cohort", "Founders' Inner Circle", "Founders Inner Circle",
+    "Small Business", "calendar.app.google/M92FKMrjr3zqA57x8", "start.html", "/start\""
+  ],
+  "retired_names_exempt_files": ["data/events.json", "research-src/"],
+  "external": {
+    "tally_form_id": "WOGzMe",
+    "gmail_followup_draft": "r595996861093608350",
+    "business_plan_doc": "https://claude.ai/code/artifact/c77e7a04-2b34-4418-9b1b-940ce67e53c7",
+    "drive_linkedin_page_doc": "1wh3E3vhcaj-exfGdN8iO8ewmpbpE8Ma6NEO-3rF6tAs",
+    "drive_contacts_playbook": "1K7WRqjOglrPv3nlF1ncJrmsiQW4I6P_c0N3J5xTDqO8",
+    "drive_newsletter_system": "1FFFPlL6sZkAQzTtH5-U8uA0BH5OA_DLKZ6lJKqrvXpI",
+    "drive_substack_seed_posts": "18RoWMnJ6UQaWiqgBwspBWIC2ormXzOr0WxiAt9eO5wA",
+    "drive_substack_starter_kit": "1OkbGjX2mdLObyfQ5DSr4L1NaiK16mM4uHUmUs51MDzY",
+    "drive_index": "1veygifeguNvd3KZdTlmnRpg4rFGrM3sntayGoZOfQng"
+  }
+}
