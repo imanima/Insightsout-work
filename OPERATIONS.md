@@ -18,7 +18,7 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 | Claude business plan doc | Strategy, numbers, 90-day plan. | Claude via docs tools. | By hand after a rename. |
 | Drive: LinkedIn company page doc, Contacts playbook, Newsletter System, Substack seed posts, Substack starter kit | Paste-ready copy and playbooks. | Claude creates new versions (the connector cannot edit in place); Nima trashes old ones. | IDs in `data/site.json`; the current version carries "(current)" in its title. |
 | Drive index `00 Drive Index` | Where everything in Drive lives. | Nima's browser session only. | Rows owed are listed below. |
-| Reviews (Tally OQDlWM) and introductions (Tally QoKeLg) | Quotes with permission level, headline and optional photo; referrals with permission to name the referrer. | Nima sends the asks one by one; Tally emails each reply; approved quotes go into `data/reviews.json`, then `python3 scripts/build_reviews.py` renders them into reviews.html, cohorts.html and coaching.html. | Form ids in `data/site.json`. The checker fails if the pages are out of sync with the data file. Quote only with the permission the person chose. |
+| Reviews and introductions (native forms, `js/forms.js` + `api/inbox.js`) | Quotes with permission level; referrals with permission to name the referrer. | The site forms post to `/api/inbox`, which files one issue per submission in the private repo `imanima/insightsout-inbox` (GitHub emails Nima). Until `INBOX_GITHUB_TOKEN` is set in Vercel, the form offers the Tally link instead (forms OQDlWM, QoKeLg). Approved quotes go into `data/reviews.json`, then `python3 scripts/build_reviews.py` renders reviews.html, cohorts.html and coaching.html. | Ids in `data/site.json`. The checker fails if the pages are out of sync with the data file. Quote only with the permission the person chose. |
 | LinkedIn company page | Logo, cover, tagline, About, fields, events, posts. | Nima pastes from the current Drive doc (v5). Images live in `assets/linkedin/`. | None automatic. |
 | Substack | Not created yet. When it exists, set `NEWSLETTER_URL` in `js/config.js`. | Nima. | |
 | `slides/keep-going.*` | End-of-workshop slide with QR codes (Luma calendar, cohorts page, free call). | Regenerate if a link changes. | |
@@ -31,7 +31,8 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 - **When a name changes:** follow the rename steps in `CLAUDE.md`.
 
 ## Open items that need Nima's browser
+- Switch the inbox on: create the private repo `insightsout-inbox`, a fine-grained token with Issues read and write on it, and the Vercel env var `INBOX_GITHUB_TOKEN`; redeploy; send a test review. Steps in the Reviews doc, section 11.
 - Drive index rows for: LinkedIn company page v5, Contacts playbook v3, Newsletter System, Substack seed posts, Post-event follow-up template, InsightsOut operations map.
-- Trash the superseded docs: Review ask v1 and Reviews and introductions v2 (replaced by v3), LinkedIn company page v2, v3 and v4, Contacts playbook v1 and v2, the Oct 13 follow-up template doc.
+- Trash the superseded docs: Review ask v1 and Reviews and introductions v2 and v3 (replaced by v4), LinkedIn company page v2, v3 and v4, Contacts playbook v1 and v2, the Oct 13 follow-up template doc.
 - Scan the three QR codes on `slides/keep-going.png` once with a phone.
 - Create the Substack and send the URL back so the site's subscribe forms go live.
