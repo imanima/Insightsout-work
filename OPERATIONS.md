@@ -32,6 +32,6 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 
 ## Open items that need Nima's browser
 - Drive index rows for: LinkedIn company page v5, Contacts playbook v3, Newsletter System, Substack seed posts, Post-event follow-up template, InsightsOut operations map.
-- Trash the superseded docs: Review ask v1 (replaced by Reviews and introductions v2), LinkedIn company page v2, v3 and v4, Contacts playbook v1 and v2, the Oct 13 follow-up template doc.
+- Trash the superseded docs: Review ask v1 and Reviews and introductions v2 (replaced by v3), LinkedIn company page v2, v3 and v4, Contacts playbook v1 and v2, the Oct 13 follow-up template doc.
 - Scan the three QR codes on `slides/keep-going.png` once with a phone.
 - Create the Substack and send the URL back so the site's subscribe forms go live.
