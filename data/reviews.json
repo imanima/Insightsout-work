@@ -1,0 +1,61 @@
+{
+  "_about": "Every published quote on the site comes from this file. Add a review only with the permission the person chose in the review form (Tally OQDlWM). permission: name | first | anon. program: group | coaching | workshop | organization. featured: pages that show it in their short section (cohorts, coaching, home). Run scripts/build_reviews.py after editing.",
+  "reviews": [
+    {
+      "id": "kamran-rahman",
+      "name": "Kamran Rahman",
+      "role": "Co-founder, media company",
+      "program": "coaching",
+      "headline": "It has led to significant growth in my business.",
+      "quote": "Nima's coaching style encourages me to find my own solutions. It has led to significant growth in my business. It's tripled since we began working together.",
+      "permission": "name",
+      "linkedin": "https://www.linkedin.com/in/kamranrahman/",
+      "photo": "",
+      "source": "LinkedIn recommendation",
+      "date": "2025",
+      "featured": ["coaching"]
+    },
+    {
+      "id": "tiana-thomas",
+      "name": "Tiana Thomas",
+      "role": "Product Leader, Digital Health",
+      "program": "coaching",
+      "headline": "Far less overwhelming and much more structured.",
+      "quote": "Nima helped me break down my vision into actionable steps, making the process far less overwhelming and much more structured.",
+      "permission": "name",
+      "linkedin": "https://www.linkedin.com/in/iamtianathomas/",
+      "photo": "",
+      "source": "LinkedIn recommendation",
+      "date": "2025",
+      "featured": ["cohorts", "coaching"]
+    },
+    {
+      "id": "chandler-cook",
+      "name": "Chandler Cook",
+      "role": "Sr. Program Manager",
+      "program": "coaching",
+      "headline": "He pulled my focus back to building.",
+      "quote": "My confusion around very early stage co-founder titles, equity, overlapping work. Nima pointed out some assumptions I was making that likely weren't true, and pulled my focus back to building.",
+      "permission": "name",
+      "linkedin": "https://www.linkedin.com/in/chandler-cook3/",
+      "photo": "",
+      "source": "LinkedIn recommendation",
+      "date": "2025",
+      "featured": ["cohorts", "coaching"]
+    },
+    {
+      "id": "miangaly-randriamihaja",
+      "name": "Miangaly Randriamihaja, MBA",
+      "role": "Finance professional",
+      "program": "coaching",
+      "headline": "It transformed my approach to career planning.",
+      "quote": "Nima's ability to ask the right questions and provide actionable steps transformed my approach to career planning.",
+      "permission": "name",
+      "linkedin": "https://www.linkedin.com/in/noromiangaly-randriamihaja/",
+      "photo": "",
+      "source": "LinkedIn recommendation",
+      "date": "2025",
+      "featured": ["cohorts", "coaching"]
+    }
+  ]
+}

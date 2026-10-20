@@ -94,6 +94,11 @@ for f in ("llms.txt", "llms-full.txt", "README.md", "scripts/followup_email.py")
     for name in SITE["retired_names"]:
         if name in t: bad("retired name", f, name)
 
+# reviews rendered from data/reviews.json must be in sync
+import subprocess
+_r = subprocess.run([sys.executable, "scripts/build_reviews.py", "--check"], capture_output=True, text=True)
+if _r.returncode != 0: bad("reviews out of sync", "data/reviews.json", _r.stdout.strip())
+
 # sitemap and llms
 site_urls = set(re.findall(r"<loc>https://insightsout.work/?([^<]*)</loc>", open("sitemap.xml").read()))
 page_urls = {p[:-5] if p != "index.html" else "" for p in pages if p != "404.html"}

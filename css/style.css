@@ -1327,3 +1327,35 @@ h2 { font-size: clamp(1.75rem, 2.9vw, 2.3rem); }
 }
 .footer-actions .btn-primary, .coaching-page .footer-actions .btn-primary, .coaching-page .coaching-hero .btn-primary { background: #F1EFE9; border-color: #F1EFE9; color: var(--brand-night); }
 .footer-actions .btn-primary:hover, .coaching-page .footer-actions .btn-primary:hover, .coaching-page .coaching-hero .btn-primary:hover { background: #FFFFFF; border-color: #FFFFFF; }
+
+/* Reviews */
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.review-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.review-card { margin: 0; display: flex; flex-direction: column; gap: 12px; padding: 24px 22px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 1px 2px rgba(23, 26, 28, 0.03), 0 14px 34px rgba(23, 26, 28, 0.05); }
+.review-card[hidden] { display: none; }
+.review-headline { margin: 0; font-weight: 700; font-size: 15.5px; line-height: 1.35; color: var(--head); letter-spacing: -0.01em; }
+.review-card blockquote { margin: 0; font-family: var(--display); font-size: 16.5px; line-height: 1.55; color: var(--ink); }
+.review-card figcaption { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); }
+.review-photo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: 0 0 44px; }
+.review-initials { display: inline-flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--teal) 12%, transparent); color: var(--teal); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.review-who { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.review-who strong { font-size: 14.5px; color: var(--head); }
+.review-who strong a { color: var(--head); }
+.review-who span { font-size: 13px; color: var(--muted); }
+.review-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.review-filter { font: inherit; font-size: 13.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.review-filter:hover { border-color: var(--teal); color: var(--teal); }
+.review-filter.is-active { background: var(--teal); border-color: var(--teal); color: #FFFFFF; }
+.review-empty { margin-top: 8px; color: var(--muted); }
+.review-more { margin-top: 24px; }
+.reviews-wall { background: var(--ground); }
+.coach-testimonial-section .review-card { background: rgba(255, 255, 255, 0.055); border-color: rgba(255, 255, 255, 0.12); box-shadow: none; }
+.coach-testimonial-section .review-headline, .coach-testimonial-section .review-who strong, .coach-testimonial-section .review-who strong a { color: #FFFFFF; }
+.coach-testimonial-section .review-card blockquote { color: var(--band-ink); }
+.coach-testimonial-section .review-who span { color: var(--band-muted); }
+.coach-testimonial-section .review-card figcaption { border-top-color: rgba(255, 255, 255, 0.12); }
+.coach-testimonial-section .review-initials { background: rgba(255, 255, 255, 0.12); color: #FFFFFF; }
+.coach-testimonial-section .coach-testimonial-more a { color: var(--band-ink); }
+@media (max-width: 860px) {
+.review-grid, .review-grid-2 { grid-template-columns: 1fr; gap: 14px; }
+}
