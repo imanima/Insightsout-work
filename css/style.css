@@ -1285,3 +1285,45 @@ h1 { font-size: clamp(2.15rem, 10vw, 2.45rem); }
 /* accessibility: keyboard users jump past the nav */
 .skip-link { position: absolute; left: -9999px; top: 12px; z-index: 1000; padding: 10px 16px; background: var(--teal); color: #fff; border-radius: 6px; font-weight: 700; }
 .skip-link:focus { left: 16px; outline: 3px solid #fff; }
+/* Site design pass: readability, hero contrast, consistent scale, teal action bands */
+:root { --muted: #4F545B; }
+h2 { font-size: clamp(1.75rem, 2.9vw, 2.3rem); }
+.lede { font-size: 18px; line-height: 1.65; }
+.simple-hero, .about-hero, .article-hero, .coach-premium-hero, .coaching-hero {
+  background: radial-gradient(900px 520px at 12% -10%, rgba(46, 97, 101, 0.55), transparent 62%), var(--brand-night);
+}
+.simple-hero { padding: 76px 0 68px; }
+.about-hero { padding: 84px 0 76px; }
+.article-hero { padding: 80px 0 60px; }
+.coach-premium-hero { padding: 76px 0 68px; }
+.simple-hero h1, .about-hero h1, .article-hero h1, .coach-premium-hero h1, .coaching-hero h1 {
+  font-size: clamp(2.3rem, 4.6vw, 3.4rem); line-height: 1.08; max-width: 18ch; margin-bottom: 20px;
+}
+.simple-hero .lede, .about-hero .lede, .article-hero .lede, .coach-premium-hero .lede, .coaching-hero .lede { font-size: 18px; line-height: 1.65; color: #C9D1D0; max-width: 56ch; }
+.simple-hero .btn-primary, .about-hero .btn-primary, .article-hero .btn-primary, .coach-premium-hero .btn-primary, .coaching-hero .btn-primary,
+.band .btn-primary, .coach-testimonial-cta .btn-primary, .org-start .btn-primary, .cohort-join .btn-primary, #work-with-us .btn-primary {
+  background: #F1EFE9; border-color: #F1EFE9; color: var(--brand-night);
+}
+.simple-hero .btn-primary:hover, .about-hero .btn-primary:hover, .article-hero .btn-primary:hover, .coach-premium-hero .btn-primary:hover, .coaching-hero .btn-primary:hover,
+.band .btn-primary:hover, .coach-testimonial-cta .btn-primary:hover, .org-start .btn-primary:hover, .cohort-join .btn-primary:hover, #work-with-us .btn-primary:hover {
+  background: #FFFFFF; border-color: #FFFFFF;
+}
+.simple-hero .btn-ghost, .about-hero .btn-ghost, .article-hero .btn-ghost, .coach-premium-hero .btn-ghost, .band .btn-ghost { color: #F1EFE9; border-color: rgba(241, 239, 233, 0.38); }
+.simple-hero .btn-ghost:hover, .about-hero .btn-ghost:hover, .article-hero .btn-ghost:hover, .coach-premium-hero .btn-ghost:hover, .band .btn-ghost:hover { border-color: #F1EFE9; }
+.simple-hero .text-link, .about-hero .text-link, .coach-premium-hero .text-link { color: #9FC5C3; }
+.org-start, .cohort-join, #work-with-us { background: var(--coral-deep); color: var(--band-ink); border: 0; }
+.org-start .eyebrow, .cohort-join .eyebrow, #work-with-us .eyebrow { color: #9FC5C3; }
+.org-start h2, .cohort-join h2, #work-with-us h2, .cohort-join strong { color: #FFFFFF; }
+.org-start p, .cohort-join p, .cohort-join li, #work-with-us p { color: #D6E1E0; }
+.org-start a:not(.btn), .cohort-join a:not(.btn), #work-with-us a:not(.btn) { color: #FFFFFF; }
+.org-start .form-note, .cohort-join .form-note { color: #B9C7C6; }
+.card p, .faq details p, .plain-row p { color: var(--muted); }
+.card { box-shadow: 0 1px 2px rgba(23, 26, 28, 0.03), 0 14px 34px rgba(23, 26, 28, 0.05); }
+.article-body > p, .article-body > ol { font-size: 17.5px; line-height: 1.75; color: var(--ink); }
+@media (max-width: 860px) {
+.simple-hero, .about-hero, .coach-premium-hero { padding-top: 52px; padding-bottom: 44px; }
+.article-hero { padding-top: 52px; padding-bottom: 40px; }
+.coach-premium-hero h1 { font-size: clamp(2.1rem, 9vw, 2.8rem); max-width: 16ch; }
+}
+.footer-actions .btn-primary, .coaching-page .footer-actions .btn-primary, .coaching-page .coaching-hero .btn-primary { background: #F1EFE9; border-color: #F1EFE9; color: var(--brand-night); }
+.footer-actions .btn-primary:hover, .coaching-page .footer-actions .btn-primary:hover, .coaching-page .coaching-hero .btn-primary:hover { background: #FFFFFF; border-color: #FFFFFF; }
