@@ -18,6 +18,7 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 | Claude business plan doc | Strategy, numbers, 90-day plan. | Claude via docs tools. | By hand after a rename. |
 | Drive: LinkedIn company page doc, Contacts playbook, Newsletter System, Substack seed posts, Substack starter kit | Paste-ready copy and playbooks. | Claude creates new versions (the connector cannot edit in place); Nima trashes old ones. | IDs in `data/site.json`; the current version carries "(current)" in its title. |
 | Drive index `00 Drive Index` | Where everything in Drive lives. | Nima's browser session only. | Rows owed are listed below. |
+| Reviews (Tally OQDlWM, "A few words about working with Nima") | Quotes from group coaching, 1:1 clients, workshops, with permission level. | Nima sends the ask one by one; Tally emails each reply; Claude adds approved quotes to cohorts.html and coaching.html. | Form id in `data/site.json`. Quote only with the permission the person chose. |
 | LinkedIn company page | Logo, cover, tagline, About, fields, events, posts. | Nima pastes from the current Drive doc (v5). Images live in `assets/linkedin/`. | None automatic. |
 | Substack | Not created yet. When it exists, set `NEWSLETTER_URL` in `js/config.js`. | Nima. | |
 | `slides/keep-going.*` | End-of-workshop slide with QR codes (Luma calendar, cohorts page, free call). | Regenerate if a link changes. | |
