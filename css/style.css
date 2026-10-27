@@ -1394,3 +1394,17 @@ h2 { font-size: clamp(1.75rem, 2.9vw, 2.3rem); }
 .io-form, .io-thanks { padding: 22px 18px 20px; }
 .io-modal { width: calc(100vw - 20px); max-height: calc(100vh - 20px); border-radius: 16px; }
 }
+
+/* Workshop pages: what comes next */
+.after-room { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line); }
+.after-room .eyebrow { margin-bottom: 10px; }
+.after-room h2 { margin: 0 0 6px; }
+.after-lede { color: var(--muted); font-size: 15.5px; margin: 0 0 22px; }
+.after-grid { gap: 16px; }
+.after-card { gap: 8px; padding: 22px 22px 20px; }
+.after-kicker { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+.after-card h3 { font-size: 1.1rem; }
+.after-card h3 a { color: var(--head); }
+.after-card p { font-size: 14.5px; }
+.after-card .btn { align-self: flex-start; margin-top: 6px; }
+.after-room .form-note { margin-top: 18px; }
