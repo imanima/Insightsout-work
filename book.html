@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <meta name="theme-color" content="#141c1c">
-  <link rel="stylesheet" href="css/style.css?v=78">
+  <link rel="stylesheet" href="css/style.css?v=79">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,7 +53,7 @@
   <section class="book-page" data-mode="you">
     <div class="wrap book-grid">
       <div class="book-intro">
-        <p class="eyebrow">Free 30 minute call &middot; Online</p>
+        <p class="eyebrow">Book a time with Nima &middot; Online</p>
         <h1>Let&rsquo;s talk about what&rsquo;s in front of you.</h1>
         <div class="book-switch" role="group" aria-label="Who is the call for?">
           <button type="button" class="book-switch-btn is-active" data-for="you" aria-pressed="true">For you</button>
@@ -82,9 +82,22 @@
         </div>
       </div>
       <div class="book-panel" id="pick-a-time">
+        <div class="book-options" id="book-options" role="group" aria-label="Which kind of time?" hidden>
+          <button type="button" class="book-option is-active" data-option="call" aria-pressed="true"><b>Free 30 minute call</b><span>Talk it through, leave with a next step</span></button>
+          <button type="button" class="book-option" data-option="session" aria-pressed="false"><b>1 hour session</b><span>$150 &middot; A full coaching session</span></button>
+        </div>
         <div class="book-panel-head">
-          <h2>Pick a time</h2>
-          <p>Times show in your time zone. Google Meet link by email.</p>
+          <h2 id="book-title">Pick a time</h2>
+          <p id="book-note">Times show in your time zone. Google Meet link by email.</p>
+        </div>
+        <div class="book-session" id="book-session" hidden>
+          <p class="book-price"><b>$150</b> 60 minutes &middot; online</p>
+          <ul class="book-points">
+            <li><b>A full hour on one real situation.</b> We go deeper than a first call allows.</li>
+            <li><b>Pay by card through Stripe.</b> Then pick your time on the next screen.</li>
+          </ul>
+          <a class="btn btn-primary" id="book-pay" href="#pick-a-time" data-track="session_pay_click">Pay and pick a time</a>
+          <p class="book-email">Want ongoing support? <a href="coaching.html">See the 3 month program &rarr;</a></p>
         </div>
         <div class="book-embed" id="book-embed"></div>
         <div class="book-fallback" id="book-fallback">
@@ -107,8 +120,8 @@
   </div>
 </footer>
 
-<script src="js/config.js?v=11"></script>
+<script src="js/config.js?v=12"></script>
 <script src="js/main.js?v=12"></script>
-<script src="js/book.js?v=1"></script>
+<script src="js/book.js?v=2"></script>
 </body>
 </html>

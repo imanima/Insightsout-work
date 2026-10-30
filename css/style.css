@@ -1460,3 +1460,14 @@ h2 + p:not(.eyebrow), .section-heading + p:not(.eyebrow) { margin-top: 14px; }
   .book-panel { padding: 20px 16px 18px; }
   .book-embed iframe { height: 760px; }
 }
+.book-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+.book-option { appearance: none; text-align: left; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font: inherit; cursor: pointer; }
+.book-option b { display: block; font-size: 15px; color: var(--head); }
+.book-option span { display: block; margin-top: 3px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.book-option.is-active { border: 2px solid var(--teal); padding: 13px 15px; background: color-mix(in srgb, var(--teal) 6%, var(--surface)); }
+.book-option:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.book-session { margin-top: 18px; }
+.book-price { margin: 0; font-size: 15px; color: var(--muted); }
+.book-price b { margin-right: 8px; font-family: var(--display); font-size: 2rem; color: var(--head); }
+.book-session .book-points { margin: 14px 0 22px; }
+.book-session .book-email { margin: 16px 0 0; font-size: 14px; color: var(--muted); }

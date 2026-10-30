@@ -15,6 +15,14 @@ window.IO_CONFIG = {
   // Empty = buttons open the Google page in a new tab, as before.
   BOOKING_EMBED_COACHING: "",
   BOOKING_EMBED_ORG: "",
+  // Paid 1 hour session ($150). Stripe payment link first; set its "after payment"
+  // redirect to https://insightsout.work/book?paid=session, where the session
+  // calendar (a separate 60 minute Google booking page, not linked anywhere else)
+  // shows. The option stays hidden on /book until SESSION_PAYMENT_LINK and one
+  // of the two session calendar fields are set.
+  SESSION_PAYMENT_LINK: "",
+  BOOKING_URL_SESSION: "",
+  BOOKING_EMBED_SESSION: "",
 
   // --- Cohort form backend ---
   // Leave empty to use the email fallback (opens a pre-filled email).
