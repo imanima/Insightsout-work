@@ -1408,3 +1408,5 @@ h2 { font-size: clamp(1.75rem, 2.9vw, 2.3rem); }
 .after-card p { font-size: 14.5px; }
 .after-card .btn { align-self: flex-start; margin-top: 6px; }
 .after-room .form-note { margin-top: 18px; }
+
+.offer-inline { color: var(--teal); font-weight: 650; }
