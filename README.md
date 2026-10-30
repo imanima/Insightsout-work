@@ -15,7 +15,7 @@ Serve over HTTP: the Luma iframe and the `fetch()` calls don't run from `file://
 
 The home page is the one page: work for organizations, private 1:1 coaching (three ways in), The InsightsOut Cohort starting January 2027 and the public rooms that lead into it, upcoming dates, and the free 30 minute call. Everything else is detail behind it.
 
-Nav: Organizations · 1:1 Coaching · Cohorts · Workshops (`events.html`) · About. Also live but not in the nav: `insights.html` (Research), `answers.html` (for search engines and AI assistants), `company-pay.html`.
+Nav: Organizations · 1:1 Coaching · Cohorts · Small Business (`small-business.html`) · About. Also live but not in the nav: `events.html` (Workshops, linked from Home and the footer), `insights.html` (Research), `answers.html` (for search engines and AI assistants), `company-pay.html`.
 One level down: `workshops/` (one page per series), `research/` (living papers), `articles/`.
 
 Recurring series, same title everywhere (site, Luma, email, LinkedIn): Founder Group Coaching & Peer Support (every Friday), Building on the Side (Fridays, for working professionals), When Your Role Starts Changing, When Agents Join the Team, What Should Stay Human?, How Do I Lead Through Change and Uncertainty? (`my-team-is-overwhelmed.html`). Dates are instances of a series: they fill live from Luma through `/api/events`; the HTML carries a static fallback.

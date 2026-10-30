@@ -263,36 +263,37 @@ figure.shot figcaption {
 .page-home .home-hero .btn-ghost { color: #F1EFE9; border-color: rgba(241, 239, 233, 0.38); }
 .page-home .home-hero .btn-ghost:hover { border-color: #F1EFE9; }
 
-.lanes { padding: 60px 0 56px; }
-.lanes-head { margin-bottom: 26px; }
-.lanes-head h2 { margin: 0 0 8px; font-size: clamp(1.7rem, 2.8vw, 2.15rem); }
-.lanes-head p { margin: 0; color: var(--muted); font-size: 16px; }
-.lane-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.lane {
-  display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 0;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
-  padding: 26px 24px 22px; box-shadow: 0 1px 2px rgba(23, 26, 28, 0.03), 0 14px 34px rgba(23, 26, 28, 0.05);
-}
-.lane-head { padding-bottom: 18px; }
-.lane-head .eyebrow { font-size: 11.5px; margin-bottom: 10px; }
-.lane-head h3 { margin: 0 0 8px; font-size: 1.28rem; line-height: 1.22; }
-.lane-head p:not(.eyebrow) { margin: 0; color: #4B5057; font-size: 14.5px; line-height: 1.55; }
-.lane-step { display: flex; flex-direction: column; gap: 8px; padding: 16px 0 0; border-top: 1px solid var(--line); }
-.lane-step + .lane-step { margin-top: 16px; }
-.lane-step-label { display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 650; color: var(--head); letter-spacing: .01em; }
-.lane-step-label b { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: color-mix(in srgb, var(--teal) 12%, transparent); color: var(--teal); font-size: 11.5px; font-weight: 700; }
-.lane-step-label em { font-style: normal; color: var(--muted); font-weight: 500; }
-.lane-step-label em::before { content: "\00b7"; margin: 0 6px 0 0; }
-.lane-step p { margin: 0; color: #4B5057; font-size: 14px; line-height: 1.5; }
-.lane-step .btn { width: 100%; padding: 11px 16px; font-size: 14px; border-radius: 10px; }
-.lane-cohort a { font-weight: 700; color: var(--head); font-size: 15.5px; }
-.lane-apply { color: var(--teal); font-weight: 650; font-size: 14px; }
-.lanes-rooms { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px; }
-.lanes-rooms-label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
-.room-chip { display: inline-flex; align-items: baseline; gap: 6px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--head); font-size: 13px; font-weight: 600; }
-.room-chip span { color: var(--muted); font-weight: 500; }
-.room-chip:hover { border-color: var(--teal); color: var(--teal); text-decoration: none; }
-.room-chip-all { background: transparent; color: var(--teal); }
+/* home: ways to work, for your business */
+.home-ways { padding: 72px 0 72px; }
+.home-head { max-width: 760px; margin-bottom: 32px; }
+.home-head .eyebrow { margin-bottom: 10px; }
+.home-head h2 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.3rem); line-height: 1.15; }
+.home-head h2 + p { margin-top: 12px; color: var(--muted); font-size: 17px; line-height: 1.6; }
+.ways-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.way-card { display: flex; flex-direction: column; padding: 28px 26px 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.way-card-featured { border: 2px solid var(--teal); padding: 27px 25px 25px; box-shadow: 0 10px 30px -18px rgba(36, 80, 79, 0.45); }
+.way-kind { margin: 0 0 12px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+.way-when { color: var(--muted); font-weight: 600; letter-spacing: .06em; }
+.way-when::before { content: "\00b7"; margin: 0 6px; }
+.way-card h3 { margin: 0 0 10px; font-size: 1.4rem; line-height: 1.2; color: var(--head); }
+.way-card > p:not(.way-kind):not(.way-offer) { margin: 0; color: #4B5057; font-size: 16px; line-height: 1.6; }
+.way-offer { margin: 16px 0 0; padding: 10px 14px; border-radius: 10px; background: color-mix(in srgb, var(--teal) 9%, transparent); color: var(--head); font-size: 15px; line-height: 1.45; }
+.way-offer b { color: var(--teal); margin-right: 4px; }
+.way-list { list-style: none; margin: 16px 0 0; padding: 0; }
+.way-list li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.4; }
+.way-list li:last-child { border-bottom: 1px solid var(--line); }
+.way-list a { color: var(--head); font-weight: 600; }
+.way-list li:not(:has(a)) { color: #4B5057; }
+.way-list span { display: block; margin-top: 2px; color: var(--muted); font-size: 13.5px; }
+.way-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: auto; padding-top: 24px; }
+.way-card .text-link { color: var(--teal); }
+.home-biz .home-head h2 { color: #FFFFFF; }
+.biz-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.biz-card { display: flex; flex-direction: column; padding: 28px 26px 26px; border-radius: 18px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.16); }
+.biz-card .way-kind { color: #9FC5C3; }
+.biz-card h3 { margin: 0 0 10px; font-size: 1.35rem; line-height: 1.25; color: #FFFFFF; }
+.biz-card > p:not(.way-kind):not(.org-next) { margin: 0; max-width: 52ch; color: #D6E1E0; font-size: 16px; line-height: 1.6; }
+.biz-card .org-next { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.16); color: #D6E1E0; }
 
 .org-band { background: var(--coral-deep); color: var(--band-ink); border: 0; }
 .org-band .eyebrow { color: #9FC5C3; }
@@ -317,9 +318,12 @@ figure.shot figcaption {
 .section-tight.org-band, .section-tight.about-band { padding-top: 56px; padding-bottom: 56px; }
 @media (max-width: 860px) {
 .home-hero-short { padding-top: 52px; padding-bottom: 44px; }
-.lanes { padding: 44px 0 40px; }
-.lane-grid { grid-template-columns: 1fr; gap: 14px; }
-.lane { display: flex; flex-direction: column; padding: 22px 20px 20px; }
+.home-ways { padding: 48px 0 48px; }
+.home-head { margin-bottom: 24px; }
+.ways-grid, .biz-grid { grid-template-columns: 1fr; gap: 14px; }
+.way-card, .biz-card { padding: 24px 20px 22px; }
+.way-card-featured { padding: 23px 19px 21px; order: -1; }
+.way-actions { padding-top: 20px; }
 .org-band-grid, .about-band-grid { grid-template-columns: 1fr; gap: 20px; }
 .about-photo { max-width: 200px; }
 .section-tight.org-band, .section-tight.about-band { padding-top: 44px; padding-bottom: 44px; }

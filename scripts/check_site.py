@@ -7,7 +7,7 @@
 Checks, against data/site.json and today's date:
   - every internal link, anchor, image and asset resolves
   - every JSON-LD block parses; no nested <a>
-  - every page: current nav (Organizations · 1:1 Coaching · Cohorts · Workshops · About), current footer line,
+  - every page: current nav (Organizations · 1:1 Coaching · Cohorts · Small Business · About), current footer line,
     one stylesheet version, a skip link, a nav button that is one of the two calendars
   - no retired name or retired link anywhere (data/site.json "retired_names")
   - the cohort name on the site matches data/site.json, and the cohorts page links the Tally form
@@ -26,7 +26,7 @@ problems = []
 def bad(kind, where, what=""): problems.append((kind, where, what))
 
 pages = sorted(p for p in glob.glob("**/*.html", recursive=True) if not p.startswith(("out/", "slides/", "node_modules/")))
-NAV = ("Organizations", "1:1 Coaching", "Cohorts", "Workshops", "About")
+NAV = ("Organizations", "1:1 Coaching", "Cohorts", "Small Business", "About")
 CALS = {SITE["booking"]["coaching"], SITE["booking"]["org"]}
 MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
 css_versions = set()
