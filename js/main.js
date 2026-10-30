@@ -73,6 +73,11 @@ document.addEventListener("click", function (e) {
   e.preventDefault();
   var kind = el.getAttribute("data-book");
   window.ioTrack(kind === "org" ? "book_org_call_click" : "book_coaching_click");
+  var c = window.IO_CONFIG || {};
+  if (kind === "org" ? c.BOOKING_EMBED_ORG : c.BOOKING_EMBED_COACHING) {
+    window.location.href = "/book.html" + (kind === "org" ? "?for=org" : "");
+    return;
+  }
   var url = bookingUrl(kind) || el.href;
   if (url) {
     window.open(url, "_blank", "noopener");
@@ -86,30 +91,6 @@ document.addEventListener("click", function (e) {
     var contactEmail = (window.IO_CONFIG || {}).CONTACT_EMAIL || "nima@insightsout.work";
     window.location.href = "mailto:" + contactEmail +
       "?subject=" + encodeURIComponent(subject) + "&body=" + body;
-  }
-});
-
-// Inline booking embed (coaching page): if a URL is configured, show the
-// Google Calendar appointment page in an iframe; otherwise show fallback text.
-document.addEventListener("DOMContentLoaded", function () {
-  var mount = document.getElementById("booking-embed");
-  if (!mount) return;
-  var kind = mount.getAttribute("data-kind") || "coaching";
-  var url = bookingUrl(kind);
-  if (url) {
-    // Google appointment pages only allow framing with gv=true appended
-    if (url.indexOf("calendar.google.com/calendar/appointments") !== -1 && url.indexOf("gv=true") === -1) {
-      url += (url.indexOf("?") === -1 ? "?" : "&") + "gv=true";
-    }
-    var iframe = document.createElement("iframe");
-    iframe.src = url;
-    iframe.title = "Book a call with Nima";
-    iframe.loading = "lazy";
-    mount.appendChild(iframe);
-  } else {
-    mount.style.display = "none";
-    var fb = document.getElementById("booking-fallback");
-    if (fb) fb.style.display = "block";
   }
 });
 
