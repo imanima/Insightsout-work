@@ -12,7 +12,7 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 | Repo `imanima/Insightsout-work`, branch `main` | The site. Vercel deploys main within a minute. | Either session, after `git fetch`. | `scripts/check_site.py` on every push and every Monday (GitHub Action). |
 | `data/site.json` | Canonical names, links, cohorts, series, retired names, external IDs. | Whoever renames anything, first. | The checker reads it. |
 | Luma calendar `luma.com/NimaImani` | Every event and its dates. The site reads it live through `/api/events`. | Nima, on Luma. | Live dates on Home, Workshops, each workshop page. Static fallbacks are checked for past dates. |
-| Tally form `WOGzMe` | Cohort applications. Email notification to Nima is on. | Claude via Tally tools, then publish. | Options must match `data/site.json` cohort names. |
+| Tally form `WOGzMe` | Applications for The InsightsOut Cohort. Asks which situation is closest (team, career, building on the side) and the one goal. Email notification to Nima is on. | Claude via Tally tools, then publish. | Intro text must match the cohort facts in `data/site.json`. |
 | Gmail draft `r595996861093608350` | The post-event follow-up template (long version). | Claude via Gmail tools; Nima sends. | Cohort names and dates by hand after a rename. |
 | `scripts/followup_email.py` | Generates the short Luma blast, the Gmail version, and the weekly letter with live dates. Reads `data/site.json`. | Run it; never edit the output by hand. | Checker confirms cohort names. |
 | Claude business plan doc | Strategy, numbers, 90-day plan. | Claude via docs tools. | By hand after a rename. |
