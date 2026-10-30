@@ -34,12 +34,11 @@
       "name": "The InsightsOut Cohort",
       "for": "for working professionals, managers, and people building something on the side",
       "format": "3 months, up to 8 people, a weekly 90 minute group session online, a private 1:1 with Nima every month, one clear goal",
-      "short": "3 months, up to 8 people, weekly sessions and a monthly 1:1. Apply by November 30 and your first month is free.",
+      "short": "3 months, up to 8 people, weekly sessions and a monthly 1:1. Founding offer: your first month is free.",
       "start": "January 2027",
       "try_first": "events.html",
       "offer": {
-        "text": "Apply by November 30 and your first month is free.",
-        "deadline": "2026-11-30",
+        "text": "Founding offer: your first month is free.",
         "seats": 8
       }
     }

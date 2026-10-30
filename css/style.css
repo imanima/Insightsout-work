@@ -1410,3 +1410,12 @@ h2 { font-size: clamp(1.75rem, 2.9vw, 2.3rem); }
 .after-room .form-note { margin-top: 18px; }
 
 .offer-inline { color: var(--teal); font-weight: 650; }
+
+/* Spacing rhythm: text never touches the next block */
+.lede + .cta-row, p + .cta-row, ol + .cta-row, ul + .cta-row { margin-top: 26px; }
+h2 + p:not(.eyebrow), .section-heading + p:not(.eyebrow) { margin-top: 14px; }
+.after-room h2 + .after-lede { margin-top: 10px; }
+.community-topics article > div > p + p { margin-top: 10px; }
+.community-topics article > div > p.form-note { margin-top: 8px; }
+.cohort-list + .cohort-who { margin-top: 18px; }
+.offer-note + .cta-row { margin-top: 18px; }
