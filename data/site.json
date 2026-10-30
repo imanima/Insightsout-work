@@ -30,25 +30,13 @@
   ],
   "cohorts": [
     {
-      "key": "managers",
-      "name": "Steady Leadership Under Pressure",
-      "for": "for managers and team leads",
-      "format": "6 group sessions over 3 months, 2 private 1:1s, online, 6 to 8 people",
-      "try_first": "workshops/my-team-is-overwhelmed.html"
-    },
-    {
-      "key": "role-change",
-      "name": "Career Clarity Through Change",
-      "for": "for professionals unsure of their next move",
-      "format": "6 weekly sessions, 1 private 1:1, online, 8 to 10 people",
-      "try_first": "workshops/when-your-role-starts-changing.html"
-    },
-    {
-      "key": "founders",
-      "name": "Startup on the Side",
-      "for": "for professionals building something alongside a job",
-      "format": "12 weekly sessions over 3 months, 3 private 1:1s, in person in San Francisco, up to 8 people",
-      "try_first": "workshops/founder-group-coaching.html"
+      "key": "cohort",
+      "name": "The InsightsOut Cohort",
+      "for": "for working professionals, managers, and people building something on the side",
+      "format": "3 months, up to 8 people, a weekly 90 minute group session online, a private 1:1 with Nima every month, one clear goal, first month free",
+      "short": "3 months, up to 8 people, weekly sessions and a monthly 1:1. First month free.",
+      "start": "January 2027",
+      "try_first": "events.html"
     }
   ],
   "cohorts_start": "January 2027",
@@ -91,7 +79,10 @@
     "Small Business",
     "calendar.app.google/M92FKMrjr3zqA57x8",
     "start.html",
-    "/start\""
+    "/start\"",
+    "Steady Leadership Under Pressure",
+    "Career Clarity Through Change",
+    "Startup on the Side"
   ],
   "retired_names_exempt_files": [
     "data/events.json",

@@ -13,7 +13,7 @@ Serve over HTTP: the Luma iframe and the `fetch()` calls don't run from `file://
 
 ## Site map
 
-The home page is the one page: work for organizations, private 1:1 coaching (three ways in), the three cohorts starting January 2027 with the public room that feeds each, upcoming dates, and the free 30 minute call. Everything else is detail behind it.
+The home page is the one page: work for organizations, private 1:1 coaching (three ways in), The InsightsOut Cohort starting January 2027 and the public rooms that lead into it, upcoming dates, and the free 30 minute call. Everything else is detail behind it.
 
 Nav: Organizations · 1:1 Coaching · Cohorts · Workshops (`events.html`) · About. Also live but not in the nav: `insights.html` (Research), `answers.html` (for search engines and AI assistants), `company-pay.html`.
 One level down: `workshops/` (one page per series), `research/` (living papers), `articles/`.

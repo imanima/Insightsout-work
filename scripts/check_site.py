@@ -10,7 +10,7 @@ Checks, against data/site.json and today's date:
   - every page: current nav (Organizations · 1:1 Coaching · Cohorts · Workshops · About), current footer line,
     one stylesheet version, a skip link, a nav button that is one of the two calendars
   - no retired name or retired link anywhere (data/site.json "retired_names")
-  - cohort names on the site match data/site.json, and the Tally cohort= keys match
+  - the cohort name on the site matches data/site.json, and the cohorts page links the Tally form
   - no static fallback date in the past (<time datetime>, data-event-date, and the dated text inside
     data-luma-next / data-luma-when spans), so a page never advertises a past date even if Luma is down
   - sitemap lists every page and nothing else; llms files only link to pages that exist
@@ -81,11 +81,11 @@ for p in pages:
 
 if len(css_versions) > 1: bad("css versions differ", "site", str(sorted(css_versions)))
 
-# cohort names and keys
+# cohort name and apply link
 coh = open("cohorts.html").read()
+if "tally.so/r/%s" % SITE["external"]["tally_form_id"] not in coh: bad("cohort apply link missing", "cohorts.html", "")
 for c in SITE["cohorts"]:
-    if "<h3>%s</h3>" % c["name"] not in coh: bad("cohort name missing on cohorts page", "cohorts.html", c["name"])
-    if "cohort=%s&" % c["key"] not in coh: bad("cohort apply key missing", "cohorts.html", c["key"])
+    if c["name"] not in coh: bad("cohort name missing on cohorts page", "cohorts.html", c["name"])
     if c["name"] not in open("index.html").read(): bad("cohort name missing on home", "index.html", c["name"])
     for f in ("llms.txt", "llms-full.txt"):
         if c["name"] not in open(f).read(): bad("cohort name missing", f, c["name"])

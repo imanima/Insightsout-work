@@ -41,7 +41,7 @@ MUTED = "#6b7a78"
 RULE = "#e3e8e7"
 
 _SITE = json.load(open(os.path.join(ROOT, "data", "site.json")))
-COHORT_LINES = [(c["name"], c["for"]) for c in _SITE["cohorts"]]
+COHORT_LINES = [(c["name"], c.get("short", c["for"])) for c in _SITE["cohorts"]]
 BOOK_ME = _SITE["booking"]["coaching"]
 BOOK_ORG = _SITE["booking"]["org"]
 CALENDAR = _SITE["luma_calendar"]
@@ -133,7 +133,7 @@ def build(args, events):
     event_day = ran.strftime("%A")
     note = (" " + args.note.strip()) if args.note else ""
     opening = "Thanks for joining %s on %s.%s" % (args.event, event_day, note)
-    bridge = ("If you want to keep going, here is what is coming up, the small cohorts "
+    bridge = ("If you want to keep going, here is what is coming up, the small cohort "
               "starting in January, and a simple way to book time with me.")
     subject = "Thanks for joining %s" % args.event
 
@@ -143,7 +143,7 @@ def build(args, events):
         l += ["%s, %s: %s" % (when(e), short_time(e["time"]), e["title"]), e["url"], ""]
     if fridays:
         l += ["Fridays at 2 PM, SF Commons: group coaching and peer support", fridays[0]["url"], ""]
-    l += ["Free 30 minute call: " + BOOK_ME, "Cohorts, organizations, everything else: " + START_PAGE, "", "Nima"]
+    l += ["Free 30 minute call: " + BOOK_ME, "The cohort, organizations, everything else: " + START_PAGE, "", "Nima"]
     luma = "\n".join(l)
 
     # ---------- plain text (Gmail) ----------
@@ -162,9 +162,9 @@ def build(args, events):
     t += ["Full calendar: " + CALENDAR, "", ""]
     t += ["BOOK TIME", "", "For you: a free 30 minute coaching call", BOOK_ME, "",
           "For your team or organization: a free conversation", BOOK_ORG, "", ""]
-    t += ["COHORTS, STARTING JANUARY", ""]
+    t += ["THE COHORT, STARTING JANUARY", ""]
     t += ["%s, %s" % (n, who) for n, who in COHORT_LINES]
-    t += ["", "See the cohorts and apply: " + COHORTS, "", ""]
+    t += ["", "See the cohort and apply: " + COHORTS, "", ""]
     t += ["All of this, on one page: " + START_PAGE, "", "Nima", "",
           "Nima Imani", "ICF Associate Certified Coach, InsightsOut", "San Francisco and online", SITE]
     text = "\n".join(t)
@@ -236,8 +236,8 @@ def build(args, events):
         "cal": a(CALENDAR, "Full calendar on Luma →"),
         "h_book": heading("Book time"), "teal": TEAL, "book_me": BOOK_ME,
         "book_org": a(BOOK_ORG, "book a conversation →"),
-        "h_cohorts": heading("Cohorts, starting January"), "cohorts": cohort_html,
-        "cohorts_link": a(COHORTS, "See the cohorts and apply →"),
+        "h_cohorts": heading("The cohort, starting January"), "cohorts": cohort_html,
+        "cohorts_link": a(COHORTS, "See the cohort and apply →"),
         "rule": RULE, "start": a(START_PAGE, "insightsout.work"),
         "muted": MUTED, "site": SITE,
     }
