@@ -13,7 +13,7 @@ Checks, against data/site.json and today's date:
   - the cohort name on the site matches data/site.json, and the cohorts page links the Tally form
   - no static fallback date in the past (<time datetime>, data-event-date, and the dated text inside
     data-luma-next / data-luma-when spans), so a page never advertises a past date even if Luma is down
-  - sitemap lists every page and nothing else; llms files only link to pages that exist
+  - sitemap lists every page and nothing else; llms files only link to pages that exist and name no past date
 """
 import datetime as dt, glob, json, os, re, sys
 
@@ -107,6 +107,10 @@ for u in sorted(page_urls - site_urls): bad("page missing from sitemap", "sitema
 for f in ("llms.txt", "llms-full.txt"):
     for u in set(re.findall(r"https://insightsout\.work/([a-z0-9/\-]+)", open(f).read())):
         if u.rstrip("/") not in page_urls and u not in ("llms-full", "llms", "sitemap"): bad("dead link", f, u)
+    # dated "Next: Sun Nov 8, 2026" style lines must not be in the past
+    for mon, day, year in re.findall(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\d{1,2}),? (20\d\d)", open(f).read()):
+        when = dt.datetime.strptime("%s %s %s" % (mon, day, year), "%b %d %Y").date()
+        if when < TODAY: bad("past date", f, "%s %s, %s" % (mon, day, year))
 
 if problems:
     print("check_site: %d problem(s)" % len(problems))

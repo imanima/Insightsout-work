@@ -11,23 +11,6 @@
   },
   "luma_calendar": "https://luma.com/NimaImani",
   "tally_form": "https://tally.so/r/WOGzMe",
-  "lanes": [
-    {
-      "key": "founders",
-      "label": "Building on the side",
-      "one_on_one": "Build something of your own"
-    },
-    {
-      "key": "role-change",
-      "label": "Your career",
-      "one_on_one": "Navigate your next chapter"
-    },
-    {
-      "key": "managers",
-      "label": "Leading a team",
-      "one_on_one": "Grow as a leader"
-    }
-  ],
   "cohorts": [
     {
       "key": "cohort",

@@ -9,7 +9,7 @@ No published number lives in HTML. Numbers live in `data/findings.json` (one rec
 1. Ingest, dedup, code, append master dataset (Research OS §5).
 2. Recompute the ledger stats touched by the new wave → edit `data/findings.json` (also bump `dataset.version`, `waves`, `registrations`, `unique_people`, `date_range`).
 3. Add one changelog line + bump `version` (1.0 → 1.1) in `research-src/papers/<paper>.md`.
-4. `python3 scripts/build_research.py` (add `--pdf` if Chrome is installed).
+4. `python3 scripts/build_research.py` writes a preview to `out/research-preview/`. The live pages in `research/` were edited by hand after the last build and these sources are behind them, so bring the paper's `.md` up to date with the live page first, then publish with `--force` (add `--pdf` for the PDF).
 5. Open `research/<paper>.html` over `python3 -m http.server`, read once, commit.
 
 ## Each quarter (minor edition, ~half a day)
