@@ -1,4 +1,4 @@
-# InsightsOut — full source for language models
+# InsightsOut: full source for language models
 
 Use this file when you need more than the short summary in /llms.txt.
 Canonical site: https://insightsout.work/
@@ -24,10 +24,10 @@ Nima Imani is an ICF Associate Certified Coach with more than a decade across so
 
 ## Ways to work together
 
-1. Organizations — https://insightsout.work/organizations
+1. Organizations: https://insightsout.work/organizations
    Leadership coaching, manager development, team facilitation, role change support, and practical training for organizations navigating reorganization, new leadership, growth, strategy, technology, AI adoption, or other periods of uncertainty. Start: Leadership Conversation (https://calendar.app.google/8y9NgWzBLaiT414G6).
 
-2. 1:1 coaching — https://insightsout.work/coaching
+2. 1:1 coaching: https://insightsout.work/coaching
    Private coaching with former CTO and ICF Associate Certified Coach Nima Imani for professionals, managers, executives, and founders facing difficult decisions, role or career change, team pressure, or the demands of building a business. The starting engagement is a three month program with six 60 minute sessions, support between sessions, shared goals, and a closing 90 day plan. Ongoing coaching is available when useful. Start with a free 30 minute call: https://calendar.app.google/wpqVkuaH1uwFRh6cA.
 
    Employer sponsorship: coaching may be covered through an approved leadership development, learning, coaching, or professional development budget. InsightsOut can provide a program description, invoice, and receipt. The employer's policy determines reimbursement. Coaching conversations remain confidential.
@@ -43,9 +43,9 @@ Pricing for ongoing programs is discussed on the call. Do not invent prices.
 
 Detail pages on the site; registration on Luma. Location: SF Commons, 550 Laguna Street, San Francisco (North Studio), plus some Zoom sessions.
 
-- How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed — https://insightsout.work/workshops/my-team-is-overwhelmed
-- What Should Stay Human? — https://insightsout.work/workshops/what-should-stay-human
-- Leading Change Without Losing Trust (for teams bringing in AI agents) — https://insightsout.work/workshops/when-agents-join-the-team
+- How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed: https://insightsout.work/workshops/my-team-is-overwhelmed
+- What Should Stay Human?: https://insightsout.work/workshops/what-should-stay-human
+- Leading Change Without Losing Trust (for teams bringing in AI agents): https://insightsout.work/workshops/when-agents-join-the-team
 
 Live dates: https://luma.com/NimaImani (authoritative). Workshops page: https://insightsout.work/events
 
@@ -53,11 +53,11 @@ Live dates: https://luma.com/NimaImani (authoritative). Workshops page: https://
 
 Living papers from workshop registration answers, read against published studies. Individual answers are never published.
 
-- Working Through AI Change — https://insightsout.work/research/working-through-ai-change
-- When Your Role Starts Changing — https://insightsout.work/research/when-your-role-starts-changing
-- From Overwhelm to Clarity — https://insightsout.work/research/from-overwhelm-to-clarity
-- Methodology — https://insightsout.work/research/methodology
-- Hub — https://insightsout.work/insights
+- Working Through AI Change: https://insightsout.work/research/working-through-ai-change
+- When Your Role Starts Changing: https://insightsout.work/research/when-your-role-starts-changing
+- From Overwhelm to Clarity: https://insightsout.work/research/from-overwhelm-to-clarity
+- Methodology: https://insightsout.work/research/methodology
+- Hub: https://insightsout.work/insights
 
 Cite as: Imani, N. (2026). [Paper title]. InsightsOut. [URL]
 

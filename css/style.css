@@ -300,7 +300,7 @@ figure.shot figcaption {
 .org-band h2 { color: #FFFFFF; }
 .org-band-grid, .about-band-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 24px 64px; align-items: start; }
 .org-band-grid h2 { max-width: 16ch; margin: 0; font-size: clamp(1.7rem, 2.8vw, 2.15rem); }
-.org-band-grid p { max-width: 58ch; color: #D6E1E0; font-size: 15.5px; line-height: 1.6; }
+.org-band-grid p:not(.eyebrow) { max-width: 58ch; color: #D6E1E0; font-size: 15.5px; line-height: 1.6; }
 .org-band-grid .cta-row { margin-top: 20px; }
 .org-band .btn-primary { background: #F1EFE9; color: var(--brand-night); }
 .org-band .btn-primary:hover { background: #FFFFFF; }
@@ -311,7 +311,7 @@ figure.shot figcaption {
 .about-photo { margin: 0; }
 .about-photo img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 18px; }
 .about-band-grid h2 { margin: 0 0 14px; font-size: clamp(1.7rem, 2.8vw, 2.15rem); }
-.about-band-grid p { max-width: 62ch; font-size: 15.5px; line-height: 1.6; color: #4B5057; }
+.about-band-grid p:not(.eyebrow) { max-width: 62ch; font-size: 15.5px; line-height: 1.6; color: #4B5057; }
 .about-band-grid p + p { margin-top: 12px; }
 .about-facts { font-size: 14px; color: var(--muted); }
 .about-facts a { color: var(--teal); font-weight: 600; }
@@ -543,9 +543,9 @@ h1 { font-size: clamp(2.15rem, 10vw, 2.45rem); }
   color: var(--personal-ink);
 }
 .coaching-page h1, .coaching-page h2 {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-weight: 500;
-  letter-spacing: -0.045em;
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.012em;
 }
 .coaching-page h3 {
   color: var(--personal-ink);
@@ -556,17 +556,6 @@ h1 { font-size: clamp(2.15rem, 10vw, 2.45rem); }
 }
 .coaching-page nav.site {
   background: var(--personal-night);
-}
-.coaching-page nav .btn-primary, .coaching-page .msticky .btn-primary {
-  background: var(--personal-accent);
-  border-color: var(--personal-accent);
-  color: #0d2023;
-  box-shadow: none;
-}
-.coaching-page nav .btn-primary:hover, .coaching-page .msticky .btn-primary:hover {
-  background: #92d3d7;
-  border-color: #92d3d7;
-  box-shadow: none;
 }
 .coach-premium-hero {
   padding: 92px 0 84px;
@@ -1029,7 +1018,7 @@ h1 { font-size: clamp(2.15rem, 10vw, 2.45rem); }
 }
 .about-clean h3 { color: var(--about-ink); }
 .about-shell {
-  width: min(1120px, calc(100% - 56px));
+  width: min(1024px, calc(100% - 56px));
   margin: 0 auto;
 }
 .about-label {
@@ -1471,3 +1460,16 @@ h2 + p:not(.eyebrow), .section-heading + p:not(.eyebrow) { margin-top: 14px; }
 .book-price b { margin-right: 8px; font-family: var(--display); font-size: 2rem; color: var(--head); }
 .book-session .book-points { margin: 14px 0 22px; }
 .book-session .book-email { margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+
+/* consistency pass */
+.hero-aside { margin: 22px 0 0; font-size: 14px; line-height: 1.5; color: #C9D1D0; }
+.hero-aside a { color: #FFFFFF; font-weight: 600; }
+.about-paths { list-style: none; margin: 4px 0 0; padding: 0; }
+.about-paths li { padding: 14px 0; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+.about-paths li:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+.about-paths a { display: block; font-size: 16px; font-weight: 650; }
+.about-paths span { display: block; margin-top: 3px; font-size: 14.5px; line-height: 1.5; color: #D6E1E0; }
+#work-with-us .cta-row { margin-top: 24px; }
+#work-with-us .research-proof-row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 24px 64px; align-items: start; }
+#work-with-us h2 { margin: 0; max-width: 14ch; }
+@media (max-width: 860px) { #work-with-us .research-proof-row { grid-template-columns: 1fr; gap: 18px; } }

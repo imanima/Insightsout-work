@@ -9,7 +9,7 @@ Checks, against data/site.json and today's date:
   - every JSON-LD block parses; no nested <a>
   - every page: current nav (Organizations · 1:1 Coaching · Cohorts · Small Business · About), current footer line,
     one stylesheet version, a skip link, a nav button that is one of the two calendars
-  - no retired name or retired link anywhere (data/site.json "retired_names")
+  - no retired name or retired link anywhere (data/site.json "retired_names"); no em or en dashes
   - the cohort name on the site matches data/site.json, and the cohorts page links the Tally form
   - no static fallback date in the past (<time datetime>, data-event-date, and the dated text inside
     data-luma-next / data-luma-when spans), so a page never advertises a past date even if Luma is down
@@ -70,6 +70,9 @@ for p in pages:
     body = re.sub(r"<script.*?</script>", "", s, flags=re.S)
     for name in SITE["retired_names"]:
         if name in body: bad("retired name", p, name)
+    # house style: no em or en dashes in the copy (ranges use "to", asides use commas or parentheses)
+    for m in re.finditer("[\u2014\u2013]|&mdash;|&ndash;", s):
+        bad("dash", p, s[max(0, m.start() - 30):m.start()].split("\n")[-1].strip()); break
     # past dates in static fallbacks
     for iso in re.findall(r'(?:datetime|data-event-date)="(\d{4}-\d{2}-\d{2})"', s):
         if dt.date.fromisoformat(iso) < TODAY: bad("past date", p, iso)
@@ -107,6 +110,7 @@ for u in sorted(page_urls - site_urls): bad("page missing from sitemap", "sitema
 for f in ("llms.txt", "llms-full.txt"):
     for u in set(re.findall(r"https://insightsout\.work/([a-z0-9/\-]+)", open(f).read())):
         if u.rstrip("/") not in page_urls and u not in ("llms-full", "llms", "sitemap"): bad("dead link", f, u)
+    if re.search("[\u2014\u2013]", open(f).read()): bad("dash", f)
     # dated "Next: Sun Nov 8, 2026" style lines must not be in the past
     for mon, day, year in re.findall(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\d{1,2}),? (20\d\d)", open(f).read()):
         when = dt.datetime.strptime("%s %s %s" % (mon, day, year), "%b %d %Y").date()

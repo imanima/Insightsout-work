@@ -30,8 +30,8 @@
 
 ## Research (living papers, updated as new workshop waves land)
 - [Working Through AI Change](https://insightsout.work/research/working-through-ai-change): the human side of AI-driven change, read against Gallup, Microsoft, MIT SMR, SHRM, Anthropic.
-- [When Your Role Starts Changing](https://insightsout.work/research/when-your-role-starts-changing): the individual side — where role change is felt, who names fear, why people ask for a map not a course.
-- [From Overwhelm to Clarity](https://insightsout.work/research/from-overwhelm-to-clarity): the founder side — overwhelm as pace and fragmentation, fear unnamed, wanting a place to think with peers.
+- [When Your Role Starts Changing](https://insightsout.work/research/when-your-role-starts-changing): the individual side: where role change is felt, who names fear, why people ask for a map not a course.
+- [From Overwhelm to Clarity](https://insightsout.work/research/from-overwhelm-to-clarity): the founder side: overwhelm as pace and fragmentation, fear unnamed, wanting a place to think with peers.
 - [How We Do Research](https://insightsout.work/research/methodology): questions, coding, cross-checks, publishing thresholds, versioning.
 
 ## Perspectives
