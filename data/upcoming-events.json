@@ -1,0 +1,37 @@
+{
+  "verified_at": "2026-10-31",
+  "events": [
+    {
+      "name": "Building on the Side: Group Coaching for Working Professionals",
+      "start_at": "2026-11-06T14:00:00-08:00",
+      "url": "https://luma.com/the-yehu",
+      "timezone": "America/Los_Angeles",
+      "location_type": "offline",
+      "address": "550 Laguna Street, San Francisco \u00b7 North Studio"
+    },
+    {
+      "name": "What Should Stay Human?",
+      "start_at": "2026-11-08T14:00:00-08:00",
+      "url": "https://luma.com/the-z3sh",
+      "timezone": "America/Los_Angeles",
+      "location_type": "offline",
+      "address": "550 Laguna Street, San Francisco \u00b7 Full Studio"
+    },
+    {
+      "name": "Friday Group Coaching & Peer Support",
+      "start_at": "2026-11-13T14:00:00-08:00",
+      "url": "https://luma.com/the-fxcc",
+      "timezone": "America/Los_Angeles",
+      "location_type": "offline",
+      "address": "550 Laguna Street, San Francisco \u00b7 North Studio"
+    },
+    {
+      "name": "Group Coaching & Peer Support for Founders, Creators & Business Builders",
+      "start_at": "2026-11-20T14:00:00-08:00",
+      "url": "https://luma.com/the-a5j2",
+      "timezone": "America/Los_Angeles",
+      "location_type": "offline",
+      "address": "550 Laguna Street, San Francisco \u00b7 North Studio"
+    }
+  ]
+}

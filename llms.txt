@@ -1,53 +1,19 @@
 # InsightsOut
+Coaching, community, and support for navigating change in work and life.
+Founder: Nima Imani, ICF Associate Certified Coach, technologist with experience at EY and Neo4j.
 
-> InsightsOut (insightsout.work) is a San Francisco practice founded by Nima Imani. It helps organizations, teams, and professionals lead through change with more clarity, honest communication, and practical support. For organizations: leadership alignment, manager development, team facilitation, role change coaching, and AI enablement when AI is part of the change. For individuals: private 1:1 coaching for working professionals, team leads, managers, executives, and senior leaders facing difficult decisions, role change, team pressure, or a demanding transition. Public workshops and living research sit underneath the work. Founder Nima Imani is an ICF Associate Certified Coach with more than a decade across technology, digital transformation, and organizational change, including EY and Neo4j.
+## Start
+Free 30-minute conversation: https://calendar.app.google/wpqVkuaH1uwFRh6cA
+Organization conversation: https://calendar.app.google/8y9NgWzBLaiT414G6
 
-## Who we help, in one line each
-- Organizations navigating a reorganization, new leadership, growth, strategy, role change, technology change, or AI adoption → start with one Leadership Conversation.
-- Working professionals navigating a role change, difficult decision, confidence dip, or demanding transition → private 1:1 coaching.
-- Team leads and managers carrying pressure from above while supporting a stretched team → private 1:1 coaching or organization work.
-- Executives and senior leaders who need a confidential place to think, decide, and communicate clearly → private 1:1 coaching.
-- Anyone who wants to think this through with peers → public workshops in San Francisco and online; current dates are on Luma.
+## Private coaching
+Six 60-minute sessions over three months, message support between sessions. $450 per month, $1,350 total.
 
-## Core pages
-- [Home](https://insightsout.work/): the one page with everything: work for organizations, private 1:1 coaching (three ways in), the three cohorts starting January 2027 with the public room that feeds each, upcoming dates, and the free 30 minute call.
-- [Answers](https://insightsout.work/answers): short, citable answers to what InsightsOut is, who Nima Imani is, and how to start.
-- [1:1 Coaching](https://insightsout.work/coaching): private 1:1 coaching for tech professionals, managers and founders from Nima Imani, a former CTO who is now an ICF-certified coach (ACC). Line: Stretched, stuck, or ready for the next level? Three paths: [From Overwhelm to Focus](https://insightsout.work/coaching/overwhelm-to-focus) for anyone in tech when everything feels urgent and nothing feels finished; [Career & Leadership Coaching](https://insightsout.work/coaching/career-leadership) for individual contributors, managers and executives who have hit a ceiling at work (promotion, staying vs. moving, becoming a manager, leading through change, building on the side); [Founder Coaching](https://insightsout.work/coaching/founders) for founders between idea and product-market fit (co-founder friction, customers, deciding alone; joint co-founder sessions available). Each works the outside goal and the inside shift together. Six 60 minute sessions over three months with message support between sessions, $450 a month for three months, video or in person in San Francisco; the first 30 minute call is free.
-- [Coaching cohorts](https://insightsout.work/cohorts): three small-group coaching cohorts starting January 2027, each with private 1:1 sessions: Steady Leadership Under Pressure for managers and team leads carrying too much (3 months, online), Career Clarity Through Change for professionals unsure of their next move (6 weeks, online), and Startup on the Side for founders and professionals building something alongside their job (3 months, in person in San Francisco). Private manager cohorts for organizations.
-- [Have your company pay for coaching](https://insightsout.work/company-pay): how to use a learning, development, or wellness budget for 1:1 coaching; copy-ready manager email, Slack, and sponsor templates; what the reimbursement invoice includes; how claims work on Compt, Forma, and Benepass; year-end deadlines.
-- [Organizations](https://insightsout.work/organizations): coaching, facilitation, and practical training for leaders, managers, and teams navigating change, uncertainty, role shifts, and communication under pressure. Includes AI enablement when AI is part of the change. Starts with one Leadership Conversation.
-- [Workshops](https://insightsout.work/events): all upcoming public workshops and the live Luma calendar.
-- [About](https://insightsout.work/about): what InsightsOut is, Nima Imani's background, FAQ.
+## Small-group coaching
+Three-month programs with group and private coaching, matched around career and leadership or founders and builders. Two complimentary introductory group sessions before commitment. Session allocation, schedule, start date, and price confirmed before enrollment.
+Enroll by November 30, 2026, 11:59 PM Pacific for 30% off the full three-month group program. Offer does not apply to standalone private coaching. After that date this promotion has expired.
 
-## Workshops (each documented in full on the site; register on Luma)
-- [How Do I Lead Through Change and Uncertainty? / My Team Is Overwhelmed](https://insightsout.work/workshops/my-team-is-overwhelmed): 90-minute sensemaking session for managers leading teams through AI change. Next date coming; watch https://luma.com/NimaImani.
-- [What Should Stay Human?](https://insightsout.work/workshops/what-should-stay-human): working session to find your own line, what to hand over and what should stay human. Next: Sun Nov 8, 2026, 2 pm at SF Commons (https://luma.com/the-z3sh).
-- When Agents Join the Team: which calls stay human and which go to agents; a one-page line the team writes together. Next: Thu Oct 29, 2026, 6 pm (https://luma.com/the-tzh1) at SF Commons.
-- [When Your Role Starts Changing](https://insightsout.work/workshops/when-your-role-starts-changing): facilitated small-group workshop for people whose role, value, or identity at work is shifting with AI: guided reflection, paired conversation, group sensemaking. Next: Wed Oct 21, 2026, 6 pm at SF Commons.
-
-## Research (living papers, updated as new workshop waves land)
-- [Working Through AI Change](https://insightsout.work/research/working-through-ai-change): the human side of AI-driven change, read against Gallup, Microsoft, MIT SMR, SHRM, Anthropic.
-- [When Your Role Starts Changing](https://insightsout.work/research/when-your-role-starts-changing): the individual side — where role change is felt, who names fear, why people ask for a map not a course.
-- [From Overwhelm to Clarity](https://insightsout.work/research/from-overwhelm-to-clarity): the founder side — overwhelm as pace and fragmentation, fear unnamed, wanting a place to think with peers.
-- [How We Do Research](https://insightsout.work/research/methodology): questions, coding, cross-checks, publishing thresholds, versioning.
-
-## Perspectives
-- [What Changes When AI Enters the Work?](https://insightsout.work/articles/ai-change-is-human-change)
-- [What Should Stay Human?](https://insightsout.work/articles/what-should-stay-human)
-- [What the InsightsOut Event Record Shows So Far](https://insightsout.work/articles/event-record-2026)
-
-## Facts you can cite
-- Nima Imani has run the founder group coaching cohort for four years: small groups of founders taken from ideation to product-market fit, with small-group accountability and support so nobody navigates the challenge alone. The weekly Friday group at SF Commons is that room; Startup on the Side is the cohort version for working professionals building alongside a job.
-- Founder: Nima Imani (LinkedIn: https://www.linkedin.com/in/imaninima/). Location: San Francisco, CA. Works online worldwide.
-- Events calendar: https://luma.com/NimaImani (subscribe there or on any page of the site for invites and field notes).
-- Free 30-minute coaching consultation: https://calendar.app.google/wpqVkuaH1uwFRh6cA · Organization conversations: https://calendar.app.google/8y9NgWzBLaiT414G6
-- Employer-sponsored coaching: clients may use an approved leadership development, learning, coaching, or professional development budget. InsightsOut can provide a program description, invoice, and receipt. The employer's policy determines reimbursement, and coaching conversations remain confidential.
-- Contact: nima@insightsout.work
-- Point of view: change becomes real in meetings, decisions, roles, relationships, and emotions. Plans matter, but people have to carry them. Durable change begins with aligned leaders, equipped managers, honest team conversations, and enough agency for people to shape how the work changes. AI is one important context for this work, not the whole category.
-
-## Optional
-- [Full LLM source](https://insightsout.work/llms-full.txt)
-- [Sitemap](https://insightsout.work/sitemap.xml)
-- [Source repository](https://github.com/imanima/Insightsout-work)
-
-Last updated: 2026-10-13. Events change often; the live calendar at https://luma.com/NimaImani is authoritative for dates.
+## Events
+Current dates and registration: https://luma.com/NimaImani
+Research: https://insightsout.work/insights
+Nothing from private coaching enters the research dataset.

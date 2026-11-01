@@ -7,11 +7,11 @@
   "use strict";
 
   var TITLES = {
-    "org-agents": "Leading Change Without Losing Trust",
+    "org-agents": "When Agents Join the Team",
     "org-lead": "My Team Is Overwhelmed. How Do I Lead?",
     "org-role": "When Your Role Starts Changing",
     everyone: "What Should Stay Human?",
-    founders: "Building on the Side"
+    founders: "Founder Group Coaching"
   };
 
   // Weekly groups are listed only where [data-upcoming="all"] asks for every date.
@@ -29,10 +29,11 @@
   }
 
   function displayTitle(name, kind) {
+    if (name) return name;
     if (kind !== "guest") return TITLES[kind] || name;
-    if (/building on the side/i.test(name)) return "Building on the Side";
+    if (/building on the side/i.test(name)) return "Founder Group Coaching";
     if (/group coaching/i.test(name) || /peer support for founders/i.test(name)) {
-      return "Building on the Side";
+      return "Founder Group Coaching";
     }
     return name;
   }
@@ -42,6 +43,7 @@
   }
 
   function place(e) {
+    if (e.place) return e.place;
     var type = String(e.location_type || "");
     if (type === "online" || type === "virtual" || type === "zoom") return "Online";
     var addr = String(e.address || "");
@@ -98,7 +100,9 @@
 
   function lumaUrl(slug) {
     if (!slug) return calendarUrl();
-    if (/^https?:/i.test(slug)) return slug;
+    if (/^https?:/i.test(slug)) {
+      try { var parsed = new URL(slug); return parsed.protocol === "https:" && /(^|\.)luma\.com$|(^|\.)lu\.ma$/.test(parsed.hostname) ? parsed.href : calendarUrl(); } catch (_) { return calendarUrl(); }
+    }
     return "https://luma.com/" + String(slug).replace(/^\//, "");
   }
 
@@ -142,7 +146,10 @@
     var list = showAll
       ? events.filter(function (e) { return e.kind !== "guest"; }).slice(0, 12)
       : uniqueKinds(events).slice(0, 5);
-    if (!list.length) return;
+    if (!list.length) {
+      mount.innerHTML = '<p>New dates are announced on our live calendar.</p><a class="text-link" href="' + esc(calendarUrl()) + '" target="_blank" rel="noopener">See the Luma calendar ↗</a>';
+      return;
+    }
     mount.innerHTML = list.map(function (e) {
       return '<a class="upcoming-row' + (showAll ? ' upcoming-row-full' : '') + '" href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="luma_rsvp_click">' +
         '<time datetime="' + esc(dateAttr(e)) + '">' + esc(shortDate(e)) + '</time>' +
@@ -211,8 +218,7 @@
   }
 
   function apply(events) {
-    var upcoming = document.querySelector("[data-upcoming]");
-    if (upcoming) renderUpcoming(upcoming, events);
+    document.querySelectorAll("[data-upcoming]").forEach(function (upcoming) { renderUpcoming(upcoming, events); });
     fillSeries(events);
     fillRegisters(events);
     fillNext(events);
@@ -225,9 +231,13 @@
       .then(function (r) { if (!r.ok) throw new Error("no events api"); return r.json(); })
       .then(function (data) {
         var list = prepare(data.events || []);
-        if (!list.length) return;
         apply(list);
       })
-      .catch(function () { /* keep the dates already in the HTML */ });
+      .catch(function () {
+        return fetch('/data/upcoming-events.json')
+          .then(function (r) { if (!r.ok) throw new Error('no fallback'); return r.json(); })
+          .then(function (data) { apply(prepare(data.events || [])); })
+          .catch(function () { apply([]); });
+      });
   });
 })();
