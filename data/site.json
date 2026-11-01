@@ -1,0 +1,93 @@
+{
+  "_comment": "Canonical facts for insightsout.work. Change a name or link HERE first, then run scripts/check_site.py; it lists every file that still carries the old value. The checker also fails on retired names and on static dates that have passed.",
+  "updated": "2026-10-31",
+  "site": "https://insightsout.work",
+  "home_headline": "Change is easier to navigate together.",
+  "coaching_headline": "Find your direction. Lead with confidence. Move forward.",
+  "contact_email": "nima@insightsout.work",
+  "booking": {
+    "coaching": "https://calendar.app.google/wpqVkuaH1uwFRh6cA",
+    "org": "https://calendar.app.google/8y9NgWzBLaiT414G6"
+  },
+  "luma_calendar": "https://luma.com/NimaImani",
+  "tally_form": "https://tally.so/r/WOGzMe",
+  "cohorts": [
+    {
+      "key": "cohort",
+      "name": "The InsightsOut Cohort",
+      "for": "for working professionals, managers, and people building something on the side",
+      "format": "3 months of small-group coaching and private sessions with Nima; groups matched around stage, goals, and availability",
+      "short": "Try two introductory group sessions free before choosing a three-month program.",
+      "start": "Dates confirmed before enrollment",
+      "try_first": "events.html",
+      "offer": {
+        "text": "Enroll by November 30, 2026 for 30% off all three months. Two introductory sessions are free before commitment.",
+        "expires": "2026-12-01T00:00:00-08:00"
+      }
+    }
+  ],
+  "cohorts_start": "Dates confirmed before enrollment",
+  "series": [
+    {
+      "kind": "org-role",
+      "name": "When Your Role Starts Changing",
+      "page": "workshops/when-your-role-starts-changing.html"
+    },
+    {
+      "kind": "org-agents",
+      "name": "When Agents Join the Team",
+      "page": "workshops/when-agents-join-the-team.html"
+    },
+    {
+      "kind": "everyone",
+      "name": "What Should Stay Human?",
+      "page": "workshops/what-should-stay-human.html"
+    },
+    {
+      "kind": "org-lead",
+      "name": "How Do I Lead Through Change and Uncertainty?",
+      "page": "workshops/my-team-is-overwhelmed.html"
+    },
+    {
+      "kind": "founders",
+      "name": "Friday Group Coaching and Peer Support",
+      "page": "workshops/founder-group-coaching.html",
+      "weekly": "Every Friday, 2:00 PM, SF Commons"
+    }
+  ],
+  "retired_names": [
+    "Leading Through Change",
+    "Leading Through Uncertainty and Pressure",
+    "Lead With Confidence",
+    "When Your Role Starts Changing cohort",
+    "Your Next Chapter cohort",
+    "Founders' Inner Circle",
+    "Founders Inner Circle",
+    "calendar.app.google/M92FKMrjr3zqA57x8",
+    "start.html",
+    "/start\"",
+    "Steady Leadership Under Pressure",
+    "Career Clarity Through Change",
+    "Startup on the Side"
+  ],
+  "retired_names_exempt_files": [
+    "data/events.json",
+    "research-src/"
+  ],
+  "external": {
+    "tally_form_id": "WOGzMe",
+    "gmail_followup_draft": "r595996861093608350",
+    "business_plan_doc": "https://claude.ai/code/artifact/c77e7a04-2b34-4418-9b1b-940ce67e53c7",
+    "drive_linkedin_page_doc": "1OGVjPknc3WIuFr3xqdNHBuP0B0b3krFH_xkLdKL1cek",
+    "drive_contacts_playbook": "1K7WRqjOglrPv3nlF1ncJrmsiQW4I6P_c0N3J5xTDqO8",
+    "drive_newsletter_system": "1FFFPlL6sZkAQzTtH5-U8uA0BH5OA_DLKZ6lJKqrvXpI",
+    "drive_substack_seed_posts": "18RoWMnJ6UQaWiqgBwspBWIC2ormXzOr0WxiAt9eO5wA",
+    "drive_substack_starter_kit": "1OkbGjX2mdLObyfQ5DSr4L1NaiK16mM4uHUmUs51MDzY",
+    "drive_index": "1veygifeguNvd3KZdTlmnRpg4rFGrM3sntayGoZOfQng",
+    "drive_operations_map": "1MoJJLGGDR03Z_iGWgRj2iaWWIaJvK20DsM4Ic3leTfc",
+    "tally_review_form": "OQDlWM",
+    "drive_review_ask_doc": "1tV_ybpEovTzaZjUSW45t3tVmV2YzNoOWJVbHwQR4qG8",
+    "tally_referral_form": "QoKeLg",
+    "inbox_repo": "imanima/insightsout-inbox"
+  }
+}

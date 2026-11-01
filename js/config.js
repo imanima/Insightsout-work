@@ -8,6 +8,21 @@ window.IO_CONFIG = {
   BOOKING_URL_COACHING: "https://calendar.app.google/wpqVkuaH1uwFRh6cA",
   // Discovery calls (organizations + general) book through Google Calendar.
   BOOKING_URL_ORG: "https://calendar.app.google/8y9NgWzBLaiT414G6",
+  // Embed links for the on-site booking page (/book). In Google Calendar: open the
+  // booking page, Share, Website embed, and copy the src URL
+  // (https://calendar.google.com/calendar/appointments/schedules/...).
+  // When set, every "Book" button opens /book with the calendar inline.
+  // Empty = buttons open the Google page in a new tab, as before.
+  BOOKING_EMBED_COACHING: "",
+  BOOKING_EMBED_ORG: "",
+  // Paid 1 hour session ($150). Stripe payment link first; set its "after payment"
+  // redirect to https://insightsout.work/book?paid=session, where the session
+  // calendar (a separate 60 minute Google booking page, not linked anywhere else)
+  // shows. The option stays hidden on /book until SESSION_PAYMENT_LINK and one
+  // of the two session calendar fields are set.
+  SESSION_PAYMENT_LINK: "",
+  BOOKING_URL_SESSION: "",
+  BOOKING_EMBED_SESSION: "",
 
   // --- Cohort form backend ---
   // Leave empty to use the email fallback (opens a pre-filled email).

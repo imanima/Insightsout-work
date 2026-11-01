@@ -13,9 +13,9 @@ Serve over HTTP: the Luma iframe and the `fetch()` calls don't run from `file://
 
 ## Site map
 
-The home page is the one page: work for organizations, private 1:1 coaching (three ways in), the three cohorts starting January 2027 with the public room that feeds each, upcoming dates, and the free 30 minute call. Everything else is detail behind it.
+The home page is the one page: work for organizations, private 1:1 coaching (three ways in), The InsightsOut Cohort with dates confirmed before enrollment and the public rooms that lead into it, upcoming dates, and the free 30 minute call. Everything else is detail behind it.
 
-Nav: Organizations · 1:1 Coaching · Cohorts · Workshops (`events.html`) · About. Also live but not in the nav: `insights.html` (Research), `answers.html` (for search engines and AI assistants), `company-pay.html`.
+Nav: Organizations · 1:1 Coaching · Cohorts · Small Business (`small-business.html`) · About. Also live but not in the nav: `events.html` (Workshops, linked from Home and the footer), `insights.html` (Research), `answers.html` (for search engines and AI assistants), `company-pay.html`.
 One level down: `workshops/` (one page per series), `research/` (living papers), `articles/`.
 
 Recurring series, same title everywhere (site, Luma, email, LinkedIn): Founder Group Coaching & Peer Support (every Friday), Building on the Side (Fridays, for working professionals), When Your Role Starts Changing, When Agents Join the Team, What Should Stay Human?, How Do I Lead Through Change and Uncertainty? (`my-team-is-overwhelmed.html`). Dates are instances of a series: they fill live from Luma through `/api/events`; the HTML carries a static fallback.
@@ -36,6 +36,10 @@ The weekly sync agent (runs on Nima's machine, token in `.git-push-token`, gitig
 ## Redirects
 
 `vercel.json` (`cleanUrls: true`). Retired URLs 301 to their replacement: `/start` and `/ai-transformation` → `/` or `/organizations`, `/what-should-stay-human` → `/workshops/what-should-stay-human`, `/workshops/when-the-work-changes` → `/workshops/when-your-role-starts-changing`, the retired workshops (`ai-for-the-rest-of-us`, `navigating-uncertainty-at-work`, `the-argument-you-keep-having`, `you-cant-wait-for-certainty`) → `/events`, older `/cohort`, `/leadership-circle`, `/partnerships`, `/ai-enablement` → the matching door.
+
+## Keeping it in sync
+
+Start with `CLAUDE.md` (rules for any agent session) and `OPERATIONS.md` (what lives where). `data/site.json` is the one source of truth for names and links; `scripts/check_site.py` must pass before every push and runs in CI every Monday.
 
 ## Hosting and hygiene
 
