@@ -46,3 +46,6 @@ What lives where, who changes it, and how it stays in sync. Canonical copy of th
 
 ## October 31 website integration
 The current group offer is two complimentary introductory sessions before a paid three-month commitment, and 30% off all three months for enrollment by November 30, 2026 (11:59 PM Pacific). Groups are matched by stage and goals, with no fixed eight-person promise. Dates and fees are confirmed before enrollment. The website booking call is the primary enrollment path. External Tally and existing email drafts may still carry older terms; review those before reusing them. Booking, small-business support, native reviews/referrals and the current research remain integrated.
+
+## November 1 design review
+All 28 public pages now use css/revamp.css as their only stylesheet. Navigation and footer copy are shared across pages; data/site.json records navigation labels and the booking call to action. Research content and figures remain intact. The checker verifies one page heading, unique IDs, one active stylesheet, and one live date module per workshop. Review quotes still come from data/reviews.json. All booking links retain the existing calendar destinations. The mobile booking page places calendar controls before explanatory text. External form integrations and calendars have not been reconfigured.

@@ -34,6 +34,11 @@
   function render(push) {
     var paid = state.option === "paid", pay = state.option === "session";
     page.setAttribute("data-mode", state.mode);
+    var headerBooking = document.querySelector('nav.site [data-book]');
+    if (headerBooking) {
+      headerBooking.setAttribute('data-book', state.mode === 'org' ? 'org' : 'coaching');
+      headerBooking.href = state.mode === 'org' ? c.BOOKING_URL_ORG : c.BOOKING_URL_COACHING;
+    }
     page.querySelectorAll(".book-switch-btn").forEach(function (b) {
       var on = b.getAttribute("data-for") === state.mode;
       b.classList.toggle("is-active", on);
@@ -46,8 +51,8 @@
       b.classList.toggle("is-active", on);
       b.setAttribute("aria-pressed", on ? "true" : "false");
     });
-    title.textContent = paid ? "Payment received. Pick your time." : pay ? "1 hour coaching session" : "Pick a time";
-    note.textContent = paid ? "Thank you. Choose a 60 minute slot below. Google Meet link by email."
+    title.textContent = paid ? "Choose your session time." : pay ? "1 hour coaching session" : "Pick a time";
+    note.textContent = paid ? "For clients who have completed checkout. Choose a 60 minute slot below."
       : pay ? "Pay first, then choose your time." : "Times show in your time zone. Google Meet link by email.";
     session.hidden = !pay;
 

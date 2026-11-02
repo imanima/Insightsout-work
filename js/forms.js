@@ -6,7 +6,9 @@
   var FALLBACK = { review: "https://tally.so/r/OQDlWM", introduce: "https://tally.so/r/QoKeLg" };
 
   function field(label, inner, hint) {
-    return '<label class="io-field"><span class="io-label">' + label + (hint ? ' <em>' + hint + '</em>' : '') + '</span>' + inner + '</label>';
+    var caption = label + (hint ? ' <em>' + hint + '</em>' : '');
+    if (inner.indexOf('class="io-choices"') !== -1) return '<fieldset class="io-field"><legend class="io-label">' + caption + '</legend>' + inner + '</fieldset>';
+    return '<label class="io-field"><span class="io-label">' + caption + '</span>' + inner + '</label>';
   }
   function input(name, type, placeholder, required) {
     return '<input class="io-input" name="' + name + '" type="' + (type || "text") + '"' + (placeholder ? ' placeholder="' + placeholder + '"' : '') + (required ? ' required' : '') + (type === "email" ? ' autocomplete="email"' : '') + (name === "name" ? ' autocomplete="name"' : '') + '>';
@@ -49,10 +51,11 @@
     var spec = FORMS[kind];
     var dlg = document.createElement("dialog");
     dlg.className = "io-modal";
+    dlg.setAttribute("aria-labelledby", "io-title-" + kind);
     dlg.innerHTML =
       '<form class="io-form" method="dialog" novalidate>' +
       '<button type="button" class="io-close" aria-label="Close">&times;</button>' +
-      '<h2 class="io-title">' + spec.title + '</h2>' +
+      '<h2 class="io-title" id="io-title-' + kind + '">' + spec.title + '</h2>' +
       '<p class="io-intro">' + spec.intro + '</p>' +
       '<div class="io-fields">' + spec.body + '</div>' +
       '<input class="io-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +

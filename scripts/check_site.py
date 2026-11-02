@@ -26,13 +26,20 @@ problems = []
 def bad(kind, where, what=""): problems.append((kind, where, what))
 
 pages = sorted(p for p in glob.glob("**/*.html", recursive=True) if not p.startswith(("out/", "slides/", "node_modules/", "_to_delete/")))
-NAV = ("1:1 Coaching", "Small groups", "Events", "Organizations", "Small business", "About")
+NAV = tuple(item[0] for item in SITE["navigation"])
 CALS = {SITE["booking"]["coaching"], SITE["booking"]["org"]}
 MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
 css_versions = set()
 
 for p in pages:
     s = open(p).read(); d = os.path.dirname(p); ids = set(re.findall(r'id="([^"]+)"', s))
+    # Shared page structure and one active visual system.
+    if len(re.findall(r"<h1(?:\s[^>]*)?>", s)) != 1: bad("heading", p, "expected one h1")
+    all_ids = re.findall(r'id="([^"]+)"', s)
+    if len(all_ids) != len(set(all_ids)): bad("duplicate id", p)
+    sheets = re.findall(r'<link[^>]*rel="stylesheet"[^>]*href="([^"]+)"', s)
+    if len(sheets) != 1 or "revamp.css" not in sheets[0]: bad("design system", p, str(sheets))
+    if p.startswith("workshops/") and s.count('data-luma-kind=') != 1: bad("event dates", p, "expected one live date section")
     # links
     for h in re.findall(r'href="([^"]+)"', s):
         if h.startswith(("http", "mailto:")): continue
@@ -63,7 +70,7 @@ for p in pages:
         ok = btn and (btn.group(1) in CALS or "tally.so" in btn.group(1) or btn.group(1) == SITE["luma_calendar"]
                       or (btn.group(1).startswith("#") and btn.group(1)[1:] in ids))
         if not ok: bad("nav button", p, btn.group(1) if btn else "none")
-        if "Human connection. Clearer choices." not in s: bad("footer", p)
+        if SITE["footer_tagline"] not in s: bad("footer", p)
         if 'class="skip-link"' not in s or 'id="main"' not in s: bad("skip link", p)
     css_versions.update(re.findall(r"style\.css\?v=(\d+)", s))
     # retired names

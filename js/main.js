@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   toggle.setAttribute("aria-expanded", "false");
   toggle.setAttribute("aria-label", "Open navigation menu");
 
-  var headerAction = navInner.querySelector(":scope > .btn");
-  navInner.insertBefore(toggle, headerAction || null);
+  navInner.insertBefore(toggle, links);
 
   function closeMenu() {
     nav.classList.remove("mobile-open");
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target.closest("a")) closeMenu();
   });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeMenu();
+    if (e.key === "Escape" && nav.classList.contains("mobile-open")) { closeMenu(); toggle.focus(); }
   });
   document.addEventListener("click", function (e) {
     if (!nav.contains(e.target)) closeMenu();
