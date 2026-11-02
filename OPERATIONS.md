@@ -52,3 +52,6 @@ All 28 public pages now use css/revamp.css as their only stylesheet. Navigation 
 
 ## November 2 positioning update
 The site leads with AI enablement and leadership, alongside coaching and community. Main navigation is AI & leadership, Coaching, Events, Insights, About. General header calls route to /book; offer-specific calls retain the correct calendar. Research web texts carry November 2 editorial corrections and load data/findings-2026-08-15.json, preserving original statistics with corrected display context. Original v1.0 PDFs remain archived editions. Update research HTML and metadata together; do not silently substitute a new dataset or regenerate from stale research-src. No underlying participant data was reanalyzed in this update.
+
+## November 2 concise UX pass
+Removed overlapping sections across home, organizational, coaching, cohort, event and supporting pages. Simplified headings and shortened marketing copy; research papers retain their evidence with shorter opening summaries. Approved pricing and November offer terms are unchanged. Layout spacing uses css/revamp.css v5.

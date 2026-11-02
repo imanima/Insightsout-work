@@ -49,3 +49,7 @@ footer.site{padding:56px 0 22px;background:#183b32}.footer-grid{grid-template-co
 @media(max-width:420px){.positioning-hero h1{font-size:40px}.method-grid{grid-template-columns:1fr}.method-grid article{padding-top:18px}.positioning-hero .hero-image img{height:290px}nav.site .nav-inner>.btn-primary{font-size:11px;padding:10px 8px}}
 
 .finding-detail{font-size:13px!important;line-height:1.65;opacity:.9}.finding .finding-detail{color:#e1e9da}.section .two-grid+.text-link{display:inline-block;margin-top:28px}
+
+/* Concise editorial pass: consistent rhythm and restrained framing. */
+.section{padding-block:64px}.section-head{margin-bottom:30px}.section-head .eyebrow{margin-bottom:12px}.section .three-grid p,.section .two-grid p{max-width:48ch}.compact-note{padding-block:20px;font-size:15px}.compact-note p{margin:0}.closing .section-head{margin-bottom:20px}.closing h2{max-width:22ch}.three-grid .number,.two-grid .number{display:none}.method-grid .number{display:block}.hero .micro{margin-top:18px}.article-hero h1{font-size:clamp(38px,4.4vw,60px)}.article-body>ul{padding-left:24px}.article-body>ul li{margin-bottom:10px}
+@media(max-width:800px){.section{padding-block:44px}.section-head{margin-bottom:24px}.compact-note{padding-block:14px}.closing h2{font-size:34px}.article-hero h1{font-size:38px}}

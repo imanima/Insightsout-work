@@ -74,7 +74,6 @@
             return '<article class="card paper-card">' +
               '<span class="offer-kicker">' + (p.type_label || p.type) + (meta ? " · " + meta : "") + "</span>" +
               '<h3><a href="' + root + p.url + '">' + p.title + "</a></h3>" +
-              (p.subtitle ? '<p class="paper-sub">' + p.subtitle + "</p>" : "") +
               "<p>" + (p.summary || "") + "</p>" +
               '<div class="paper-actions"><a class="btn btn-primary btn-sm" href="' + root + p.url + '">Read the paper</a>' +
               (p.pdf ? '<a class="card-cta" href="' + root + p.pdf + '">Original PDF (v1.0) ↓</a>' : "") + "</div>" +

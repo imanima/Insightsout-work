@@ -10,7 +10,7 @@
       "version": "1.0",
       "date": "2026-08-18",
       "status": "published",
-      "summary": "A living research paper on the individual side of AI-driven change: where role change is felt, who names fear and who doesn't, why people ask for a map rather than a course, and what kind of support they actually want. Built from InsightsOut workshop registrations using the March to July 2026 dataset.",
+      "summary": "How registrants described changing roles, identity, and their next steps.",
       "url": "research/when-your-role-starts-changing.html",
       "pdf": "research/pdf/when-your-role-starts-changing-v1.0.pdf",
       "changelog": [
@@ -28,7 +28,7 @@
       "version": "1.0",
       "date": "2026-08-18",
       "status": "published",
-      "summary": "A living research paper on the human side of AI-driven change, built from InsightsOut workshop registrations and read against Gallup, Microsoft, MIT SMR, SHRM, and Anthropic. Uses the March to July 2026 dataset.",
+      "summary": "Decisions, manager pressure, and peer support in optional workshop registration responses.",
       "url": "research/working-through-ai-change.html",
       "pdf": "research/pdf/working-through-ai-change-v1.0.pdf",
       "changelog": [
@@ -46,7 +46,7 @@
       "version": "1.0",
       "date": "2026-08-18",
       "status": "published",
-      "summary": "A living research paper on the founder side of AI-driven change: an early-stage room where money and customers come first, overwhelm is pace and fragmentation rather than hours, fear goes mostly unnamed, and what people quietly want is a place to think with peers. Built from InsightsOut founder workshop registrations using the March to July 2026 dataset.",
+      "summary": "What early-stage founders shared about priorities, uncertainty, and the support they wanted.",
       "url": "research/from-overwhelm-to-clarity.html",
       "pdf": "research/pdf/from-overwhelm-to-clarity-v1.0.pdf",
       "changelog": [
