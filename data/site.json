@@ -1,9 +1,9 @@
 {
   "_comment": "Canonical facts for insightsout.work. Change a name or link HERE first, then run scripts/check_site.py; it lists every file that still carries the old value. The checker also fails on retired names and on static dates that have passed.",
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "site": "https://insightsout.work",
-  "home_headline": "Change is easier to navigate together.",
-  "coaching_headline": "Find your direction. Lead with confidence. Move forward.",
+  "home_headline": "AI is changing work. How we lead matters.",
+  "coaching_headline": "Your next chapter. Space to work it through.",
   "contact_email": "nima@insightsout.work",
   "booking": {
     "coaching": "https://calendar.app.google/wpqVkuaH1uwFRh6cA",
@@ -92,30 +92,26 @@
   },
   "navigation": [
     [
-      "1:1 coaching",
-      "/coaching.html"
+      "AI & leadership",
+      "/organizations.html"
     ],
     [
-      "Small groups",
-      "/cohorts.html"
+      "Coaching",
+      "/coaching.html"
     ],
     [
       "Events",
       "/events.html"
     ],
     [
-      "Organizations",
-      "/organizations.html"
-    ],
-    [
-      "Small business",
-      "/small-business.html"
+      "Insights",
+      "/insights.html"
     ],
     [
       "About",
       "/about.html"
     ]
   ],
-  "primary_cta": "Book a free call",
-  "footer_tagline": "Human connection. Clearer choices."
+  "primary_cta": "Book a conversation",
+  "footer_tagline": "Human judgment. Shared understanding. Practical change."
 }

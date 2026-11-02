@@ -68,6 +68,7 @@ for p in pages:
         if navset != NAV: bad("nav items", p, str(navset))
         btn = re.search(r'<nav class="site"[^>]*>.*?<a class="btn btn-primary(?: btn-sm)?" href="([^"]+)"', s, re.S)
         ok = btn and (btn.group(1) in CALS or "tally.so" in btn.group(1) or btn.group(1) == SITE["luma_calendar"]
+                      or btn.group(1) == "/book.html"
                       or (btn.group(1).startswith("#") and btn.group(1)[1:] in ids))
         if not ok: bad("nav button", p, btn.group(1) if btn else "none")
         if SITE["footer_tagline"] not in s: bad("footer", p)

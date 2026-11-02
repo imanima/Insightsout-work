@@ -1,5 +1,5 @@
 # InsightsOut
-Coaching, community, and support for navigating change in work and life.
+AI enablement and leadership, with human judgment at the center. Leadership alignment, manager development, practical workflow experiments, coaching, and community.
 Founder: Nima Imani, ICF Associate Certified Coach, technologist with experience at EY and Neo4j.
 
 ## Start
@@ -22,3 +22,7 @@ The InsightsOut Cohort is the small-group coaching program.
 Small business: https://insightsout.work/small-business
 Booking options: https://insightsout.work/book
 Client experiences: https://insightsout.work/reviews
+
+AI & leadership: https://insightsout.work/organizations
+Method: Understand, Align, Lead, Enable.
+Research web editions corrected November 2, 2026; first-edition data covers March to July 2026. Registration responses describe needs, not program outcomes.

@@ -3,7 +3,7 @@
 
   // Paths are relative to the page; pages in /research/ set data-research-root="../".
   var root = document.documentElement.getAttribute("data-research-root") || "";
-  var FINDINGS = root + "data/findings.json";
+  var FINDINGS = root + (document.documentElement.getAttribute("data-findings-source") || "data/findings.json");
   var MANIFEST = root + "data/research.json";
 
   function text(el, value) { if (value !== undefined && value !== null && value !== "") el.textContent = value; }
@@ -46,7 +46,7 @@
           : "";
         el.innerHTML =
           '<div class="research-stat"><strong>' + f.stat.value + "</strong></div>" +
-          "<p>" + f.claim + "</p>" + anchor;
+          "<p>" + f.claim + "</p>" + (f.stat.detail ? '<p class="finding-detail">' + f.stat.detail + "</p>" : "") + anchor;
       });
     })
     .catch(function () {
@@ -77,7 +77,7 @@
               (p.subtitle ? '<p class="paper-sub">' + p.subtitle + "</p>" : "") +
               "<p>" + (p.summary || "") + "</p>" +
               '<div class="paper-actions"><a class="btn btn-primary btn-sm" href="' + root + p.url + '">Read the paper</a>' +
-              (p.pdf ? '<a class="card-cta" href="' + root + p.pdf + '">PDF ↓</a>' : "") + "</div>" +
+              (p.pdf ? '<a class="card-cta" href="' + root + p.pdf + '">Original PDF (v1.0) ↓</a>' : "") + "</div>" +
             "</article>";
           }
           return '<a class="article-card article-live" href="' + root + p.url + '">' +
