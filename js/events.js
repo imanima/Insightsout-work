@@ -1,5 +1,5 @@
 // Fills event dates and Register links from /api/events (live Luma).
-// If the request fails, the dates already in the HTML stay put.
+// If the request fails, visitors are sent to the live Luma calendar.
 // Guest/partner events (Agora, Redwood City, etc.) are skipped here;
 // they still show in the Luma embed on the Events page.
 

@@ -119,10 +119,13 @@ for f in ("llms.txt", "llms-full.txt"):
     for u in set(re.findall(r"https://insightsout\.work/([a-z0-9/\-]+)", open(f).read())):
         if u.rstrip("/") not in page_urls and u not in ("llms-full", "llms", "sitemap"): bad("dead link", f, u)
     if re.search("[\u2014\u2013]", open(f).read()): bad("dash", f)
-    # dated "Next: Sun Nov 8, 2026" style lines must not be in the past
-    for mon, day, year in re.findall(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\d{1,2}),? (20\d\d)", open(f).read()):
-        when = dt.datetime.strptime("%s %s %s" % (mon, day, year), "%b %d %Y").date()
-        if when < TODAY: bad("past date", f, "%s %s, %s" % (mon, day, year))
+    # Dated upcoming-event lines must not be in the past. Historical and
+    # revision dates are valid context and should not fail the site check.
+    for line in open(f).read().splitlines():
+        if not re.search(r"\b(?:next|upcoming|join us|register)\b", line, re.I): continue
+        for mon, day, year in re.findall(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\d{1,2}),? (20\d\d)", line):
+            when = dt.datetime.strptime("%s %s %s" % (mon, day, year), "%b %d %Y").date()
+            if when < TODAY: bad("past date", f, "%s %s, %s" % (mon, day, year))
 
 if problems:
     print("check_site: %d problem(s)" % len(problems))
